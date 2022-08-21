@@ -38,7 +38,7 @@
         main > :nth-child(4) {
             background: deeppink;
             position: absolute;
-            right: 0px;
+            right: 0;
             top: 50vh;
         }
 
@@ -47,27 +47,44 @@
             position: absolute;
             width: 150px;
             height: 150px;
-            right: 0px;
-            left: 0px;
-            bottom: 0px;
-            top: 0px;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            top: 0;
             margin: auto;
             border: 1px solid white;
             background: white;
+        }
+
+        /*circle inside the white square in the center*/
+        main > div > div {
+            position: absolute;
+            width: 60%;
+            height: 60%;
+            background: red;
+            border-radius: 100%;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
         }
 
     </style>
 </head>
 <body>
 <main>
-<!-- red, orange, green & pink four rectangles-->
+    <!-- red, orange, green & pink four rectangles-->
     <section></section>
     <section></section>
     <section></section>
     <section></section>
 
     <!-- white square in the center-->
-    <div></div>
+    <div>
+        <!-- circle in the center-->
+        <div></div>
+    </div>
 </main>
 </body>
 </html>
