@@ -43,10 +43,10 @@
         }
 
         /*white square in the center*/
-        main > div {
+        main > :nth-child(5) {
             position: absolute;
-            width: 150px;
-            height: 150px;
+            width: 160px;
+            height: 160px;
             right: 0;
             left: 0;
             bottom: 0;
@@ -57,10 +57,10 @@
         }
 
         /*circle inside the white square in the center*/
-        main > div > div {
+        main > :nth-child(5) > div {
             position: absolute;
-            width: 60%;
-            height: 60%;
+            width: 65%;
+            height: 65%;
             background: red;
             border-radius: 100%;
             right: 0;
@@ -68,6 +68,42 @@
             bottom: 0;
             top: 0;
             margin: auto;
+        }
+
+        /*all white quarter circles in the four corners*/
+        main > :nth-child(6), main > div:nth-child(7), main > div:nth-child(8), main > div:nth-child(9) {
+            width: 130px;
+            height: 130px;
+            position: absolute;
+            background: white;
+        }
+
+        /*top left white quarter circle*/
+        main > :nth-child(6) {
+            left: 0;
+            top: 0;
+            border-bottom-right-radius: 100%;
+        }
+
+        /*top right white quarter circle*/
+        main > :nth-child(7) {
+            right: 0;
+            top: 0;
+            border-bottom-left-radius: 100%;
+        }
+
+        /*bottom left white quarter circle*/
+        main > :nth-child(8) {
+            left: 0;
+            bottom: 0;
+            border-top-right-radius: 100%;
+        }
+
+        /*bottom right white quarter circle*/
+        main > :nth-child(9) {
+            right: 0;
+            bottom: 0;
+            border-top-left-radius: 100%;
         }
 
     </style>
@@ -85,6 +121,13 @@
         <!-- circle in the center-->
         <div></div>
     </div>
+
+    <!-- white quarter circles in the four corners-->
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
 </main>
 </body>
 </html>
