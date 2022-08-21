@@ -106,6 +106,38 @@
             border-top-left-radius: 100%;
         }
 
+        /*white semi-circles in the top & bottom center*/
+        main > :nth-child(10), main > :nth-child(11) {
+            position: absolute;
+            height: 100px;
+            width: 120px;
+            border: 2px solid white;
+            background: white;
+        }
+
+        /*white semi-circle in the top center*/
+        main > :nth-child(10) {
+            left: 0;
+            right: 0;
+            top: 0;
+            margin: auto;
+            border-bottom-left-radius: 100%;
+            border-bottom-right-radius: 100%;
+        }
+
+        /*white semi-circle in the bottom center*/
+        main > :nth-child(11) {
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            border-top-left-radius: 100%;
+            border-top-right-radius: 100%;
+        }
+
+
+
+
     </style>
 </head>
 <body>
@@ -125,6 +157,10 @@
     <!-- white quarter circles in the four corners-->
     <div></div>
     <div></div>
+    <div></div>
+    <div></div>
+
+    <!-- white semicircles in the top & bottom center-->
     <div></div>
     <div></div>
 
