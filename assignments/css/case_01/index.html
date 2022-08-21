@@ -16,14 +16,17 @@
             width: 50vw;
         }
 
+        /*red rectangle*/
         main > :nth-child(1) {
             background: red;
         }
 
+        /*green rectangle*/
         main > :nth-child(2) {
             background: green;
         }
 
+        /*orange rectangle*/
         main > :nth-child(3) {
             background: orange;
             position: absolute;
@@ -31,6 +34,7 @@
             top: 0;
         }
 
+        /*pink rectangle*/
         main > :nth-child(4) {
             background: deeppink;
             position: absolute;
@@ -38,14 +42,32 @@
             top: 50vh;
         }
 
+        /*square & circle in the center*/
+        main > div {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            right: 0px;
+            left: 0px;
+            bottom: 0px;
+            top: 0px;
+            margin: auto;
+            border: 1px solid white;
+            background: white;
+        }
+
     </style>
 </head>
 <body>
 <main>
+<!--    red, orange, green & pink four rectangles-->
     <section></section>
     <section></section>
     <section></section>
     <section></section>
+
+    <!--    square & circle in the center-->
+    <div></div>
 </main>
 </body>
 </html>
