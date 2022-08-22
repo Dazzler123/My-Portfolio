@@ -34,6 +34,19 @@
             font-family: "Agency FB";
         }
 
+        main{
+            position: relative;
+        }
+
+        /*navigations container*/
+        main > aside > div {
+            position: absolute;
+            background: #9c27b0;
+            top: 0;
+            bottom: 0;
+            width: 270px;
+        }
+
     </style>
 
 </head>
@@ -51,19 +64,22 @@
             <li>About Us</li>
         </ul>
     </nav>
+
 </header>
 
 <main>
     <!-- side navigation bar-->
     <aside>
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>Services</li>
-                <li>Contacts</li>
-                <li>About Us</li>
-            </ul>
-        </nav>
+        <div>
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>Services</li>
+                    <li>Contacts</li>
+                    <li>About Us</li>
+                </ul>
+            </nav>
+        </div>
     </aside>
 
     <!--paragraph & images content-->
