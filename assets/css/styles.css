@@ -33,7 +33,8 @@
 
 /*header*/
 body > header {
-    background-color: #ff0c0c;
+    background-color: black;
+    box-shadow: 0px -1px 8px 2px #1c1717e8;
     top: 0;
     height: 57px;
     position: fixed;
@@ -49,17 +50,18 @@ header > img {
 header > h3 {
     position: absolute;
     margin: auto;
-    top: 18px;
+    top: 17px;
     /* bottom: 0; */
-    left: 64px;
+    left: 71px;
     font-size: 21px;
     font-family: sans-serif;
+    color: white;
 }
 
 header > nav {
     position: absolute;
-    top: -18px;
-    right: 35px;
+    top: -20px;
+    right: 39px;
 }
 
 /*header > nav > ul {*/
@@ -71,7 +73,8 @@ header > nav {
 header > nav > ul > li {
     display: inline-block;
     padding: 22px;
-    font-family: "sans-serif";
+    font-family: "system-ui";
     font-size: 17px;
+    color: white;
 }
 
