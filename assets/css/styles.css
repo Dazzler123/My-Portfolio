@@ -156,7 +156,19 @@ main > section:nth-child(1) > aside > h3 {
     position: absolute;
     left: 120px;
     top: 543px;
+
     font-family: 'system-ui';
     font-weight: 400;
     font-size: 32px;
+}
+
+/*about me description*/
+main > section:nth-child(1) > aside pre {
+    position: absolute;
+    left: 121px;
+    top: 622px;
+
+    font-family: system-ui;
+    font-weight: 400;
+    font-size: 20px;
 }
