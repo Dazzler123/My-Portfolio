@@ -88,7 +88,7 @@ header > nav > ul > li > a:hover, header > nav > ul > li:hover {
 }
 
 /*===================!*Personal info ====================================================*!*/
-
+/*section container*/
 main > section:nth-child(1) {
     /* display: block; */
     top: 57px;
@@ -96,6 +96,7 @@ main > section:nth-child(1) {
     height: 974px;
 }
 
+/*article container*/
 main > section:nth-child(1) > article {
     position: absolute;
     top: 0;
@@ -167,8 +168,25 @@ main > section:nth-child(1) > aside pre {
     position: absolute;
     left: 121px;
     top: 622px;
+    text-align: left;
 
     font-family: system-ui;
     font-weight: 400;
     font-size: 20px;
+}
+
+/*download resume button*/
+main > section:nth-child(1) > aside > button {
+    position: absolute;
+    width: 234px;
+    height: 52px;
+    left: 129px;
+    top: 833px;
+    background: #317A30;
+    border-radius: 10px;
+
+    font-family: 'system-ui';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
 }
