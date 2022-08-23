@@ -30,9 +30,9 @@
 /*    background-color: transparent */
 /*}*/
 
-/*=======================================================================*/
+/*=====================!*Header==================================================*!*/
 
-/*header*/
+/*container*/
 body > header {
     background-color: #24292f;
     box-shadow: 0px -1px 8px 2px #1c1717e8;
@@ -88,16 +88,28 @@ header > nav > ul > li > a {
     color: white;
 }
 
+/*change color while hovering*/
+header > nav > ul > li > a:hover, header > nav > ul > li:hover {
+    color: #4c06ff;
+}
 
-/*=======================================================================*/
-/*personal info*/
+/*===================!*Personal info ====================================================*!*/
+
+/*main > section:nth-child(1) {*/
+/*    position: absolute;*/
+/*    display: block;*/
+/*    top: 0;*/
+/*    bottom: 0;*/
+/*}*/
+
+/*profile pic*/
 main > section:nth-child(1) > article > img {
-    position: relative;
-    display: inline-block;
-    width: 615px;
-    height: 489px;
-    left: 0;
-    top: 57px;
+    /*position: relative;*/
+    /*display: inline-block;*/
+    /*width: 615px;*/
+    /*height: 489px;*/
+    /*left: 0;*/
+    /*top: 57px;*/
 }
 
 /*hi there...*/
