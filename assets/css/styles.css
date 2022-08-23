@@ -150,3 +150,13 @@ main > section:nth-child(1) > article > dd > pre {
     font-size: 24px;
     text-align: left;
 }
+
+/*about me*/
+main > section:nth-child(1) > aside > h3 {
+    position: absolute;
+    left: 120px;
+    top: 543px;
+    font-family: 'system-ui';
+    font-weight: 400;
+    font-size: 32px;
+}
