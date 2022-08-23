@@ -42,12 +42,14 @@ body > header {
     width: 100vw;
 }
 
+/*icon*/
 header > img {
     position: relative;
     left: 25px;
     top: 13px;
 }
 
+/*heading*/
 header > h3 {
     position: absolute;
     margin: auto;
@@ -71,6 +73,7 @@ header > nav {
 /*    right: 3px;*/
 /*}*/
 
+/*home, services, contact me*/
 header > nav > ul > li {
     display: inline-block;
     padding: 22px;
@@ -79,5 +82,60 @@ header > nav > ul > li {
     color: white;
 }
 
-/*=======================================================================*/
+/*contact me*/
+header > nav > ul > li > a {
+    text-decoration: none;
+    color: white;
+}
 
+
+/*=======================================================================*/
+/*personal info*/
+main > section:nth-child(1) > article > img {
+    position: relative;
+    display: inline-block;
+    width: 615px;
+    height: 489px;
+    left: 0;
+    top: 57px;
+}
+
+/*hi there...*/
+main > section:nth-child(1) > :first-child {
+    display: inline-block;
+    position: relative;
+    margin: auto;
+    left: 674px;
+    top: 136px;
+
+    font-family: 'system-ui';
+    font-weight: 400;
+    font-size: 32px;
+}
+
+/*dasindu hew...*/
+main > section:nth-child(1) > h1 {
+    display: inline-block;
+    position: relative;
+    margin: auto;
+    left: 487px;
+    top: 211px;
+
+    font-family: 'system-ui';
+    font-weight: 400;
+    font-size: 64px;
+}
+
+/*a passionate software dev...*/
+main > section:nth-child(1) > article > dd > pre {
+    display: inline-block;
+    position: absolute;
+    left: 678px;
+    top: 309px;
+
+    font-family: 'system-ui';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: left;
+}
