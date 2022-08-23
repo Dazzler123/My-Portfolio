@@ -67,12 +67,6 @@ header > nav {
     right: 39px;
 }
 
-/*header > nav > ul {*/
-/*    position: absolute;*/
-/*    top: 0;*/
-/*    right: 3px;*/
-/*}*/
-
 /*home, services, contact me*/
 header > nav > ul > li {
     display: inline-block;
@@ -90,26 +84,31 @@ header > nav > ul > li > a {
 
 /*change color while hovering*/
 header > nav > ul > li > a:hover, header > nav > ul > li:hover {
-    color: #4c06ff;
+    color: #761fe1;
 }
 
 /*===================!*Personal info ====================================================*!*/
 
-/*main > section:nth-child(1) {*/
-/*    position: absolute;*/
-/*    display: block;*/
-/*    top: 0;*/
-/*    bottom: 0;*/
-/*}*/
+main > section:nth-child(1) {
+    /* display: block; */
+    top: 57px;
+    position: relative;
+    height: 974px;
+}
+
+main > section:nth-child(1) > article {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
 /*profile pic*/
 main > section:nth-child(1) > article > img {
-    /*position: relative;*/
-    /*display: inline-block;*/
-    /*width: 615px;*/
-    /*height: 489px;*/
-    /*left: 0;*/
-    /*top: 57px;*/
+    position: absolute;
+    width: 615px;
+    height: 489px;
+    left: 0;
+    top: 0;
 }
 
 /*hi there...*/
