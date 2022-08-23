@@ -56,3 +56,22 @@ header > h3 {
     font-family: sans-serif;
 }
 
+header > nav {
+    position: absolute;
+    top: -18px;
+    right: 35px;
+}
+
+/*header > nav > ul {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    right: 3px;*/
+/*}*/
+
+header > nav > ul > li {
+    display: inline-block;
+    padding: 22px;
+    font-family: "sans-serif";
+    font-size: 17px;
+}
+
