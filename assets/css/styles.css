@@ -40,3 +40,9 @@ body > header {
     width: 100vw;
 }
 
+header > img {
+    position: relative;
+    left: 25px;
+    top: 13px;
+}
+
