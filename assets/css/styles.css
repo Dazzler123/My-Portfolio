@@ -46,3 +46,13 @@ header > img {
     top: 13px;
 }
 
+header > h3 {
+    position: absolute;
+    margin: auto;
+    top: 18px;
+    /* bottom: 0; */
+    left: 64px;
+    font-size: 21px;
+    font-family: sans-serif;
+}
+
