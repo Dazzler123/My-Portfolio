@@ -1,7 +1,31 @@
 /*background image*/
- body > img {
-     position: fixed;
-     width: 100%;
-     height: 100%;
-     top: 0;
- }
+/*main > img:nth-child(1) {*/
+/*    position: absolute;*/
+/*    width: 100vw;*/
+/*    height: 100vh;*/
+/*    top: 0;*/
+/*}*/
+
+/*body > div{*/
+/*    position: absolute;*/
+/*    height: 100vh;*/
+/*    width: 100vw;*/
+/*    background-image: url("../images/bgi.jpg");*/
+/*    !*background-color: #ff253a;*!*/
+/*    !*bac*!*/
+/*}*/
+
+
+/*body  {*/
+/*    background-image: url("../images/bgi.jpg");*/
+/*    background-attachment: block;*/
+/*    background-position: center;*/
+
+/*    !*width: 100vw;*!*/
+/*    !*height: 100vh;*!*/
+/*    !*top: 0;*!*/
+/*}*/
+
+/*body > section{ */
+/*    background-color: transparent */
+/*}*/
