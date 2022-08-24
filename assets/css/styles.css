@@ -194,6 +194,7 @@ main > section:nth-child(1) > aside > button {
 /*===================!*Education ====================================================*!*/
 /*section container*/
 main > section:nth-child(2) {
+    border: 2px solid red;
     /* display: block; */
     top: 41px;
     position: relative;
@@ -201,7 +202,8 @@ main > section:nth-child(2) {
 }
 
 /*heading*/
-main > section:nth-child(2) > :first-child { /*<--- heading should be positioned to the center (hoyl blnn)*/
+main > section:nth-child(2) > :first-child { /*<--- heading should be positioned to the center (poddk hoyl blnn)*/
+    border: 1px solid red;
     position: absolute;
     left: 679px;
     top: 0;
@@ -212,7 +214,7 @@ main > section:nth-child(2) > :first-child { /*<--- heading should be positioned
 }
 
 /*line to divide*/
-main > section:nth-child(2) > div {
+main > section:nth-child(2) > div { /*<--- line should be positioned to the center (poddk hoyl blnn)*/
     position: absolute;
     border: 0.5px solid black;
     /*width: 618px;*/
@@ -224,22 +226,22 @@ main > section:nth-child(2) > div {
 
 /*left aside container*/
 main > section:nth-child(2) > :nth-child(2) {
+    border: 1px solid red;
     display: inline-block;
     position: relative;
-    border: 2px solid red;
     top: 103px;
-    left: 30px;
+    left: 32px;
     height: 90vh;
     width: 46vw;
 }
 
 /*right aside container*/
 main > section:nth-child(2) > :nth-child(4) {
+    border: 1px solid red;
     display: inline-block;
     position: relative;
-    border: 1px solid red;
-    top: 20px;
-    left: 41px;
+    top: 19px;
+    left: 42px;
     height: 90vh;
     width: 46vw;
 }
