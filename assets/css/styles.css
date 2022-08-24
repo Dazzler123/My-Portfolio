@@ -245,3 +245,12 @@ main > section:nth-child(2) > :nth-child(4) {
     height: 86vh;
     width: 46vw;
 }
+
+/*lyceum logo icon*/
+#lyceum_logo {
+    position: absolute;
+    width: 112px;
+    height: 102px;
+    left: 596px;
+    top: -1px;
+}
