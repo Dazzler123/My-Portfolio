@@ -232,3 +232,14 @@ main > section:nth-child(2) > :nth-child(2) {
     height: 90vh;
     width: 46vw;
 }
+
+/*right aside container*/
+main > section:nth-child(2) > :nth-child(4) {
+    display: inline-block;
+    position: relative;
+    border: 1px solid red;
+    top: 20px;
+    left: 41px;
+    height: 90vh;
+    width: 46vw;
+}
