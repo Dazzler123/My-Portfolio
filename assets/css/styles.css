@@ -200,4 +200,13 @@ main > section:nth-child(2) {
     height: 919px;
 }
 
+/*heading*/
+main > section:nth-child(2) > :first-child {  /*<--- heading should be positioned to the center (hoyl blnn)*/
+    position: absolute;
+    left: 679px;
+    top: 0;
 
+    font-family: 'system-ui';
+    font-weight: 600;
+    font-size: 32px;
+}
