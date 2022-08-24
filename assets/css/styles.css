@@ -229,9 +229,9 @@ main > section:nth-child(2) > :nth-child(2) {
     border: 1px solid red;
     display: inline-block;
     position: relative;
-    top: 103px;
+    top: 134px;
     left: 32px;
-    height: 90vh;
+    height: 86vh;
     width: 46vw;
 }
 
@@ -240,8 +240,8 @@ main > section:nth-child(2) > :nth-child(4) {
     border: 1px solid red;
     display: inline-block;
     position: relative;
-    top: 19px;
+    top: -16px;
     left: 42px;
-    height: 90vh;
+    height: 86vh;
     width: 46vw;
 }
