@@ -84,7 +84,7 @@ header > nav > ul > li > a {
 
 /*change color while hovering*/
 header > nav > ul > li > a:hover, header > nav > ul > li:hover {
-    color: #761fe1;
+    color: #ce489e;
 }
 
 /*===================!*Personal info ====================================================*!*/
@@ -186,7 +186,7 @@ main > section:nth-child(1) > aside > button {
     border-radius: 10px;
 
     font-family: 'system-ui';
+    color: white;
     font-weight: 400;
     font-size: 20px;
-    line-height: 24px;
 }
