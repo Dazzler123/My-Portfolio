@@ -190,3 +190,14 @@ main > section:nth-child(1) > aside > button {
     font-weight: 400;
     font-size: 20px;
 }
+
+/*===================!*Education ====================================================*!*/
+/*section container*/
+main > section:nth-child(2) {
+    /* display: block; */
+    top: 41px;
+    position: relative;
+    height: 919px;
+}
+
+
