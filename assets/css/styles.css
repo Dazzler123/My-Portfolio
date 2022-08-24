@@ -210,3 +210,14 @@ main > section:nth-child(2) > :first-child {  /*<--- heading should be positione
     font-weight: 600;
     font-size: 32px;
 }
+
+/*line to divide*/
+ main > section:nth-child(2) > div {
+     position: absolute;
+     border: 0.5px solid black;
+     /*width: 618px;*/
+     height: 618px;
+     left: 747.5px;
+     top: 135px;
+     /*transform: rotate(90deg);*/
+ }
