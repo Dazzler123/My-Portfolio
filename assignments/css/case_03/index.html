@@ -20,10 +20,25 @@
         }
 
         /*<!--red like circle-->*/
-        body > div:nth-child(1) > div {
+        body > div:nth-child(1) > div:first-child {
             position: fixed;
             /* border: 2px solid red; */
             background-color: red;
+            border-radius: 70%;
+            height: 34vh;
+            width: 16vw;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        /*white circle*/
+        body > div:nth-child(1) > div:last-child {
+            position: fixed;
+            /* border: 2px solid red; */
+            background-color: white;
             border-radius: 70%;
             height: 34vh;
             width: 16vw;
@@ -136,6 +151,9 @@
 <!--light grey like circle (fixed)-->
 <div>
     <!--red like circle (fixed)-->
+    <div></div>
+
+    <!--white circle (fixed)-->
     <div></div>
 </div>
 
