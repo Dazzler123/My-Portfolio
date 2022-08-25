@@ -5,8 +5,8 @@
     <title>Assignment 3 - Case 03</title>
     <style>
         /*<!--light grey like circle-->*/
-        body > div {
-            position: absolute;
+        body > div:nth-child(1) {
+            position: fixed;
             /* border: 2px solid red; */
             background-color: #939583;
             border-radius: 70%;
@@ -20,8 +20,8 @@
         }
 
         /*<!--red like circle-->*/
-        body > div > div {
-            position: absolute;
+        body > div:nth-child(1) > div {
+            position: fixed;
             /* border: 2px solid red; */
             background-color: red;
             border-radius: 70%;
@@ -35,33 +35,46 @@
         }
 
         /*<!--purple like circle-->*/
-        body > div > div > div {
-            position: absolute;
+        body > div:nth-child(2) {
+            position: relative;
             /* border: 2px solid red; */
             background-color: #81436f;
             border-radius: 70%;
-            height: 34vh;
-            width: 16vw;
-            top: 0px;
+            height: 224px;
+            width: 227px;
+            top: 241px;
             left: 0;
             right: 0;
             /* bottom: 0; */
             margin: auto;
         }
 
+        body > div:nth-child(2) > h3 {
+            position: relative;
+            color: white;
+            top: 95px;
+            font-family: system-ui;
+            left: 79px;
+            right: 0;
+            margin: auto;
+            font-size: 27px;
+        }
 
     </style>
 </head>
 <body>
 
-
-<!--light grey like circle-->
+<!--light grey like circle (fixed)-->
 <div>
-    <!--red like circle-->
-    <div>
-        <!--purple like circle-->
-        <div></div>
-    </div>
+    <!--red like circle (fixed)-->
+    <div></div>
 </div>
+
+<!--purple like circle-->
+<div>
+    <h3>Hello</h3>
+</div>
+
+
 </body>
 </html>
