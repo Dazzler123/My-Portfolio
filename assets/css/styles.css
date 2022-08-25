@@ -246,11 +246,101 @@ main > section:nth-child(2) > :nth-child(4) {
     width: 46vw;
 }
 
+/*left side container first div*/
+main > section:nth-child(2) > :nth-child(2) > div:nth-child(1) {
+    border: 1px solid red;
+    top: 0;
+    height: 166px;;
+}
+
 /*lyceum logo icon*/
 #lyceum_logo {
-    position: absolute;
+    position: relative;
     width: 112px;
     height: 102px;
     left: 596px;
     top: -1px;
+}
+
+/*lyceum details container*/
+#lyceum {
+    height: 119px;
+    top: 0;
+}
+
+/*lyceum heading*/
+#lyceum_heading {
+    position: absolute;
+    left: 229px;
+    top: 8px;
+
+    font-family: 'system-ui';
+    font-style: italic;
+    font-weight: 300;
+    font-size: 24px;
+}
+
+/*lyceum student year*/
+#lyceum_year {
+    position: absolute;
+    left: 461px;
+    top: 43px;
+
+    font-family: 'system-ui';
+    font-style: italic;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+/*lyceum grades*/
+#lyceum_grade > pre {
+    position: absolute;
+    left: 287px;
+    top: 68px;
+
+    font-family: 'system-ui';
+    font-style: italic;
+    font-weight: 300;
+    font-size: 20px;
+    text-align: right;
+}
+
+/*left side container second div*/
+main > section:nth-child(2) > :nth-child(2) > div:nth-child(2) {
+    border: 1px solid red;
+    top: 0;
+    height: 166px;;
+}
+
+/*eastern band container*/
+#eb_container {
+    height: 119px;
+    top: 0;
+}
+
+
+/*lyceum DNA logo*/
+#lyceum_DNA_logo {
+    position: relative;
+    width: 82px;
+    height: 66px;
+    left: 600px;
+    top: 212px;
+}
+
+/*eastern band heading*/
+#eastern_band {
+    position: absolute;
+    left: 283px;
+    top: 1412px;
+
+    font-family: 'system-ui';
+    font-style: italic;
+    font-weight: 300;
+    font-size: 24px;
+}
+
+/*eastern band year period*/
+#eb_year {
+    position: absolute;
 }
