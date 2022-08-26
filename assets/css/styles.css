@@ -6,6 +6,9 @@
 /*    top: 0;*/
 /*}*/
 
+
+/*=====================!* Common ==================================================*!*/
+
 /*body > div{*/
 /*    position: absolute;*/
 /*    height: 100vh;*/
@@ -26,9 +29,12 @@
 /*    !*top: 0;*!*/
 /*}*/
 
-/*body > section{ */
-/*    background-color: transparent */
-/*}*/
+/*all contents inside main in common*/
+body > main {
+    margin: 0;
+    width: 100%;
+    /*overflow-x: hidden;*/
+}
 
 /*=====================!*Header==================================================*!*/
 
