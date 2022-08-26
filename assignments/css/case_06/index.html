@@ -11,10 +11,41 @@
 
         section {
             border: 2px solid red;
-            display: grid;
             height: 608px;
             width: 100%;
+
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 10px;
         }
+
+        section > div {
+            /*border: 2px solid blue;*/
+            box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.68);
+        }
+
+        /*div 1*/
+        section > div:nth-child(1) {
+            grid-row: 1/2;
+            grid-column: 1/3;
+            background-color: red;
+        }
+
+        /*div 4*/
+        section > div:nth-child(4) {
+            grid-column: 4/5;
+            grid-row: 1/4;
+            background-color: red;
+        }
+
+        /*div 10*/
+        section > div:nth-child(10) {
+            grid-column: 2/4;
+            grid-row: 3/4;
+            background-color: #3b2177;
+        }
+
 
     </style>
 </head>
