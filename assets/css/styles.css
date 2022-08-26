@@ -39,7 +39,8 @@ body > header {
     top: 0;
     height: 57px;
     position: fixed;
-    width: 100vw;
+    z-index: 1;
+    width: 100%;
 }
 
 /*icon*/
