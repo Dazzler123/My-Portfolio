@@ -2,9 +2,97 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Assignment 5 - Case 05</title>
+    <title>Grid Layout</title>
+    <style>
+        section {
+            /*border: 2px solid red;*/
+            height: 600px;
+            width: 100%;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        section > div {
+            /*border: 1px solid blue;*/
+        }
+
+        /*div 1*/
+        section > div:nth-child(1) {
+            background-color: blue;
+        }
+
+        /*div 2*/
+        section > div:nth-child(2) {
+            background-color: yellow;
+        }
+
+        /*div 3*/
+        section > div:nth-child(3) {
+            background-color: brown;
+        }
+
+        /*div 4*/
+        section > div:nth-child(4) {
+            background-color: red;
+        }
+
+        /*div 5*/
+        section > div:nth-child(5) {
+            background-color: dimgrey;
+        }
+
+        /*div 6*/
+        section > div:nth-child(6) {
+            background-color: rosybrown;
+        }
+
+        /*div 7*/
+        section > div:nth-child(7) {
+            background-color: orange;
+        }
+
+        /*div 8*/
+        section > div:nth-child(8) {
+            background-color: deeppink;
+        }
+
+        /*div 9*/
+        section > div:nth-child(9) {
+            background-color: royalblue;
+        }
+
+        /*div 10*/
+        section > div:nth-child(10) {
+            background-color: aqua;
+        }
+
+        /*div 11*/
+        section > div:nth-child(11) {
+            background-color: indigo;
+        }
+
+        /*div 12*/
+        section > div:nth-child(12) {
+            background-color: chartreuse;
+        }
+
+    </style>
 </head>
 <body>
-
+<section>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</section>
 </body>
 </html>
