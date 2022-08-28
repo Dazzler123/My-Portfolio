@@ -162,11 +162,24 @@ main > section:nth-child(1) > article > dd > pre {
     text-align: left;
 }
 
+/*aside container*/
+main > section:nth-child(1) > aside {
+    position: absolute;
+    display: inline-block;
+    margin: 0;
+    top: 492px;
+    left: 0;
+    height: 61vh;
+    /*border: 2px solid red;*/
+    width: 97%;
+}
+
 /*about me*/
 main > section:nth-child(1) > aside > h3 {
     position: absolute;
-    left: 120px;
-    top: 543px;
+    left: 138px;
+    top: 72px;
+    text-align: left;
 
     font-family: 'system-ui';
     font-weight: 400;
@@ -176,8 +189,8 @@ main > section:nth-child(1) > aside > h3 {
 /*about me description*/
 main > section:nth-child(1) > aside pre {
     position: absolute;
-    left: 121px;
-    top: 622px;
+    left: 137px;
+    top: 150px;
     text-align: left;
 
     font-family: system-ui;
@@ -190,11 +203,11 @@ main > section:nth-child(1) > aside > button {
     position: absolute;
     width: 234px;
     height: 52px;
-    left: 123px;
-    top: 833px;
+    left: 135px;
+    top: 369px;
+
     background: #317A30;
     border-radius: 10px;
-
     font-family: 'system-ui';
     color: white;
     font-weight: 400;
