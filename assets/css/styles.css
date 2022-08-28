@@ -1,39 +1,29 @@
-/*background image*/
-/*main > img:nth-child(1) {*/
-/*    position: absolute;*/
-/*    width: 100vw;*/
-/*    height: 100vh;*/
-/*    top: 0;*/
-/*}*/
-
-
 /*=====================!* Common ==================================================*!*/
 
-/*body > div{*/
-/*    position: absolute;*/
+/*background image container*/
+/*body > div:nth-child(1) {*/
+/*    position: fixed;*/
+/*    margin: 0;*/
+/*    width: 100%;*/
 /*    height: 100vh;*/
-/*    width: 100vw;*/
 /*    background-image: url("../images/bgi.jpg");*/
-/*    !*background-color: #ff253a;*!*/
-/*    !*bac*!*/
+/*    background-size: cover;*/
 /*}*/
 
 
-/*body  {*/
-/*    background-image: url("../images/bgi.jpg");*/
-/*    background-attachment: block;*/
-/*    background-position: center;*/
-
-/*    !*width: 100vw;*!*/
-/*    !*height: 100vh;*!*/
-/*    !*top: 0;*!*/
-/*}*/
-
-/*all contents inside main in common*/
-body > main {
+/*all contents inside the body in common*/
+body {
     margin: 0;
     width: 100%;
+    color: white;
+
+    background-image: url("../images/bgi.jpg");
+    background-size: cover;
     /*overflow-x: hidden;*/
+}
+
+footer {
+    background-color: black;
 }
 
 /*=====================!*Header==================================================*!*/
