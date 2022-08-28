@@ -71,6 +71,7 @@ header > nav > ul > li {
     font-family: "system-ui";
     font-size: 17px;
     color: white;
+    cursor: pointer;
 }
 
 /*contact me*/
@@ -212,6 +213,12 @@ main > section:nth-child(1) > aside > button {
     color: white;
     font-weight: 400;
     font-size: 20px;
+    cursor: pointer;
+}
+
+/*download resume button click action*/
+#download_resume_btn:active {
+    background-color: #006021;
 }
 
 /*===================!*Education ====================================================*!*/
