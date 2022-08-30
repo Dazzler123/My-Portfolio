@@ -443,10 +443,9 @@ main > section:nth-child(2) > :nth-child(4) > div > dl > dd {
 /*section container*/
 main > section:nth-child(3) {
     /*border: 2px solid red;*/
-    /* display: block; */
-    top: 87px;
     position: relative;
-    height: 197vh;
+    top: 87px;
+    height: 203vh;
 }
 
 /*heading*/
@@ -464,11 +463,11 @@ main > section:nth-child(3) > :first-child { /*<--- heading should be exactly po
 
 /*blockquote*/
 main > section:nth-child(3) > blockquote > pre {
-    font-family: 'system-ui';
     position: relative;
     display: inline-block;
     left: 20%;
 
+    font-family: 'system-ui';
     font-style: italic;
     font-weight: 300;
     font-size: 24px;
@@ -590,10 +589,10 @@ main > section:nth-child(3) > :nth-child(5) {
 
 /*achievements container*/
 main > section:nth-child(3) > :nth-child(6) {
-    border: 2px solid red;
+    /*border: 2px solid red;*/
     position: relative;
     top: 59vh;
-    height: 82vh;
+    height: 98vh;
 }
 
 /*achievements ul */
@@ -611,4 +610,38 @@ main > section:nth-child(3) > :nth-child(6) > ul > li {
     font-style: italic;
     font-weight: 400;
     font-size: 20px;
+}
+
+/*images container*/
+main > section:nth-child(3) > :nth-child(6) > div {
+    position: relative;
+    display: inline-block;
+    top: 21vh;
+    left: 13vh;
+}
+
+/*left image*/
+main > section:nth-child(3) > :nth-child(6) > div > img:nth-child(1) {
+    position: relative;
+    height: 180px;
+    width: 350px;
+    padding-right: 30px;
+    border-radius: 20px;
+}
+
+/*middle image*/
+main > section:nth-child(3) > :nth-child(6) > div > img:nth-child(2) {
+    position: relative;
+    height: 300px;
+    width: 550px;
+    border-radius: 20px;
+}
+
+/*right image*/
+main > section:nth-child(3) > :nth-child(6) > div > img:nth-child(3) {
+    position: relative;
+    height: 180px;
+    width: 350px;
+    padding-left: 30px;
+    border-radius: 20px;
 }
