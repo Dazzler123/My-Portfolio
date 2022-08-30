@@ -229,11 +229,11 @@ main > section:nth-child(2) {
     /* display: block; */
     top: 83px;
     position: relative;
-    height: 919px;
+    height: 799px;
 }
 
 /*heading*/
-main > section:nth-child(2) > :first-child { /*<--- heading should be positioned to the center (poddk hoyl blnn)*/
+main > section:nth-child(2) > :first-child { /*<--- heading should be exactly positioned to the center (poddk hoyl blnn)*/
     /*border: 1px solid red;*/
     position: absolute;
     left: 679px;
@@ -245,7 +245,7 @@ main > section:nth-child(2) > :first-child { /*<--- heading should be positioned
 }
 
 /*line to divide*/
-main > section:nth-child(2) > div { /*<--- line should be positioned to the center (poddk hoyl blnn)*/
+main > section:nth-child(2) > div { /*<--- line should be exactly positioned to the center (poddk hoyl blnn)*/
     position: absolute;
     border: 0.5px solid white;
     /*width: 618px;*/
@@ -450,10 +450,11 @@ main > section:nth-child(3) {
 }
 
 /*heading*/
-main > section:nth-child(3) > :first-child { /*<--- heading should be positioned to the left (poddk hoyl blnn)*/
+main > section:nth-child(3) > :first-child { /*<--- heading should be exactly positioned to the left (poddk hoyl blnn)*/
     /*border: 1px solid red;*/
     position: relative;
-    left: 0;
+    display: inline-block;
+    left: 140px;
     top: 0;
 
     font-family: 'system-ui';
