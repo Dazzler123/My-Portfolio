@@ -645,3 +645,26 @@ main > section:nth-child(3) > :nth-child(6) > div > img:nth-child(3) {
     padding-left: 30px;
     border-radius: 20px;
 }
+
+
+/*===================!*Projects & Research ====================================================*!*/
+/*section container*/
+main > section:nth-child(4) {
+    border: 2px solid red;
+    position: relative;
+    top: 13vh;
+    height: 50vh;
+}
+
+/*heading*/
+main > section:nth-child(4) > :first-child {
+    /*border: 1px solid red;*/
+    position: relative;
+    display: inline-block;
+    left: 617px;
+    top: 19vh;
+
+    font-family: 'system-ui';
+    font-weight: 600;
+    font-size: 32px;
+}
