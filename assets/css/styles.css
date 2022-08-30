@@ -446,7 +446,7 @@ main > section:nth-child(3) {
     /* display: block; */
     top: 87px;
     position: relative;
-    height: 919px;
+    height: 197vh;
 }
 
 /*heading*/
@@ -535,9 +535,9 @@ main > section:nth-child(3) > :nth-child(4) > ul > li {
 
 /*technology icon container*/
 main > section:nth-child(3) > :nth-child(5) {
+    /*border: 2px solid red;*/
     position: absolute;
     top: 68vh;
-    /*border: 2px solid red;*/
     height: 35vh;
     left: 117px;
     width: 83%;
@@ -586,4 +586,11 @@ main > section:nth-child(3) > :nth-child(5) {
     height: 78px;
     top: 19vh;
     left: 72%;
+}
+
+/*achievements container*/
+main > section:nth-child(3) > :nth-child(6) {
+    border: 2px solid red;
+    position: relative;
+    top: 59vh;
 }
