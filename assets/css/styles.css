@@ -488,3 +488,27 @@ main > section:nth-child(3) > blockquote > pre > h4 {
     font-size: 16px;
     /*text-align: center;*/
 }
+
+/*left aside container*/
+main > section:nth-child(3) > :nth-child(3) {
+    /*border: 2px solid red;*/
+    display: inline-block;
+    position: absolute;
+    left: 8%;
+    top: 35vh;
+}
+
+/*left aside container ul*/
+main > section:nth-child(3) > :nth-child(3) > ul {
+    list-style: none;
+}
+
+/*left aside container ul lists*/
+main > section:nth-child(3) > :nth-child(3) > ul > li {
+    padding: 13px;
+    font-family: system-ui;
+    font-size: 20px;
+}
+
+
+
