@@ -88,7 +88,6 @@ header > nav > ul > li > a:hover, header > nav > ul > li:hover {
 /*===================!*Personal info ====================================================*!*/
 /*section container*/
 main > section:nth-child(1) {
-    /* display: block; */
     top: 57px;
     position: relative;
     height: 974px;
@@ -166,13 +165,13 @@ main > section:nth-child(1) > article > dd > pre {
 
 /*aside container*/
 main > section:nth-child(1) > aside {
+    /*border: 2px solid red;*/
     position: absolute;
     display: inline-block;
     margin: 0;
     top: 492px;
     left: 0;
     height: 61vh;
-    /*border: 2px solid red;*/
     width: 97%;
 }
 
@@ -226,15 +225,13 @@ main > section:nth-child(1) > aside > button {
 /*section container*/
 main > section:nth-child(2) {
     /*border: 2px solid red;*/
-    /* display: block; */
     top: 83px;
     position: relative;
     height: 799px;
 }
 
 /*heading*/
-main > section:nth-child(2) > :first-child { /*<--- heading should be exactly positioned to the center (poddk hoyl blnn)*/
-    /*border: 1px solid red;*/
+main > section:nth-child(2) > :first-child {
     position: absolute;
     left: 679px;
     top: 0;
@@ -245,7 +242,7 @@ main > section:nth-child(2) > :first-child { /*<--- heading should be exactly po
 }
 
 /*line to divide*/
-main > section:nth-child(2) > div { /*<--- line should be exactly positioned to the center (poddk hoyl blnn)*/
+main > section:nth-child(2) > div {
     position: absolute;
     border: 0.5px solid white;
     /*width: 618px;*/
@@ -349,7 +346,7 @@ main > section:nth-child(2) > :nth-child(2) > div:nth-child(2) {
     /*border: 1px solid red;*/
     position: relative;
     top: 0;
-    height: 166px;;
+    height: 166px;
 }
 
 /*eastern band container*/
@@ -357,7 +354,6 @@ main > section:nth-child(2) > :nth-child(2) > div:nth-child(2) {
     height: 119px;
     top: 0;
 }
-
 
 /*lyceum DNA logo*/
 #lyceum_DNA_logo {
@@ -449,8 +445,7 @@ main > section:nth-child(3) {
 }
 
 /*heading*/
-main > section:nth-child(3) > :first-child { /*<--- heading should be exactly positioned to the left (poddk hoyl blnn)*/
-    /*border: 1px solid red;*/
+main > section:nth-child(3) > :first-child {
     position: relative;
     display: inline-block;
     left: 140px;
@@ -658,7 +653,6 @@ main > section:nth-child(4) {
 
 /*heading*/
 main > section:nth-child(4) > :first-child {
-    /*border: 1px solid red;*/
     position: relative;
     display: inline-block;
     left: 617px;
