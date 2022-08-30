@@ -498,12 +498,12 @@ main > section:nth-child(3) > :nth-child(3) {
     top: 35vh;
 }
 
-/*left aside container ul*/
+/*left aside ul*/
 main > section:nth-child(3) > :nth-child(3) > ul {
     list-style: none;
 }
 
-/*left aside container ul lists*/
+/*left aside ul lists*/
 main > section:nth-child(3) > :nth-child(3) > ul > li {
     padding: 13px;
     font-family: system-ui;
@@ -519,19 +519,71 @@ main > section:nth-child(3) > :nth-child(4) {
     top: 37vh;
 }
 
-/*right aside container heading*/
+/*right aside heading*/
 main > section:nth-child(3) > :nth-child(4) > h4 {
     font-family: system-ui;
     font-size: 22px;
     font-weight: 560;
 }
 
-/*left aside container ul lists*/
+/*right aside ul lists*/
 main > section:nth-child(3) > :nth-child(4) > ul > li {
     padding: 2px;
     font-family: system-ui;
     font-size: 22px;
 }
 
+/*technology icon container*/
+main > section:nth-child(3) > :nth-child(5) {
+    position: absolute;
+    top: 68vh;
+    /*border: 2px solid red;*/
+    height: 35vh;
+    left: 117px;
+    width: 83%;
+}
 
+/*css icon img*/
+#css_icon {
+    position: relative;
+    width: 104px;
+    height: 97px;
+    top: 14vh;
+    left: 21%;
+}
 
+/*html icon img*/
+#html_icon {
+    position: relative;
+    width: 139px;
+    height: 126px;
+    top: 15vh;
+    left: 22%;
+}
+
+/*java icon img*/
+#java_icon {
+    position: absolute;
+    width: 216px;
+    height: 221px;
+    top: 1vh;
+    left: 41%;
+}
+
+/*javascript icon img*/
+#js_icon {
+    position: absolute;
+    width: 98px;
+    height: 110px;
+    top: 16vh;
+    left: 60%;
+}
+
+/*intellij icon img*/
+#intelliJ_icon {
+    position: absolute;
+    width: 83px;
+    height: 78px;
+    top: 19vh;
+    left: 72%;
+}
