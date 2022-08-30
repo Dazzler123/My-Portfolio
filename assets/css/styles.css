@@ -593,4 +593,22 @@ main > section:nth-child(3) > :nth-child(6) {
     border: 2px solid red;
     position: relative;
     top: 59vh;
+    height: 82vh;
+}
+
+/*achievements ul */
+main > section:nth-child(3) > :nth-child(6) > ul {
+    position: relative;
+    display: inline-block;
+    top: 8vh;
+    left: 10vw;
+}
+
+/*achievements ul list*/
+main > section:nth-child(3) > :nth-child(6) > ul > li {
+    padding: 10px;
+    font-family: 'system-ui';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 20px;
 }
