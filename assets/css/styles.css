@@ -444,7 +444,7 @@ main > section:nth-child(2) > :nth-child(4) > div > dl > dd {
 main > section:nth-child(3) {
     /*border: 2px solid red;*/
     /* display: block; */
-    top: 51px;
+    top: 87px;
     position: relative;
     height: 919px;
 }
@@ -460,4 +460,31 @@ main > section:nth-child(3) > :first-child { /*<--- heading should be exactly po
     font-family: 'system-ui';
     font-weight: 600;
     font-size: 32px;
+}
+
+/*blockquote*/
+main > section:nth-child(3) > blockquote > pre {
+    font-family: 'system-ui';
+    position: relative;
+    display: inline-block;
+    left: 20%;
+
+    font-style: italic;
+    font-weight: 300;
+    font-size: 24px;
+    /*text-align: center;*/
+}
+
+/*blockquote writer's name*/
+main > section:nth-child(3) > blockquote > pre > h4 {
+    position: relative;
+    display: inline-block;
+    left: 34%;
+    top: -18px;
+
+    font-family: 'system-ui';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    /*text-align: center;*/
 }
