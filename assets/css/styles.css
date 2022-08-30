@@ -227,7 +227,7 @@ main > section:nth-child(1) > aside > button {
 main > section:nth-child(2) {
     /*border: 2px solid red;*/
     /* display: block; */
-    top: 41px;
+    top: 83px;
     position: relative;
     height: 919px;
 }
@@ -437,4 +437,26 @@ main > section:nth-child(2) > :nth-child(4) > div > dl > dd {
     font-size: 20px;
     left: -38px;
     top: 6px;
+}
+
+/*===================!*Skills & Achievements ====================================================*!*/
+/*section container*/
+main > section:nth-child(3) {
+    /*border: 2px solid red;*/
+    /* display: block; */
+    top: 51px;
+    position: relative;
+    height: 919px;
+}
+
+/*heading*/
+main > section:nth-child(3) > :first-child { /*<--- heading should be positioned to the left (poddk hoyl blnn)*/
+    /*border: 1px solid red;*/
+    position: relative;
+    left: 0;
+    top: 0;
+
+    font-family: 'system-ui';
+    font-weight: 600;
+    font-size: 32px;
 }
