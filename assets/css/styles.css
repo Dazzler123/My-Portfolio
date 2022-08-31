@@ -748,7 +748,7 @@ main > section:nth-child(5) > article {
     height: 51vh;
 }
 
-/*mate's profile pic image 1 */
+/*first mate's profile pic image 1 */
 main > section:nth-child(5) > article > :nth-child(1) {
     position: relative;
     display: inline-block;
@@ -771,7 +771,21 @@ main > section:nth-child(5) > article > :nth-child(2) {
     font-size: 24px;
 }
 
-/*mate's profile pic image 2 */
+/*first mate's name*/
+main > section:nth-child(5) > article > :nth-child(2) > h4 {
+    position: absolute;
+    display: inline-block;
+    left: 58%;
+    top: 72px;
+
+    font-family: 'system-ui';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+
+/*second mate's profile pic image 2 */
 main > section:nth-child(5) > article > :nth-child(3) {
     position: relative;
     width: 51px;
@@ -792,4 +806,17 @@ main > section:nth-child(5) > article > :nth-child(4) {
     font-style: italic;
     font-weight: 100;
     font-size: 24px;
+}
+
+/*second mate's name*/
+main > section:nth-child(5) > article > :nth-child(4) > h4 {
+    position: absolute;
+    display: inline-block;
+    left: 58%;
+    top: 74px;
+
+    font-family: 'system-ui';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
 }
