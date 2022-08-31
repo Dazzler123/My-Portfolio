@@ -739,3 +739,57 @@ main > section:nth-child(5) > :first-child {
     font-weight: 600;
     font-size: 32px;
 }
+
+/*article container*/
+main > section:nth-child(5) > article {
+    border: 2px solid red;
+    position: relative;
+    top: 33vh;
+    height: 51vh;
+}
+
+/*mate's profile pic image 1 */
+main > section:nth-child(5) > article > :nth-child(1) {
+    position: relative;
+    display: inline-block;
+    width: 51px;
+    height: 54px;
+    left: 11%;
+}
+
+/*first mate's comment*/
+main > section:nth-child(5) > article > :nth-child(2) {
+    position: absolute;
+    display: inline-block;
+    width: 55vw;
+    top: 4vh;
+    left: 14%;
+
+    font-family: 'system-ui';
+    font-style: italic;
+    font-weight: 100;
+    font-size: 24px;
+}
+
+/*mate's profile pic image 2 */
+main > section:nth-child(5) > article > :nth-child(3) {
+    position: relative;
+    width: 51px;
+    height: 54px;
+    top: 22vh;
+    left: 112px;
+}
+
+/*second mate's comment*/
+main > section:nth-child(5) > article > :nth-child(4) {
+    position: relative;
+    display: inline-block;
+    width: 55vw;
+    top: 26vh;
+    left: 7%;
+
+    font-family: 'system-ui';
+    font-style: italic;
+    font-weight: 100;
+    font-size: 24px;
+}
