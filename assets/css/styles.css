@@ -725,7 +725,7 @@ main > section:nth-child(5) {
     border: 2px solid red;
     position: relative;
     top: 13vh;
-    height: 133vh;
+    height: 99vh;
 }
 
 /*heading*/
@@ -742,7 +742,7 @@ main > section:nth-child(5) > :first-child {
 
 /*article container*/
 main > section:nth-child(5) > article {
-    border: 2px solid red;
+    /*border: 2px solid red;*/
     position: relative;
     top: 33vh;
     height: 51vh;
@@ -784,13 +784,12 @@ main > section:nth-child(5) > article > :nth-child(2) > h4 {
     font-size: 16px;
 }
 
-
 /*second mate's profile pic image 2 */
 main > section:nth-child(5) > article > :nth-child(3) {
     position: relative;
     width: 51px;
     height: 54px;
-    top: 22vh;
+    top: 26vh;
     left: 112px;
 }
 
@@ -799,7 +798,7 @@ main > section:nth-child(5) > article > :nth-child(4) {
     position: relative;
     display: inline-block;
     width: 55vw;
-    top: 26vh;
+    top: 30vh;
     left: 7%;
 
     font-family: 'system-ui';
