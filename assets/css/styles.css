@@ -775,8 +775,8 @@ main > section:nth-child(5) > article > :nth-child(2) {
 main > section:nth-child(5) > article > :nth-child(2) > h4 {
     position: absolute;
     display: inline-block;
-    left: 58%;
-    top: 72px;
+    left: 51%;
+    top: 75px;
 
     font-family: 'system-ui';
     font-style: normal;
@@ -811,8 +811,8 @@ main > section:nth-child(5) > article > :nth-child(4) {
 main > section:nth-child(5) > article > :nth-child(4) > h4 {
     position: absolute;
     display: inline-block;
-    left: 58%;
-    top: 74px;
+    left: 51%;
+    top: 75px;
 
     font-family: 'system-ui';
     font-style: normal;
