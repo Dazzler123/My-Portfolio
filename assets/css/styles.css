@@ -498,8 +498,8 @@ main > section:nth-child(3) > :nth-child(3) > ul {
 }
 
 /*left aside ul lists*/
-main > section:nth-child(3) > :nth-child(3) > ul > li {
-    padding: 13px;
+main > section:nth-child(3) > :nth-child(3) > ul > li > pre {
+    padding: 3px;
     font-family: system-ui;
     font-size: 20px;
 }
