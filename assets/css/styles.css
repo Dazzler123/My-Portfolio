@@ -22,10 +22,6 @@ body {
     /*overflow-x: hidden;*/
 }
 
-footer {
-    background-color: black;
-}
-
 /*=====================!*Header==================================================*!*/
 
 /*container*/
@@ -722,10 +718,10 @@ main > section:nth-child(4) > div > img:nth-child(3) {
 /*===================!*Collaborator's recommendation ====================================================*!*/
 /*section container*/
 main > section:nth-child(5) {
-    border: 2px solid red;
+    /*border: 2px solid red;*/
     position: relative;
     top: 13vh;
-    height: 99vh;
+    height: 117vh;
 }
 
 /*heading*/
@@ -818,4 +814,15 @@ main > section:nth-child(5) > article > :nth-child(4) > h4 {
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
+}
+
+
+/*===================!* Footer ====================================================*!*/
+/*footer container*/
+footer {
+    border: 2px solid red;
+    background-color: #070c30;
+    position: relative;
+    top: 13vh;
+    height: 35vh;
 }
