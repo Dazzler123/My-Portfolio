@@ -645,7 +645,7 @@ main > section:nth-child(3) > :nth-child(6) > div > img:nth-child(3) {
 /*===================!*Projects & Research ====================================================*!*/
 /*section container*/
 main > section:nth-child(4) {
-    border: 2px solid red;
+    /*border: 2px solid red;*/
     position: relative;
     top: 13vh;
     height: 133vh;
@@ -684,7 +684,7 @@ main > section:nth-child(4) > ul > li {
 
 /*projects images container*/
 main > section:nth-child(4) > div {
-    border: 2px solid red;
+    /*border: 2px solid red;*/
     position: relative;
     top: 77vh;
     left: 6%;
