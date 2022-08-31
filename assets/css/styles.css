@@ -648,12 +648,12 @@ main > section:nth-child(4) {
     border: 2px solid red;
     position: relative;
     top: 13vh;
-    height: 50vh;
+    height: 197vh;
 }
 
 /*heading*/
 main > section:nth-child(4) > :first-child {
-    position: relative;
+    position: absolute;
     display: inline-block;
     left: 617px;
     top: 19vh;
@@ -661,4 +661,23 @@ main > section:nth-child(4) > :first-child {
     font-family: 'system-ui';
     font-weight: 600;
     font-size: 32px;
+}
+
+/*projects list ul container*/
+main > section:nth-child(4) > ul {
+    position: absolute;
+    display: inline-block;
+    left: 7%;
+    top: 35vh;
+}
+
+/*projects list li*/
+main > section:nth-child(4) > ul > li {
+    padding: 18px;
+    list-style: none;
+
+    font-family: 'system-ui';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 21px;
 }
