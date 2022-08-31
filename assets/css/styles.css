@@ -717,3 +717,25 @@ main > section:nth-child(4) > div > img:nth-child(3) {
     padding-left: 30px;
     border-radius: 20px;
 }
+
+
+/*===================!*Collaborator's recommendation ====================================================*!*/
+/*section container*/
+main > section:nth-child(5) {
+    border: 2px solid red;
+    position: relative;
+    top: 13vh;
+    height: 133vh;
+}
+
+/*heading*/
+main > section:nth-child(5) > :first-child {
+    position: relative;
+    display: inline-block;
+    left: 143px;
+    top: 29vh;
+
+    font-family: 'system-ui';
+    font-weight: 600;
+    font-size: 32px;
+}
