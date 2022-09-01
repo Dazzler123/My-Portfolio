@@ -920,11 +920,11 @@ footer > :nth-child(7) {
 /*trademark and copyrights*/
 footer > small {
     position: relative;
-    left: 75%;
+    left: 76%;
     top: -3vh;
     font-family: system-ui;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 250;
     font-size: 16px;
 }
 
