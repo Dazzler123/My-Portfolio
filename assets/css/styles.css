@@ -820,48 +820,60 @@ main > section:nth-child(5) > article > :nth-child(4) > h4 {
 /*===================!* Footer ====================================================*!*/
 /*footer container*/
 footer {
-    border: 2px solid red;
-    background-color: #070c30;
+    /*border: 2px solid red;*/
+    background-color: black;
     position: relative;
     top: 13vh;
-    height: 35vh;
+    height: 220px;
 }
 
 /*heading*/
 footer > h3 > dfn {
     position: relative;
-    top: 2vh;
+    top: 3vh;
     left: 3%;
 
-    font-family: system-ui;
+    font-family: "Agency FB";
     font-style: normal;
     font-weight: 400;
-    font-size: 35px;
+    font-size: 40px;
 }
 
 /*phone icon image*/
 footer > :nth-child(2) {
-    border: 2px solid red;
+    position: relative;
+    border-radius: 100%;
+    left: 3%;
+    top: 4vh;
     width: 32px;
     height: 32px;
 }
 
 /*whatsapp icon image*/
 footer > :nth-child(3) {
-    border: 2px solid red;
+    position: relative;
+    left: 50px;
+    top: 4vh;
     width: 32px;
     height: 32px;
 }
 
 /*email icon image*/
 footer > :nth-child(4) {
-    border: 2px solid red;
+    position: relative;
+    top: 11vh;
+    left: -26px;
+
+    border-radius: 100%;
     width: 32px;
     height: 32px;
 }
 
 /*mobile number*/
 footer > address > a:nth-child(1) {
+    position: relative;
+    left: 9%;
+    top: -3px;
     text-decoration: none;
     color: white;
 
@@ -873,6 +885,9 @@ footer > address > a:nth-child(1) {
 
 /*mail address*/
 footer > address > a:nth-child(2) {
+    position: relative;
+    left: -49px;
+    top: 47px;
     text-decoration: none;
     color: white;
 
@@ -885,6 +900,8 @@ footer > address > a:nth-child(2) {
 /*telegram icon image*/
 footer > :nth-child(6) {
     position: relative;
+    left: 87%;
+    top: -5vh;
     border-radius: 100%;
     width: 72px;
     height: 69px;
@@ -893,6 +910,8 @@ footer > :nth-child(6) {
 /*linkdin icon image*/
 footer > :nth-child(7) {
     position: relative;
+    left: 88%;
+    top: -5vh;
     border-radius: 100%;
     width: 72px;
     height: 69px;
@@ -900,6 +919,9 @@ footer > :nth-child(7) {
 
 /*trademark and copyrights*/
 footer > small {
+    position: relative;
+    left: 75%;
+    top: -3vh;
     font-family: system-ui;
     font-style: normal;
     font-weight: 400;
