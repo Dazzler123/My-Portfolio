@@ -838,3 +838,71 @@ footer > h3 > dfn {
     font-weight: 400;
     font-size: 35px;
 }
+
+/*phone icon image*/
+footer > :nth-child(2) {
+    border: 2px solid red;
+    width: 32px;
+    height: 32px;
+}
+
+/*whatsapp icon image*/
+footer > :nth-child(3) {
+    border: 2px solid red;
+    width: 32px;
+    height: 32px;
+}
+
+/*email icon image*/
+footer > :nth-child(4) {
+    border: 2px solid red;
+    width: 32px;
+    height: 32px;
+}
+
+/*mobile number*/
+footer > address > a:nth-child(1) {
+    text-decoration: none;
+    color: white;
+
+    font-family: system-ui;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+/*mail address*/
+footer > address > a:nth-child(2) {
+    text-decoration: none;
+    color: white;
+
+    font-family: system-ui;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+/*telegram icon image*/
+footer > :nth-child(6) {
+    position: relative;
+    border-radius: 100%;
+    width: 72px;
+    height: 69px;
+}
+
+/*linkdin icon image*/
+footer > :nth-child(7) {
+    position: relative;
+    border-radius: 100%;
+    width: 72px;
+    height: 69px;
+}
+
+/*trademark and copyrights*/
+footer > small {
+    font-family: system-ui;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+}
+
