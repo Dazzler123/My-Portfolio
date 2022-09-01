@@ -826,3 +826,15 @@ footer {
     top: 13vh;
     height: 35vh;
 }
+
+/*heading*/
+footer > h3 > dfn {
+    position: relative;
+    top: 2vh;
+    left: 3%;
+
+    font-family: system-ui;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+}
