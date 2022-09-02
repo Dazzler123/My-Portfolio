@@ -4,37 +4,44 @@
     <meta charset="UTF-8">
     <title>Transitions - Case 02</title>
     <style>
+        body {
+            background-color: #4d97ff;
+        }
+
         body > div {
-            border: 2px solid red;
-            position: relative;
-            top: 30vh;
+            border: 10px solid white;
+            position: absolute;
+            top: 0;
             left: 0;
             right: 0;
+            bottom: 0;
             margin: auto;
+
             height: 300px;
             width: 300px;
             border-radius: 100%;
+            background-color: gray;
         }
 
-        body > div > div {
-            border: 2px solid red;
-            position: relative;
-            top: 4%;
+        body > div > h3 {
+            position: absolute;
             left: 0;
+            top: 0;
             right: 0;
+            bottom: 0;
             margin: auto;
-            height: 275px;
-            width: 275px;
-            border-radius: 100%;
-            background-color: gray;
+            height: max-content;
+            width: max-content;
+            font-family: system-ui;
+            font-size: 35px;
+            color: white;
         }
     </style>
 </head>
 <body>
-<!--parent circle-->
-<div>
     <!--center grey circle-->
-    <div></div>
-</div>
+    <div>
+        <h3>RWAD</h3>
+    </div>
 </body>
 </html>
