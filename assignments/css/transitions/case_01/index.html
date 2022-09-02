@@ -3,8 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Transitions - Case 01</title>
+    <style>
+        body {
+            border: 2px solid red;
+            display: flex;
+            flex-direction: column;
+        }
+
+        div {
+            background-color:#9c27b0;
+            height: 50px;
+            width: 40px;
+            margin: 40px;
+        }
+
+        div:hover {
+            border: 2px solid red;
+            width: 15%;
+        }
+
+        div > h4 {
+            position: relative;
+            left: 20px;
+        }
+    </style>
 </head>
 <body>
-
+<div><h4>Menu One</h4></div>
+<div><h4>Menu Two</h4></div>
+<div><h4>Menu Three</h4></div>
+<div><h4>Menu Five</h4></div>
+<div><h4>Menu Six</h4></div>
 </body>
 </html>
