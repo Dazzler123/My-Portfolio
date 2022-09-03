@@ -883,6 +883,11 @@ footer > address > a:nth-child(1) {
     font-size: 20px;
 }
 
+/*mobile number - hover*/
+footer > address > a:nth-child(1):hover {
+    color: darkorange;
+}
+
 /*mail address*/
 footer > address > a:nth-child(2) {
     position: relative;
@@ -896,6 +901,11 @@ footer > address > a:nth-child(2) {
     font-weight: 400;
     font-size: 20px;
 }
+
+/*!*mail address - hover*!*/
+/*footer > address > a:nth-child(2) {*/
+/*    color: darkorange;*/
+/*}*/
 
 /*telegram icon image*/
 footer > :nth-child(6) {
