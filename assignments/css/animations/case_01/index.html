@@ -12,7 +12,7 @@
             border-radius: 20px;
 
             animation-name: div-animation;
-            animation-duration: 2s;
+            animation-duration: 5s;
             animation-iteration-count: infinite;
 
             margin: 0 0 0 1vw;
@@ -24,17 +24,25 @@
                 margin: 0 0 0 1vw;
             }
 
-            50% {
+            25% {
                 transform: rotate(180deg);
                 background-color: yellow;
                 margin: 0 0 0 85vw;
             }
 
-            100% {
+            50% {
                 transform: rotate(360deg);
                 background-color: red;
                 margin: 85vh 0 0 85vw;
             }
+
+            100% {
+                transform: rotate(180deg);
+                background-color: deeppink;
+                margin: 85vh 85vw 0 0;
+            }
+
+
         }
     </style>
 </head>
