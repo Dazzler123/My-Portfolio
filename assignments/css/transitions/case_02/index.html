@@ -23,6 +23,7 @@
             background-color: gray;
 
             border-top: 12px solid red;
+            cursor: pointer;
         }
 
         body > div > h3 {
@@ -38,13 +39,26 @@
             font-family: system-ui;
             font-size: 35px;
             color: white;
+
         }
+
+        /*while hovering*/
+        body > div:hover {
+            transition: all 2s;
+            transform: rotate(360deg);
+        }
+
+        body > div:hover > h3 {
+            transition: all 2s;
+            transform: rotate(-360deg);
+        }
+
     </style>
 </head>
 <body>
-    <!--center grey circle-->
-    <div>
-        <h3>RWAD</h3>
-    </div>
+<!--center grey circle-->
+<div>
+    <h3>RWAD</h3>
+</div>
 </body>
 </html>
