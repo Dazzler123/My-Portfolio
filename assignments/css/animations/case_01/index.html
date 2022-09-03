@@ -3,8 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Animations - Case 01</title>
+    <style>
+        div {
+            width: 200px;
+            height: 90px;
+            border: 2px solid black;
+            background-color: black;
+            border-radius: 20px;
+
+            animation-name: div-animation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+
+            margin: 0 0 0 0;
+        }
+
+        @keyframes div-animation {
+            0% {
+                background-color: #ff253a;
+                margin: 0 0 0 0;
+            }
+
+            100% {
+                background-color: #9c27b0;
+                margin: 0 0 0 500px;
+            }
+        }
+    </style>
 </head>
 <body>
-
+<div></div>
 </body>
 </html>
