@@ -941,39 +941,43 @@ footer > small {
 
 /*========================================!* R E S P O N S I V E ==================================================*!*/
 
-/*============================ Laptop L (1440px) ===============================*/
+/*============================ Laptop L (1440px) - From 1024px to 1440px ===============================*/
+@media all and (min-width: 1024px) and (max-width: 1440px) {
 
-/*======!*Header======*!*/
-/*all contents suitable with this resolution*/
-
-
-
-
-
-/*============================ Laptop (1024px) ===============================*/
-
-/*======!*Header======*!*/
+    /*======!*Header======*!*/
+    /*all contents suitable with this resolution*/
 
 
 
+}
+
+/*============================ Laptop (1024px) - From 768px to 1024px ===============================*/
+@media all and (min-width: 768px) and (max-width: 1024px) {
+
+    /*======!*Header======*!*/
+    /*all contents suitable with this resolution*/
 
 
 
-/*============================ Tablet (768px) ===============================*/
+}
+
+/*============================ Tablet (768px) - From 425px to 768px ===============================*/
+@media all and (min-width: 425px) and (max-width: 768px) {
+
+    /*======!*Header======*!*/
+    header {
+        background-color: #ff253a;
+    }
 
 
 
+}
+
+/*============================ Mobile L (425px) - From 375px to 425px ===============================*/
+@media all and (min-width: 375px) and (max-width: 425px) {
 
 
-
-
-/*============================ Mobile L (425px) ===============================*/
-
-
-
-
-
-
+}
 
 /*============================ Mobile M (375px) ===============================*/
 
