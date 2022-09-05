@@ -1,16 +1,5 @@
 /*=====================!* Common ==================================================*!*/
 
-/*background image container*/
-/*body > div:nth-child(1) {*/
-/*    position: fixed;*/
-/*    margin: 0;*/
-/*    width: 100%;*/
-/*    height: 100vh;*/
-/*    background-image: url("../images/bgi.jpg");*/
-/*    background-size: cover;*/
-/*}*/
-
-
 /*all contents inside the body in common*/
 body {
     margin: 0;
@@ -19,6 +8,7 @@ body {
 
     background-image: url("../images/bgi.jpg");
     background-size: cover;
+    background-attachment: fixed;
     /*overflow-x: hidden;*/
 }
 
