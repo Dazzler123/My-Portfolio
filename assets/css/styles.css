@@ -820,7 +820,7 @@ footer {
 /*heading*/
 footer > h3 > dfn {
     position: relative;
-    top: 3vh;
+    top: 26px;
     left: 3%;
 
     font-family: "Agency FB";
@@ -834,7 +834,7 @@ footer > :nth-child(2) {
     position: relative;
     border-radius: 100%;
     left: 3%;
-    top: 4vh;
+    top: 5vh;
     width: 32px;
     height: 32px;
 }
@@ -843,7 +843,7 @@ footer > :nth-child(2) {
 footer > :nth-child(3) {
     position: relative;
     left: 50px;
-    top: 4vh;
+    top: 5vh;
     width: 32px;
     height: 32px;
 }
@@ -863,7 +863,7 @@ footer > :nth-child(4) {
 footer > address > a:nth-child(1) {
     position: relative;
     left: 9%;
-    top: -3px;
+    top: 4px;
     text-decoration: none;
     color: white;
 
