@@ -3,8 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>Animations - Case 02</title>
+    <style>
+        div {
+            border: 1px solid red;
+            position: absolute;
+            height: 200px;
+            width: 200px;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            border-radius: 100%;
+
+            animation-name: div-animation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes div-animation {
+            0% {
+                height: 200px;
+                width: 200px;
+            }
+
+            /*50% {*/
+            /*    height: 250px;*/
+            /*    width: 250px;*/
+            /*}*/
+
+            100% {
+                height: 300px;
+                width: 300px;
+                border: 0 solid white;
+            }
+        }
+    </style>
 </head>
 <body>
-
+<div></div>
 </body>
 </html>
