@@ -14,13 +14,19 @@
             top: 0;
             bottom: 0;
             margin: auto;
-            overflow-x: scroll;
+            overflow-x: hidden;
         }
 
         main > section {
             height: 100%;
             width: 400%;
             display: flex;
+
+            animation-name: div-animation;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-direction: alternate;
         }
 
         main > section > div {
@@ -28,31 +34,50 @@
             width: 100%;
         }
 
-        main>section>div:nth-child(1){
+        main > section > div:nth-child(1) {
             background-color: #9c27b0;
             background-size: cover;
             background-position: center;
         }
 
-        main>section>div:nth-child(2){
+        main > section > div:nth-child(2) {
             background-color: #4d97ff;
             background-size: cover;
             background-position: center;
         }
 
-        main>section>div:nth-child(3){
+        main > section > div:nth-child(3) {
             background-color: #317A30;
             background-size: cover;
             background-position: center;
         }
 
-        main>section>div:nth-child(4){
+        main > section > div:nth-child(4) {
             background-color: #81436f;
             background-size: cover;
             background-position: center;
         }
 
+        @keyframes div-animation {
+            0%, 20% {
+                transform: translateX(0);
+            }
 
+            20%, 40% {
+                /*left: 200px;*/
+                transform: translateX(-25%);
+            }
+
+            50%, 70% {
+                /*left: 200px;*/
+                transform: translateX(-50%);
+            }
+
+            80%, 100% {
+                /*left: 200px;*/
+                transform: translateX(-75%);
+            }
+        }
 
     </style>
 </head>
