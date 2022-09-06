@@ -62,7 +62,7 @@
         }
 
         /*car*/
-        body > div {
+        body > :nth-child(3) {
             /*border: 2px solid red;*/
             position: fixed;
             top: 50vh;
@@ -76,6 +76,41 @@
             background-size: cover;
             background-position: center;
         }
+
+        /*car wheel 1*/
+        body > :nth-child(4) {
+            /*border: 2px solid red;*/
+            position: absolute;
+            left: 230px;
+            right: 0;
+            top: 431px;
+            margin: auto;
+            width: 77px;
+            height: 76px;
+            border-radius: 100%;
+
+            background-image: url("wheel.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        /*car wheel 2*/
+        body > :nth-child(5) {
+            /*border: 2px solid red;*/
+            position: absolute;
+            left: -259px;
+            right: 0;
+            top: 432px;
+            margin: auto;
+            width: 77px;
+            height: 76px;
+            border-radius: 100%;
+
+            background-image: url("wheel.png");
+            background-size: cover;
+            background-position: center;
+        }
+
 
         @keyframes road-sky-animation {
             0% {
@@ -105,7 +140,6 @@
 <!--sky-->
 <section></section>
 
-
 <main>
     <!--moving container-->
     <section>
@@ -118,6 +152,10 @@
 </main>
 
 <!--car-->
+<div></div>
+
+<!--car wheels-->
+<div></div>
 <div></div>
 
 </body>
