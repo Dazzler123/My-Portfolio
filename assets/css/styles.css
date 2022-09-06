@@ -938,15 +938,25 @@ footer > small {
     /*all contents suitable with this resolution*/
 
 
-
 }
 
 /*============================ Laptop (1024px) - From 768px to 1024px ===============================*/
 @media all and (min-width: 768px) and (max-width: 1024px) {
 
-    /*======!*Header======*!*/
-    /*all contents suitable with this resolution*/
+    /*===============================!*Header===============================*!*/
+    /*heading*/
+    header > h3 {
+        font-size: 19px;
+    }
 
+    header > nav {
+        top: -19px;
+    }
+
+    /*home, services, contact me*/
+    header > nav > ul > li {
+        font-size: 16px;
+    }
 
 
 }
@@ -954,11 +964,20 @@ footer > small {
 /*============================ Tablet (768px) - From 425px to 768px ===============================*/
 @media all and (min-width: 425px) and (max-width: 768px) {
 
-    /*======!*Header======*!*/
-    header {
-        background-color: #ff253a;
+    /*===============================!*Header===============================*!*/
+    /*heading*/
+    header > h3 {
+        font-size: 19px;
     }
 
+    header > nav {
+        top: -19px;
+    }
+
+    /*home, services, contact me*/
+    header > nav > ul > li {
+        font-size: 16px;
+    }
 
 
 }
@@ -972,9 +991,69 @@ footer > small {
 /*============================ Mobile M (375px) ===============================*/
 
 
-
-
-
-
-
 /*============================ Mobile S (320px) ===============================*/
+
+
+
+
+
+/*=====================!*Header==================================================*!*/
+
+/*!*container*!*/
+/*body > header {*/
+/*    background-color: #24292f;*/
+/*    box-shadow: 0px -1px 8px 2px #1c1717e8;*/
+/*    top: 0;*/
+/*    height: 57px;*/
+/*    position: fixed;*/
+/*    z-index: 1;*/
+/*    width: 100%;*/
+/*}*/
+
+/*!*icon*!*/
+/*header > img {*/
+/*    position: relative;*/
+/*    left: 25px;*/
+/*    top: 13px;*/
+/*}*/
+
+/*!*heading*!*/
+/*header > h3 {*/
+/*    position: absolute;*/
+/*    margin: auto;*/
+/*    top: 17px;*/
+/*    !* bottom: 0; *!*/
+/*    left: 71px;*/
+/*    font-size: 21px;*/
+/*    font-family: sans-serif;*/
+/*    color: white;*/
+/*}*/
+
+/*header > nav {*/
+/*    position: absolute;*/
+/*    top: -20px;*/
+/*    right: 27px;*/
+/*}*/
+
+/*!*home, services, contact me*!*/
+/*header > nav > ul > li {*/
+/*    display: inline-block;*/
+/*    padding: 22px;*/
+/*    font-family: "system-ui";*/
+/*    font-size: 17px;*/
+/*    color: white;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*!*contact me*!*/
+/*header > nav > ul > li > a {*/
+/*    text-decoration: none;*/
+/*    color: white;*/
+/*}*/
+
+/*!*change color while hovering*!*/
+/*header > nav > ul > li > a:hover, header > nav > ul > li:hover {*/
+/*    color: #ce489e;*/
+/*}*/
+
+
