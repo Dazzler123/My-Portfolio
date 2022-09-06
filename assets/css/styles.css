@@ -9,7 +9,7 @@ body {
     background-image: url("../images/rgb_keyboard_background_image_blur_effect_0.2.jpeg");
     background-size: cover;
     background-attachment: fixed;
-    /*overflow-x: hidden;*/
+    overflow-x: hidden;
 }
 
 /*=====================!*Header==================================================*!*/
@@ -996,18 +996,88 @@ footer > small {
 }
 
 /*============================ Mobile L (425px) - From 375px to 425px ===============================*/
-@media all and (min-width: 375px) and (max-width: 425px) {
+@media all and (min-width: 375px) and (max-width: 426px) {
+
+    /*=====================!*Header==================================================*!*/
+    /*container*/
+    body > header {
+        height: 85px;
+    }
+
+    /*!*icon*!*/
+    header > img {
+        left: 19px;
+        height: 27px;
+        width: 28px;
+        top: 13px;
+    }
+
+    /*heading*/
+    header > h3 {
+        top: 15px;
+        left: 88px;
+        font-size: 20px;
+    }
+
+    header > nav {
+        top: 25px;
+        right: 95px;
+    }
+
+    /*home, services, contact me*/
+    header > nav > ul > li {
+        padding: 12px;
+        font-size: 12px;
+        font-weight: bold;
+    }
 
 
 }
 
-/*============================ Mobile M (375px) ===============================*/
+/*============================ Mobile M (375px) From 320px to 375px ===============================*/
+@media all and (min-width: 320px) and (max-width: 376px) {
 
+    /*=====================!*Header==================================================*!*/
+    /*container*/
+    body > header {
+        height: 150px;
+    }
+
+    /*!*icon*!*/
+    /*header > img {*/
+    /*    position: relative;*/
+    /*    left: 25px;*/
+    /*    top: 13px;*/
+    /*}*/
+    /*!*heading*!*/
+    /*header > h3 {*/
+    /*    position: absolute;*/
+    /*    margin: auto;*/
+    /*    top: 17px;*/
+    /*    !* bottom: 0; *!*/
+    /*    left: 71px;*/
+    /*    font-size: 21px;*/
+    /*    font-family: sans-serif;*/
+    /*    color: white;*/
+    /*}*/
+    /*header > nav {*/
+    /*    position: absolute;*/
+    /*    top: -20px;*/
+    /*    right: 27px;*/
+    /*}*/
+    /*!*home, services, contact me*!*/
+    /*header > nav > ul > li {*/
+    /*    display: inline-block;*/
+    /*    padding: 22px;*/
+    /*    font-family: "system-ui";*/
+    /*    font-size: 17px;*/
+    /*    color: white;*/
+    /*    cursor: pointer;*/
+    /*}*/
+
+}
 
 /*============================ Mobile S (320px) ===============================*/
-
-
-
 
 
 /*=====================!*Header==================================================*!*/
