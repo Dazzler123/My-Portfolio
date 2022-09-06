@@ -52,7 +52,7 @@
         }
 
         /*road*/
-        body > main > section >  div:last-child {
+        body > main > section > div:last-child {
             /*border: 2px solid red;*/
             position: relative;
             top: 0;
@@ -92,6 +92,11 @@
             background-image: url("wheel.png");
             background-size: cover;
             background-position: center;
+
+            animation-name: wheel1-animation;
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
         }
 
         /*car wheel 2*/
@@ -109,6 +114,11 @@
             background-image: url("wheel.png");
             background-size: cover;
             background-position: center;
+
+            animation-name: wheel2-animation;
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
         }
 
 
@@ -122,15 +132,60 @@
             }
 
             50% {
-                transform: translateX(-50%);
+                transform: translateX(-40%);
             }
 
             75% {
-                transform: translateX(-60%);
+                transform: translateX(-50%);
             }
 
             100% {
-                transform: translateX(-65%);
+                transform: translateX(-55%);
+            }
+        }
+
+
+        @keyframes wheel1-animation {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(-150deg);
+            }
+
+            50% {
+                transform: rotate(-200deg);
+            }
+
+            75% {
+                transform: rotate(350deg);
+            }
+
+            100% {
+                transform: rotate(550deg);
+            }
+        }
+
+        @keyframes wheel2-animation {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(-150deg);
+            }
+
+            50% {
+                transform: rotate(-200deg);
+            }
+
+            75% {
+                transform: rotate(350deg);
+            }
+
+            100% {
+                transform: rotate(550deg);
             }
         }
 
