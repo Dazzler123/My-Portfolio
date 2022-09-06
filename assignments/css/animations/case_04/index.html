@@ -18,35 +18,46 @@
             background-position: center;
         }
 
-
         body > main {
-            /*border: 2px solid red;*/
+            /*!*border: 2px solid red;*!*/
             position: absolute;
-            top: 25vh;
             left: 0;
-            height: 72vh;
+            top: 27vh;
             width: 100%;
+            height: 526px;
+            margin: auto;
+            overflow-x: hidden;
+        }
+
+        /*moving container*/
+        body > main > section {
+            height: 100%;
+            width: 300%;
+
+            animation-name: road-sky-animation;
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            animation-timing-function: linear;
         }
 
         /*city*/
-        body > main > div:first-child {
-            /*border: 2px solid red;*/
+        body > main > section > div:first-child {
+            /* border: 2px solid red; */
             position: relative;
             top: 0;
             height: 31vh;
             background-image: url("city.png");
-            background-size: cover;
             background-position: center;
         }
 
         /*road*/
-        body > main > div:last-child {
+        body > main > section >  div:last-child {
             /*border: 2px solid red;*/
             position: relative;
             top: 0;
-            height: 317px;
+            height: 302px;
             background-image: url("road.jpg");
-            background-size: cover;
             background-position: center;
         }
 
@@ -58,11 +69,34 @@
             left: 0;
             right: 0;
             margin: auto;
+
             height: 136px;
             width: 398px;
             background-image: url("car.png");
             background-size: cover;
             background-position: center;
+        }
+
+        @keyframes road-sky-animation {
+            0% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-25%);
+            }
+
+            50% {
+                transform: translateX(-50%);
+            }
+
+            75% {
+                transform: translateX(-60%);
+            }
+
+            /*100% {*/
+            /*    transform: translateX(-90%);*/
+            /*}*/
         }
 
     </style>
@@ -73,11 +107,14 @@
 
 
 <main>
-    <!--city-->
-    <div></div>
+    <!--moving container-->
+    <section>
+        <!--city-->
+        <div></div>
 
-    <!--road-->
-    <div></div>
+        <!--road-->
+        <div></div>
+    </section>
 </main>
 
 <!--car-->
