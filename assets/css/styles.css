@@ -934,7 +934,7 @@ footer > small {
 /*============================ Laptop L (1440px) - From 1024px to 1440px ===============================*/
 @media all and (min-width: 1024px) and (max-width: 1440px) {
 
-    /*======!*Header======*!*/
+    /*===============================!*Header===============================*!*/
     /*all contents suitable with this resolution*/
 
 
@@ -965,18 +965,31 @@ footer > small {
 @media all and (min-width: 425px) and (max-width: 768px) {
 
     /*===============================!*Header===============================*!*/
+    /*icon*/
+    header > img {
+        left: 19px;
+        height: 30px;
+        width: 31px;
+        top: 13px;
+    }
+
     /*heading*/
     header > h3 {
-        font-size: 19px;
+        font-size: 18px;
+        top: 19px;
+        left: 60px;
     }
 
     header > nav {
-        top: -19px;
+        top: -11px;
+        right: 23px;
     }
 
     /*home, services, contact me*/
     header > nav > ul > li {
-        font-size: 16px;
+        font-weight: normal;
+        font-size: 14px;
+        padding: 15px;
     }
 
 
