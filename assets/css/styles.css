@@ -1040,40 +1040,35 @@ footer > small {
     /*=====================!*Header==================================================*!*/
     /*container*/
     body > header {
-        height: 150px;
+        height: 71px;
     }
 
     /*!*icon*!*/
-    /*header > img {*/
-    /*    position: relative;*/
-    /*    left: 25px;*/
-    /*    top: 13px;*/
-    /*}*/
-    /*!*heading*!*/
-    /*header > h3 {*/
-    /*    position: absolute;*/
-    /*    margin: auto;*/
-    /*    top: 17px;*/
-    /*    !* bottom: 0; *!*/
-    /*    left: 71px;*/
-    /*    font-size: 21px;*/
-    /*    font-family: sans-serif;*/
-    /*    color: white;*/
-    /*}*/
-    /*header > nav {*/
-    /*    position: absolute;*/
-    /*    top: -20px;*/
-    /*    right: 27px;*/
-    /*}*/
-    /*!*home, services, contact me*!*/
-    /*header > nav > ul > li {*/
-    /*    display: inline-block;*/
-    /*    padding: 22px;*/
-    /*    font-family: "system-ui";*/
-    /*    font-size: 17px;*/
-    /*    color: white;*/
-    /*    cursor: pointer;*/
-    /*}*/
+    header > img {
+        left: 13px;
+        height: 29px;
+        width: 30px;
+        top: 9px;
+    }
+
+    /*heading*/
+    header > h3 {
+        top: 14px;
+        left: 73px;
+        font-size: 18px;
+    }
+
+    header > nav {
+        top: 19px;
+        right: 85px;
+    }
+
+    /*home, services, contact me*/
+    header > nav > ul > li {
+        padding: 9px;
+        font-size: 12px;
+        font-weight: bold;
+    }
 
 }
 
