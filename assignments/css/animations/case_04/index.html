@@ -5,6 +5,7 @@
     <title>Animations - Case 04</title>
     <style>
 
+        /*sky*/
         body > section {
             /*border: 2px solid red;*/
             position: absolute;
@@ -17,14 +18,49 @@
             background-position: center;
         }
 
+
+        body > main {
+            /*border: 2px solid red;*/
+            position: absolute;
+            top: 25vh;
+            left: 0;
+            height: 72vh;
+            width: 100%;
+        }
+
+        /*city*/
+        body > main > div:first-child {
+            /*border: 2px solid red;*/
+            position: relative;
+            top: 0;
+            height: 31vh;
+            background-image: url("city.png");
+            background-size: cover;
+            background-position: center;
+        }
+
+        /*road*/
+        body > main > div:last-child {
+            /*border: 2px solid red;*/
+            position: relative;
+            top: 0;
+            height: 317px;
+            background-image: url("road.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+
     </style>
 </head>
 <body>
 <!--sky-->
 <section></section>
 
-<!--city-->
+
 <main>
+    <!--city-->
+    <div></div>
 
     <!--road-->
     <div></div>
