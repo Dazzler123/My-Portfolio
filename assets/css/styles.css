@@ -1072,66 +1072,46 @@ footer > small {
 
 }
 
-/*============================ Mobile S (320px) ===============================*/
+/*============================ Mobile S (320px) - From 0 to 320px ===============================*/
+@media all and (min-width: 0px) and (max-width: 320px) {
+
+    /*=====================!*Header================================*!*/
+    /*container*/
+    body > header {
+        height: 63px;
+    }
+
+    /*!*icon*!*/
+    header > img {
+        left: 11px;
+        height: 25px;
+        width: 27px;
+        top: 9px;
+    }
+
+    /*heading*/
+    header > h3 {
+        top: 13px;
+        left: 57px;
+        font-size: 17px
+    }
+
+    header > nav {
+        top: 18px;
+        right: 73px;
+    }
+
+    /*home, services, contact me*/
+    header > nav > ul > li {
+        padding: 7px;
+        font-size: 10px;
+        font-weight: bold;
+    }
 
 
-/*=====================!*Header==================================================*!*/
 
-/*!*container*!*/
-/*body > header {*/
-/*    background-color: #24292f;*/
-/*    box-shadow: 0px -1px 8px 2px #1c1717e8;*/
-/*    top: 0;*/
-/*    height: 57px;*/
-/*    position: fixed;*/
-/*    z-index: 1;*/
-/*    width: 100%;*/
-/*}*/
+}
 
-/*!*icon*!*/
-/*header > img {*/
-/*    position: relative;*/
-/*    left: 25px;*/
-/*    top: 13px;*/
-/*}*/
 
-/*!*heading*!*/
-/*header > h3 {*/
-/*    position: absolute;*/
-/*    margin: auto;*/
-/*    top: 17px;*/
-/*    !* bottom: 0; *!*/
-/*    left: 71px;*/
-/*    font-size: 21px;*/
-/*    font-family: sans-serif;*/
-/*    color: white;*/
-/*}*/
-
-/*header > nav {*/
-/*    position: absolute;*/
-/*    top: -20px;*/
-/*    right: 27px;*/
-/*}*/
-
-/*!*home, services, contact me*!*/
-/*header > nav > ul > li {*/
-/*    display: inline-block;*/
-/*    padding: 22px;*/
-/*    font-family: "system-ui";*/
-/*    font-size: 17px;*/
-/*    color: white;*/
-/*    cursor: pointer;*/
-/*}*/
-
-/*!*contact me*!*/
-/*header > nav > ul > li > a {*/
-/*    text-decoration: none;*/
-/*    color: white;*/
-/*}*/
-
-/*!*change color while hovering*!*/
-/*header > nav > ul > li > a:hover, header > nav > ul > li:hover {*/
-/*    color: #ce489e;*/
-/*}*/
 
 
