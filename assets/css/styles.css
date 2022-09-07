@@ -627,6 +627,26 @@ main > section:nth-child(3) > :nth-child(6) > div > img:nth-child(3) {
     border-radius: 20px;
 }
 
+/*to left right icons in common*/
+main > section:nth-child(3) > :nth-child(6) > div > i {
+    position: absolute;
+    font-size: 35px;
+    color: #ff253a;
+}
+
+/*to left icon*/
+main > section:nth-child(3) > :nth-child(6) > div > :nth-child(4) {
+    left: 3vw;
+    top: 45vh;
+}
+
+/*to right icon*/
+main > section:nth-child(3) > :nth-child(6) > div > :nth-child(5) {
+    left: 81vw;
+    top: 45vh;
+    transform: rotate(180deg);
+}
+
 
 
 /*===================!*Projects & Research ====================================================*!*/
