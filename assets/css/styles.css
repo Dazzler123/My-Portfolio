@@ -1293,6 +1293,78 @@ footer > small {
         font-weight: bold;
     }
 
+    /*!*===================!*Personal info ====================================================*!*!*/
+    /*section container*/
+    main > section:nth-child(1) {
+        height: 485px;
+    }
+
+    /*article container*/
+    main > section:nth-child(1) > article {
+        height: 42vh;
+    }
+
+    /*dd container inside article*/
+    main > section:nth-child(1) > article > dd {
+        top: 22vh;
+        left: 327px;
+    }
+
+    /*profile pic*/
+    main > section:nth-child(1) > article > img {
+        width: 305px;
+        height: 244px;
+    }
+
+    /*hi there...*/
+    main > section:nth-child(1) > :first-child {
+        font-size: 14px;
+        left: 334px;
+        top: 57px;
+    }
+
+    /*dasindu hew...*/
+    main > section:nth-child(1) > h1 {
+        font-size: 37px;
+        left: 249px;
+        top: 98px;
+    }
+
+    /*a passionate software dev...*/
+    main > section:nth-child(1) > article > dd > pre {
+        font-size: 12px;
+    }
+
+    /*aside container*/
+    main > section:nth-child(1) > aside {
+        height: 37vh;
+        width: 100%;
+        top: 42vh;
+    }
+
+    /*about me*/
+    main > section:nth-child(1) > aside > h3 {
+        top: 23px;
+        font-size: 13px;
+        left: 69px;
+    }
+
+    /*about me description*/
+    main > section:nth-child(1) > aside pre {
+        top: 56px;
+        font-size: 10px;
+        left: 69px;
+    }
+
+    /*download resume button*/
+    main > section:nth-child(1) > aside > button {
+        width: 115px;
+        height: 33px;
+        left: 69px;
+        top: 165px;
+        font-size: 10px;
+    }
+
 
 }
 
