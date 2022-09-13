@@ -1109,7 +1109,6 @@ footer > small {
         top: 7vh;
     }
 
-
     /*lyceum grades*/
     #lyceum_grade > pre {
         left: 17vw;
@@ -1139,229 +1138,73 @@ footer > small {
     /*===================!*Skills & Achievements ====================================================*!*/
     /*section container*/
     main > section:nth-child(3) {
-        /*border: 2px solid red;*/
-        position: relative;
         top: 87px;
-        height: 203vh;
-    }
-
-    /*heading*/
-    main > section:nth-child(3) > :first-child {
-        position: relative;
-        display: inline-block;
-        left: 140px;
-        top: 0;
-
-        font-family: 'system-ui';
-        font-weight: 600;
-        font-size: 32px;
+        height: 255vh;
     }
 
     /*blockquote*/
     main > section:nth-child(3) > blockquote > pre {
-        position: relative;
-        display: inline-block;
         left: 20%;
-
-        font-family: 'system-ui';
-        font-style: italic;
-        font-weight: 300;
-        font-size: 24px;
-        /*text-align: center;*/
-    }
-
-    /*blockquote writer's name*/
-    main > section:nth-child(3) > blockquote > pre > h4 {
-        position: relative;
-        display: inline-block;
-        left: 34%;
-        top: -18px;
-
-        font-family: 'system-ui';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        /*text-align: center;*/
     }
 
     /*left aside container - skills*/
     main > section:nth-child(3) > :nth-child(3) {
-        /*border: 2px solid red;*/
-        display: inline-block;
-        position: absolute;
-        left: 8%;
-        top: 35vh;
-    }
-
-    /*left aside ul*/
-    main > section:nth-child(3) > :nth-child(3) > ul {
-        list-style: none;
-    }
-
-    /*left aside ul lists*/
-    main > section:nth-child(3) > :nth-child(3) > ul > li > pre {
-        padding: 3px;
-        font-family: system-ui;
-        font-size: 20px;
+        top: 42vh;
     }
 
     /*right aside container - tools & tech*/
     main > section:nth-child(3) > :nth-child(4) {
-        /*border: 2px solid red;*/
-        display: inline-block;
-        position: absolute;
-        left: 65%;
-        top: 37vh;
-    }
-
-    /*right aside heading*/
-    main > section:nth-child(3) > :nth-child(4) > h4 {
-        font-family: system-ui;
-        font-size: 22px;
-        font-weight: 560;
-    }
-
-    /*right aside ul lists*/
-    main > section:nth-child(3) > :nth-child(4) > ul > li {
-        padding: 2px;
-        font-family: system-ui;
-        font-size: 22px;
+        top: 40vh;
     }
 
     /*technology icon container*/
     main > section:nth-child(3) > :nth-child(5) {
-        /*border: 2px solid red;*/
-        position: absolute;
-        top: 68vh;
-        height: 35vh;
-        left: 117px;
-        width: 83%;
-    }
-
-    /*css icon img*/
-    #css_icon {
-        position: relative;
-        width: 104px;
-        height: 97px;
-        top: 14vh;
-        left: 21%;
-    }
-
-    /*html icon img*/
-    #html_icon {
-        position: relative;
-        width: 139px;
-        height: 126px;
-        top: 15vh;
-        left: 22%;
-    }
-
-    /*java icon img*/
-    #java_icon {
-        position: absolute;
-        width: 216px;
-        height: 221px;
-        top: 1vh;
-        left: 41%;
-    }
-
-    /*javascript icon img*/
-    #js_icon {
-        position: absolute;
-        width: 98px;
-        height: 110px;
-        top: 16vh;
-        left: 60%;
-    }
-
-    /*intellij icon img*/
-    #intelliJ_icon {
-        position: absolute;
-        width: 83px;
-        height: 78px;
-        top: 19vh;
-        left: 72%;
+        top: 84vh;
+        height: 40vh;
     }
 
     /*achievements container*/
     main > section:nth-child(3) > :nth-child(6) {
-        /*border: 2px solid red;*/
-        position: relative;
-        top: 59vh;
-        height: 98vh;
-    }
-
-    /*achievements ul */
-    main > section:nth-child(3) > :nth-child(6) > ul {
-        position: relative;
-        display: inline-block;
-        top: 8vh;
-        left: 10vw;
-    }
-
-    /*achievements ul list*/
-    main > section:nth-child(3) > :nth-child(6) > ul > li {
-        padding: 10px;
-        font-family: 'system-ui';
-        font-style: italic;
-        font-weight: 400;
-        font-size: 20px;
+        top: 70vh;
+        height: 50vh;
     }
 
     /*images container*/
     main > section:nth-child(3) > :nth-child(6) > div {
-        position: relative;
-        display: inline-block;
         top: 21vh;
-        left: 13vh;
+        left: 14vh;
+        height: 64vh;
     }
 
     /*left image*/
     main > section:nth-child(3) > :nth-child(6) > div > img:nth-child(1) {
-        position: relative;
-        height: 180px;
-        width: 350px;
-        padding-right: 30px;
-        border-radius: 20px;
+        height: 29vh;
+        width: 24vw;
     }
 
     /*middle image*/
     main > section:nth-child(3) > :nth-child(6) > div > img:nth-child(2) {
-        position: relative;
-        height: 300px;
-        width: 550px;
-        border-radius: 20px;
+        height: 50vh;
+        width: 35vw;
     }
 
     /*right image*/
     main > section:nth-child(3) > :nth-child(6) > div > img:nth-child(3) {
-        position: relative;
-        height: 180px;
-        width: 350px;
-        padding-left: 30px;
-        border-radius: 20px;
-    }
-
-    /*to left right icons in common*/
-    main > section:nth-child(3) > :nth-child(6) > div > i {
-        position: absolute;
-        font-size: 35px;
-        color: #ff253a;
+        height: 29vh;
+        width: 24vw;
     }
 
     /*to left icon*/
     main > section:nth-child(3) > :nth-child(6) > div > :nth-child(4) {
-        left: 3vw;
-        top: 45vh;
+        left: 5vw;
+        top: 57vh;
     }
 
     /*to right icon*/
     main > section:nth-child(3) > :nth-child(6) > div > :nth-child(5) {
         left: 81vw;
-        top: 45vh;
-        transform: rotate(180deg);
+        top: 57vh;
     }
-
 
 
     /*===================!*Projects & Research ====================================================*!*/
