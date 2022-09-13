@@ -1210,7 +1210,6 @@ footer > small {
     /*===================!*Projects & Research ====================================================*!*/
     /*section container*/
     main > section:nth-child(4) {
-        border: 2px solid red;
         top: 15vh;
         height: 160vh;
     }
