@@ -1757,115 +1757,80 @@ footer > small {
 
 
     /*!*===================!*Collaborator's recommendation ====================================================*!*!*/
-    /*!*section container*!*/
-    /*main > section:nth-child(5) {*/
-    /*    !*border: 2px solid red;*!*/
-    /*    position: relative;*/
-    /*    top: 13vh;*/
-    /*    height: 117vh;*/
-    /*}*/
+    /*section container*/
+    main > section:nth-child(5) {
+        top: -6vh;
+        height: 53vh;
+    }
 
-    /*!*heading*!*/
-    /*main > section:nth-child(5) > :first-child {*/
-    /*    position: relative;*/
-    /*    display: inline-block;*/
-    /*    left: 143px;*/
-    /*    top: 29vh;*/
+    /*heading*/
+    main > section:nth-child(5) > :first-child {
+        left: 102px;
+        top: 0;
+        font-size: 23px;
+    }
 
-    /*    font-family: 'system-ui';*/
-    /*    font-weight: 600;*/
-    /*    font-size: 32px;*/
-    /*}*/
+    /*article container*/
+    main > section:nth-child(5) > article {
+        top: 33vh;
+        height: 51vh;
+    }
 
-    /*!*article container*!*/
-    /*main > section:nth-child(5) > article {*/
-    /*    !*border: 2px solid red;*!*/
-    /*    position: relative;*/
-    /*    top: 33vh;*/
-    /*    height: 51vh;*/
-    /*}*/
+    /*first mate's profile pic image 1 */
+    main > section:nth-child(5) > article > :nth-child(1) {
+        width: 51px;
+        height: 54px;
+        left: 11%;
+        top: -29vh;
+    }
 
-    /*!*first mate's profile pic image 1 *!*/
-    /*main > section:nth-child(5) > article > :nth-child(1) {*/
-    /*    position: relative;*/
-    /*    display: inline-block;*/
-    /*    width: 51px;*/
-    /*    height: 54px;*/
-    /*    left: 11%;*/
-    /*}*/
+    /*first mate's comment*/
+    main > section:nth-child(5) > article > :nth-child(2) {
+        width: 72vw;
+        top: -28vh;
+        left: 14%;
+        font-size: 18px;
+    }
 
-    /*!*first mate's comment*!*/
-    /*main > section:nth-child(5) > article > :nth-child(2) {*/
-    /*    position: absolute;*/
-    /*    display: inline-block;*/
-    /*    width: 55vw;*/
-    /*    top: 4vh;*/
-    /*    left: 14%;*/
+    /*first mate's name*/
+    main > section:nth-child(5) > article > :nth-child(2) > h4 {
+        left: 54%;
+        top: 39px;
+        font-size: 13px;
+    }
 
-    /*    font-family: 'system-ui';*/
-    /*    font-style: italic;*/
-    /*    font-weight: 100;*/
-    /*    font-size: 24px;*/
-    /*}*/
+    /*second mate's profile pic image 2 */
+    main > section:nth-child(5) > article > :nth-child(3) {
+        width: 51px;
+        height: 54px;
+        top: -9vh;
+        left: 56px;
+    }
 
-    /*!*first mate's name*!*/
-    /*main > section:nth-child(5) > article > :nth-child(2) > h4 {*/
-    /*    position: absolute;*/
-    /*    display: inline-block;*/
-    /*    left: 51%;*/
-    /*    top: 75px;*/
+    /*second mate's comment*/
+    main > section:nth-child(5) > article > :nth-child(4) {
+        width: 72vw;
+        top: -8vh;
+        left: 3%;
+        font-size: 18px;
+    }
 
-    /*    font-family: 'system-ui';*/
-    /*    font-style: normal;*/
-    /*    font-weight: 400;*/
-    /*    font-size: 16px;*/
-    /*}*/
-
-    /*!*second mate's profile pic image 2 *!*/
-    /*main > section:nth-child(5) > article > :nth-child(3) {*/
-    /*    position: relative;*/
-    /*    width: 51px;*/
-    /*    height: 54px;*/
-    /*    top: 26vh;*/
-    /*    left: 112px;*/
-    /*}*/
-
-    /*!*second mate's comment*!*/
-    /*main > section:nth-child(5) > article > :nth-child(4) {*/
-    /*    position: relative;*/
-    /*    display: inline-block;*/
-    /*    width: 55vw;*/
-    /*    top: 30vh;*/
-    /*    left: 7%;*/
-
-    /*    font-family: 'system-ui';*/
-    /*    font-style: italic;*/
-    /*    font-weight: 100;*/
-    /*    font-size: 24px;*/
-    /*}*/
-
-    /*!*second mate's name*!*/
-    /*main > section:nth-child(5) > article > :nth-child(4) > h4 {*/
-    /*    position: absolute;*/
-    /*    display: inline-block;*/
-    /*    left: 51%;*/
-    /*    top: 75px;*/
-
-    /*    font-family: 'system-ui';*/
-    /*    font-style: normal;*/
-    /*    font-weight: 400;*/
-    /*    font-size: 16px;*/
-    /*}*/
+    /*second mate's name*/
+    main > section:nth-child(5) > article > :nth-child(4) > h4 {
+        left: 54%;
+        top: 40px;
+        font-size: 13px;
+    }
 
 
     /*!*===================!* Footer ====================================================*!*!*/
     /*!*footer container*!*/
     /*footer {*/
     /*    !*border: 2px solid red;*!*/
-    /*    background-color: black;*/
-    /*    position: relative;*/
-    /*    top: 13vh;*/
-    /*    height: 220px;*/
+    /*    !*background-color: black;*!*/
+    /*    !*position: relative;*!*/
+    /*    top: 7vh;*/
+    /*    height: 35vh;*/
     /*}*/
 
     /*!*heading*!*/
