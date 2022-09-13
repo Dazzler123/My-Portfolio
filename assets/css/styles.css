@@ -1532,7 +1532,6 @@ footer > small {
     /*!*===================!*Skills & Achievements ====================================================*!*!*/
     /*!*section container*!*/
     main > section:nth-child(3) {
-        border: 2px solid red;
         top: -100px;
         height: 203vh;
     }
@@ -1689,100 +1688,72 @@ footer > small {
 
 
     /*!*===================!*Projects & Research ====================================================*!*!*/
-    /*!*section container*!*/
-    /*main > section:nth-child(4) {*/
-    /*    !*border: 2px solid red;*!*/
-    /*    position: relative;*/
-    /*    top: 13vh;*/
-    /*    height: 133vh;*/
-    /*}*/
+    /*section container*/
+    main > section:nth-child(4) {
+        top: -17vh;
+        height: 112vh;
+    }
 
-    /*!*heading*!*/
-    /*main > section:nth-child(4) > :first-child {*/
-    /*    position: relative;*/
-    /*    display: inline-block;*/
-    /*    left: 617px;*/
-    /*    top: 19vh;*/
+    /*heading*/
+    main > section:nth-child(4) > :first-child {
+        left: 40vw;
+        top: 0;
+        font-size: 23px;
+    }
 
-    /*    font-family: 'system-ui';*/
-    /*    font-weight: 600;*/
-    /*    font-size: 32px;*/
-    /*}*/
+    /*projects list ul container*/
+    main > section:nth-child(4) > ul {
+        left: 5%;
+        top: 13vh;
+    }
 
-    /*!*projects list ul container*!*/
-    /*main > section:nth-child(4) > ul {*/
-    /*    position: absolute;*/
-    /*    display: inline-block;*/
-    /*    left: 7%;*/
-    /*    top: 35vh;*/
-    /*}*/
+    /*projects list li*/
+    main > section:nth-child(4) > ul > li {
+        font-size: 17px;
+    }
 
-    /*!*projects list li*!*/
-    /*main > section:nth-child(4) > ul > li {*/
-    /*    padding: 18px;*/
-    /*    list-style: none;*/
+    /*projects images container*/
+    main > section:nth-child(4) > div {
+        top: 51vh;
+        left: 4%;
+        height: 42%;
+        width: 90.5%;
+    }
 
-    /*    font-family: 'system-ui';*/
-    /*    font-style: italic;*/
-    /*    font-weight: 400;*/
-    /*    font-size: 21px;*/
-    /*}*/
+    /*left image*/
+    main > section:nth-child(4) > div > img:nth-child(1) {
+        height: 142px;
+        width: 251px;
+    }
 
-    /*!*projects images container*!*/
-    /*main > section:nth-child(4) > div {*/
-    /*    !*border: 2px solid red;*!*/
-    /*    position: relative;*/
-    /*    top: 77vh;*/
-    /*    left: 6%;*/
-    /*    height: 32%;*/
-    /*    width: 87%;*/
-    /*}*/
+    /*middle image*/
+    main > section:nth-child(4) > div > img:nth-child(2) {
+        height: 207px;
+        width: 353px;
+    }
 
-    /*!*left image*!*/
-    /*main > section:nth-child(4) > div > img:nth-child(1) {*/
-    /*    position: relative;*/
-    /*    height: 180px;*/
-    /*    width: 350px;*/
-    /*    padding-right: 30px;*/
-    /*    border-radius: 20px;*/
-    /*}*/
+    /*right image*/
+    main > section:nth-child(4) > div > img:nth-child(3) {
+        height: 142px;
+        width: 251px;
+    }
 
-    /*!*middle image*!*/
-    /*main > section:nth-child(4) > div > img:nth-child(2) {*/
-    /*    position: relative;*/
-    /*    height: 300px;*/
-    /*    width: 550px;*/
-    /*    border-radius: 20px;*/
-    /*}*/
+    /*to left right icons in common*/
+    main > section:nth-child(4) > div > i {
+        font-size: 25px;
+    }
 
-    /*!*right image*!*/
-    /*main > section:nth-child(4) > div > img:nth-child(3) {*/
-    /*    position: relative;*/
-    /*    height: 180px;*/
-    /*    width: 350px;*/
-    /*    padding-left: 30px;*/
-    /*    border-radius: 20px;*/
-    /*}*/
+    /*to left icon*/
+    main > section:nth-child(4) > div > :nth-child(4) {
+        left: 6vw;
+        top: 42vh;
+    }
 
-    /*!*to left right icons in common*!*/
-    /*main > section:nth-child(4) > div > i {*/
-    /*    position: absolute;*/
-    /*    font-size: 35px;*/
-    /*    color: #ff253a;*/
-    /*}*/
-
-    /*!*to left icon*!*/
-    /*main > section:nth-child(4) > div > :nth-child(4) {*/
-    /*    left: 3vw;*/
-    /*    top: 45vh;*/
-    /*}*/
-
-    /*!*to right icon*!*/
-    /*main > section:nth-child(4) > div > :nth-child(5) {*/
-    /*    left: 81vw;*/
-    /*    top: 45vh;*/
-    /*    transform: rotate(180deg);*/
-    /*}*/
+    /*to right icon*/
+    main > section:nth-child(4) > div > :nth-child(5) {
+        left: 82vw;
+        top: 42vh;
+    }
 
 
     /*!*===================!*Collaborator's recommendation ====================================================*!*!*/
