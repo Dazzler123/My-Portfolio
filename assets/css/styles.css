@@ -1824,125 +1824,79 @@ footer > small {
 
 
     /*!*===================!* Footer ====================================================*!*!*/
-    /*!*footer container*!*/
-    /*footer {*/
-    /*    !*border: 2px solid red;*!*/
-    /*    !*background-color: black;*!*/
-    /*    !*position: relative;*!*/
-    /*    top: 7vh;*/
-    /*    height: 35vh;*/
-    /*}*/
+    /*footer container*/
+    footer {
+        top: 7vh;
+        height: 35vh;
+    }
 
-    /*!*heading*!*/
-    /*footer > h3 > dfn {*/
-    /*    position: relative;*/
-    /*    top: 26px;*/
-    /*    left: 3%;*/
+    /*heading*/
+    footer > h3 > dfn {
+        top: 26px;
+        left: 3%;
+        font-size: 33px;
+    }
 
-    /*    font-family: "Agency FB";*/
-    /*    font-style: normal;*/
-    /*    font-weight: 400;*/
-    /*    font-size: 40px;*/
-    /*}*/
+    /*phone icon image*/
+    footer > :nth-child(2) {
+        left: 3%;
+        top: 5vh;
+        width: 32px;
+        height: 32px;
+    }
 
-    /*!*phone icon image*!*/
-    /*footer > :nth-child(2) {*/
-    /*    position: relative;*/
-    /*    border-radius: 100%;*/
-    /*    left: 3%;*/
-    /*    top: 5vh;*/
-    /*    width: 32px;*/
-    /*    height: 32px;*/
-    /*}*/
+    /*whatsapp icon image*/
+    footer > :nth-child(3) {
+        left: 35px;
+        top: 5vh;
+        width: 32px;
+        height: 32px;
+    }
 
-    /*!*whatsapp icon image*!*/
-    /*footer > :nth-child(3) {*/
-    /*    position: relative;*/
-    /*    left: 50px;*/
-    /*    top: 5vh;*/
-    /*    width: 32px;*/
-    /*    height: 32px;*/
-    /*}*/
+    /*email icon image*/
+    footer > :nth-child(4) {
+        top: 13vh;
+        left: -42px;
+        width: 32px;
+        height: 32px;
+    }
 
-    /*!*email icon image*!*/
-    /*footer > :nth-child(4) {*/
-    /*    position: relative;*/
-    /*    top: 11vh;*/
-    /*    left: -26px;*/
+    /*mobile number*/
+    footer > address > a:nth-child(1) {
+        left: 11%;
+        top: 0;
+        font-size: 18px;
+    }
 
-    /*    border-radius: 100%;*/
-    /*    width: 32px;*/
-    /*    height: 32px;*/
-    /*}*/
+    /*mail address*/
+    footer > address > a:nth-child(2) {
+        left: -53px;
+        top: 45px;
+        font-size: 18px;
+    }
 
-    /*!*mobile number*!*/
-    /*footer > address > a:nth-child(1) {*/
-    /*    position: relative;*/
-    /*    left: 9%;*/
-    /*    top: 4px;*/
-    /*    text-decoration: none;*/
-    /*    color: white;*/
+    /*telegram icon image*/
+    footer > :nth-child(6) {
+        left: 83%;
+        top: -5vh;
+        width: 64px;
+        height: 62px;
+    }
 
-    /*    font-family: system-ui;*/
-    /*    font-style: normal;*/
-    /*    font-weight: 400;*/
-    /*    font-size: 20px;*/
-    /*}*/
+    /*linkdin icon image*/
+    footer > :nth-child(7) {
+        left: 84%;
+        top: -5vh;
+        width: 67px;
+        height: 64px;
+    }
 
-    /*!*mobile number - hover*!*/
-    /*footer > address > a:nth-child(1):hover {*/
-    /*    color: darkorange;*/
-    /*}*/
-
-    /*!*mail address*!*/
-    /*footer > address > a:nth-child(2) {*/
-    /*    position: relative;*/
-    /*    left: -49px;*/
-    /*    top: 47px;*/
-    /*    text-decoration: none;*/
-    /*    color: white;*/
-
-    /*    font-family: system-ui;*/
-    /*    font-style: normal;*/
-    /*    font-weight: 400;*/
-    /*    font-size: 20px;*/
-    /*}*/
-
-    /*!*!*mail address - hover*!*!*/
-    /*!*footer > address > a:nth-child(2) {*!*/
-    /*!*    color: darkorange;*!*/
-    /*!*}*!*/
-
-    /*!*telegram icon image*!*/
-    /*footer > :nth-child(6) {*/
-    /*    position: relative;*/
-    /*    left: 87%;*/
-    /*    top: -5vh;*/
-    /*    border-radius: 100%;*/
-    /*    width: 72px;*/
-    /*    height: 69px;*/
-    /*}*/
-
-    /*!*linkdin icon image*!*/
-    /*footer > :nth-child(7) {*/
-    /*    position: relative;*/
-    /*    left: 88%;*/
-    /*    top: -5vh;*/
-    /*    border-radius: 100%;*/
-    /*    width: 72px;*/
-    /*    height: 69px;*/
-    /*}*/
-
-    /*!*trademark and copyrights*!*/
-    /*footer > small {*/
-    /*    position: relative;*/
-    /*    left: 76%;*/
-    /*    top: -3vh;*/
-    /*    font-family: system-ui;*/
-    /*    font-style: normal;*/
-    /*    font-weight: 250;*/
-    /*    font-size: 16px;*/
-    /*}*/
+    /*trademark and copyrights*/
+    footer > small {
+        left: 69%;
+        top: -3vh;
+        font-size: 14px
+    }
 
 }
 
