@@ -2177,14 +2177,15 @@ footer > small {
 
     /*heading*/
     main > section:nth-child(3) > :first-child {
-        left: 98px;
+        left: 10vw;
         font-size: 23px;
     }
 
     /*blockquote*/
     main > section:nth-child(3) > blockquote > pre {
-        left: 13%;
+        left: 0;
         font-size: 19px;
+        top: -1vh;
     }
 
     /*blockquote writer's name*/
@@ -2223,9 +2224,9 @@ footer > small {
 
     /*technology icon container*/
     main > section:nth-child(3) > :nth-child(5) {
-        top: 66vh;
+        top: 67vh;
         height: 35vh;
-        left: 64px;
+        left: 8vw;
         width: 83%;
     }
 
@@ -2234,7 +2235,7 @@ footer > small {
         width: 92px;
         height: 83px;
         top: 14vh;
-        left: 20%;
+        left: 6%;
     }
 
     /*html icon img*/
@@ -2242,7 +2243,7 @@ footer > small {
         width: 108px;
         height: 109px;
         top: 15vh;
-        left: 19%;
+        left: 5%;
     }
 
     /*java icon img*/
@@ -2250,7 +2251,7 @@ footer > small {
         width: 191px;
         height: 181px;
         top: 1vh;
-        left: 40%;
+        left: 34%;
     }
 
     /*javascript icon img*/
@@ -2258,7 +2259,7 @@ footer > small {
         width: 84px;
         height: 86px;
         top: 17vh;
-        left: 62%;
+        left: 64%;
     }
 
     /*intellij icon img*/
@@ -2266,7 +2267,7 @@ footer > small {
         width: 75px;
         height: 67px;
         top: 19vh;
-        left: 75%;
+        left: 81%;
     }
 
     /*achievements container*/
@@ -2399,19 +2400,19 @@ footer > small {
     /*section container*/
     main > section:nth-child(5) {
         top: -6vh;
-        height: 53vh;
+        height: 58vh;
     }
 
     /*heading*/
     main > section:nth-child(5) > :first-child {
-        left: 102px;
+        left: 13vh;
         top: 0;
         font-size: 23px;
     }
 
     /*article container*/
     main > section:nth-child(5) > article {
-        top: 33vh;
+        top: 4vh;
         height: 51vh;
     }
 
@@ -2419,22 +2420,22 @@ footer > small {
     main > section:nth-child(5) > article > :nth-child(1) {
         width: 51px;
         height: 54px;
-        left: 11%;
-        top: -29vh;
+        left: 7%;
+        top: -1vh;
     }
 
     /*first mate's comment*/
     main > section:nth-child(5) > article > :nth-child(2) {
         width: 72vw;
-        top: -28vh;
-        left: 14%;
+        top: 1vh;
+        left: 10%;
         font-size: 18px;
     }
 
     /*first mate's name*/
     main > section:nth-child(5) > article > :nth-child(2) > h4 {
-        left: 54%;
-        top: 39px;
+        left: 43%;
+        top: 53px;
         font-size: 13px;
     }
 
@@ -2442,22 +2443,22 @@ footer > small {
     main > section:nth-child(5) > article > :nth-child(3) {
         width: 51px;
         height: 54px;
-        top: -9vh;
-        left: 56px;
+        top: 22vh;
+        left: 0;
     }
 
     /*second mate's comment*/
     main > section:nth-child(5) > article > :nth-child(4) {
         width: 72vw;
-        top: -8vh;
-        left: 3%;
+        top: 24vh;
+        left: -4%;
         font-size: 18px;
     }
 
     /*second mate's name*/
     main > section:nth-child(5) > article > :nth-child(4) > h4 {
-        left: 54%;
-        top: 40px;
+        left: 43%;
+        top: 54px;
         font-size: 13px;
     }
 
@@ -2486,7 +2487,7 @@ footer > small {
 
     /*whatsapp icon image*/
     footer > :nth-child(3) {
-        left: 35px;
+        left: 24px;
         top: 5vh;
         width: 32px;
         height: 32px;
@@ -2495,28 +2496,28 @@ footer > small {
     /*email icon image*/
     footer > :nth-child(4) {
         top: 13vh;
-        left: -42px;
+        left: -47px;
         width: 32px;
         height: 32px;
     }
 
     /*mobile number*/
     footer > address > a:nth-child(1) {
-        left: 11%;
+        left: 13%;
         top: 0;
         font-size: 18px;
     }
 
     /*mail address*/
     footer > address > a:nth-child(2) {
-        left: -53px;
+        left: -59px;
         top: 45px;
         font-size: 18px;
     }
 
     /*telegram icon image*/
     footer > :nth-child(6) {
-        left: 83%;
+        left: 79%;
         top: -5vh;
         width: 64px;
         height: 62px;
@@ -2524,7 +2525,7 @@ footer > small {
 
     /*linkdin icon image*/
     footer > :nth-child(7) {
-        left: 84%;
+        left: 80%;
         top: -5vh;
         width: 67px;
         height: 64px;
@@ -2532,15 +2533,12 @@ footer > small {
 
     /*trademark and copyrights*/
     footer > small {
-        left: 69%;
+        left: 60%;
         top: -3vh;
         font-size: 14px
     }
-
-
-
-
 }
+
 
 /*============================ Mobile L (425px) - From 375px to 425px ===============================*/
 @media all and (min-width: 375px) and (max-width: 426px) {
