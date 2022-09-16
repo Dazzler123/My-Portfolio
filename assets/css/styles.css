@@ -2977,40 +2977,40 @@ footer > small {
     /*!*===================!*Projects & Research ====================================================*!*!*/
     /*section container*/
     main > section:nth-child(4) {
-        top: -17vh;
+        top: -28vh;
         height: 112vh;
     }
 
     /*heading*/
     main > section:nth-child(4) > :first-child {
-        left: 40vw;
+        left: 27vw;
         top: 0;
-        font-size: 23px;
+        font-size: 22px;
     }
 
     /*projects list ul container*/
     main > section:nth-child(4) > ul {
-        left: 5%;
-        top: 13vh;
+        left: -7%;
+        top: 12vh;
     }
 
     /*projects list li*/
     main > section:nth-child(4) > ul > li {
-        font-size: 17px;
+        font-size: 14px;
     }
 
     /*projects images container*/
     main > section:nth-child(4) > div {
-        top: 51vh;
-        left: 4%;
+        top: 45vh;
+        left: 8%;
         height: 42%;
-        width: 90.5%;
+        /*width: 90.5%;*/
     }
 
     /*left image*/
     main > section:nth-child(4) > div > img:nth-child(1) {
-        height: 142px;
-        width: 251px;
+        height: 0px;
+        width: 0px;
     }
 
     /*middle image*/
@@ -3021,8 +3021,8 @@ footer > small {
 
     /*right image*/
     main > section:nth-child(4) > div > img:nth-child(3) {
-        height: 142px;
-        width: 251px;
+        height: 0px;
+        width: 0px;
     }
 
     /*to left right icons in common*/
@@ -3032,14 +3032,14 @@ footer > small {
 
     /*to left icon*/
     main > section:nth-child(4) > div > :nth-child(4) {
-        left: 6vw;
-        top: 42vh;
+        left: 11vw;
+        top: 43vh;
     }
 
     /*to right icon*/
     main > section:nth-child(4) > div > :nth-child(5) {
-        left: 82vw;
-        top: 42vh;
+        left: 67vw;
+        top: 251px;
     }
 
 
