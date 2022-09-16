@@ -2579,21 +2579,21 @@ footer > small {
     /*===================!*Personal info ====================================================*!*/
     /*section container*/
     main > section:nth-child(1) {
-        top: 57px;
-        height: 974px;
+        top: 84px;
+        height: 847px;
     }
 
     /*article container*/
     main > section:nth-child(1) > article {
-        height: 94vh;
+        height: 86vh;
     }
 
     /*dd container inside article*/
     main > section:nth-child(1) > article > dd {
-        top: 78vh;
-        width: 88%;
+        top: 70vh;
+        width: 91%;
         height: 15vh;
-        left: 5%;
+        left: 4%;
     }
 
     /*profile pic*/
@@ -2614,10 +2614,10 @@ footer > small {
 
     /*hi there...*/
     main > section:nth-child(1) > :first-child {
-        left: 41vw;
+        left: 39vw;
         right: 0;
         top: 59vh;
-        font-size: 23px;
+        font-size: 17px;
     }
 
     /*dasindu hew...*/
@@ -2625,52 +2625,52 @@ footer > small {
         display: inline-block;
         position: absolute;
         margin: auto;
-        left: 21vw;
+        left: 14vw;
         top: 64vh;
 
         font-family: 'system-ui';
         font-weight: 400;
-        font-size: 45px;
+        font-size: 31px;
     }
 
     /*a passionate software dev...*/
     main > section:nth-child(1) > article > dd > pre {
-        left: 13vw;
-        top: -2vh;
-        font-size: 17px;
+        left: 1vw;
+        top: 1vh;
+        font-size: 13px;
         text-align: center;
     }
 
     /*aside container*/
     main > section:nth-child(1) > aside {
-        top: 95vh;
+        top: 87vh;
         left: 0;
-        height: 61vh;
+        height: 42vh;
         width: 100%;
     }
 
     /*about me*/
     main > section:nth-child(1) > aside > h3 {
-        left: 43vw;
-        top: 5vh;
-        font-size: 22px;
+        left: 41vw;
+        top: 2vh;
+        font-size: 17px;
     }
 
     /*about me description*/
     main > section:nth-child(1) > aside pre {
-        left: 19vw;
-        top: 14vh;
+        left: 8vw;
+        top: 9vh;
         text-align: center;
-        font-size: 16px;
+        font-size: 12px;
     }
 
     /*download resume button*/
     main > section:nth-child(1) > aside > button {
-        width: 201px;
-        height: 47px;
-        left: 37vw;
-        top: 44vh;
-        font-size: 17px;
+        width: 177px;
+        height: 42px;
+        left: 29vw;
+        top: 32vh;
+        font-size: 15px;
     }
 
     /*!*===================!*Education ====================================================*!*!*/
@@ -2682,16 +2682,16 @@ footer > small {
 
     /*heading*/
     main > section:nth-child(2) > :first-child {
-        left: 43vw;
+        left: 38vw;
         top: -9px;
-        font-size: 23px;
+        font-size: 22px;
     }
 
     /*line to divide*/
     main > section:nth-child(2) > div {
-        height: 497px;
+        height: 369px;
         left: 50vw;
-        top: 17vh;
+        top: 18vh;
         transform: rotate(90deg);
     }
 
@@ -2699,13 +2699,13 @@ footer > small {
     main > section:nth-child(2) > :nth-child(2) {
         top: 10%;
         left: 3vw;
-        height: 45vh;
+        height: 37vh;
         width: 93vw;
     }
 
     /*right aside container*/
     main > section:nth-child(2) > :nth-child(4) {
-        top: 45%;
+        top: 37%;
         left: 3vw;
         width: 93vw;
         height: 34vh;
@@ -2715,36 +2715,36 @@ footer > small {
     #lyceum_logo {
         width: 87px;
         height: 76px;
-        left: 15vw;
+        left: 2vw;
     }
 
     /*lyceum details container*/
     #lyceum {
         display: inline-block;
-        height: 134px;
+        height: 116px;
         top: 0;
         width: 84%;
     }
 
     /*lyceum heading*/
     #lyceum_heading {
-        left: 28vw;
+        left: 21vw;
         top: 9px;
-        font-size: 19px;
+        font-size: 17px;
     }
 
     /*lyceum student year*/
     #lyceum_year {
-        left: 37vw;
+        left: 32vw;
         top: 35px;
-        font-size: 17px;
+        font-size: 14px;
     }
 
     /*lyceum grades*/
     #lyceum_grade > pre {
-        left: 19vw;
-        top: 55px;
-        font-size: 17px;
+        left: 6vw;
+        top: 52px;
+        font-size: 14px;
     }
 
     /*lyceum DNA logo*/
@@ -2752,29 +2752,36 @@ footer > small {
         position: absolute;
         width: 65px;
         height: 53px;
-        left: 22vw;
+        left: 6vw;
         top: -1vh;
+    }
+
+    main > section:nth-child(2) > :nth-child(2) > div:nth-child(2) {
+        /* border: 1px solid red; */
+        position: relative;
+        top: -37px;
+        height: 166px;
     }
 
     /*eastern band heading*/
     #eastern_band {
-        left: 32vw;
-        top: -3%;
-        font-size: 19px;
+        left: 27vw;
+        top: 0%;
+        font-size: 17px;
     }
 
     /*eastern band year period*/
     #eb_year {
-        top: 13%;
-        left: 40%;
-        font-size: 18px;
+        top: 15%;
+        left: 35%;
+        font-size: 14px;
     }
 
     /*ijse info div container*/
     main > section:nth-child(2) > :nth-child(4) > div {
         position: relative;
-        left: 2%;
-        height: 33vh;
+        left: 0%;
+        height: 23vh;
         top: -9%;
     }
 
@@ -2784,34 +2791,34 @@ footer > small {
         top: 2vh;
         width: 188px;
         height: 53px;
-        left: 33vw;
+        left: 26vw;
     }
 
     /*ijse standard name*/
     main > section:nth-child(2) > :nth-child(4) > div > h4 {
-        top: 6vh;
-        left: 31vw;
-        font-size: 13px;
+        top: 39px;
+        left: 26vw;
+        font-size: 11px;
     }
 
     /*gdse heading*/
     main > section:nth-child(2) > :nth-child(4) > div > dl > dt {
         top: 14vh;
-        left: 23vw;
-        font-size: 19px;
+        left: 13vw;
+        font-size: 17px;
     }
 
     /*gdse year*/
     main > section:nth-child(2) > :nth-child(4) > div > dl > dd {
-        font-size: 18px;
         top: 15vh;
-        left: 33vw;
+        left: 28vw;
+        font-size: 14px;
     }
 
     /*!*===================!*Skills & Achievements ====================================================*!*!*/
     /*!*section container*!*/
     main > section:nth-child(3) {
-        top: -100px;
+        top: -32vh;
         height: 203vh;
     }
 
