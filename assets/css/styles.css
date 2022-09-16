@@ -3046,15 +3046,15 @@ footer > small {
     /*!*===================!*Collaborator's recommendation ====================================================*!*!*/
     /*section container*/
     main > section:nth-child(5) {
-        top: -6vh;
+        top: -22vh;
         height: 58vh;
     }
 
     /*heading*/
     main > section:nth-child(5) > :first-child {
-        left: 13vh;
+        left: 9vh;
         top: 0;
-        font-size: 23px;
+        font-size: 22px;
     }
 
     /*article container*/
@@ -3074,39 +3074,39 @@ footer > small {
     /*first mate's comment*/
     main > section:nth-child(5) > article > :nth-child(2) {
         width: 72vw;
-        top: 1vh;
-        left: 10%;
-        font-size: 18px;
+        top: -1vh;
+        left: 13%;
+        font-size: 15px;
     }
 
     /*first mate's name*/
     main > section:nth-child(5) > article > :nth-child(2) > h4 {
         left: 43%;
-        top: 53px;
-        font-size: 13px;
+        top: 78px;
+        font-size: 11px;
     }
 
     /*second mate's profile pic image 2 */
     main > section:nth-child(5) > article > :nth-child(3) {
         width: 51px;
         height: 54px;
-        top: 22vh;
-        left: 0;
+        top: 27vh;
+        left: -23px;
     }
 
     /*second mate's comment*/
     main > section:nth-child(5) > article > :nth-child(4) {
         width: 72vw;
-        top: 24vh;
-        left: -4%;
-        font-size: 18px;
+        top: 17vh;
+        left: 13%;
+        font-size: 15px;
     }
 
     /*second mate's name*/
     main > section:nth-child(5) > article > :nth-child(4) > h4 {
         left: 43%;
-        top: 54px;
-        font-size: 13px;
+        top: 79px;
+        font-size: 11px;
     }
 
 
