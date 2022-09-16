@@ -2824,127 +2824,127 @@ footer > small {
 
     /*heading*/
     main > section:nth-child(3) > :first-child {
-        left: 10vw;
-        font-size: 23px;
+        left: 24vw;
+        font-size: 22px;
     }
 
     /*blockquote*/
     main > section:nth-child(3) > blockquote > pre {
-        left: 0;
-        font-size: 19px;
-        top: -1vh;
+        left: -20vw;
+        font-size: 14px;
+        top: -2vh;
     }
 
     /*blockquote writer's name*/
     main > section:nth-child(3) > blockquote > pre > h4 {
-        left: 34%;
-        top: -18px;
-        font-size: 16px;
+        left: 33%;
+        top: -12px;
+        font-size: 12px;
     }
 
     /*left aside container - skills*/
     main > section:nth-child(3) > :nth-child(3) {
-        left: 6%;
-        top: 36vh;
+        left: -2%;
+        top: 30vh;
     }
 
     /*left aside ul lists*/
     main > section:nth-child(3) > :nth-child(3) > ul > li > pre {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     /*right aside container - tools & tech*/
     main > section:nth-child(3) > :nth-child(4) {
-        left: 65%;
-        top: 34vh;
+        left: 9%;
+        top: 59vh;
     }
 
     /*right aside heading*/
     main > section:nth-child(3) > :nth-child(4) > h4 {
-        font-size: 17px;
+        font-size: 14px;
     }
 
     /*right aside ul lists*/
     main > section:nth-child(3) > :nth-child(4) > ul > li {
-        font-size: 17px;
+        font-size: 14px;
     }
 
     /*technology icon container*/
     main > section:nth-child(3) > :nth-child(5) {
-        top: 67vh;
+        top: 88vh;
         height: 35vh;
-        left: 8vw;
-        width: 83%;
+        left: 2vw;
+        width: 96%;
     }
 
     /*css icon img*/
     #css_icon {
-        width: 92px;
-        height: 83px;
-        top: 14vh;
-        left: 6%;
+        width: 68px;
+        height: 67px;
+        top: 3vh;
+        left: 4%;
     }
 
     /*html icon img*/
     #html_icon {
-        width: 108px;
-        height: 109px;
-        top: 15vh;
-        left: 5%;
+        width: 81px;
+        height: 83px;
+        top: 4vh;
+        left: 1%;
     }
 
     /*java icon img*/
     #java_icon {
-        width: 191px;
-        height: 181px;
-        top: 1vh;
+        width: 133px;
+        height: 125px;
+        top: -4vh;
         left: 34%;
     }
 
     /*javascript icon img*/
     #js_icon {
-        width: 84px;
-        height: 86px;
-        top: 17vh;
-        left: 64%;
+        width: 53px;
+        height: 60px;
+        top: 6vh;
+        left: 65%;
     }
 
     /*intellij icon img*/
     #intelliJ_icon {
-        width: 75px;
-        height: 67px;
-        top: 19vh;
+        width: 52px;
+        height: 48px;
+        top: 7vh;
         left: 81%;
     }
 
     /*achievements container*/
     main > section:nth-child(3) > :nth-child(6) {
-        top: 59vh;
-        height: 98vh;
+        top: 68vh;
+        height: 96vh;
     }
 
     /*achievements ul */
     main > section:nth-child(3) > :nth-child(6) > ul {
         top: 3vh;
-        left: 8vw;
+        left: 1vw;
     }
 
     /*achievements ul list*/
     main > section:nth-child(3) > :nth-child(6) > ul > li {
-        font-size: 16px;
+        font-size: 12px;
     }
 
     /*images container*/
     main > section:nth-child(3) > :nth-child(6) > div {
-        top: 10vh;
-        left: 8vh;
-        height: 48vh;
+        top: 8vh;
+        left: 0vh;
+        height: 46vh;
     }
 
     /*left image*/
     main > section:nth-child(3) > :nth-child(6) > div > img:nth-child(1) {
-        height: 142px;
-        width: 251px;
+        height: 0px;
+        width: 0px;
     }
 
     /*middle image*/
@@ -2955,22 +2955,22 @@ footer > small {
 
     /*right image*/
     main > section:nth-child(3) > :nth-child(6) > div > img:nth-child(3) {
-        height: 142px;
-        width: 251px;
+        height: 0px;
+        width: 0px;
     }
 
     /*to left icon*/
     main > section:nth-child(3) > :nth-child(6) > div > :nth-child(4) {
         font-size: 25px;
-        left: 6vw;
-        top: 42vh;
+        left: 19vw;
+        top: 40vh;
     }
 
     /*to right icon*/
     main > section:nth-child(3) > :nth-child(6) > div > :nth-child(5) {
         font-size: 25px;
-        left: 81vw;
-        top: 42vh;
+        left: 74vw;
+        top: 40vh;
     }
 
 
