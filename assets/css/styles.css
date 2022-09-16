@@ -3113,29 +3113,29 @@ footer > small {
     /*!*===================!* Footer ====================================================*!*!*/
     /*footer container*/
     footer {
-        top: 7vh;
-        height: 35vh;
+        top: -4vh;
+        height: 47vh;
     }
 
     /*heading*/
     footer > h3 > dfn {
         top: 26px;
-        left: 3%;
-        font-size: 33px;
+        left: 38%;
+        font-size: 27px;
     }
 
     /*phone icon image*/
     footer > :nth-child(2) {
-        left: 3%;
-        top: 5vh;
+        left: 72px;
+        top: 29px;
         width: 32px;
         height: 32px;
     }
 
     /*whatsapp icon image*/
     footer > :nth-child(3) {
-        left: 24px;
-        top: 5vh;
+        left: -4px;
+        top: 30px;
         width: 32px;
         height: 32px;
     }
@@ -3143,48 +3143,47 @@ footer > small {
     /*email icon image*/
     footer > :nth-child(4) {
         top: 13vh;
-        left: -47px;
+        left: -40px;
         width: 32px;
         height: 32px;
     }
 
     /*mobile number*/
     footer > address > a:nth-child(1) {
-        left: 13%;
-        top: 0;
-        font-size: 18px;
+        left: 27%;
+        top: -1px;
+        font-size: 17px;
     }
 
     /*mail address*/
     footer > address > a:nth-child(2) {
-        left: -59px;
+        left: -45px;
         top: 45px;
-        font-size: 18px;
+        font-size: 17px;
     }
 
     /*telegram icon image*/
     footer > :nth-child(6) {
-        left: 79%;
-        top: -5vh;
+        left: 35%;
+        top: 15vh;
         width: 64px;
         height: 62px;
     }
 
     /*linkdin icon image*/
     footer > :nth-child(7) {
-        left: 80%;
-        top: -5vh;
+        left: 37%;
+        top: 15vh;
         width: 67px;
         height: 64px;
     }
 
     /*trademark and copyrights*/
     footer > small {
-        left: 60%;
-        top: -3vh;
-        font-size: 14px
+        left: 20%;
+        top: 16vh;
+        font-size: 13px;
     }
-
 
 }
 
