@@ -1902,7 +1902,7 @@ footer > small {
 
 
 /*============================ Tablet (768px) - From 425px to 768px ===============================*/
-@media all and (min-width: 425px) and (max-width: 768px) {
+@media all and (min-width: 426px) and (max-width: 768px) {
 
     /*===============================!*Header===============================*!*/
     /*container*/
@@ -2541,7 +2541,7 @@ footer > small {
 
 
 /*============================ Mobile L (425px) - From 375px to 425px ===============================*/
-@media all and (min-width: 375px) and (max-width: 426px) {
+@media all and (min-width: 376px) and (max-width: 426px) {
 
     /*=====================!*Header==================================================*!*/
     /*container*/
@@ -2576,83 +2576,613 @@ footer > small {
         font-weight: bold;
     }
 
-    /*!*===================!*Personal info ====================================================*!*!*/
+    /*===================!*Personal info ====================================================*!*/
     /*section container*/
     main > section:nth-child(1) {
-        height: 485px;
+        top: 57px;
+        height: 974px;
     }
 
     /*article container*/
     main > section:nth-child(1) > article {
-        height: 42vh;
+        height: 94vh;
     }
 
     /*dd container inside article*/
     main > section:nth-child(1) > article > dd {
-        top: 22vh;
-        left: 327px;
+        top: 78vh;
+        width: 88%;
+        height: 15vh;
+        left: 5%;
     }
 
     /*profile pic*/
     main > section:nth-child(1) > article > img {
-        width: 305px;
-        height: 244px;
+        position: absolute;
+        top: 9vh;
+        left: 0;
+        right: 0;
+        margin: auto;
+
+        content: url("../images/20220413_131126.jpg");
+        width: 260px;
+        height: 250px;
+        border-radius: 100%;
+        background-size: cover;
+        background-position: center;
     }
 
     /*hi there...*/
     main > section:nth-child(1) > :first-child {
-        font-size: 14px;
-        left: 334px;
-        top: 57px;
+        left: 41vw;
+        right: 0;
+        top: 59vh;
+        font-size: 23px;
     }
 
     /*dasindu hew...*/
     main > section:nth-child(1) > h1 {
-        font-size: 37px;
-        left: 249px;
-        top: 98px;
+        display: inline-block;
+        position: absolute;
+        margin: auto;
+        left: 21vw;
+        top: 64vh;
+
+        font-family: 'system-ui';
+        font-weight: 400;
+        font-size: 45px;
     }
 
     /*a passionate software dev...*/
     main > section:nth-child(1) > article > dd > pre {
-        font-size: 12px;
+        left: 13vw;
+        top: -2vh;
+        font-size: 17px;
+        text-align: center;
     }
 
     /*aside container*/
     main > section:nth-child(1) > aside {
-        height: 37vh;
+        top: 95vh;
+        left: 0;
+        height: 61vh;
         width: 100%;
-        top: 42vh;
     }
 
     /*about me*/
     main > section:nth-child(1) > aside > h3 {
-        top: 23px;
-        font-size: 13px;
-        left: 69px;
+        left: 43vw;
+        top: 5vh;
+        font-size: 22px;
     }
 
     /*about me description*/
     main > section:nth-child(1) > aside pre {
-        top: 56px;
-        font-size: 10px;
-        left: 69px;
+        left: 19vw;
+        top: 14vh;
+        text-align: center;
+        font-size: 16px;
     }
 
     /*download resume button*/
     main > section:nth-child(1) > aside > button {
-        width: 115px;
-        height: 33px;
-        left: 69px;
-        top: 165px;
-        font-size: 10px;
+        width: 201px;
+        height: 47px;
+        left: 37vw;
+        top: 44vh;
+        font-size: 17px;
+    }
+
+    /*!*===================!*Education ====================================================*!*!*/
+    /*section container*/
+    main > section:nth-child(2) {
+        top: 14vh;
+        height: 799px;
+    }
+
+    /*heading*/
+    main > section:nth-child(2) > :first-child {
+        left: 43vw;
+        top: -9px;
+        font-size: 23px;
+    }
+
+    /*line to divide*/
+    main > section:nth-child(2) > div {
+        height: 497px;
+        left: 50vw;
+        top: 17vh;
+        transform: rotate(90deg);
+    }
+
+    /*left aside container*/
+    main > section:nth-child(2) > :nth-child(2) {
+        top: 10%;
+        left: 3vw;
+        height: 45vh;
+        width: 93vw;
+    }
+
+    /*right aside container*/
+    main > section:nth-child(2) > :nth-child(4) {
+        top: 45%;
+        left: 3vw;
+        width: 93vw;
+        height: 34vh;
+    }
+
+    /*lyceum logo icon*/
+    #lyceum_logo {
+        width: 87px;
+        height: 76px;
+        left: 15vw;
+    }
+
+    /*lyceum details container*/
+    #lyceum {
+        display: inline-block;
+        height: 134px;
+        top: 0;
+        width: 84%;
+    }
+
+    /*lyceum heading*/
+    #lyceum_heading {
+        left: 28vw;
+        top: 9px;
+        font-size: 19px;
+    }
+
+    /*lyceum student year*/
+    #lyceum_year {
+        left: 37vw;
+        top: 35px;
+        font-size: 17px;
+    }
+
+    /*lyceum grades*/
+    #lyceum_grade > pre {
+        left: 19vw;
+        top: 55px;
+        font-size: 17px;
+    }
+
+    /*lyceum DNA logo*/
+    #lyceum_DNA_logo {
+        position: absolute;
+        width: 65px;
+        height: 53px;
+        left: 22vw;
+        top: -1vh;
+    }
+
+    /*eastern band heading*/
+    #eastern_band {
+        left: 32vw;
+        top: -3%;
+        font-size: 19px;
+    }
+
+    /*eastern band year period*/
+    #eb_year {
+        top: 13%;
+        left: 40%;
+        font-size: 18px;
+    }
+
+    /*ijse info div container*/
+    main > section:nth-child(2) > :nth-child(4) > div {
+        position: relative;
+        left: 2%;
+        height: 33vh;
+        top: -9%;
+    }
+
+    /*ijse logo icon*/
+    main > section:nth-child(2) > :nth-child(4) > div > img {
+        position: absolute;
+        top: 2vh;
+        width: 188px;
+        height: 53px;
+        left: 33vw;
+    }
+
+    /*ijse standard name*/
+    main > section:nth-child(2) > :nth-child(4) > div > h4 {
+        top: 6vh;
+        left: 31vw;
+        font-size: 13px;
+    }
+
+    /*gdse heading*/
+    main > section:nth-child(2) > :nth-child(4) > div > dl > dt {
+        top: 14vh;
+        left: 23vw;
+        font-size: 19px;
+    }
+
+    /*gdse year*/
+    main > section:nth-child(2) > :nth-child(4) > div > dl > dd {
+        font-size: 18px;
+        top: 15vh;
+        left: 33vw;
+    }
+
+    /*!*===================!*Skills & Achievements ====================================================*!*!*/
+    /*!*section container*!*/
+    main > section:nth-child(3) {
+        top: -100px;
+        height: 203vh;
+    }
+
+    /*heading*/
+    main > section:nth-child(3) > :first-child {
+        left: 10vw;
+        font-size: 23px;
+    }
+
+    /*blockquote*/
+    main > section:nth-child(3) > blockquote > pre {
+        left: 0;
+        font-size: 19px;
+        top: -1vh;
+    }
+
+    /*blockquote writer's name*/
+    main > section:nth-child(3) > blockquote > pre > h4 {
+        left: 34%;
+        top: -18px;
+        font-size: 16px;
+    }
+
+    /*left aside container - skills*/
+    main > section:nth-child(3) > :nth-child(3) {
+        left: 6%;
+        top: 36vh;
+    }
+
+    /*left aside ul lists*/
+    main > section:nth-child(3) > :nth-child(3) > ul > li > pre {
+        font-size: 15px;
+    }
+
+    /*right aside container - tools & tech*/
+    main > section:nth-child(3) > :nth-child(4) {
+        left: 65%;
+        top: 34vh;
+    }
+
+    /*right aside heading*/
+    main > section:nth-child(3) > :nth-child(4) > h4 {
+        font-size: 17px;
+    }
+
+    /*right aside ul lists*/
+    main > section:nth-child(3) > :nth-child(4) > ul > li {
+        font-size: 17px;
+    }
+
+    /*technology icon container*/
+    main > section:nth-child(3) > :nth-child(5) {
+        top: 67vh;
+        height: 35vh;
+        left: 8vw;
+        width: 83%;
+    }
+
+    /*css icon img*/
+    #css_icon {
+        width: 92px;
+        height: 83px;
+        top: 14vh;
+        left: 6%;
+    }
+
+    /*html icon img*/
+    #html_icon {
+        width: 108px;
+        height: 109px;
+        top: 15vh;
+        left: 5%;
+    }
+
+    /*java icon img*/
+    #java_icon {
+        width: 191px;
+        height: 181px;
+        top: 1vh;
+        left: 34%;
+    }
+
+    /*javascript icon img*/
+    #js_icon {
+        width: 84px;
+        height: 86px;
+        top: 17vh;
+        left: 64%;
+    }
+
+    /*intellij icon img*/
+    #intelliJ_icon {
+        width: 75px;
+        height: 67px;
+        top: 19vh;
+        left: 81%;
+    }
+
+    /*achievements container*/
+    main > section:nth-child(3) > :nth-child(6) {
+        top: 59vh;
+        height: 98vh;
+    }
+
+    /*achievements ul */
+    main > section:nth-child(3) > :nth-child(6) > ul {
+        top: 3vh;
+        left: 8vw;
+    }
+
+    /*achievements ul list*/
+    main > section:nth-child(3) > :nth-child(6) > ul > li {
+        font-size: 16px;
+    }
+
+    /*images container*/
+    main > section:nth-child(3) > :nth-child(6) > div {
+        top: 10vh;
+        left: 8vh;
+        height: 48vh;
+    }
+
+    /*left image*/
+    main > section:nth-child(3) > :nth-child(6) > div > img:nth-child(1) {
+        height: 142px;
+        width: 251px;
+    }
+
+    /*middle image*/
+    main > section:nth-child(3) > :nth-child(6) > div > img:nth-child(2) {
+        height: 207px;
+        width: 353px;
+    }
+
+    /*right image*/
+    main > section:nth-child(3) > :nth-child(6) > div > img:nth-child(3) {
+        height: 142px;
+        width: 251px;
+    }
+
+    /*to left icon*/
+    main > section:nth-child(3) > :nth-child(6) > div > :nth-child(4) {
+        font-size: 25px;
+        left: 6vw;
+        top: 42vh;
+    }
+
+    /*to right icon*/
+    main > section:nth-child(3) > :nth-child(6) > div > :nth-child(5) {
+        font-size: 25px;
+        left: 81vw;
+        top: 42vh;
+    }
+
+
+    /*!*===================!*Projects & Research ====================================================*!*!*/
+    /*section container*/
+    main > section:nth-child(4) {
+        top: -17vh;
+        height: 112vh;
+    }
+
+    /*heading*/
+    main > section:nth-child(4) > :first-child {
+        left: 40vw;
+        top: 0;
+        font-size: 23px;
+    }
+
+    /*projects list ul container*/
+    main > section:nth-child(4) > ul {
+        left: 5%;
+        top: 13vh;
+    }
+
+    /*projects list li*/
+    main > section:nth-child(4) > ul > li {
+        font-size: 17px;
+    }
+
+    /*projects images container*/
+    main > section:nth-child(4) > div {
+        top: 51vh;
+        left: 4%;
+        height: 42%;
+        width: 90.5%;
+    }
+
+    /*left image*/
+    main > section:nth-child(4) > div > img:nth-child(1) {
+        height: 142px;
+        width: 251px;
+    }
+
+    /*middle image*/
+    main > section:nth-child(4) > div > img:nth-child(2) {
+        height: 207px;
+        width: 353px;
+    }
+
+    /*right image*/
+    main > section:nth-child(4) > div > img:nth-child(3) {
+        height: 142px;
+        width: 251px;
+    }
+
+    /*to left right icons in common*/
+    main > section:nth-child(4) > div > i {
+        font-size: 25px;
+    }
+
+    /*to left icon*/
+    main > section:nth-child(4) > div > :nth-child(4) {
+        left: 6vw;
+        top: 42vh;
+    }
+
+    /*to right icon*/
+    main > section:nth-child(4) > div > :nth-child(5) {
+        left: 82vw;
+        top: 42vh;
+    }
+
+
+    /*!*===================!*Collaborator's recommendation ====================================================*!*!*/
+    /*section container*/
+    main > section:nth-child(5) {
+        top: -6vh;
+        height: 58vh;
+    }
+
+    /*heading*/
+    main > section:nth-child(5) > :first-child {
+        left: 13vh;
+        top: 0;
+        font-size: 23px;
+    }
+
+    /*article container*/
+    main > section:nth-child(5) > article {
+        top: 4vh;
+        height: 51vh;
+    }
+
+    /*first mate's profile pic image 1 */
+    main > section:nth-child(5) > article > :nth-child(1) {
+        width: 51px;
+        height: 54px;
+        left: 7%;
+        top: -1vh;
+    }
+
+    /*first mate's comment*/
+    main > section:nth-child(5) > article > :nth-child(2) {
+        width: 72vw;
+        top: 1vh;
+        left: 10%;
+        font-size: 18px;
+    }
+
+    /*first mate's name*/
+    main > section:nth-child(5) > article > :nth-child(2) > h4 {
+        left: 43%;
+        top: 53px;
+        font-size: 13px;
+    }
+
+    /*second mate's profile pic image 2 */
+    main > section:nth-child(5) > article > :nth-child(3) {
+        width: 51px;
+        height: 54px;
+        top: 22vh;
+        left: 0;
+    }
+
+    /*second mate's comment*/
+    main > section:nth-child(5) > article > :nth-child(4) {
+        width: 72vw;
+        top: 24vh;
+        left: -4%;
+        font-size: 18px;
+    }
+
+    /*second mate's name*/
+    main > section:nth-child(5) > article > :nth-child(4) > h4 {
+        left: 43%;
+        top: 54px;
+        font-size: 13px;
+    }
+
+
+    /*!*===================!* Footer ====================================================*!*!*/
+    /*footer container*/
+    footer {
+        top: 7vh;
+        height: 35vh;
+    }
+
+    /*heading*/
+    footer > h3 > dfn {
+        top: 26px;
+        left: 3%;
+        font-size: 33px;
+    }
+
+    /*phone icon image*/
+    footer > :nth-child(2) {
+        left: 3%;
+        top: 5vh;
+        width: 32px;
+        height: 32px;
+    }
+
+    /*whatsapp icon image*/
+    footer > :nth-child(3) {
+        left: 24px;
+        top: 5vh;
+        width: 32px;
+        height: 32px;
+    }
+
+    /*email icon image*/
+    footer > :nth-child(4) {
+        top: 13vh;
+        left: -47px;
+        width: 32px;
+        height: 32px;
+    }
+
+    /*mobile number*/
+    footer > address > a:nth-child(1) {
+        left: 13%;
+        top: 0;
+        font-size: 18px;
+    }
+
+    /*mail address*/
+    footer > address > a:nth-child(2) {
+        left: -59px;
+        top: 45px;
+        font-size: 18px;
+    }
+
+    /*telegram icon image*/
+    footer > :nth-child(6) {
+        left: 79%;
+        top: -5vh;
+        width: 64px;
+        height: 62px;
+    }
+
+    /*linkdin icon image*/
+    footer > :nth-child(7) {
+        left: 80%;
+        top: -5vh;
+        width: 67px;
+        height: 64px;
+    }
+
+    /*trademark and copyrights*/
+    footer > small {
+        left: 60%;
+        top: -3vh;
+        font-size: 14px
     }
 
 
 }
 
 /*============================ Mobile M (375px) From 320px to 375px ===============================*/
-@media all and (min-width: 320px) and (max-width: 376px) {
+@media all and (min-width: 321px) and (max-width: 376px) {
 
     /*=====================!*Header==================================================*!*/
     /*container*/
