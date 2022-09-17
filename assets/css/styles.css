@@ -4404,6 +4404,10 @@ footer > small {
 
 
     /*!*===================!* Footer ====================================================*!*!*/
+    body > main {
+        height: 635vh;
+    }
+
     /*footer container*/
     footer {
         top: -4vh;
@@ -4419,7 +4423,7 @@ footer > small {
 
     /*phone icon image*/
     footer > :nth-child(2) {
-        left: 68px;
+        left: 58px;
         top: 29px;
         width: 32px;
         height: 32px;
@@ -4427,7 +4431,7 @@ footer > small {
 
     /*whatsapp icon image*/
     footer > :nth-child(3) {
-        left: -4px;
+        left: -15px;
         top: 30px;
         width: 32px;
         height: 32px;
@@ -4436,50 +4440,49 @@ footer > small {
     /*email icon image*/
     footer > :nth-child(4) {
         top: 13vh;
-        left: -40px;
+        left: -51px;
         width: 32px;
         height: 32px;
     }
 
     /*mobile number*/
     footer > address > a:nth-child(1) {
-        left: 28%;
+        left: 31%;
         top: -1px;
-        font-size: 17px;
+        font-size: 16px;
     }
 
     /*mail address*/
     footer > address > a:nth-child(2) {
-        left: -49px;
-        top: 45px;
-        font-size: 17px;
+        left: 62px;
+        top: 26px;
+        font-size: 16px;
     }
 
     /*telegram icon image*/
     footer > :nth-child(6) {
-        left: 31%;
-        top: 15vh;
+        left: 29%;
+        top: 13vh;
         width: 64px;
         height: 62px;
     }
 
     /*linkdin icon image*/
     footer > :nth-child(7) {
-        left: 33%;
-        top: 15vh;
+        left: 30%;
+        top: 13vh;
         width: 67px;
         height: 64px;
     }
 
     /*trademark and copyrights*/
     footer > small {
-        left: 15%;
-        top: 16vh;
-        font-size: 13px;
+        left: 12%;
+        top: 13vh;
+        font-size: 12px;
     }
 
 
 }
-
 
 /*///////////////////////////=========================/////////////////////================//////////////////*/
