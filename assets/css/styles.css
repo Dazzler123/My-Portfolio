@@ -3695,9 +3695,9 @@ footer > small {
 
     /*heading*/
     main > section:nth-child(5) > :first-child {
-        left: 9vh;
+        left: 6vh;
         top: 0;
-        font-size: 22px;
+        font-size: 21px;
     }
 
     /*article container*/
@@ -3710,7 +3710,7 @@ footer > small {
     main > section:nth-child(5) > article > :nth-child(1) {
         width: 51px;
         height: 54px;
-        left: 7%;
+        left: 5%;
         top: -1vh;
     }
 
@@ -3718,7 +3718,7 @@ footer > small {
     main > section:nth-child(5) > article > :nth-child(2) {
         width: 72vw;
         top: -1vh;
-        left: 13%;
+        left: 11%;
         font-size: 15px;
     }
 
@@ -3734,14 +3734,14 @@ footer > small {
         width: 51px;
         height: 54px;
         top: 27vh;
-        left: -23px;
+        left: -35px;
     }
 
     /*second mate's comment*/
     main > section:nth-child(5) > article > :nth-child(4) {
         width: 72vw;
         top: 17vh;
-        left: 13%;
+        left: 11%;
         font-size: 15px;
     }
 
