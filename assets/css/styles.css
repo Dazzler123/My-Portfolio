@@ -648,7 +648,6 @@ main > section:nth-child(3) > :nth-child(6) > div > :nth-child(5) {
 }
 
 
-
 /*===================!*Projects & Research ====================================================*!*/
 /*section container*/
 main > section:nth-child(4) {
@@ -970,8 +969,6 @@ footer > small {
 }
 
 
-
-
 /*========================================!* R E S P O N S I V E ==================================================*!*/
 
 /*============================ Laptop L (1440px) - From 1024px to 1440px ===============================*/
@@ -979,8 +976,6 @@ footer > small {
 
     /*===============================!*Header===============================*!*/
     /*all contents suitable with this resolution*/
-
-
     /*===================!*Personal info ====================================================*!*/
     /*section container*/
     main > section:nth-child(1) {
@@ -1909,6 +1904,7 @@ footer > small {
     body > header {
         height: 54px;
     }
+
     /*icon*/
     header > img {
         left: 19px;
@@ -3624,21 +3620,21 @@ footer > small {
     /*!*===================!*Projects & Research ====================================================*!*!*/
     /*section container*/
     main > section:nth-child(4) {
-        top: -28vh;
+        top: -23vh;
         height: 112vh;
     }
 
     /*heading*/
     main > section:nth-child(4) > :first-child {
-        left: 27vw;
-        top: 0;
+        left: 24vw;
+        top: 0px;
         font-size: 22px;
     }
 
     /*projects list ul container*/
     main > section:nth-child(4) > ul {
         left: -7%;
-        top: 12vh;
+        top: 10vh;
     }
 
     /*projects list li*/
@@ -3649,7 +3645,7 @@ footer > small {
     /*projects images container*/
     main > section:nth-child(4) > div {
         top: 45vh;
-        left: 8%;
+        left: 5%;
         height: 42%;
         /*width: 90.5%;*/
     }
@@ -3662,8 +3658,8 @@ footer > small {
 
     /*middle image*/
     main > section:nth-child(4) > div > img:nth-child(2) {
-        height: 207px;
-        width: 353px;
+        height: 200px;
+        width: 337px;
     }
 
     /*right image*/
@@ -3679,7 +3675,7 @@ footer > small {
 
     /*to left icon*/
     main > section:nth-child(4) > div > :nth-child(4) {
-        left: 11vw;
+        left: 15vw;
         top: 43vh;
     }
 
@@ -3693,7 +3689,7 @@ footer > small {
     /*!*===================!*Collaborator's recommendation ====================================================*!*!*/
     /*section container*/
     main > section:nth-child(5) {
-        top: -22vh;
+        top: -19vh;
         height: 58vh;
     }
 
@@ -3872,8 +3868,6 @@ footer > small {
 
 
 }
-
-
 
 
 /*///////////////////////////=========================/////////////////////================//////////////////*/
@@ -4452,7 +4446,6 @@ footer > small {
 /*    top: 45vh;*/
 /*    transform: rotate(180deg);*/
 /*}*/
-
 
 
 /*!*===================!*Projects & Research ====================================================*!*!*/
