@@ -3972,16 +3972,16 @@ footer > small {
 
     /*heading*/
     main > section:nth-child(2) > :first-child {
-        left: 38vw;
+        left: 35vw;
         top: -9px;
         font-size: 22px;
     }
 
     /*line to divide*/
     main > section:nth-child(2) > div {
-        height: 315px;
+        height: 271px;
         left: 50vw;
-        top: 23vh;
+        top: 27vh;
         transform: rotate(90deg);
     }
 
@@ -4003,9 +4003,10 @@ footer > small {
 
     /*lyceum logo icon*/
     #lyceum_logo {
-        width: 87px;
-        height: 76px;
-        left: -2vw;
+        width: 83px;
+        height: 71px;
+        left: -5vw;
+        top: -10px;
     }
 
     /*lyceum details container*/
@@ -4019,30 +4020,30 @@ footer > small {
     /*lyceum heading*/
     #lyceum_heading {
         left: 18vw;
-        top: 9px;
-        font-size: 17px;
+        top: 2px;
+        font-size: 15px;
     }
 
     /*lyceum student year*/
     #lyceum_year {
-        left: 29vw;
-        top: 35px;
+        left: 27vw;
+        top: 25px;
         font-size: 14px;
     }
 
     /*lyceum grades*/
     #lyceum_grade > pre {
-        left: 0vw;
-        top: 52px;
+        left: -8vw;
+        top: 44px;
         font-size: 14px;
     }
 
     /*lyceum DNA logo*/
     #lyceum_DNA_logo {
         position: absolute;
-        width: 65px;
-        height: 53px;
-        left: 3vw;
+        width: 57px;
+        height: 50px;
+        left: 2vw;
         top: -1vh;
     }
 
@@ -4055,15 +4056,15 @@ footer > small {
 
     /*eastern band heading*/
     #eastern_band {
-        left: 22vw;
-        top: 0%;
-        font-size: 17px;
+        left: 20vw;
+        top: -1%;
+        font-size: 16px;
     }
 
     /*eastern band year period*/
     #eb_year {
-        top: 15%;
-        left: 31%;
+        top: 14%;
+        left: 27%;
         font-size: 14px;
     }
 
@@ -4081,27 +4082,27 @@ footer > small {
         top: 2vh;
         width: 188px;
         height: 53px;
-        left: 23vw;
+        left: 19vw;
     }
 
     /*ijse standard name*/
     main > section:nth-child(2) > :nth-child(4) > div > h4 {
         top: 39px;
-        left: 23vw;
+        left: 19vw;
         font-size: 11px;
     }
 
     /*gdse heading*/
     main > section:nth-child(2) > :nth-child(4) > div > dl > dt {
         top: 14vh;
-        left: 7vw;
-        font-size: 17px;
+        left: 6vw;
+        font-size: 15px;
     }
 
     /*gdse year*/
     main > section:nth-child(2) > :nth-child(4) > div > dl > dd {
         top: 15vh;
-        left: 25vw;
+        left: 23vw;
         font-size: 14px;
     }
 
