@@ -3223,6 +3223,615 @@ footer > small {
         font-weight: bold;
     }
 
+    /*===================!*Personal info ====================================================*!*/
+    /*section container*/
+    main > section:nth-child(1) {
+        top: 84px;
+        height: 822px;
+    }
+
+    /*article container*/
+    main > section:nth-child(1) > article {
+        height: 86vh;
+    }
+
+    /*dd container inside article*/
+    main > section:nth-child(1) > article > dd {
+        top: 70vh;
+        width: 91%;
+        height: 15vh;
+        left: 4%;
+    }
+
+    /*profile pic*/
+    main > section:nth-child(1) > article > img {
+        position: absolute;
+        top: 9vh;
+        left: 0;
+        right: 0;
+        margin: auto;
+
+        content: url("../images/20220413_131126.jpg");
+        width: 260px;
+        height: 250px;
+        border-radius: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+
+    /*hi there...*/
+    main > section:nth-child(1) > :first-child {
+        left: 38vw;
+        right: 0;
+        top: 59vh;
+        font-size: 17px;
+    }
+
+    /*dasindu hew...*/
+    main > section:nth-child(1) > h1 {
+        display: inline-block;
+        position: absolute;
+        margin: auto;
+        left: 10vw;
+        top: 63vh;
+
+        font-family: 'system-ui';
+        font-weight: 400;
+        font-size: 30px;
+    }
+
+    /*a passionate software dev...*/
+    main > section:nth-child(1) > article > dd > pre {
+        left: -1vw;
+        top: 1vh;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    /*aside container*/
+    main > section:nth-child(1) > aside {
+        top: 87vh;
+        left: 0;
+        height: 42vh;
+        width: 100%;
+    }
+
+    /*about me*/
+    main > section:nth-child(1) > aside > h3 {
+        left: 40vw;
+        top: 2vh;
+        font-size: 17px;
+    }
+
+    /*about me description*/
+    main > section:nth-child(1) > aside pre {
+        left: 3vw;
+        top: 9vh;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    /*download resume button*/
+    main > section:nth-child(1) > aside > button {
+        width: 177px;
+        height: 42px;
+        left: 28vw;
+        top: 32vh;
+        font-size: 15px;
+    }
+
+    /*!*===================!*Education ====================================================*!*!*/
+    /*section container*/
+    main > section:nth-child(2) {
+        top: 14vh;
+        height: 799px;
+    }
+
+    /*heading*/
+    main > section:nth-child(2) > :first-child {
+        left: 38vw;
+        top: -9px;
+        font-size: 22px;
+    }
+
+    /*line to divide*/
+    main > section:nth-child(2) > div {
+        height: 369px;
+        left: 50vw;
+        top: 18vh;
+        transform: rotate(90deg);
+    }
+
+    /*left aside container*/
+    main > section:nth-child(2) > :nth-child(2) {
+        top: 10%;
+        left: 3vw;
+        height: 37vh;
+        width: 93vw;
+    }
+
+    /*right aside container*/
+    main > section:nth-child(2) > :nth-child(4) {
+        top: 37%;
+        left: 3vw;
+        width: 93vw;
+        height: 34vh;
+    }
+
+    /*lyceum logo icon*/
+    #lyceum_logo {
+        width: 87px;
+        height: 76px;
+        left: -2vw;
+    }
+
+    /*lyceum details container*/
+    #lyceum {
+        display: inline-block;
+        height: 116px;
+        top: 0;
+        width: 84%;
+    }
+
+    /*lyceum heading*/
+    #lyceum_heading {
+        left: 21vw;
+        top: 9px;
+        font-size: 17px;
+    }
+
+    /*lyceum student year*/
+    #lyceum_year {
+        left: 32vw;
+        top: 35px;
+        font-size: 14px;
+    }
+
+    /*lyceum grades*/
+    #lyceum_grade > pre {
+        left: 6vw;
+        top: 52px;
+        font-size: 14px;
+    }
+
+    /*lyceum DNA logo*/
+    #lyceum_DNA_logo {
+        position: absolute;
+        width: 65px;
+        height: 53px;
+        left: 6vw;
+        top: -1vh;
+    }
+
+    main > section:nth-child(2) > :nth-child(2) > div:nth-child(2) {
+        /* border: 1px solid red; */
+        position: relative;
+        top: -37px;
+        height: 166px;
+    }
+
+    /*eastern band heading*/
+    #eastern_band {
+        left: 27vw;
+        top: 0%;
+        font-size: 17px;
+    }
+
+    /*eastern band year period*/
+    #eb_year {
+        top: 15%;
+        left: 35%;
+        font-size: 14px;
+    }
+
+    /*ijse info div container*/
+    main > section:nth-child(2) > :nth-child(4) > div {
+        position: relative;
+        left: 0%;
+        height: 23vh;
+        top: -9%;
+    }
+
+    /*ijse logo icon*/
+    main > section:nth-child(2) > :nth-child(4) > div > img {
+        position: absolute;
+        top: 2vh;
+        width: 188px;
+        height: 53px;
+        left: 26vw;
+    }
+
+    /*ijse standard name*/
+    main > section:nth-child(2) > :nth-child(4) > div > h4 {
+        top: 39px;
+        left: 26vw;
+        font-size: 11px;
+    }
+
+    /*gdse heading*/
+    main > section:nth-child(2) > :nth-child(4) > div > dl > dt {
+        top: 14vh;
+        left: 13vw;
+        font-size: 17px;
+    }
+
+    /*gdse year*/
+    main > section:nth-child(2) > :nth-child(4) > div > dl > dd {
+        top: 15vh;
+        left: 28vw;
+        font-size: 14px;
+    }
+
+    /*!*===================!*Skills & Achievements ====================================================*!*!*/
+    /*!*section container*!*/
+    main > section:nth-child(3) {
+        top: -32vh;
+        height: 203vh;
+    }
+
+    /*heading*/
+    main > section:nth-child(3) > :first-child {
+        left: 24vw;
+        font-size: 22px;
+    }
+
+    /*blockquote*/
+    main > section:nth-child(3) > blockquote > pre {
+        left: -20vw;
+        font-size: 14px;
+        top: -2vh;
+    }
+
+    /*blockquote writer's name*/
+    main > section:nth-child(3) > blockquote > pre > h4 {
+        left: 33%;
+        top: -12px;
+        font-size: 12px;
+    }
+
+    /*left aside container - skills*/
+    main > section:nth-child(3) > :nth-child(3) {
+        left: -2%;
+        top: 30vh;
+    }
+
+    /*left aside ul lists*/
+    main > section:nth-child(3) > :nth-child(3) > ul > li > pre {
+        font-size: 14px;
+    }
+
+    /*right aside container - tools & tech*/
+    main > section:nth-child(3) > :nth-child(4) {
+        left: 9%;
+        top: 59vh;
+    }
+
+    /*right aside heading*/
+    main > section:nth-child(3) > :nth-child(4) > h4 {
+        font-size: 14px;
+    }
+
+    /*right aside ul lists*/
+    main > section:nth-child(3) > :nth-child(4) > ul > li {
+        font-size: 14px;
+    }
+
+    /*technology icon container*/
+    main > section:nth-child(3) > :nth-child(5) {
+        top: 88vh;
+        height: 35vh;
+        left: 2vw;
+        width: 96%;
+    }
+
+    /*css icon img*/
+    #css_icon {
+        width: 68px;
+        height: 67px;
+        top: 3vh;
+        left: 4%;
+    }
+
+    /*html icon img*/
+    #html_icon {
+        width: 81px;
+        height: 83px;
+        top: 4vh;
+        left: 1%;
+    }
+
+    /*java icon img*/
+    #java_icon {
+        width: 133px;
+        height: 125px;
+        top: -4vh;
+        left: 34%;
+    }
+
+    /*javascript icon img*/
+    #js_icon {
+        width: 53px;
+        height: 60px;
+        top: 6vh;
+        left: 65%;
+    }
+
+    /*intellij icon img*/
+    #intelliJ_icon {
+        width: 52px;
+        height: 48px;
+        top: 7vh;
+        left: 81%;
+    }
+
+    /*achievements container*/
+    main > section:nth-child(3) > :nth-child(6) {
+        top: 68vh;
+        height: 96vh;
+    }
+
+    /*achievements ul */
+    main > section:nth-child(3) > :nth-child(6) > ul {
+        top: 3vh;
+        left: 1vw;
+    }
+
+    /*achievements ul list*/
+    main > section:nth-child(3) > :nth-child(6) > ul > li {
+        font-size: 12px;
+    }
+
+    /*images container*/
+    main > section:nth-child(3) > :nth-child(6) > div {
+        top: 8vh;
+        left: 0vh;
+        height: 46vh;
+    }
+
+    /*left image*/
+    main > section:nth-child(3) > :nth-child(6) > div > img:nth-child(1) {
+        height: 0px;
+        width: 0px;
+    }
+
+    /*middle image*/
+    main > section:nth-child(3) > :nth-child(6) > div > img:nth-child(2) {
+        height: 207px;
+        width: 353px;
+    }
+
+    /*right image*/
+    main > section:nth-child(3) > :nth-child(6) > div > img:nth-child(3) {
+        height: 0px;
+        width: 0px;
+    }
+
+    /*to left icon*/
+    main > section:nth-child(3) > :nth-child(6) > div > :nth-child(4) {
+        font-size: 25px;
+        left: 19vw;
+        top: 40vh;
+    }
+
+    /*to right icon*/
+    main > section:nth-child(3) > :nth-child(6) > div > :nth-child(5) {
+        font-size: 25px;
+        left: 74vw;
+        top: 40vh;
+    }
+
+
+    /*!*===================!*Projects & Research ====================================================*!*!*/
+    /*section container*/
+    main > section:nth-child(4) {
+        top: -28vh;
+        height: 112vh;
+    }
+
+    /*heading*/
+    main > section:nth-child(4) > :first-child {
+        left: 27vw;
+        top: 0;
+        font-size: 22px;
+    }
+
+    /*projects list ul container*/
+    main > section:nth-child(4) > ul {
+        left: -7%;
+        top: 12vh;
+    }
+
+    /*projects list li*/
+    main > section:nth-child(4) > ul > li {
+        font-size: 14px;
+    }
+
+    /*projects images container*/
+    main > section:nth-child(4) > div {
+        top: 45vh;
+        left: 8%;
+        height: 42%;
+        /*width: 90.5%;*/
+    }
+
+    /*left image*/
+    main > section:nth-child(4) > div > img:nth-child(1) {
+        height: 0px;
+        width: 0px;
+    }
+
+    /*middle image*/
+    main > section:nth-child(4) > div > img:nth-child(2) {
+        height: 207px;
+        width: 353px;
+    }
+
+    /*right image*/
+    main > section:nth-child(4) > div > img:nth-child(3) {
+        height: 0px;
+        width: 0px;
+    }
+
+    /*to left right icons in common*/
+    main > section:nth-child(4) > div > i {
+        font-size: 25px;
+    }
+
+    /*to left icon*/
+    main > section:nth-child(4) > div > :nth-child(4) {
+        left: 11vw;
+        top: 43vh;
+    }
+
+    /*to right icon*/
+    main > section:nth-child(4) > div > :nth-child(5) {
+        left: 67vw;
+        top: 251px;
+    }
+
+
+    /*!*===================!*Collaborator's recommendation ====================================================*!*!*/
+    /*section container*/
+    main > section:nth-child(5) {
+        top: -22vh;
+        height: 58vh;
+    }
+
+    /*heading*/
+    main > section:nth-child(5) > :first-child {
+        left: 9vh;
+        top: 0;
+        font-size: 22px;
+    }
+
+    /*article container*/
+    main > section:nth-child(5) > article {
+        top: 4vh;
+        height: 51vh;
+    }
+
+    /*first mate's profile pic image 1 */
+    main > section:nth-child(5) > article > :nth-child(1) {
+        width: 51px;
+        height: 54px;
+        left: 7%;
+        top: -1vh;
+    }
+
+    /*first mate's comment*/
+    main > section:nth-child(5) > article > :nth-child(2) {
+        width: 72vw;
+        top: -1vh;
+        left: 13%;
+        font-size: 15px;
+    }
+
+    /*first mate's name*/
+    main > section:nth-child(5) > article > :nth-child(2) > h4 {
+        left: 43%;
+        top: 78px;
+        font-size: 11px;
+    }
+
+    /*second mate's profile pic image 2 */
+    main > section:nth-child(5) > article > :nth-child(3) {
+        width: 51px;
+        height: 54px;
+        top: 27vh;
+        left: -23px;
+    }
+
+    /*second mate's comment*/
+    main > section:nth-child(5) > article > :nth-child(4) {
+        width: 72vw;
+        top: 17vh;
+        left: 13%;
+        font-size: 15px;
+    }
+
+    /*second mate's name*/
+    main > section:nth-child(5) > article > :nth-child(4) > h4 {
+        left: 43%;
+        top: 79px;
+        font-size: 11px;
+    }
+
+
+    /*!*===================!* Footer ====================================================*!*!*/
+    /*footer container*/
+    footer {
+        top: -4vh;
+        height: 47vh;
+    }
+
+    /*heading*/
+    footer > h3 > dfn {
+        top: 26px;
+        left: 38%;
+        font-size: 27px;
+    }
+
+    /*phone icon image*/
+    footer > :nth-child(2) {
+        left: 72px;
+        top: 29px;
+        width: 32px;
+        height: 32px;
+    }
+
+    /*whatsapp icon image*/
+    footer > :nth-child(3) {
+        left: -4px;
+        top: 30px;
+        width: 32px;
+        height: 32px;
+    }
+
+    /*email icon image*/
+    footer > :nth-child(4) {
+        top: 13vh;
+        left: -40px;
+        width: 32px;
+        height: 32px;
+    }
+
+    /*mobile number*/
+    footer > address > a:nth-child(1) {
+        left: 27%;
+        top: -1px;
+        font-size: 17px;
+    }
+
+    /*mail address*/
+    footer > address > a:nth-child(2) {
+        left: -45px;
+        top: 45px;
+        font-size: 17px;
+    }
+
+    /*telegram icon image*/
+    footer > :nth-child(6) {
+        left: 35%;
+        top: 15vh;
+        width: 64px;
+        height: 62px;
+    }
+
+    /*linkdin icon image*/
+    footer > :nth-child(7) {
+        left: 37%;
+        top: 15vh;
+        width: 67px;
+        height: 64px;
+    }
+
+    /*trademark and copyrights*/
+    footer > small {
+        left: 20%;
+        top: 16vh;
+        font-size: 13px;
+    }
+
 }
 
 /*============================ Mobile S (320px) - From 0 to 320px ===============================*/

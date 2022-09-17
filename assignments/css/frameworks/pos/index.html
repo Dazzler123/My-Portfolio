@@ -6,17 +6,71 @@
     <meta content="Dasindu Bimalaka Hewagamage" name="author">
     <meta content="Dasindu Bimalaka Hewagamage" name="owner">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-
     <link href="../pos/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+        body > main > aside {
+            width: 45vw;
+            height: 90vh;
+            left: 53vw;
+            top: 0;
+            display: inline-block;
+        }
+
+        /*customer container*/
+        body > main > aside > div:nth-child(1) {
+            margin-right: 100px;
+        }
+
+        /*all btn containers*/
+        body > main > aside > div {
+            width: 299px;
+            height: 50%;
+        }
+
+        /*orders container*/
+        body > main > aside > div:nth-child(3) {
+            position: absolute;
+            height: 50%;
+            width: 299px;
+            top: 40vh;
+        }
+
+        /*background image*/
+        body > main > img {
+            width: 723px;
+            height: 564px;
+        }
+
+    </style>
 </head>
-
 <body>
-<h3>Hello There!</h3>
-<h1>Welcome to Dazzler's POS System</h1>
 
-<!--use grid system to position contents-->
-<div class="shadow p-3 mb-5 bg-body rounded">Customer</div>
+<main class="container-fluid">
+    <div>
+        <h3 class="display-6">Hello There!</h3>
+        <h2 class="display-6">Welcome to Dazzler's POS System</h2>
+    </div>
 
+    <img src="../pos/assets/img/Woman%20cashier%20at%20checkout%20in%20shop%20or%20supermarket.jpg" alt="bg_image">
+
+    <!--use grid system to position contents-->
+    <aside class="row position-absolute justify-content-center">
+        <div class="col-5 shadow p-3 mb-5 bg-body rounded-5">
+            <h3 class="display-6">Customer</h3>
+        </div>
+
+        <div class="col-5 shadow p-3 mb-5 bg-body rounded-5">
+            <h3 class="display-6">Item</h3>
+        </div>
+        <div class="col-6 shadow p-3 mb-5 bg-body rounded-5">
+            <h3 class="display-6">Order</h3>
+        </div>
+    </aside>
+
+    <small>Designed & Developed By Dasindu Hewagamage</small>
+</main>
 
 
 <!--============================================================-->
