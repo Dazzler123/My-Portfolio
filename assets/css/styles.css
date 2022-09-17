@@ -4109,45 +4109,47 @@ footer > small {
     /*!*===================!*Skills & Achievements ====================================================*!*!*/
     /*!*section container*!*/
     main > section:nth-child(3) {
-        top: -32vh;
+        top: -36vh;
         height: 203vh;
     }
 
     /*heading*/
     main > section:nth-child(3) > :first-child {
-        left: 21vw;
-        font-size: 22px;
+        left: 18vw;
+        font-size: 21px;
     }
 
     /*blockquote*/
     main > section:nth-child(3) > blockquote > pre {
-        left: -24vw;
-        font-size: 13px;
+        left: -25vw;
+        font-size: 11px;
         top: -4vh;
+        text-align: left;
     }
 
     /*blockquote writer's name*/
     main > section:nth-child(3) > blockquote > pre > h4 {
-        left: 33%;
+        left: 31%;
         top: -12px;
         font-size: 11px;
     }
 
     /*left aside container - skills*/
     main > section:nth-child(3) > :nth-child(3) {
-        left: -2%;
-        top: 27vh;
+        left: -6%;
+        top: 25vh;
+
     }
 
     /*left aside ul lists*/
     main > section:nth-child(3) > :nth-child(3) > ul > li > pre {
-        font-size: 13px;
+        font-size: 12px;
     }
 
     /*right aside container - tools & tech*/
     main > section:nth-child(3) > :nth-child(4) {
-        left: 10%;
-        top: 55vh;
+        left: 8%;
+        top: 52vh;
     }
 
     /*right aside heading*/
@@ -4162,55 +4164,55 @@ footer > small {
 
     /*technology icon container*/
     main > section:nth-child(3) > :nth-child(5) {
-        top: 85vh;
+        top: 82vh;
         height: 35vh;
-        left: 1vw;
+        left: 0vw;
         width: 96%;
     }
 
     /*css icon img*/
     #css_icon {
-        width: 61px;
-        height: 63px;
+        width: 58px;
+        height: 56px;
         top: 4vh;
-        left: 4%;
+        left: 3%;
     }
 
     /*html icon img*/
     #html_icon {
-        width: 75px;
-        height: 76px;
+        width: 66px;
+        height: 67px;
         top: 4vh;
-        left: 1%;
+        left: -1%;
     }
 
     /*java icon img*/
     #java_icon {
-        width: 120px;
-        height: 118px;
+        width: 109px;
+        height: 104px;
         top: -4vh;
-        left: 34%;
+        left: 33%;
     }
 
     /*javascript icon img*/
     #js_icon {
-        width: 49px;
-        height: 57px;
-        top: 6vh;
-        left: 65%;
+        width: 46px;
+        height: 51px;
+        top: 5vh;
+        left: 66%;
     }
 
     /*intellij icon img*/
     #intelliJ_icon {
-        width: 48px;
-        height: 46px;
-        top: 7vh;
-        left: 81%;
+        width: 43px;
+        height: 43px;
+        top: 37px;
+        left: 83%;
     }
 
     /*achievements container*/
     main > section:nth-child(3) > :nth-child(6) {
-        top: 68vh;
+        top: 65vh;
         height: 96vh;
     }
 
@@ -4227,8 +4229,8 @@ footer > small {
 
     /*images container*/
     main > section:nth-child(3) > :nth-child(6) > div {
-        top: 8vh;
-        left: -3vh;
+        top: 3vh;
+        left: 2vh;
         height: 46vh;
     }
 
@@ -4240,8 +4242,8 @@ footer > small {
 
     /*middle image*/
     main > section:nth-child(3) > :nth-child(6) > div > img:nth-child(2) {
-        height: 200px;
-        width: 337px;
+        height: 176px;
+        width: 289px;
     }
 
     /*right image*/
@@ -4253,22 +4255,22 @@ footer > small {
     /*to left icon*/
     main > section:nth-child(3) > :nth-child(6) > div > :nth-child(4) {
         font-size: 25px;
-        left: 26vw;
-        top: 38vh;
+        left: 18vw;
+        top: 37vh;
     }
 
     /*to right icon*/
     main > section:nth-child(3) > :nth-child(6) > div > :nth-child(5) {
         font-size: 25px;
-        left: 78vw;
-        top: 38vh;
+        left: 66vw;
+        top: 37vh;
     }
 
 
     /*!*===================!*Projects & Research ====================================================*!*!*/
     /*section container*/
     main > section:nth-child(4) {
-        top: -23vh;
+        top: -36vh;
         height: 112vh;
     }
 
