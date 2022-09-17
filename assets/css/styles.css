@@ -4270,26 +4270,26 @@ footer > small {
     /*!*===================!*Projects & Research ====================================================*!*!*/
     /*section container*/
     main > section:nth-child(4) {
-        top: -36vh;
+        top: -42vh;
         height: 112vh;
     }
 
     /*heading*/
     main > section:nth-child(4) > :first-child {
-        left: 24vw;
+        left: 19vw;
         top: 0px;
-        font-size: 22px;
+        font-size: 21px;
     }
 
     /*projects list ul container*/
     main > section:nth-child(4) > ul {
-        left: -7%;
+        left: -13%;
         top: 10vh;
     }
 
     /*projects list li*/
     main > section:nth-child(4) > ul > li {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     /*projects images container*/
@@ -4308,8 +4308,8 @@ footer > small {
 
     /*middle image*/
     main > section:nth-child(4) > div > img:nth-child(2) {
-        height: 200px;
-        width: 337px;
+        height: 176px;
+        width: 289px;
     }
 
     /*right image*/
@@ -4326,20 +4326,20 @@ footer > small {
     /*to left icon*/
     main > section:nth-child(4) > div > :nth-child(4) {
         left: 15vw;
-        top: 43vh;
+        top: 38vh;
     }
 
     /*to right icon*/
     main > section:nth-child(4) > div > :nth-child(5) {
         left: 67vw;
-        top: 251px;
+        top: 222px;
     }
 
 
     /*!*===================!*Collaborator's recommendation ====================================================*!*!*/
     /*section container*/
     main > section:nth-child(5) {
-        top: -19vh;
+        top: -42vh;
         height: 58vh;
     }
 
