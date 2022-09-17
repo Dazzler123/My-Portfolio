@@ -10,14 +10,43 @@
 
     <style>
 
-        /*btn container*/
+        /*headings container*/
+        main > div {
+            /*display: inline-block;*/
+            top: 12vh;
+            left: 7vw;
+            margin: 0;
+        }
+
+        /*heading dasin hewa*/
+        body > main > div:nth-child(1) > h1 {
+            font-size: 33px;
+            font-weight: bold;
+            margin-top: 1%;
+        }
+
+        /*heading hi there*/
+        body > main > div:nth-child(1) > h3 {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        /*background image*/
+        body > main > img {
+            top: 16vh;
+            left: 5vw;
+            width: 723px;
+            height: 564px;
+        }
+
+        /*btn container (grid)*/
         body > main > aside {
-            width: 45vw;
-            height: 90vh;
+            display: inline-block;
             left: 50vw;
             margin: 0;
             top: 10vh;
-            display: inline-block;
+            width: 45vw;
+            height: 90vh;
         }
 
         /*all btn containers in common*/
@@ -42,29 +71,21 @@
             width: 290px;
         }
 
-        /*background image*/
-        body > main > img {
-            width: 723px;
-            height: 564px;
-        }
-
-        body > main > div:nth-child(1) > h2 {
-            font-size: 30px;
-        }
-
     </style>
 </head>
-<body>
+<body class="position-relative height: 100vh">
 
-<main class="container-fluid">
-    <div>
-        <h3 class="display-6">Hello There!</h3>
-        <h2 class="display-6">Welcome to Dazzler's POS System</h2>
+<main class="container-fluid position-relative height: 200vh">
+    <div class="position-relative">
+        <h3>Hello There!</h3>
+        <h1>Welcome to Dazzler's POS System</h1>
     </div>
 
-    <img src="../pos/assets/img/Woman%20cashier%20at%20checkout%20in%20shop%20or%20supermarket.jpg" alt="bg_image">
+    <!--bg image-->
+    <img src="../pos/assets/img/Woman%20cashier%20at%20checkout%20in%20shop%20or%20supermarket.jpg"
+         class="position-relative img-fluid" alt="bg_image">
 
-    <!--use grid system to position contents-->
+    <!--use grid system to position buttons-->
     <aside class="row position-absolute justify-content-center">
         <div class="col-5 shadow bg-body rounded-5">
             <h3 class="display-6">Customer</h3>
