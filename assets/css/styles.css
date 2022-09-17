@@ -3769,7 +3769,7 @@ footer > small {
 
     /*phone icon image*/
     footer > :nth-child(2) {
-        left: 72px;
+        left: 68px;
         top: 29px;
         width: 32px;
         height: 32px;
@@ -3793,21 +3793,21 @@ footer > small {
 
     /*mobile number*/
     footer > address > a:nth-child(1) {
-        left: 27%;
+        left: 28%;
         top: -1px;
         font-size: 17px;
     }
 
     /*mail address*/
     footer > address > a:nth-child(2) {
-        left: -45px;
+        left: -49px;
         top: 45px;
         font-size: 17px;
     }
 
     /*telegram icon image*/
     footer > :nth-child(6) {
-        left: 35%;
+        left: 31%;
         top: 15vh;
         width: 64px;
         height: 62px;
@@ -3815,7 +3815,7 @@ footer > small {
 
     /*linkdin icon image*/
     footer > :nth-child(7) {
-        left: 37%;
+        left: 33%;
         top: 15vh;
         width: 67px;
         height: 64px;
@@ -3823,7 +3823,7 @@ footer > small {
 
     /*trademark and copyrights*/
     footer > small {
-        left: 20%;
+        left: 15%;
         top: 16vh;
         font-size: 13px;
     }
