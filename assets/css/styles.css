@@ -3336,9 +3336,9 @@ footer > small {
 
     /*line to divide*/
     main > section:nth-child(2) > div {
-        height: 369px;
+        height: 315px;
         left: 50vw;
-        top: 18vh;
+        top: 23vh;
         transform: rotate(90deg);
     }
 
@@ -3375,21 +3375,21 @@ footer > small {
 
     /*lyceum heading*/
     #lyceum_heading {
-        left: 21vw;
+        left: 18vw;
         top: 9px;
         font-size: 17px;
     }
 
     /*lyceum student year*/
     #lyceum_year {
-        left: 32vw;
+        left: 29vw;
         top: 35px;
         font-size: 14px;
     }
 
     /*lyceum grades*/
     #lyceum_grade > pre {
-        left: 6vw;
+        left: 0vw;
         top: 52px;
         font-size: 14px;
     }
@@ -3399,7 +3399,7 @@ footer > small {
         position: absolute;
         width: 65px;
         height: 53px;
-        left: 6vw;
+        left: 3vw;
         top: -1vh;
     }
 
@@ -3412,7 +3412,7 @@ footer > small {
 
     /*eastern band heading*/
     #eastern_band {
-        left: 27vw;
+        left: 22vw;
         top: 0%;
         font-size: 17px;
     }
@@ -3420,7 +3420,7 @@ footer > small {
     /*eastern band year period*/
     #eb_year {
         top: 15%;
-        left: 35%;
+        left: 31%;
         font-size: 14px;
     }
 
@@ -3438,27 +3438,27 @@ footer > small {
         top: 2vh;
         width: 188px;
         height: 53px;
-        left: 26vw;
+        left: 23vw;
     }
 
     /*ijse standard name*/
     main > section:nth-child(2) > :nth-child(4) > div > h4 {
         top: 39px;
-        left: 26vw;
+        left: 23vw;
         font-size: 11px;
     }
 
     /*gdse heading*/
     main > section:nth-child(2) > :nth-child(4) > div > dl > dt {
         top: 14vh;
-        left: 13vw;
+        left: 7vw;
         font-size: 17px;
     }
 
     /*gdse year*/
     main > section:nth-child(2) > :nth-child(4) > div > dl > dd {
         top: 15vh;
-        left: 28vw;
+        left: 25vw;
         font-size: 14px;
     }
 
