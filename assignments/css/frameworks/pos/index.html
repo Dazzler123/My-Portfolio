@@ -10,32 +10,36 @@
 
     <style>
 
+        /*btn container*/
         body > main > aside {
             width: 45vw;
             height: 90vh;
-            left: 53vw;
+            left: 50vw;
             margin: 0;
-            top: 0;
+            top: 10vh;
             display: inline-block;
         }
 
-        /*customer container*/
-        body > main > aside > div:nth-child(1) {
-            margin-right: 100px;
-        }
-
-        /*all btn containers*/
+        /*all btn containers in common*/
         body > main > aside > div {
             width: 299px;
             height: 30%;
         }
 
+        /*customer container*/
+        body > main > aside > div:nth-child(1) {
+            margin-right: 100px;
+            margin-top: 5%;
+        }
+
+        /*items container*/
+        body > main > aside > div:nth-child(2) {
+            margin-top: 5%;
+        }
+
         /*orders container*/
         body > main > aside > div:nth-child(3) {
-            position: absolute;
-            height: 30%;
-            width: 299px;
-            top: 40vh;
+            width: 290px;
         }
 
         /*background image*/
@@ -62,11 +66,11 @@
 
     <!--use grid system to position contents-->
     <aside class="row position-absolute justify-content-center">
-        <div class="col-5 shadow p-3 mb-5 bg-body rounded-5">
+        <div class="col-5 shadow bg-body rounded-5">
             <h3 class="display-6">Customer</h3>
         </div>
 
-        <div class="col-5 shadow p-3 mb-5 bg-body rounded-5">
+        <div class="col-5 shadow bg-body rounded-5">
             <h3 class="display-6">Item</h3>
         </div>
         <div class="col-6 shadow bg-body rounded-5">
