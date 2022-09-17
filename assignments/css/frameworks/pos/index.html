@@ -7,6 +7,7 @@
     <meta content="Dasindu Bimalaka Hewagamage" name="owner">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="../pos/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../pos/assets/fonts/css/all.min.css" rel="stylesheet">
 
     <style>
 
@@ -61,9 +62,21 @@
             margin-top: 5%;
         }
 
+        /*customer icon*/
+        body > main > aside > div:nth-child(1) > img{
+            margin-top: 15%;
+            width: 88px;
+            height: 64px;
+        }
+
         /*items container*/
         body > main > aside > div:nth-child(2) {
             margin-top: 5%;
+        }
+
+        /*!*items icon*/
+        body > main > aside > div:nth-child(2) > i{
+            font-size: 55px;
         }
 
         /*orders container*/
@@ -71,11 +84,22 @@
             width: 290px;
         }
 
+        /*cart icon*/
+        body > main > aside > div:nth-child(3) > i{
+            font-size: 55px;
+        }
+
+        /*ownership title*/
+        body > main > small{
+            top: 93vh;
+            left: 78vw;
+        }
+
     </style>
 </head>
 <body class="position-relative height: 100vh">
 
-<main class="container-fluid position-relative height: 200vh">
+<main class="container-fluid position-relative">
     <div class="position-relative">
         <h3>Hello There!</h3>
         <h1>Welcome to Dazzler's POS System</h1>
@@ -87,19 +111,23 @@
 
     <!--use grid system to position buttons-->
     <aside class="row position-absolute justify-content-center">
-        <div class="col-5 shadow bg-body rounded-5">
-            <h3 class="display-6">Customer</h3>
+        <div class="row col-5 shadow bg-body rounded-5 justify-content-center">
+            <img src="../pos/assets/img/download.png" alt="customer icon">
+            <h3 class="col-12">Customer</h3>
         </div>
 
-        <div class="col-5 shadow bg-body rounded-5">
+        <div class="col-5 shadow bg-body rounded-5 justify-content-center">
+            <i class="fa-solid fa-cubes"></i>
             <h3 class="display-6">Item</h3>
         </div>
-        <div class="col-6 shadow bg-body rounded-5">
+
+        <div class="col-6 shadow bg-body rounded-5 justify-content-center">
+            <i class="fa-solid fa-cart-shopping"></i>
             <h3 class="display-6">Order</h3>
         </div>
     </aside>
 
-    <small>Designed & Developed By Dasindu Hewagamage</small>
+    <small class="position-absolute">Designed & Developed By Dasindu Hewagamage</small>
 </main>
 
 
