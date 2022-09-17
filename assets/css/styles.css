@@ -3471,39 +3471,39 @@ footer > small {
 
     /*heading*/
     main > section:nth-child(3) > :first-child {
-        left: 24vw;
+        left: 21vw;
         font-size: 22px;
     }
 
     /*blockquote*/
     main > section:nth-child(3) > blockquote > pre {
-        left: -20vw;
-        font-size: 14px;
-        top: -2vh;
+        left: -24vw;
+        font-size: 13px;
+        top: -4vh;
     }
 
     /*blockquote writer's name*/
     main > section:nth-child(3) > blockquote > pre > h4 {
         left: 33%;
         top: -12px;
-        font-size: 12px;
+        font-size: 11px;
     }
 
     /*left aside container - skills*/
     main > section:nth-child(3) > :nth-child(3) {
         left: -2%;
-        top: 30vh;
+        top: 27vh;
     }
 
     /*left aside ul lists*/
     main > section:nth-child(3) > :nth-child(3) > ul > li > pre {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     /*right aside container - tools & tech*/
     main > section:nth-child(3) > :nth-child(4) {
-        left: 9%;
-        top: 59vh;
+        left: 10%;
+        top: 55vh;
     }
 
     /*right aside heading*/
@@ -3513,53 +3513,53 @@ footer > small {
 
     /*right aside ul lists*/
     main > section:nth-child(3) > :nth-child(4) > ul > li {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     /*technology icon container*/
     main > section:nth-child(3) > :nth-child(5) {
-        top: 88vh;
+        top: 85vh;
         height: 35vh;
-        left: 2vw;
+        left: 1vw;
         width: 96%;
     }
 
     /*css icon img*/
     #css_icon {
-        width: 68px;
-        height: 67px;
-        top: 3vh;
+        width: 61px;
+        height: 63px;
+        top: 4vh;
         left: 4%;
     }
 
     /*html icon img*/
     #html_icon {
-        width: 81px;
-        height: 83px;
+        width: 75px;
+        height: 76px;
         top: 4vh;
         left: 1%;
     }
 
     /*java icon img*/
     #java_icon {
-        width: 133px;
-        height: 125px;
+        width: 120px;
+        height: 118px;
         top: -4vh;
         left: 34%;
     }
 
     /*javascript icon img*/
     #js_icon {
-        width: 53px;
-        height: 60px;
+        width: 49px;
+        height: 57px;
         top: 6vh;
         left: 65%;
     }
 
     /*intellij icon img*/
     #intelliJ_icon {
-        width: 52px;
-        height: 48px;
+        width: 48px;
+        height: 46px;
         top: 7vh;
         left: 81%;
     }
@@ -3573,7 +3573,7 @@ footer > small {
     /*achievements ul */
     main > section:nth-child(3) > :nth-child(6) > ul {
         top: 3vh;
-        left: 1vw;
+        left: 0vw;
     }
 
     /*achievements ul list*/
@@ -3584,7 +3584,7 @@ footer > small {
     /*images container*/
     main > section:nth-child(3) > :nth-child(6) > div {
         top: 8vh;
-        left: 0vh;
+        left: -3vh;
         height: 46vh;
     }
 
@@ -3596,8 +3596,8 @@ footer > small {
 
     /*middle image*/
     main > section:nth-child(3) > :nth-child(6) > div > img:nth-child(2) {
-        height: 207px;
-        width: 353px;
+        height: 200px;
+        width: 337px;
     }
 
     /*right image*/
@@ -3609,15 +3609,15 @@ footer > small {
     /*to left icon*/
     main > section:nth-child(3) > :nth-child(6) > div > :nth-child(4) {
         font-size: 25px;
-        left: 19vw;
-        top: 40vh;
+        left: 26vw;
+        top: 38vh;
     }
 
     /*to right icon*/
     main > section:nth-child(3) > :nth-child(6) > div > :nth-child(5) {
         font-size: 25px;
-        left: 74vw;
-        top: 40vh;
+        left: 78vw;
+        top: 38vh;
     }
 
 
