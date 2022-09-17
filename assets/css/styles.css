@@ -4340,14 +4340,14 @@ footer > small {
     /*section container*/
     main > section:nth-child(5) {
         top: -42vh;
-        height: 58vh;
+        height: 75vh;
     }
 
     /*heading*/
     main > section:nth-child(5) > :first-child {
-        left: 6vh;
+        left: 4vh;
         top: 0;
-        font-size: 21px;
+        font-size: 19px;
     }
 
     /*article container*/
@@ -4358,8 +4358,8 @@ footer > small {
 
     /*first mate's profile pic image 1 */
     main > section:nth-child(5) > article > :nth-child(1) {
-        width: 51px;
-        height: 54px;
+        width: 44px;
+        height: 46px;
         left: 5%;
         top: -1vh;
     }
@@ -4375,30 +4375,30 @@ footer > small {
     /*first mate's name*/
     main > section:nth-child(5) > article > :nth-child(2) > h4 {
         left: 43%;
-        top: 78px;
+        top: 104px;
         font-size: 11px;
     }
 
     /*second mate's profile pic image 2 */
     main > section:nth-child(5) > article > :nth-child(3) {
-        width: 51px;
-        height: 54px;
-        top: 27vh;
+        width: 44px;
+        height: 46px;
+        top: 29vh;
         left: -35px;
     }
 
     /*second mate's comment*/
     main > section:nth-child(5) > article > :nth-child(4) {
         width: 72vw;
-        top: 17vh;
-        left: 11%;
+        top: 21vh;
+        left: 10%;
         font-size: 15px;
     }
 
     /*second mate's name*/
     main > section:nth-child(5) > article > :nth-child(4) > h4 {
         left: 43%;
-        top: 79px;
+        top: 105px;
         font-size: 11px;
     }
 
