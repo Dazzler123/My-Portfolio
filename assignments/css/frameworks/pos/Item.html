@@ -50,8 +50,8 @@
 <main class="container-fluid bg-light">
 
     <!--heading & icon-->
-    <img src="../pos/assets/img/download.png" alt="customer icon">
-    <h4 class="fw-semibold">Customer</h4>
+    <i class="fa-solid fa-cubes" style="font-size: 150px"></i>
+    <h4 class="fw-semibold">Items</h4>
 
     <!--search item-->
     <div>
@@ -61,53 +61,53 @@
         </form>
         <h6 class="fw-normal">Search By</h6>
         <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-            <option selected>ID</option>
+            <option selected>Code</option>
             <option value="1">Name</option>
         </select>
     </div>
 
     <!--crud btns-->
     <div class="row">
-        <button type="button" class="btn btn-outline-success col-6 mb-4">+ Add New Customer</button>
-        <button type="button" class="btn btn-outline-warning col-6 mb-4">Update Customer</button>
-        <button type="button" class="btn btn-outline-danger col-6">- Delete Customer</button>
-        <button type="button" class="btn btn-outline-primary col-6">View All Customers</button>
+        <button type="button" class="btn btn-outline-success col-6 mb-4">+ Add New Item</button>
+        <button type="button" class="btn btn-outline-warning col-6 mb-4">Update Item</button>
+        <button type="button" class="btn btn-outline-danger col-6">- Delete Item</button>
+        <button type="button" class="btn btn-outline-primary col-6">View All Items</button>
     </div>
 
-    <!--customer details table-->
+    <!--item details table-->
     <table class="table table-hover table-bordered">
         <thead class="table-primary">
         <tr>
-            <th scope="col" class="text-center">Customer ID</th>
-            <th scope="col" class="text-center">Customer Name</th>
-            <th scope="col" class="text-center">Customer Address</th>
-            <th scope="col" class="text-center">Customer Salary</th>
+            <th scope="col" class="text-center">Item Code</th>
+            <th scope="col" class="text-center">Item Name</th>
+            <th scope="col" class="text-center">Item Price</th>
+            <th scope="col" class="text-center">Item Quantity</th>
         </tr>
         </thead>
         <tbody>
         <tr>
-            <td>C001</td>
-            <td>Dasun Perera</td>
-            <td>Panadura</td>
-            <td>15000</td>
+            <td>ITM-001</td>
+            <td>Araliya Keerisamba 5kg</td>
+            <td>1960.00</td>
+            <td>350</td>
         </tr>
         <tr>
-            <td>C002</td>
-            <td>Wimal Shanaka</td>
-            <td>Galle</td>
-            <td>13000</td>
+            <td>ITM-002</td>
+            <td>Baasmathi Rice 25kg</td>
+            <td>11250.00</td>
+            <td>120</td>
         </tr>
         <tr>
-            <td>C003</td>
-            <td>Kamal Fernando</td>
-            <td>Bellanwila</td>
-            <td>25000</td>
+            <td>ITM-003</td>
+            <td>Maggie Coconut Milk 400g</td>
+            <td>350.00</td>
+            <td>20</td>
         </tr>
         <tr>
-            <td>C004</td>
-            <td>Ranjith Wickramasinghe</td>
-            <td>Kottawa</td>
-            <td>50000</td>
+            <td>ITM-004</td>
+            <td>Maliban Cream Cracker 150g</td>
+            <td>300.00</td>
+            <td>70</td>
         </tr>
         </tbody>
     </table>
