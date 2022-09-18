@@ -47,11 +47,24 @@
     </nav>
 </header>
 
-<main class="container-fluid">
+<main class="container-fluid bg-light">
 
     <!--heading & icon-->
     <img src="../pos/assets/img/download.png" alt="customer icon">
     <h4 class="fw-semibold">Customer</h4>
+
+    <!--search customer-->
+    <div>
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <h6 class="fw-normal">Search By</h6>
+        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+            <option selected>ID</option>
+            <option value="1">Name</option>
+        </select>
+    </div>
 
     <!--crud btns-->
     <div class="row">
@@ -60,7 +73,6 @@
         <button type="button" class="btn btn-outline-danger col-6">- Delete Customer</button>
         <button type="button" class="btn btn-outline-primary col-6">View All Customers</button>
     </div>
-
 
     <!--customer details table-->
     <table class="table table-hover table-bordered">
@@ -74,28 +86,28 @@
         </thead>
         <tbody>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>C001</td>
+            <td>Dasun Perera</td>
+            <td>Panadura</td>
+            <td>15000</td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>C002</td>
+            <td>Wimal Shanaka</td>
+            <td>Galle</td>
+            <td>13000</td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>C003</td>
+            <td>Kamal Fernando</td>
+            <td>Bellanwila</td>
+            <td>25000</td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>C004</td>
+            <td>Ranjith Wickramasinghe</td>
+            <td>Kottawa</td>
+            <td>50000</td>
         </tr>
         </tbody>
     </table>
