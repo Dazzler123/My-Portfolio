@@ -3,8 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <title>Item Form</title>
+    <meta content="Dasindu Bimlaka Hewagamage" name="author">
+    <meta content="Dasindu Bimlaka Hewagamage" name="owner">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="../pos/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../pos/assets/fonts/css/all.min.css" rel="stylesheet">
+    <link href="../pos/assets/img/point-of-sale-icon-7.png" rel="icon">
 </head>
 <body>
+<header>
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #e3f2fd;">
+        <div class="container-fluid">
+            <!--heading & icon-->
+            <a class="navbar-brand" href="../pos/index.html">
+                <img src="../pos/assets/img/online-grocery-shopping-concept-supermarket-smartphone-product-basket-icons-e-commerce-store-ordering-food-app-187308614.jpg"
+                     alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                Dazzler's POS System
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!--Home-->
+                    <li class="nav-item">
+                        <a class="nav-link active link-primary" aria-current="page" href="../pos/index.html">Home</a>
+                    </li>
+
+                    <!--Orders-->
+                    <li class="nav-item">
+                        <a class="nav-link active link-primary" href="#">Orders</a>
+                    </li>
+
+                    <!--Items-->
+                    <li class="nav-item">
+                        <a class="nav-link active link-primary" href="#">Items</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="container-fluid bg-light">
+
+    <!--heading & icon-->
+    <img src="../pos/assets/img/download.png" alt="customer icon">
+    <h4 class="fw-semibold">Customer</h4>
+
+    <!--search item-->
+    <div>
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <h6 class="fw-normal">Search By</h6>
+        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+            <option selected>ID</option>
+            <option value="1">Name</option>
+        </select>
+    </div>
+
+    <!--crud btns-->
+    <div class="row">
+        <button type="button" class="btn btn-outline-success col-6 mb-4">+ Add New Customer</button>
+        <button type="button" class="btn btn-outline-warning col-6 mb-4">Update Customer</button>
+        <button type="button" class="btn btn-outline-danger col-6">- Delete Customer</button>
+        <button type="button" class="btn btn-outline-primary col-6">View All Customers</button>
+    </div>
+
+    <!--customer details table-->
+    <table class="table table-hover table-bordered">
+        <thead class="table-primary">
+        <tr>
+            <th scope="col" class="text-center">Customer ID</th>
+            <th scope="col" class="text-center">Customer Name</th>
+            <th scope="col" class="text-center">Customer Address</th>
+            <th scope="col" class="text-center">Customer Salary</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>C001</td>
+            <td>Dasun Perera</td>
+            <td>Panadura</td>
+            <td>15000</td>
+        </tr>
+        <tr>
+            <td>C002</td>
+            <td>Wimal Shanaka</td>
+            <td>Galle</td>
+            <td>13000</td>
+        </tr>
+        <tr>
+            <td>C003</td>
+            <td>Kamal Fernando</td>
+            <td>Bellanwila</td>
+            <td>25000</td>
+        </tr>
+        <tr>
+            <td>C004</td>
+            <td>Ranjith Wickramasinghe</td>
+            <td>Kottawa</td>
+            <td>50000</td>
+        </tr>
+        </tbody>
+    </table>
+
+
+</main>
+
+<!--============================================================-->
+<script src="../pos/assets/bootstrap/js/bootstrap.min.js"></script>
 
 </body>
 </html>
