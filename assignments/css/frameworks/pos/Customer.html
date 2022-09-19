@@ -9,6 +9,24 @@
     <link href="../pos/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="../pos/assets/fonts/css/all.min.css" rel="stylesheet">
     <link href="../pos/assets/img/point-of-sale-icon-7.png" rel="icon">
+
+    <style>
+        #cust_icon {
+            position: relative;
+            display: inline-block;
+            height: 35%;
+            width: 8%;
+            top: 68%;
+            left: 2%;
+        }
+
+        #cust_heading {
+            position: relative;
+            display: inline-block;
+            top: 70%;
+            padding-left: 2%;
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -49,68 +67,94 @@
 
 <main class="container-fluid bg-light">
 
-    <!--heading & icon-->
-    <img src="../pos/assets/img/download.png" alt="customer icon">
-    <h4 class="fw-semibold">Customers</h4>
+    <section class="row">
+        <!--heading & icon-->
+        <div class="col-6 row">
+            <img id="cust_icon" class="col-6" src="../pos/assets/img/download.png" alt="customer icon">
+            <h4 id="cust_heading" class="fw-semibold col-6">Customers</h4>
+        </div>
 
-    <!--search customer-->
-    <div>
-        <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-        <h6 class="fw-normal">Search By</h6>
-        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-            <option selected>ID</option>
-            <option value="1">Name</option>
-        </select>
-    </div>
+        <!--crud btns-->
+        <div class="container col-6 row position-relative top-50">
+            <button type="button" class="btn btn-outline-success col-6 mb-4">+ Add New Customer</button>
+            <button type="button" class="btn btn-outline-warning col-6 mb-4">Update Customer</button>
+            <button type="button" class="btn btn-outline-danger col-6">- Delete Customer</button>
+            <button type="button" class="btn btn-outline-primary col-6">View All Customers</button>
+        </div>
 
-    <!--crud btns-->
-    <div class="row">
-        <button type="button" class="btn btn-outline-success col-6 mb-4">+ Add New Customer</button>
-        <button type="button" class="btn btn-outline-warning col-6 mb-4">Update Customer</button>
-        <button type="button" class="btn btn-outline-danger col-6">- Delete Customer</button>
-        <button type="button" class="btn btn-outline-primary col-6">View All Customers</button>
-    </div>
 
-    <!--customer details table-->
-    <table class="table table-hover table-bordered">
-        <thead class="table-primary">
-        <tr>
-            <th scope="col" class="text-center">Customer ID</th>
-            <th scope="col" class="text-center">Customer Name</th>
-            <th scope="col" class="text-center">Customer Address</th>
-            <th scope="col" class="text-center">Customer Salary</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>C001</td>
-            <td>Dasun Perera</td>
-            <td>Panadura</td>
-            <td>15000</td>
-        </tr>
-        <tr>
-            <td>C002</td>
-            <td>Wimal Shanaka</td>
-            <td>Galle</td>
-            <td>13000</td>
-        </tr>
-        <tr>
-            <td>C003</td>
-            <td>Kamal Fernando</td>
-            <td>Bellanwila</td>
-            <td>25000</td>
-        </tr>
-        <tr>
-            <td>C004</td>
-            <td>Ranjith Wickramasinghe</td>
-            <td>Kottawa</td>
-            <td>50000</td>
-        </tr>
-        </tbody>
-    </table>
+        <!--search customer-->
+        <div class="container card col-4 row">
+            <h5 class="card-header bg-primary">Search Customer</h5>
+            <div class="card-body border-0 p-0">
+                <form class="d-flex col-12" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <h6 class="fw-normal col-5">Search By</h6>
+                <select class="form-select form-select-sm col-7" aria-label=".form-select-sm example">
+                    <option selected>ID</option>
+                    <option value="1">Name</option>
+                </select>
+            </div>
+        </div>
+
+        <!--search customer-->
+<!--        <div class="col-4 row">-->
+<!--            <form class="d-flex col-12" role="search">-->
+<!--                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">-->
+<!--                <button class="btn btn-outline-success" type="submit">Search</button>-->
+<!--            </form>-->
+<!--            <h6 class="fw-normal col-5">Search By</h6>-->
+<!--            <select class="form-select form-select-sm col-7" aria-label=".form-select-sm example">-->
+<!--                <option selected>ID</option>-->
+<!--                <option value="1">Name</option>-->
+<!--            </select>-->
+<!--        </div>-->
+
+
+
+        <!--customer details table-->
+        <table class="table table-hover table-bordered">
+            <thead class="table-primary">
+            <tr>
+                <th scope="col" class="text-center">Customer ID</th>
+                <th scope="col" class="text-center">Customer Name</th>
+                <th scope="col" class="text-center">Customer Address</th>
+                <th scope="col" class="text-center">Customer Salary</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>C001</td>
+                <td>Dasun Perera</td>
+                <td>Panadura</td>
+                <td>15000</td>
+            </tr>
+            <tr>
+                <td>C002</td>
+                <td>Wimal Shanaka</td>
+                <td>Galle</td>
+                <td>13000</td>
+            </tr>
+            <tr>
+                <td>C003</td>
+                <td>Kamal Fernando</td>
+                <td>Bellanwila</td>
+                <td>25000</td>
+            </tr>
+            <tr>
+                <td>C004</td>
+                <td>Ranjith Wickramasinghe</td>
+                <td>Kottawa</td>
+                <td>50000</td>
+            </tr>
+            </tbody>
+        </table>
+
+    </section>
+
+
 
 
 </main>
