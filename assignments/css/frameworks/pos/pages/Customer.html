@@ -11,50 +11,12 @@
     <link href="../assets/img/point-of-sale-icon-7.png" rel="icon">
 
     <style>
-        #cust_icon {
-            position: relative;
-            display: inline-block;
-            height: 89%;
-            width: 4%;
-            /*top: 68%;*/
-            /*left: 2%;*/
-        }
-
-        #cust_heading {
-            position: relative;
-            display: inline-block;
-            /*top: 70%;*/
-            padding-left: 0;
-        }
-
-        #cust_heading_container {
-            margin-top: 19px;
-            margin-left: 17px;
-            position: relative;
-            display: inline-block;
-        }
 
         #cust_main_container {
             position: absolute;
             top: 7%;
-            margin-right: 0px;
-            padding-right: 0px;
         }
 
-        #search_cust_container {
-            margin-right: 16%;
-            margin-top: 15px;
-            margin-left: 34px;
-        }
-
-        #cust_crud_btns {
-            margin-top: 15px;
-        }
-
-        #cust_table {
-            margin-top: 35px;
-            width: 97%;
-        }
     </style>
 </head>
 <body>
@@ -94,24 +56,21 @@
     </nav>
 </header>
 
-<main id="cust_main_container" class="container-fluid bg-light row justify-content-sm-center">
+<main id="cust_main_container" class="container-fluid bg-light row me-0 pe-0 ms-0 ps-0 justify-content-around">
 
-    <!--heading & icon-->
-    <div id="cust_heading_container" class="col-xxl-12 row">
-        <img id="cust_icon" class="col-xxl-6" src="../assets/img/download.png" alt="customer icon">
-        <h4 id="cust_heading" class="fw-semibold col-xxl-6">Customers</h4>
-    </div>
+    <!--heading-->
+    <h4 id="cust_heading" class="fw-semibold fst-italic col-12 pt-4 pb-2 ps-4">Customer Form</h4>
 
     <!--search customer-->
-    <div id="search_cust_container" class="container-fluid card col-xxl-4 row">
+    <div id="search_cust_container" class="container card ps-0 pe-0 col-md-5 ms-3 row col-sm-12">
         <h5 class="card-header bg-primary">Search Customer</h5>
         <div class="card-body border-0 p-0">
-            <form style="margin-top: 17px;" class="d-flex col-xxl-12" role="search">
+            <form style="margin-top: 17px;" class="d-flex col-8 ms-3" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
-            <h6 class="fw-normal col-xxl-4" style="padding-top: 16px;">Search By</h6>
-            <select class="form-select form-select-sm col-xxl-8" style="margin-bottom: 18px;"
+            <h6 class="fst-italic fw-normal col-4 ms-3" style="padding-top: 16px;">Search By</h6>
+            <select class="form-select form-select-sm col-8 ms-3 w-50" style="margin-bottom: 18px;"
                     aria-label=".form-select-sm example">
                 <option selected>ID</option>
                 <option value="1">Name</option>
@@ -120,15 +79,15 @@
     </div>
 
     <!--crud btns-->
-    <div id="cust_crud_btns" class="container col-xxl-6 row gap-2">
-        <button type="button" class="btn btn-outline-success col-xxl-5 mb-4">+ Add New Customer</button>
-        <button type="button" class="btn btn-outline-warning col-xxl-5  mb-4">Update Customer</button>
-        <button type="button" class="btn btn-outline-danger col-xxl-5 ">- Delete Customer</button>
-        <button type="button" class="btn btn-outline-primary col-xxl-5 ">View All Customers</button>
+    <div id="cust_crud_btns" class="container row col-md-6 gap-3 mt-3 mb-3 justify-content-center col-sm-12">
+        <button type="button" class="btn btn-outline-success col-5">+ Add New Customer</button>
+        <button type="button" class="btn btn-outline-warning col-5">Update Customer</button>
+        <button type="button" class="btn btn-outline-danger col-5">- Delete Customer</button>
+        <button type="button" class="btn btn-outline-primary col-5">View All Customers</button>
     </div>
 
     <!--customer details table-->
-    <div id="cust_table" class="container justify-content-center">
+    <div id="cust_table" class="container mt-5 justify-content-center col-md-12 col-sm-12">
         <table class="table table-hover table-bordered">
             <thead class="table-primary">
             <tr>

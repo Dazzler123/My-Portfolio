@@ -9,6 +9,44 @@
     <link href="../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="../assets/fonts/css/all.min.css" rel="stylesheet">
     <link href="../assets/img/point-of-sale-icon-7.png" rel="icon">
+
+    <style>
+     /*   #cust_heading {
+            position: relative;
+            display: inline-block;
+            !*top: 70%;*!
+            padding-left: 0;
+        }
+
+        #cust_heading_container {
+            margin-top: 19px;
+            margin-left: 17px;
+            position: relative;
+            display: inline-block;
+        }*/
+
+        #cust_main_container {
+            position: absolute;
+            top: 7%;
+            margin-right: 0px;
+            padding-right: 0px;
+        }
+
+        #search_cust_container {
+            margin-right: 16%;
+            margin-top: 15px;
+            margin-left: 34px;
+        }
+
+        #cust_crud_btns {
+            margin-top: 15px;
+        }
+
+        #cust_table {
+            margin-top: 35px;
+            width: 97%;
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -47,71 +85,97 @@
     </nav>
 </header>
 
-<main class="container-fluid bg-light">
+<main id="cust_main_container" class="container-fluid bg-light row justify-content-center">
 
     <!--heading & icon-->
-    <i class="fa-solid fa-cubes" style="font-size: 150px"></i>
-    <h4 class="fw-semibold">Items</h4>
+    <div id="cust_heading_container" class="col-xxl-12 row">
+        <i class="fa-solid fa-cubes col-xxl-6" style="font-size: 30px"></i>
+        <h4 id="cust_heading" class="fw-semibold col-xxl-6">Items</h4>
+    </div>
 
     <!--search item-->
-    <div>
-        <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-        <h6 class="fw-normal">Search By</h6>
-        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-            <option selected>Code</option>
-            <option value="1">Name</option>
-        </select>
+    <div id="search_cust_container" class="container-fluid card col-xxl-4 row">
+        <h5 class="card-header bg-primary">Search Customer</h5>
+        <div class="card-body border-0 p-0">
+            <form style="margin-top: 17px;" class="d-flex col-xxl-12" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            <h6 class="fw-normal col-xxl-4" style="padding-top: 16px;">Search By</h6>
+            <select class="form-select form-select-sm col-xxl-8" style="margin-bottom: 18px;"
+                    aria-label=".form-select-sm example">
+                <option selected>ID</option>
+                <option value="1">Name</option>
+            </select>
+        </div>
     </div>
 
     <!--crud btns-->
-    <div class="row">
-        <button type="button" class="btn btn-outline-success col-6 mb-4">+ Add New Item</button>
-        <button type="button" class="btn btn-outline-warning col-6 mb-4">Update Item</button>
-        <button type="button" class="btn btn-outline-danger col-6">- Delete Item</button>
-        <button type="button" class="btn btn-outline-primary col-6">View All Items</button>
+    <div id="cust_crud_btns" class="container col-xxl-6 row gap-2">
+        <button type="button" class="btn btn-outline-success col-xxl-5 mb-4">+ Add New Customer</button>
+        <button type="button" class="btn btn-outline-warning col-xxl-5  mb-4">Update Customer</button>
+        <button type="button" class="btn btn-outline-danger col-xxl-5 ">- Delete Customer</button>
+        <button type="button" class="btn btn-outline-primary col-xxl-5 ">View All Customers</button>
     </div>
 
-    <!--item details table-->
-    <table class="table table-hover table-bordered">
-        <thead class="table-primary">
-        <tr>
-            <th scope="col" class="text-center">Item Code</th>
-            <th scope="col" class="text-center">Item Name</th>
-            <th scope="col" class="text-center">Item Price</th>
-            <th scope="col" class="text-center">Item Quantity</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>ITM-001</td>
-            <td>Araliya Keerisamba 5kg</td>
-            <td>1960.00</td>
-            <td>350</td>
-        </tr>
-        <tr>
-            <td>ITM-002</td>
-            <td>Baasmathi Rice 25kg</td>
-            <td>11250.00</td>
-            <td>120</td>
-        </tr>
-        <tr>
-            <td>ITM-003</td>
-            <td>Maggie Coconut Milk 400g</td>
-            <td>350.00</td>
-            <td>20</td>
-        </tr>
-        <tr>
-            <td>ITM-004</td>
-            <td>Maliban Cream Cracker 150g</td>
-            <td>300.00</td>
-            <td>70</td>
-        </tr>
-        </tbody>
-    </table>
+    <!--customer details table-->
+    <div id="cust_table" class="container justify-content-center">
+        <table class="table table-hover table-bordered">
+            <thead class="table-primary">
+            <tr>
+                <th scope="col" class="text-center">Customer ID</th>
+                <th scope="col" class="text-center">Customer Name</th>
+                <th scope="col" class="text-center">Customer Address</th>
+                <th scope="col" class="text-center">Customer Salary</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>C001</td>
+                <td>Dasun Perera</td>
+                <td>Panadura</td>
+                <td>15000</td>
+            </tr>
+            <tr>
+                <td>C002</td>
+                <td>Wimal Shanaka</td>
+                <td>Galle</td>
+                <td>13000</td>
+            </tr>
+            <tr>
+                <td>C003</td>
+                <td>Kamal Fernando</td>
+                <td>Bellanwila</td>
+                <td>25000</td>
+            </tr>
+            <tr>
+                <td>C004</td>
+                <td>Ranjith Wickramasinghe</td>
+                <td>Kottawa</td>
+                <td>50000</td>
+            </tr>
+            <tr>
+                <td>C004</td>
+                <td>Ranjith Wickramasinghe</td>
+                <td>Kottawa</td>
+                <td>50000</td>
+            </tr>
+            <tr>
+                <td>C004</td>
+                <td>Ranjith Wickramasinghe</td>
+                <td>Kottawa</td>
+                <td>50000</td>
+            </tr>
+            <tr>
+                <td>C004</td>
+                <td>Ranjith Wickramasinghe</td>
+                <td>Kottawa</td>
+                <td>50000</td>
+            </tr>
 
+            </tbody>
+        </table>
+    </div>
 
 </main>
 
