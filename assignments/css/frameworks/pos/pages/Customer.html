@@ -14,17 +14,46 @@
         #cust_icon {
             position: relative;
             display: inline-block;
-            height: 35%;
-            width: 8%;
-            top: 68%;
-            left: 2%;
+            height: 89%;
+            width: 4%;
+            /*top: 68%;*/
+            /*left: 2%;*/
         }
 
         #cust_heading {
             position: relative;
             display: inline-block;
-            top: 70%;
-            padding-left: 2%;
+            /*top: 70%;*/
+            padding-left: 0;
+        }
+
+        #cust_heading_container {
+            margin-top: 19px;
+            margin-left: 17px;
+            position: relative;
+            display: inline-block;
+        }
+
+        #cust_main_container {
+            position: absolute;
+            top: 7%;
+            margin-right: 0px;
+            padding-right: 0px;
+        }
+
+        #search_cust_container {
+            margin-right: 16%;
+            margin-top: 15px;
+            margin-left: 34px;
+        }
+
+        #cust_crud_btns {
+            margin-top: 15px;
+        }
+
+        #cust_table {
+            margin-top: 35px;
+            width: 97%;
         }
     </style>
 </head>
@@ -65,55 +94,41 @@
     </nav>
 </header>
 
-<main class="container-fluid bg-light">
+<main id="cust_main_container" class="container-fluid bg-light row justify-content-sm-center">
 
-    <section class="row">
-        <!--heading & icon-->
-        <div class="col-6 row">
-            <img id="cust_icon" class="col-6" src="../assets/img/download.png" alt="customer icon">
-            <h4 id="cust_heading" class="fw-semibold col-6">Customers</h4>
+    <!--heading & icon-->
+    <div id="cust_heading_container" class="col-xxl-12 row">
+        <img id="cust_icon" class="col-xxl-6" src="../assets/img/download.png" alt="customer icon">
+        <h4 id="cust_heading" class="fw-semibold col-xxl-6">Customers</h4>
+    </div>
+
+    <!--search customer-->
+    <div id="search_cust_container" class="container-fluid card col-xxl-4 row">
+        <h5 class="card-header bg-primary">Search Customer</h5>
+        <div class="card-body border-0 p-0">
+            <form style="margin-top: 17px;" class="d-flex col-xxl-12" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            <h6 class="fw-normal col-xxl-4" style="padding-top: 16px;">Search By</h6>
+            <select class="form-select form-select-sm col-xxl-8" style="margin-bottom: 18px;"
+                    aria-label=".form-select-sm example">
+                <option selected>ID</option>
+                <option value="1">Name</option>
+            </select>
         </div>
+    </div>
 
-        <!--crud btns-->
-        <div class="container col-6 row position-relative top-50">
-            <button type="button" class="btn btn-outline-success col-6 mb-4">+ Add New Customer</button>
-            <button type="button" class="btn btn-outline-warning col-6 mb-4">Update Customer</button>
-            <button type="button" class="btn btn-outline-danger col-6">- Delete Customer</button>
-            <button type="button" class="btn btn-outline-primary col-6">View All Customers</button>
-        </div>
+    <!--crud btns-->
+    <div id="cust_crud_btns" class="container col-xxl-6 row gap-2">
+        <button type="button" class="btn btn-outline-success col-xxl-5 mb-4">+ Add New Customer</button>
+        <button type="button" class="btn btn-outline-warning col-xxl-5  mb-4">Update Customer</button>
+        <button type="button" class="btn btn-outline-danger col-xxl-5 ">- Delete Customer</button>
+        <button type="button" class="btn btn-outline-primary col-xxl-5 ">View All Customers</button>
+    </div>
 
-
-        <!--search customer-->
-        <div class="container card col-4 row">
-            <h5 class="card-header bg-primary">Search Customer</h5>
-            <div class="card-body border-0 p-0">
-                <form class="d-flex col-12" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-                <h6 class="fw-normal col-5">Search By</h6>
-                <select class="form-select form-select-sm col-7" aria-label=".form-select-sm example">
-                    <option selected>ID</option>
-                    <option value="1">Name</option>
-                </select>
-            </div>
-        </div>
-
-        <!--search customer - before introducing card container -->
-<!--        <div class="col-4 row">-->
-<!--            <form class="d-flex col-12" role="search">-->
-<!--                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">-->
-<!--                <button class="btn btn-outline-success" type="submit">Search</button>-->
-<!--            </form>-->
-<!--            <h6 class="fw-normal col-5">Search By</h6>-->
-<!--            <select class="form-select form-select-sm col-7" aria-label=".form-select-sm example">-->
-<!--                <option selected>ID</option>-->
-<!--                <option value="1">Name</option>-->
-<!--            </select>-->
-<!--        </div>-->
-
-
-        <!--customer details table-->
+    <!--customer details table-->
+    <div id="cust_table" class="container justify-content-center">
         <table class="table table-hover table-bordered">
             <thead class="table-primary">
             <tr>
@@ -148,13 +163,28 @@
                 <td>Kottawa</td>
                 <td>50000</td>
             </tr>
+            <tr>
+                <td>C004</td>
+                <td>Ranjith Wickramasinghe</td>
+                <td>Kottawa</td>
+                <td>50000</td>
+            </tr>
+            <tr>
+                <td>C004</td>
+                <td>Ranjith Wickramasinghe</td>
+                <td>Kottawa</td>
+                <td>50000</td>
+            </tr>
+            <tr>
+                <td>C004</td>
+                <td>Ranjith Wickramasinghe</td>
+                <td>Kottawa</td>
+                <td>50000</td>
+            </tr>
+
             </tbody>
         </table>
-
-    </section>
-
-
-
+    </div>
 
 </main>
 
