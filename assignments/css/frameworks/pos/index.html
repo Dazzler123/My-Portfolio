@@ -12,121 +12,46 @@
 
     <style>
 
-        /*headings container*/
-        main > div {
-            /*display: inline-block;*/
-            top: 12vh;
-            left: 7vw;
-            margin: 0;
-        }
-
-        /*heading dasin hewa*/
-        body > main > div:nth-child(1) > h1 {
-            font-size: 33px;
-            margin-top: 1%;
-        }
-
-        /*heading hi there*/
-        body > main > div:nth-child(1) > h3 {
-            font-size: 25px;
-        }
-
-        /*background image*/
-        body > main > img {
-            top: 16vh;
-            left: 5vw;
-            width: 723px;
-            height: 564px;
-        }
-
-        /*btn container (grid)*/
-        body > main > aside {
-            display: inline-block;
-            left: 50vw;
-            margin: 0;
-            top: 10vh;
-            width: 45vw;
-            height: 90vh;
-        }
-
-        /*all btn containers in common*/
-        body > main > aside > div {
-            width: 299px;
-            height: 30%;
-        }
-
-        /*customer container*/
-        body > main > aside > div:nth-child(1) {
-            margin-right: 100px;
-            margin-top: 5%;
-        }
-
-        /*customer icon*/
-        body > main > aside > div:nth-child(1) > img{
-            margin-top: 15%;
-            width: 88px;
-            height: 64px;
-        }
-
-        /*items container*/
-        body > main > aside > div:nth-child(2) {
-            margin-top: 5%;
-        }
-
-        /*!*items icon*/
-        body > main > aside > div:nth-child(2) > i{
-            font-size: 55px;
-        }
-
-        /*orders container*/
-        body > main > aside > div:nth-child(3) {
-            width: 290px;
-        }
-
-        /*cart icon*/
-        body > main > aside > div:nth-child(3) > i{
-            font-size: 55px;
-        }
-
-        /*ownership title*/
-        body > main > small{
-            top: 93vh;
-            left: 78vw;
-        }
 
     </style>
 </head>
-<body class="position-relative height: 100vh">
+<body>
 
-<main class="container-fluid position-relative">
-    <div class="position-relative">
-        <h3 class="fw-bold">Hello There!</h3>
-        <h1 class="fw-bold">Welcome to Dazzler's POS System</h1>
+<main class="container-fluid row me-0 pe-0 ms-0 ps-0 overflow-hidden">
+    <!--headings-->
+    <div class="container col-md-6 col-sm-12 text-center">
+        <h3 class="fw-bold fs-4 col-12 mt-5">Hello There!</h3>
+        <h1 class="fw-bold fs-2 col-12 mb-5">Welcome to Dazzler's POS System</h1>
+
+        <!--bg image-->
+        <img src="../pos/assets/img/Woman%20cashier%20at%20checkout%20in%20shop%20or%20supermarket.jpg"
+             class="img-fluid col-12" alt="bg_image">
     </div>
 
-    <!--bg image-->
-    <img src="../pos/assets/img/Woman%20cashier%20at%20checkout%20in%20shop%20or%20supermarket.jpg"
-         class="position-relative img-fluid" alt="bg_image">
-
-    <!--use grid system to position buttons-->
-    <aside class="row position-absolute justify-content-center">
-        <div class="row col-5 shadow bg-body rounded-5 justify-content-center">
-            <img src="../pos/assets/img/download.png" alt="customer icon">
-            <h3 class="col-12">Customer</h3>
+    <!--buttons-->
+    <aside class="col-md-6 col-sm-12 row gap-4 mt-5 mb-5 justify-content-center text-center">
+        <div class="col-4 shadow bg-body rounded-5 h-50 hover-overlay">
+            <i class='fas fa-user-friends mt-5' style='font-size:48px'></i>
+            <h3 class="display-6 fs-3">Customer</h3>
         </div>
 
-        <div class="col-5 shadow bg-body rounded-5 justify-content-center">
-            <i class="fa-solid fa-cubes"></i>
-            <h3 class="display-6">Item</h3>
+        <div class="col-4 shadow bg-body rounded-5 h-50">
+            <i class="fa-solid fa-cubes mt-5" style='font-size:48px'></i>
+            <h3 class="display-6 fs-3">Item</h3>
         </div>
 
-        <div class="col-6 shadow bg-body rounded-5 justify-content-center">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <h3 class="display-6">Order</h3>
+        <div class="col-4 shadow bg-body rounded-5 h-50">
+            <i class="fa-solid fa-cart-shopping mt-5" style='font-size:48px'></i>
+            <h3 class="display-6 fs-3">Place Order</h3>
+        </div>
+
+        <div class="col-4 shadow bg-body rounded-5 h-50">
+            <i class="fa-solid fa-file-invoice mt-5" style='font-size:48px'></i>
+            <h3 class="display-6 fs-3">Manage Orders</h3>
         </div>
     </aside>
 
-    <small class="position-absolute">Designed & Developed By Dasindu Hewagamage</small>
+    <small class="col-12 fw-light fs-6 text-end mt-3 pe-4">Designed & Developed By Dasindu Hewagamage</small>
 </main>
 
 
