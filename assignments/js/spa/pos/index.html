@@ -49,7 +49,7 @@
                     </li>
                     <!--Orders-->
                     <li class="nav-item">
-                        <a id="btn_To_Orders" class="nav-link active link-primary" href="#">Orders</a>
+                        <a id="btn_To_Manage_Orders" class="nav-link active link-primary" href="#">Orders</a>
                     </li>
                     <!--Items-->
                     <li class="nav-item">
@@ -703,7 +703,7 @@
         $('#place_order_main_container').css('visibility', 'visible');
     });
 
-    //home nav
+    //header home nav
     $('#btn_To_Home').click(function () {
         $('#header_container').css('visibility', 'hidden');
         $('#cust_main_container').css('visibility', 'hidden');
@@ -711,6 +711,16 @@
         $('#manage_orders_main_container').css('visibility', 'hidden');
         $('#place_order_main_container').css('visibility', 'hidden');
         $('#dashboard_main_container').css('visibility', 'visible');
+    });
+
+    //header orders nav
+    $('#btn_To_Manage_Orders').click(function () {
+        $('#cust_main_container').css('visibility', 'hidden');
+        $('#item_main_container').css('visibility', 'hidden');
+        $('#place_order_main_container').css('visibility', 'hidden');
+        $('#dashboard_main_container').css('visibility', 'hidden');
+        $('#header_container').css('visibility', 'visible');
+        $('#manage_orders_main_container').css('visibility', 'visible');
     });
 
 </script>
