@@ -45,15 +45,15 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <!--Home-->
                     <li class="nav-item">
-                        <a class="nav-link active link-primary" aria-current="page" href="">Home</a>
+                        <a id="btn_To_Home" class="nav-link active link-primary" href="#">Home</a>
                     </li>
                     <!--Orders-->
                     <li class="nav-item">
-                        <a class="nav-link active link-primary" href="#">Orders</a>
+                        <a id="btn_To_Orders" class="nav-link active link-primary" href="#">Orders</a>
                     </li>
                     <!--Items-->
                     <li class="nav-item">
-                        <a class="nav-link active link-primary" href="#">Items</a>
+                        <a id="btn_To_Items" class="nav-link active link-primary" href="#">Items</a>
                     </li>
                 </ul>
             </div>
@@ -701,6 +701,16 @@
         $('#dashboard_main_container').css('visibility', 'hidden');
         $('#header_container').css('visibility', 'visible');
         $('#place_order_main_container').css('visibility', 'visible');
+    });
+
+    //home nav
+    $('#btn_To_Home').click(function () {
+        $('#header_container').css('visibility', 'hidden');
+        $('#cust_main_container').css('visibility', 'hidden');
+        $('#item_main_container').css('visibility', 'hidden');
+        $('#manage_orders_main_container').css('visibility', 'hidden');
+        $('#place_order_main_container').css('visibility', 'hidden');
+        $('#dashboard_main_container').css('visibility', 'visible');
     });
 
 </script>
