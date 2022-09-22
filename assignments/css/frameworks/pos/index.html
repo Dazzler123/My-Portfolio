@@ -17,7 +17,7 @@
 </head>
 <body>
 
-<main class="container-fluid row me-0 pe-0 ms-0 ps-0 overflow-hidden">
+<main id="dashboard_main_container" class="container-fluid row me-0 pe-0 ms-0 ps-0 overflow-hidden">
     <!--headings-->
     <div class="container col-md-6 col-sm-12 text-center">
         <h3 class="fw-bold fs-4 col-12 mt-5">Hello There!</h3>
@@ -30,22 +30,22 @@
 
     <!--buttons-->
     <aside class="col-md-6 col-sm-12 row gap-4 mt-5 mb-5 justify-content-center text-center">
-        <div class="col-4 shadow bg-body rounded-5 h-50">
+        <div id="btn_Customer" class="col-4 shadow bg-body rounded-5 h-50">
             <i class='fas fa-user-friends mt-5' style='font-size:48px'></i>
             <h3 class="display-6 fs-3 mt-3">Customer</h3>
         </div>
 
-        <div class="col-4 shadow bg-body rounded-5 h-50">
+        <div id="btn_Item" class="col-4 shadow bg-body rounded-5 h-50">
             <i class="fa-solid fa-cubes mt-5" style='font-size:48px'></i>
             <h3 class="display-6 fs-3 mt-3">Item</h3>
         </div>
 
-        <div class="col-4 shadow bg-body rounded-5 h-50">
+        <div id="btn_Place_Order" class="col-4 shadow bg-body rounded-5 h-50">
             <i class="fa-solid fa-cart-shopping mt-5" style='font-size:48px'></i>
             <h3 class="display-6 fs-3 mt-3">Place Order</h3>
         </div>
 
-        <div class="col-4 shadow bg-body rounded-5 h-50">
+        <div id="btn_Manage_Orders" class="col-4 shadow bg-body rounded-5 h-50">
             <i class="fa-solid fa-file-invoice mt-5" style='font-size:48px'></i>
             <h3 class="display-6 fs-3 mt-3">Manage Orders</h3>
         </div>
@@ -57,6 +57,15 @@
 
 <!--============================================================-->
 <script src="../pos/assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="../pos/assets/js/jquery-3.6.1.min.js"></script>
+
+<script>
+    $('#btn_Customer').click(function () {
+        // $('#imgOne').css('visibility', 'visible');
+        $('#btn_Item').css('visibility', 'hidden');
+        // $('#imgThree').css('visibility', 'visible');
+    });
+</script>
 
 </body>
 </html>
