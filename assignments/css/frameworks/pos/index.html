@@ -491,6 +491,7 @@
     $('#header_container').css('visibility', 'hidden');
     $('#cust_main_container').css('visibility', 'hidden');
     $('#item_main_container').css('visibility', 'hidden');
+    $('#manage_orders_main_container').css('visibility', 'hidden');
     // ===================================================
 
 
@@ -504,6 +505,12 @@
         $('#dashboard_main_container').css('visibility', 'hidden');
         $('#header_container').css('visibility', 'visible');
         $('#item_main_container').css('visibility', 'visible');
+    });
+
+    $('#btn_Manage_Orders').click(function () {
+        $('#dashboard_main_container').css('visibility', 'hidden');
+        $('#header_container').css('visibility', 'visible');
+        $('#manage_orders_main_container').css('visibility', 'visible');
     });
 </script>
 
