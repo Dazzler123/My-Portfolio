@@ -105,27 +105,27 @@
                     <!--save customer input form-->
                     <div class="mb-3">
                         <label for="formGroupExampleInput" class="form-label">Customer ID : </label>
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ex: C001">
+                        <input id="txt_Cus_ID" type="text" class="form-control" id="formGroupExampleInput" placeholder="Ex: C001">
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Customer Name :</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput2"
+                        <input id="txt_Cus_Name" type="text" class="form-control" id="formGroupExampleInput2"
                                placeholder="Enter Full Name">
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Customer Address :</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput3"
+                        <input id="txt_Cus_Address" type="text" class="form-control" id="formGroupExampleInput3"
                                placeholder="Ex: 23, Alwis Town Road, Hendala, Wattala.">
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Customer Salary :</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput4"
+                        <input id="txt_Cus_Salary" type="text" class="form-control" id="formGroupExampleInput4"
                                placeholder="Ex: 25000">
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary">Save Customer</button>
+                    <button id="btn_Add_New_Customer" type="button" class="btn btn-primary">Save Customer</button>
                 </div>
             </div>
         </div>
@@ -195,6 +195,20 @@
 
 <!--============================================================-->
 <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="../assets/js/jquery-3.6.1.min.js"></script>
 
+<script>
+    // add new customer btn on action
+    $('#btn_Add_New_Customer').click(function () {
+        var customer = {
+            // "id": "$(#txt_Cus_ID).val();",
+            // "name": "$(#txt_Cus_Name).val();",
+            // "address": "$(#txt_Cus_Address).val();",
+            // "salary": $(#txt_Cus_Salary).val()
+        };
+        // console.log(customer);
+    });
+
+</script>
 </body>
 </html>
