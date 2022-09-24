@@ -11,11 +11,13 @@
 <main class="row justify-content-center overflow-hidden mt-5">
     <div class="col-6 container-fluid row text-center mt-5 bg-secondary rounded-3">
 
+        <!--textfield & clear all btn-->
         <button id="btn_Clear_All" type="button" class="col-1 btn btn-warning mt-3">C</button>
         <div class="col-11 mt-3">
             <input id="txt_Equation" type="text" class="form-control" placeholder="" aria-label="">
         </div>
 
+        <!--value buttons-->
         <div class="col-12 row mt-3 g-1 mb-3">
             <button id="btn_Seven" type="button" class="col-3 btn btn-light">7</button>
             <button id="btn_Eight" type="button" class="col-3 btn btn-light">8</button>
@@ -51,56 +53,12 @@
         $('#txt_Equation').val("");
     });
 
+    // button 7
+    $('#btn_Seven').click(function () {
+        // var value = $('#txt_Equation').val() + "7";
+        // $('#txt_Equation').text(value);
+    });
 
-    // $('#btn_Item').click(function () {
-    //     $('#dashboard_main_container').css('visibility', 'hidden');
-    //     $('#header_container').css('visibility', 'visible');
-    //     $('#item_main_container').css('visibility', 'visible');
-    // });
-    //
-
-    // $('#btn_Manage_Orders').click(function () {
-    //     $('#dashboard_main_container').css('visibility', 'hidden');
-    //     $('#header_container').css('visibility', 'visible');
-    //     $('#manage_orders_main_container').css('visibility', 'visible');
-    // });
-    //
-
-    // $('#btn_Place_Order').click(function () {
-    //     $('#dashboard_main_container').css('visibility', 'hidden');
-    //     $('#header_container').css('visibility', 'visible');
-    //     $('#place_order_main_container').css('visibility', 'visible');
-    // });
-    //
-
-    // $('#btn_To_Home').click(function () {
-    //     $('#header_container').css('visibility', 'hidden');
-    //     $('#cust_main_container').css('visibility', 'hidden');
-    //     $('#item_main_container').css('visibility', 'hidden');
-    //     $('#manage_orders_main_container').css('visibility', 'hidden');
-    //     $('#place_order_main_container').css('visibility', 'hidden');
-    //     $('#dashboard_main_container').css('visibility', 'visible');
-    // });
-    //
-
-    // $('#btn_To_Manage_Orders').click(function () {
-    //     $('#cust_main_container').css('visibility', 'hidden');
-    //     $('#item_main_container').css('visibility', 'hidden');
-    //     $('#place_order_main_container').css('visibility', 'hidden');
-    //     $('#dashboard_main_container').css('visibility', 'hidden');
-    //     $('#header_container').css('visibility', 'visible');
-    //     $('#manage_orders_main_container').css('visibility', 'visible');
-    // });
-    //
-
-    // $('#btn_To_Items').click(function () {
-    //     $('#cust_main_container').css('visibility', 'hidden');
-    //     $('#manage_orders_main_container').css('visibility', 'hidden');
-    //     $('#place_order_main_container').css('visibility', 'hidden');
-    //     $('#dashboard_main_container').css('visibility', 'hidden');
-    //     $('#header_container').css('visibility', 'visible');
-    //     $('#item_main_container').css('visibility', 'visible');
-    // });
 
 </script>
 </body>
