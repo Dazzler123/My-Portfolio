@@ -11,31 +11,31 @@
 <main class="row justify-content-center overflow-hidden mt-5">
     <div class="col-6 container-fluid row text-center mt-5 bg-secondary rounded-3">
 
-        <button type="button" class="col-1 btn btn-warning mt-3">C</button>
+        <button id="btn_Clear_All" type="button" class="col-1 btn btn-warning mt-3">C</button>
         <div class="col-11 mt-3">
-            <input type="text" class="form-control" placeholder="" aria-label="">
+            <input id="txt_Equation" type="text" class="form-control" placeholder="" aria-label="">
         </div>
 
         <div class="col-12 row mt-3 g-1 mb-3">
-            <button type="button" class="col-3 btn btn-light">7</button>
-            <button type="button" class="col-3 btn btn-light">8</button>
-            <button type="button" class="col-3 btn btn-light">9</button>
-            <button type="button" class="col-3 btn btn-warning">+</button>
+            <button id="btn_Seven" type="button" class="col-3 btn btn-light">7</button>
+            <button id="btn_Eight" type="button" class="col-3 btn btn-light">8</button>
+            <button id="btn_Nine" type="button" class="col-3 btn btn-light">9</button>
+            <button id="btn_Plus" type="button" class="col-3 btn btn-warning">+</button>
 
-            <button type="button" class="col-3 btn btn-light">4</button>
-            <button type="button" class="col-3 btn btn-light">5</button>
-            <button type="button" class="col-3 btn btn-light">6</button>
-            <button type="button" class="col-3 btn btn-warning">-</button>
+            <button id="btn_Four" type="button" class="col-3 btn btn-light">4</button>
+            <button id="btn_Five" type="button" class="col-3 btn btn-light">5</button>
+            <button id="btn_Six" type="button" class="col-3 btn btn-light">6</button>
+            <button id="btn_Minus" type="button" class="col-3 btn btn-warning">-</button>
 
-            <button type="button" class="col-3 btn btn-light">1</button>
-            <button type="button" class="col-3 btn btn-light">2</button>
-            <button type="button" class="col-3 btn btn-light">3</button>
-            <button type="button" class="col-3 btn btn-warning">/</button>
+            <button id="btn_One" type="button" class="col-3 btn btn-light">1</button>
+            <button id="btn_Two" type="button" class="col-3 btn btn-light">2</button>
+            <button id="btn_Three" type="button" class="col-3 btn btn-light">3</button>
+            <button id="btn_Slash" type="button" class="col-3 btn btn-warning">/</button>
 
-            <button type="button" class="col-3 btn btn-light">0</button>
-            <button type="button" class="col-3 btn btn-light">.</button>
-            <button type="button" class="col-3 btn btn-info">=</button>
-            <button type="button" class="col-3 btn btn-warning">*</button>
+            <button id="btn_Zero" type="button" class="col-3 btn btn-light">0</button>
+            <button id="btn_Dot" type="button" class="col-3 btn btn-light">.</button>
+            <button id="btn_Equals" type="button" class="col-3 btn btn-info">=</button>
+            <button id="btn_Star" type="button" class="col-3 btn btn-warning">*</button>
         </div>
 
     </div>
@@ -46,20 +46,12 @@
 <script src="../spa/pos/assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="../spa/pos/assets/js/jquery-3.6.1.min.js"></script>
 <script>
-    // $('#header_container').css('visibility', 'hidden');
-    // $('#cust_main_container').css('visibility', 'hidden');
-    // $('#item_main_container').css('visibility', 'hidden');
-    // $('#manage_orders_main_container').css('visibility', 'hidden');
-    // $('#place_order_main_container').css('visibility', 'hidden');
-    // // ===================================================
-    //
-
     // $('#btn_Customer').click(function () {
     //     $('#dashboard_main_container').css('visibility', 'hidden');
     //     $('#header_container').css('visibility', 'visible');
     //     $('#cust_main_container').css('visibility', 'visible');
     // });
-    //
+
 
     // $('#btn_Item').click(function () {
     //     $('#dashboard_main_container').css('visibility', 'hidden');
