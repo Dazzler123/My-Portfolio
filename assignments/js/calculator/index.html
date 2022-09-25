@@ -103,6 +103,35 @@
         $('#txt_Equation').val($('#txt_Equation').val() + "0");
     });
 
+    // button plus (+)
+    $('#btn_Plus').click(function () {
+        $('#txt_Equation').val($('#txt_Equation').val() + "+");
+    });
+
+    // button minus (-)
+    $('#btn_Minus').click(function () {
+        $('#txt_Equation').val($('#txt_Equation').val() + "-");
+    });
+
+    // button divide (/)
+    $('#btn_Slash').click(function () {
+        $('#txt_Equation').val($('#txt_Equation').val() + "/");
+    });
+
+    // button multiply (*)
+    $('#btn_Star').click(function () {
+        $('#txt_Equation').val($('#txt_Equation').val() + $('#btn_Star').text());
+    });
+
+    // button decimal dot (.)
+    $('#btn_Dot').click(function () {
+        $('#txt_Equation').val($('#txt_Equation').val() + $('#btn_Dot').text());
+    });
+
+    // button equals (=)  ---> answer
+    $('#btn_Equals').click(function () {
+
+    });
 
 
     //use parseint (to calculate final equation)
