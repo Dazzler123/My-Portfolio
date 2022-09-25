@@ -128,7 +128,23 @@
         $('#txt_Equation').val($('#txt_Equation').val() + $('#btn_Dot').text());
     });
 
+    ////////////////////////////////////////
 
+    // calculation expression
+    function answer() {
+        var exp = $('#txt_Equation').val();
+
+        if (exp) {
+            $('#txt_Equation').val(eval(exp));
+        } else {
+            alert("No expression found!");
+        }
+    }
+
+    // button equals (=)  ---> answer
+    $('#btn_Equals').click(function () {
+        answer();
+    });
 
     //use parseint (to calculate final equation)
     // var a = '10';
