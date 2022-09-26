@@ -200,13 +200,20 @@
 <script>
     // add new customer btn on action
     $('#btn_Add_New_Customer').click(function () {
-        var customer = {
-            // "id": "$(#txt_Cus_ID).val();",
-            // "name": "$(#txt_Cus_Name).val();",
-            // "address": "$(#txt_Cus_Address).val();",
-            // "salary": $(#txt_Cus_Salary).val()
+
+        let customerID = $('#txt_Cus_ID').val();
+        let customerName = $('#txt_Cus_Name').val();
+        let customerAddress = $('#txt_Cus_Address').val();
+        let customerSalary = $('#txt_Cus_Salary').val();
+
+        var customerOne = {
+            "id": customerID ,
+            "name": customerName ,
+            "address": customerAddress,
+            "salary": customerSalary
         };
-        // console.log(customer);
+
+        console.log(customerOne);
     });
 
 </script>
