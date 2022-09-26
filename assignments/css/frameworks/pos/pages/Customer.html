@@ -88,7 +88,7 @@
         </button>
         <button type="button" class="btn btn-outline-warning col-5">Update Customer</button>
         <button type="button" class="btn btn-outline-danger col-5">- Delete Customer</button>
-        <button type="button" class="btn btn-outline-primary col-5">View All Customers</button>
+        <button id="get_All_Customers" type="button" class="btn btn-outline-primary col-5">View All Customers</button>
     </div>
 
 
@@ -105,7 +105,8 @@
                     <!--save customer input form-->
                     <div class="mb-3">
                         <label for="formGroupExampleInput" class="form-label">Customer ID : </label>
-                        <input id="txt_Cus_ID" type="text" class="form-control" id="formGroupExampleInput" placeholder="Ex: C001">
+                        <input id="txt_Cus_ID" type="text" class="form-control" id="formGroupExampleInput"
+                               placeholder="Ex: C001">
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Customer Name :</label>
@@ -143,49 +144,7 @@
                 <th scope="col" class="text-center">Customer Salary</th>
             </tr>
             </thead>
-            <tbody>
-            <tr>
-                <td>C001</td>
-                <td>Dasun Perera</td>
-                <td>Panadura</td>
-                <td>15000</td>
-            </tr>
-            <tr>
-                <td>C002</td>
-                <td>Wimal Shanaka</td>
-                <td>Galle</td>
-                <td>13000</td>
-            </tr>
-            <tr>
-                <td>C003</td>
-                <td>Kamal Fernando</td>
-                <td>Bellanwila</td>
-                <td>25000</td>
-            </tr>
-            <tr>
-                <td>C004</td>
-                <td>Ranjith Wickramasinghe</td>
-                <td>Kottawa</td>
-                <td>50000</td>
-            </tr>
-            <tr>
-                <td>C004</td>
-                <td>Ranjith Wickramasinghe</td>
-                <td>Kottawa</td>
-                <td>50000</td>
-            </tr>
-            <tr>
-                <td>C004</td>
-                <td>Ranjith Wickramasinghe</td>
-                <td>Kottawa</td>
-                <td>50000</td>
-            </tr>
-            <tr>
-                <td>C004</td>
-                <td>Ranjith Wickramasinghe</td>
-                <td>Kottawa</td>
-                <td>50000</td>
-            </tr>
+            <tbody id="tbl_Customer_Body">
 
             </tbody>
         </table>
@@ -198,7 +157,6 @@
 <script src="../assets/js/jquery-3.6.1.min.js"></script>
 
 <script>
-
     // all customers array
     var customerArr = []; //global scope
 
@@ -211,14 +169,27 @@
         let customerSalary = $('#txt_Cus_Salary').val();
 
         var customerOne = {
-            "id": customerID ,
-            "name": customerName ,
+            "id": customerID,
+            "name": customerName,
             "address": customerAddress,
             "salary": customerSalary
         };
 
         //add to the array
         customerArr.push(customerOne);
+    });
+
+    //load all customers to the table
+    $('#get_All_Customers').click(function () {
+        //clear table
+        $('#tbl_Customer_Body').empty();
+
+        for (var customer of customerArr) {
+            var row = "<tr><td>" + customer.id + "</td><td>" + customer.name + "</td><td>" + customer.address + "</td><td>" + customer.salary + "</td></tr>";
+
+            // add to the table
+            $('#tbl_Customer_Body').append(row);
+        }
     });
 
 </script>
