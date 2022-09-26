@@ -198,6 +198,10 @@
 <script src="../assets/js/jquery-3.6.1.min.js"></script>
 
 <script>
+
+    // all customers array
+    var customerArr = []; //global scope
+
     // add new customer btn on action
     $('#btn_Add_New_Customer').click(function () {
 
@@ -213,7 +217,8 @@
             "salary": customerSalary
         };
 
-        console.log(customerOne);
+        //add to the array
+        customerArr.push(customerOne);
     });
 
 </script>
