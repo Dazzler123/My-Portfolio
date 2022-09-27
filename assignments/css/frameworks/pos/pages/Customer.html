@@ -68,8 +68,9 @@
         <h5 class="card-header bg-primary">Search Customer</h5>
         <div class="card-body border-0 p-0">
             <form style="margin-top: 17px;" class="d-flex col-8 ms-3" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <input id="txt_Search_Cus_ID" class="form-control me-2" type="search" placeholder="Search"
+                       aria-label="Search">
+                <button id="btn_Search_Customer" class="btn btn-outline-success" type="submit">Search</button>
             </form>
             <h6 class="fst-italic fw-normal col-4 ms-3" style="padding-top: 16px;">Search By</h6>
             <select class="form-select form-select-sm col-8 ms-3 w-50" style="margin-bottom: 18px;"
@@ -190,6 +191,31 @@
             // add to the table
             $('#tbl_Customer_Body').append(row);
         }
+    });
+
+    //search customer
+    $('#btn_Search_Customer').click(function () {
+        var alert = false;
+
+        //clear table
+        $('#tbl_Customer_Body').empty();
+
+        //customer id or name input
+        var id = $('#txt_Search_Cus_ID').val();
+
+        for (var cus of customerArr) {
+            if (id == cus.id) {
+                var row = "<tr><td>" + cus.id + "</td><td>" + cus.name + "</td><td>" + cus.address + "</td><td>" + cus.salary + "</td></tr>";
+
+                // add to the table
+                $('#tbl_Customer_Body').append(row);
+
+                // to trigger confirmation alert
+                alert = true;
+            }
+        }
+
+        //show alert here
     });
 
 </script>
