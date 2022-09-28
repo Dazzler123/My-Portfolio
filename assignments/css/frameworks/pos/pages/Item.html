@@ -105,7 +105,8 @@
                     <!--save item input form-->
                     <div class="mb-3">
                         <label for="formGroupExampleInput" class="form-label">Item Code : </label>
-                        <input id="txt_Item_Code"  type="text" class="form-control" id="formGroupExampleInput" placeholder="Ex: ITM-001">
+                        <input id="txt_Item_Code" type="text" class="form-control" id="formGroupExampleInput"
+                               placeholder="Ex: ITM-001">
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Item Name :</label>
@@ -144,48 +145,48 @@
             </tr>
             </thead>
             <tbody id="tbl_Item_Body">
-<!--            <tr>-->
-<!--                <td>ITM-001</td>-->
-<!--                <td>Araliya Keerisamba 5kg</td>-->
-<!--                <td>1960.00</td>-->
-<!--                <td>350</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>ITM-002</td>-->
-<!--                <td>Baasmathi Rice 25kg</td>-->
-<!--                <td>11250.00</td>-->
-<!--                <td>120</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>ITM-003</td>-->
-<!--                <td>Maggie Coconut Milk 400g</td>-->
-<!--                <td>350.00</td>-->
-<!--                <td>20</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>ITM-004</td>-->
-<!--                <td>Maliban Cream Cracker 150g</td>-->
-<!--                <td>300.00</td>-->
-<!--                <td>70</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>ITM-001</td>-->
-<!--                <td>Araliya Keerisamba 5kg</td>-->
-<!--                <td>1960.00</td>-->
-<!--                <td>350</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>ITM-002</td>-->
-<!--                <td>Baasmathi Rice 25kg</td>-->
-<!--                <td>11250.00</td>-->
-<!--                <td>120</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>ITM-003</td>-->
-<!--                <td>Maggie Coconut Milk 400g</td>-->
-<!--                <td>350.00</td>-->
-<!--                <td>20</td>-->
-<!--            </tr>-->
+            <!--            <tr>-->
+            <!--                <td>ITM-001</td>-->
+            <!--                <td>Araliya Keerisamba 5kg</td>-->
+            <!--                <td>1960.00</td>-->
+            <!--                <td>350</td>-->
+            <!--            </tr>-->
+            <!--            <tr>-->
+            <!--                <td>ITM-002</td>-->
+            <!--                <td>Baasmathi Rice 25kg</td>-->
+            <!--                <td>11250.00</td>-->
+            <!--                <td>120</td>-->
+            <!--            </tr>-->
+            <!--            <tr>-->
+            <!--                <td>ITM-003</td>-->
+            <!--                <td>Maggie Coconut Milk 400g</td>-->
+            <!--                <td>350.00</td>-->
+            <!--                <td>20</td>-->
+            <!--            </tr>-->
+            <!--            <tr>-->
+            <!--                <td>ITM-004</td>-->
+            <!--                <td>Maliban Cream Cracker 150g</td>-->
+            <!--                <td>300.00</td>-->
+            <!--                <td>70</td>-->
+            <!--            </tr>-->
+            <!--            <tr>-->
+            <!--                <td>ITM-001</td>-->
+            <!--                <td>Araliya Keerisamba 5kg</td>-->
+            <!--                <td>1960.00</td>-->
+            <!--                <td>350</td>-->
+            <!--            </tr>-->
+            <!--            <tr>-->
+            <!--                <td>ITM-002</td>-->
+            <!--                <td>Baasmathi Rice 25kg</td>-->
+            <!--                <td>11250.00</td>-->
+            <!--                <td>120</td>-->
+            <!--            </tr>-->
+            <!--            <tr>-->
+            <!--                <td>ITM-003</td>-->
+            <!--                <td>Maggie Coconut Milk 400g</td>-->
+            <!--                <td>350.00</td>-->
+            <!--                <td>20</td>-->
+            <!--            </tr>-->
 
             </tbody>
         </table>
@@ -223,13 +224,13 @@
     //load all items to the table
     $('#get_All_Items').click(function () {
         //clear table
-        $('#tbl_Customer_Body').empty();
+        $('#tbl_Item_Body').empty();
 
-        for (var customer of itemArr) {
-            var row = "<tr><td>" + customer.id + "</td><td>" + customer.name + "</td><td>" + customer.address + "</td><td>" + customer.salary + "</td></tr>";
+        for (var item of itemArr) {
+            var row = "<tr><td>" + item.id + "</td><td>" + item.name + "</td><td>" + item.price_per_unit + "</td><td>" + item.qty_On_Hand + "</td></tr>";
 
             // add to the table
-            $('#tbl_Customer_Body').append(row);
+            $('#tbl_Item_Body').append(row);
         }
     });
 
