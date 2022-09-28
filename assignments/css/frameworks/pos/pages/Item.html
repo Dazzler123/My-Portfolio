@@ -88,7 +88,7 @@
         </button>
         <button type="button" class="btn btn-outline-warning col-5">Update Item</button>
         <button type="button" class="btn btn-outline-danger col-5">- Delete Item</button>
-        <button type="button" class="btn btn-outline-primary col-5">View All Items</button>
+        <button id="get_All_Items" type="button" class="btn btn-outline-primary col-5">View All Items</button>
     </div>
 
 
@@ -105,27 +105,27 @@
                     <!--save item input form-->
                     <div class="mb-3">
                         <label for="formGroupExampleInput" class="form-label">Item Code : </label>
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ex: ITM-001">
+                        <input id="txt_Item_Code"  type="text" class="form-control" id="formGroupExampleInput" placeholder="Ex: ITM-001">
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Item Name :</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput2"
+                        <input id="txt_Item_Name" type="text" class="form-control" id="formGroupExampleInput2"
                                placeholder="Ex: Keerisamba 5kg">
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Price Per Unit :</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput3"
+                        <input id="txt_Price_Per_Unit" type="text" class="form-control" id="formGroupExampleInput3"
                                placeholder="Ex: 2500.00">
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Quantity On Hand :</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput4"
+                        <input id="txt_QTY_On_Hand" type="text" class="form-control" id="formGroupExampleInput4"
                                placeholder="Ex: 500">
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary">Save Item</button>
+                    <button id="btn_Add_New_Item" type="button" class="btn btn-primary">Save Item</button>
                 </div>
             </div>
         </div>
@@ -143,49 +143,49 @@
                 <th scope="col" class="text-center">Quantity On Hand</th>
             </tr>
             </thead>
-            <tbody>
-            <tr>
-                <td>ITM-001</td>
-                <td>Araliya Keerisamba 5kg</td>
-                <td>1960.00</td>
-                <td>350</td>
-            </tr>
-            <tr>
-                <td>ITM-002</td>
-                <td>Baasmathi Rice 25kg</td>
-                <td>11250.00</td>
-                <td>120</td>
-            </tr>
-            <tr>
-                <td>ITM-003</td>
-                <td>Maggie Coconut Milk 400g</td>
-                <td>350.00</td>
-                <td>20</td>
-            </tr>
-            <tr>
-                <td>ITM-004</td>
-                <td>Maliban Cream Cracker 150g</td>
-                <td>300.00</td>
-                <td>70</td>
-            </tr>
-            <tr>
-                <td>ITM-001</td>
-                <td>Araliya Keerisamba 5kg</td>
-                <td>1960.00</td>
-                <td>350</td>
-            </tr>
-            <tr>
-                <td>ITM-002</td>
-                <td>Baasmathi Rice 25kg</td>
-                <td>11250.00</td>
-                <td>120</td>
-            </tr>
-            <tr>
-                <td>ITM-003</td>
-                <td>Maggie Coconut Milk 400g</td>
-                <td>350.00</td>
-                <td>20</td>
-            </tr>
+            <tbody id="tbl_Item_Body">
+<!--            <tr>-->
+<!--                <td>ITM-001</td>-->
+<!--                <td>Araliya Keerisamba 5kg</td>-->
+<!--                <td>1960.00</td>-->
+<!--                <td>350</td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>ITM-002</td>-->
+<!--                <td>Baasmathi Rice 25kg</td>-->
+<!--                <td>11250.00</td>-->
+<!--                <td>120</td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>ITM-003</td>-->
+<!--                <td>Maggie Coconut Milk 400g</td>-->
+<!--                <td>350.00</td>-->
+<!--                <td>20</td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>ITM-004</td>-->
+<!--                <td>Maliban Cream Cracker 150g</td>-->
+<!--                <td>300.00</td>-->
+<!--                <td>70</td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>ITM-001</td>-->
+<!--                <td>Araliya Keerisamba 5kg</td>-->
+<!--                <td>1960.00</td>-->
+<!--                <td>350</td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>ITM-002</td>-->
+<!--                <td>Baasmathi Rice 25kg</td>-->
+<!--                <td>11250.00</td>-->
+<!--                <td>120</td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>ITM-003</td>-->
+<!--                <td>Maggie Coconut Milk 400g</td>-->
+<!--                <td>350.00</td>-->
+<!--                <td>20</td>-->
+<!--            </tr>-->
 
             </tbody>
         </table>
@@ -195,6 +195,69 @@
 
 <!--============================================================-->
 <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="../assets/js/jquery-3.6.1.min.js"></script>
 
+<script>
+    // all items array
+    var itemArr = []; //global scope
+
+    // add new item btn on action
+    $('#btn_Add_New_Item').click(function () {
+
+        let itemCode = $('#txt_Item_Code').val();
+        let itemName = $('#txt_Item_Name').val();
+        let ppu = $('#txt_Price_Per_Unit').val();
+        let qtyOnHand = $('#txt_QTY_On_Hand').val();
+
+        var itemOne = {
+            "id": itemCode,
+            "name": itemName,
+            "price_per_unit": ppu,
+            "qty_On_Hand": qtyOnHand
+        };
+
+        //add to the array
+        itemArr.push(itemOne);
+    });
+
+    //load all items to the table
+    $('#get_All_Items').click(function () {
+        //clear table
+        $('#tbl_Customer_Body').empty();
+
+        for (var customer of itemArr) {
+            var row = "<tr><td>" + customer.id + "</td><td>" + customer.name + "</td><td>" + customer.address + "</td><td>" + customer.salary + "</td></tr>";
+
+            // add to the table
+            $('#tbl_Customer_Body').append(row);
+        }
+    });
+
+    //search customer
+    $('#btn_Search_Customer').click(function () {
+        var alert = false;
+
+        //clear table
+        $('#tbl_Customer_Body').empty();
+
+        //customer id or name input
+        var id = $('#txt_Search_Cus_ID').val();
+
+        for (var cus of itemArr) {
+            if (id == cus.id) {
+                var row = "<tr><td>" + cus.id + "</td><td>" + cus.name + "</td><td>" + cus.address + "</td><td>" + cus.salary + "</td></tr>";
+
+                // add to the table
+                $('#tbl_Customer_Body').append(row);
+
+                // to trigger confirmation alert
+                alert = true;
+            }
+        }
+
+        //show alert here
+    });
+
+</script>
 </body>
 </html>
