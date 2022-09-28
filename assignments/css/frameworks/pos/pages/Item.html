@@ -67,10 +67,11 @@
     <div class="container card ps-0 pe-0 col-md-5 ms-3 row col-sm-12">
         <h5 class="card-header bg-primary">Search Item</h5>
         <div class="card-body border-0 p-0">
-            <form style="margin-top: 17px;" class="d-flex col-8 ms-3" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            <div style="margin-top: 17px;" class="d-flex col-8 ms-3" role="search">
+                <input id="txt_Search_Item_Code" class="form-control me-2" type="search" placeholder="Search"
+                       aria-label="Search">
+                <button id="btn_Search_Item" class="btn btn-outline-success" type="submit">Search</button>
+            </div>
             <h6 class="fst-italic fw-normal col-4 ms-3" style="padding-top: 16px;">Search By</h6>
             <select class="form-select form-select-sm col-8 ms-3 w-50" style="margin-bottom: 18px;"
                     aria-label=".form-select-sm example">
@@ -145,48 +146,6 @@
             </tr>
             </thead>
             <tbody id="tbl_Item_Body">
-            <!--            <tr>-->
-            <!--                <td>ITM-001</td>-->
-            <!--                <td>Araliya Keerisamba 5kg</td>-->
-            <!--                <td>1960.00</td>-->
-            <!--                <td>350</td>-->
-            <!--            </tr>-->
-            <!--            <tr>-->
-            <!--                <td>ITM-002</td>-->
-            <!--                <td>Baasmathi Rice 25kg</td>-->
-            <!--                <td>11250.00</td>-->
-            <!--                <td>120</td>-->
-            <!--            </tr>-->
-            <!--            <tr>-->
-            <!--                <td>ITM-003</td>-->
-            <!--                <td>Maggie Coconut Milk 400g</td>-->
-            <!--                <td>350.00</td>-->
-            <!--                <td>20</td>-->
-            <!--            </tr>-->
-            <!--            <tr>-->
-            <!--                <td>ITM-004</td>-->
-            <!--                <td>Maliban Cream Cracker 150g</td>-->
-            <!--                <td>300.00</td>-->
-            <!--                <td>70</td>-->
-            <!--            </tr>-->
-            <!--            <tr>-->
-            <!--                <td>ITM-001</td>-->
-            <!--                <td>Araliya Keerisamba 5kg</td>-->
-            <!--                <td>1960.00</td>-->
-            <!--                <td>350</td>-->
-            <!--            </tr>-->
-            <!--            <tr>-->
-            <!--                <td>ITM-002</td>-->
-            <!--                <td>Baasmathi Rice 25kg</td>-->
-            <!--                <td>11250.00</td>-->
-            <!--                <td>120</td>-->
-            <!--            </tr>-->
-            <!--            <tr>-->
-            <!--                <td>ITM-003</td>-->
-            <!--                <td>Maggie Coconut Milk 400g</td>-->
-            <!--                <td>350.00</td>-->
-            <!--                <td>20</td>-->
-            <!--            </tr>-->
 
             </tbody>
         </table>
@@ -234,22 +193,22 @@
         }
     });
 
-    //search customer
-    $('#btn_Search_Customer').click(function () {
+    //search item
+    $('#btn_Search_Item').click(function () {
         var alert = false;
 
         //clear table
-        $('#tbl_Customer_Body').empty();
+        $('#tbl_Item_Body').empty();
 
-        //customer id or name input
-        var id = $('#txt_Search_Cus_ID').val();
+        //item code or name input
+        var id = $('#txt_Search_Item_Code').val();
 
-        for (var cus of itemArr) {
-            if (id == cus.id) {
-                var row = "<tr><td>" + cus.id + "</td><td>" + cus.name + "</td><td>" + cus.address + "</td><td>" + cus.salary + "</td></tr>";
+        for (var item of itemArr) {
+            if (id == item.id) {
+                var row = "<tr><td>" + item.id + "</td><td>" + item.name + "</td><td>" + item.price_per_unit + "</td><td>" + item.qty_On_Hand + "</td></tr>";
 
                 // add to the table
-                $('#tbl_Customer_Body').append(row);
+                $('#tbl_Item_Body').append(row);
 
                 // to trigger confirmation alert
                 alert = true;
