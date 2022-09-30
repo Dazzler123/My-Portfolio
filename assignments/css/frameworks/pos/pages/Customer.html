@@ -163,6 +163,23 @@
     // all customers array
     var customerArr = []; //global scope
 
+    //get selected table row
+    function getSelectedRow() {
+        $('#tbl_Customer_Body>tr').click(function () {
+            // enable update delete btns
+            $('#update_Customer').removeAttr('disabled');
+            $('#delete_Customer').removeAttr('disabled');
+
+            let customerData = {
+                "id": $('this').children(':eq(0)').text(),
+                "name": $('this').children(':eq(1)').text(),
+                "address": $('this').children(':eq(2)').text(),
+                "salary": $('this').children(':eq(3)').text()
+            };
+            return customerData;
+        });
+    }
+
     // add new customer btn on action
     $('#btn_Add_New_Customer').click(function () {
 
@@ -180,6 +197,15 @@
 
         //add to the array
         customerArr.push(customerOne);
+
+        var row = "<tr><td>" + customerID + "" + "</td><td>" + customerName + "</td><td>" + customerAddress +
+            "</td><td>" + customerSalary + "</td></tr>";
+
+        // add to the table
+        $('#tbl_Customer_Body').append(row);
+
+        //get selected table row
+        getSelectedRow();
     });
 
     //load all customers to the table
@@ -193,6 +219,9 @@
             // add to the table
             $('#tbl_Customer_Body').append(row);
         }
+
+        //get selected table row
+        getSelectedRow();
     });
 
     //search customer
@@ -217,25 +246,10 @@
             }
         }
         //show alert here
+
+        //get selected table row
+        getSelectedRow();
     });
-
-    //get selected table row
-    function getSelectedRow() {
-        $('#tbl_Customer_Body>tr').click(function () {
-            // enable update delete btns
-            $('#update_Customer').removeAttr('disabled');
-            $('#delete_Customer').removeAttr('disabled');
-
-            let customerData = {
-                "id": $('this').children(':eq(0)').text(),
-                "name": $('this').children(':eq(1)').text(),
-                "address": $('this').children(':eq(2)').text(),
-                "salary": $('this').children(':eq(3)').text()
-            };
-
-            return customerData;
-        });
-    }
 
 
 </script>
