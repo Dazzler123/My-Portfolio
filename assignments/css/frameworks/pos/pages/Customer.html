@@ -87,11 +87,12 @@
         <button type="button" class="btn btn-outline-success col-5" data-bs-toggle="modal"
                 data-bs-target="#staticBackdrop">+ Add New Customer
         </button>
-        <button id="update_Customer" type="button" class="btn btn-outline-warning col-5" disabled>Update Customer
+        <button id="btn_Update_Customer" type="button" class="btn btn-outline-warning col-5" disabled>Update Customer
         </button>
-        <button id="delete_Customer" type="button" class="btn btn-outline-danger col-5" disabled>- Delete Customer
+        <button id="btn_Delete_Customer" type="button" class="btn btn-outline-danger col-5" disabled>- Delete Customer
         </button>
-        <button id="get_All_Customers" type="button" class="btn btn-outline-primary col-5">View All Customers</button>
+        <button id="btn_Get_All_Customers" type="button" class="btn btn-outline-primary col-5">View All Customers
+        </button>
     </div>
 
 
@@ -163,6 +164,7 @@
     // all customers array
     var customerArr = []; //global scope
 
+
     //get selected table row
     function getSelectedRow() {
         $('#tbl_Customer_Body>tr').click(function () {
@@ -179,6 +181,14 @@
             return customerData;
         });
     }
+
+
+    // $('#btn_Update_Customer').click(function () {
+    //     //get selected table row
+    //     var rowData = getSelectedRow();
+    //     console.log(rowData);
+    // });
+
 
     // add new customer btn on action
     $('#btn_Add_New_Customer').click(function () {
@@ -208,8 +218,9 @@
         getSelectedRow();
     });
 
+
     //load all customers to the table
-    $('#get_All_Customers').click(function () {
+    $('#btn_Get_All_Customers').click(function () {
         //clear table
         $('#tbl_Customer_Body').empty();
 
@@ -223,6 +234,7 @@
         //get selected table row
         getSelectedRow();
     });
+
 
     //search customer
     $('#btn_Search_Customer').click(function () {
