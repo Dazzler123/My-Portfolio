@@ -87,8 +87,10 @@
         <button type="button" class="btn btn-outline-success col-5" data-bs-toggle="modal"
                 data-bs-target="#staticBackdrop">+ Add New Customer
         </button>
-        <button id="update_Customer" type="button" class="btn btn-outline-warning col-5" disabled>Update Customer</button>
-        <button id="delete_Customer" type="button" class="btn btn-outline-danger col-5" disabled>- Delete Customer</button>
+        <button id="update_Customer" type="button" class="btn btn-outline-warning col-5" disabled>Update Customer
+        </button>
+        <button id="delete_Customer" type="button" class="btn btn-outline-danger col-5" disabled>- Delete Customer
+        </button>
         <button id="get_All_Customers" type="button" class="btn btn-outline-primary col-5">View All Customers</button>
     </div>
 
@@ -214,14 +216,27 @@
                 alert = true;
             }
         }
-
         //show alert here
     });
 
     //get selected table row
-    $('#tbl_Customer_Body > tr').click(function () {
-        // $('#update_Customer').disabled(false);
-    });
+    function getSelectedRow() {
+        $('#tbl_Customer_Body>tr').click(function () {
+            // enable update delete btns
+            $('#update_Customer').removeAttr('disabled');
+            $('#delete_Customer').removeAttr('disabled');
+
+            let customerData = {
+                "id": $('this').children(':eq(0)').text(),
+                "name": $('this').children(':eq(1)').text(),
+                "address": $('this').children(':eq(2)').text(),
+                "salary": $('this').children(':eq(3)').text()
+            };
+
+            return customerData;
+        });
+    }
+
 
 </script>
 </body>
