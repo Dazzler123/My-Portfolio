@@ -87,8 +87,8 @@
         <button type="button" class="btn btn-outline-success col-5" data-bs-toggle="modal"
                 data-bs-target="#staticBackdrop">+ Add New Customer
         </button>
-        <button type="button" class="btn btn-outline-warning col-5">Update Customer</button>
-        <button type="button" class="btn btn-outline-danger col-5">- Delete Customer</button>
+        <button id="update_Customer" type="button" class="btn btn-outline-warning col-5" disabled>Update Customer</button>
+        <button id="delete_Customer" type="button" class="btn btn-outline-danger col-5" disabled>- Delete Customer</button>
         <button id="get_All_Customers" type="button" class="btn btn-outline-primary col-5">View All Customers</button>
     </div>
 
@@ -216,6 +216,11 @@
         }
 
         //show alert here
+    });
+
+    //get selected table row
+    $('#tbl_Customer_Body > tr').click(function () {
+        // $('#update_Customer').disabled(false);
     });
 
 </script>
