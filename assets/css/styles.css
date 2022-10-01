@@ -694,6 +694,20 @@ main > section:nth-child(4) > ul pre {
     font-weight: 320;
 }
 
+/*all go to source code btns in common*/
+main > section:nth-child(4) > ul pre button{
+    background-color: #DDBF24;
+    font-weight: bold;
+    height: 10%;
+    width: 20%;
+    cursor: pointer;
+}
+
+/*all go to source code btns while hovering in common*/
+main > section:nth-child(4) > ul pre button:hover{
+    color: #d71824;
+}
+
 /*projects images container*/
 main > section:nth-child(4) > div {
     /*border: 2px solid red;*/
