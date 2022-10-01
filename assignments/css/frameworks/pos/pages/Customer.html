@@ -169,16 +169,22 @@
     function getSelectedRow() {
         $('#tbl_Customer_Body>tr').click(function () {
             // enable update delete btns
-            $('#update_Customer').removeAttr('disabled');
-            $('#delete_Customer').removeAttr('disabled');
+            $('#btn_Update_Customer').removeAttr('disabled');
+            $('#btn_Delete_Customer').removeAttr('disabled');
+
+            let id = $('this').children(':eq(0)').text();
+            let name = $('this').children(':eq(1)').text();
+            let address = $('this').children(':eq(2)').text();
+            let salary = $('this').children(':eq(3)').text();
 
             let customerData = {
-                "id": $('this').children(':eq(0)').text(),
-                "name": $('this').children(':eq(1)').text(),
-                "address": $('this').children(':eq(2)').text(),
-                "salary": $('this').children(':eq(3)').text()
+                "id": id,
+                "name": name,
+                "address": address,
+                "salary": salary
             };
-            return customerData;
+
+            console.log(customerData);
         });
     }
 
