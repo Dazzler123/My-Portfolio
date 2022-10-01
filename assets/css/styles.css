@@ -680,7 +680,7 @@ main > section:nth-child(4) > ul {
 /*projects list li*/
 main > section:nth-child(4) > ul > li {
     padding: 18px;
-    list-style: none;
+    /*list-style: none;*/
 
     font-family: 'system-ui';
     font-style: italic;
