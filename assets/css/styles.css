@@ -688,6 +688,12 @@ main > section:nth-child(4) > ul > li {
     font-size: 21px;
 }
 
+/*all projects description pre in common*/
+main > section:nth-child(4) > ul pre {
+    font-family: system-ui;
+    font-weight: 320;
+}
+
 /*projects images container*/
 main > section:nth-child(4) > div {
     /*border: 2px solid red;*/
