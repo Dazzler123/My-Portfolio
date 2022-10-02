@@ -226,6 +226,7 @@
         });
     }
 
+
     // add new item btn on action
     $('#btn_Add_New_Item').click(function () {
         let itemCode = $('#txt_Item_Code').val();
@@ -265,7 +266,11 @@
             // add to the table
             $('#tbl_Item_Body').append(row);
         }
+
+        //get selected table row
+        getSelectedRow();
     });
+
 
     //search item
     $('#btn_Search_Item').click(function () {
@@ -288,8 +293,10 @@
                 alert = true;
             }
         }
-
         //show alert here
+
+        //get selected table row
+        getSelectedRow();
     });
 
 </script>
