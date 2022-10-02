@@ -87,7 +87,8 @@
         <button type="button" class="btn btn-outline-success col-5" data-bs-toggle="modal"
                 data-bs-target="#staticBackdrop">+ Add New Customer
         </button>
-        <button id="btn_Update_Customer" type="button" class="btn btn-outline-warning col-5" disabled>Update Customer
+        <button id="btn_Update_Customer" type="button" class="btn btn-outline-warning col-5" data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop2" disabled>Update Customer
         </button>
         <button id="btn_Delete_Customer" type="button" class="btn btn-outline-danger col-5" disabled>- Delete Customer
         </button>
@@ -131,6 +132,46 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                     <button id="btn_Add_New_Customer" type="button" class="btn btn-primary">Save Customer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--update customer model-->
+    <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+         aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-warning">
+                    <h5 class="modal-title" id="staticBackdropLabel2">Update Customer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!--update customer input form-->
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">Customer ID : </label>
+                        <input id="txt_Update_Cus_ID" type="text" class="form-control" id="formGroupExampleInput5"
+                               placeholder="Ex: C001">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">Customer Name :</label>
+                        <input id="txt_Update_Cus_Name" type="text" class="form-control" id="formGroupExampleInput6"
+                               placeholder="Enter Full Name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">Customer Address :</label>
+                        <input id="txt_Update_Cus_Address" type="text" class="form-control" id="formGroupExampleInput7"
+                               placeholder="Ex: 23, Alwis Town Road, Hendala, Wattala.">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">Customer Salary :</label>
+                        <input id="txt_Update_Cus_Salary" type="text" class="form-control" id="formGroupExampleInput8"
+                               placeholder="Ex: 25000">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button id="btn_Update_Customer_Details" type="button" class="btn btn-primary">Update Customer</button>
                 </div>
             </div>
         </div>
@@ -198,7 +239,6 @@
 
     // add new customer btn on action
     $('#btn_Add_New_Customer').click(function () {
-
         let customerID = $('#txt_Cus_ID').val();
         let customerName = $('#txt_Cus_Name').val();
         let customerAddress = $('#txt_Cus_Address').val();
