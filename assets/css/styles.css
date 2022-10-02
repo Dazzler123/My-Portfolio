@@ -634,6 +634,12 @@ main > section:nth-child(3) > :nth-child(6) > div > i {
     color: #ff253a;
 }
 
+/*!*to left right icons hover in common*!*/
+/*main > section:nth-child(3) > :nth-child(6) > div > i:hover {*/
+/*    color: darkorange;*/
+/*    cursor: pointer;*/
+/*}*/
+
 /*to left icon*/
 main > section:nth-child(3) > :nth-child(6) > div > :nth-child(4) {
     left: 3vw;
@@ -695,7 +701,7 @@ main > section:nth-child(4) > ul pre {
 }
 
 /*all go to source code btns in common*/
-main > section:nth-child(4) > ul pre button{
+main > section:nth-child(4) > ul pre button {
     background-color: #DDBF24;
     font-weight: bold;
     height: 10%;
@@ -704,7 +710,7 @@ main > section:nth-child(4) > ul pre button{
 }
 
 /*all go to source code btns while hovering in common*/
-main > section:nth-child(4) > ul pre button:hover{
+main > section:nth-child(4) > ul pre button:hover {
     color: #d71824;
 }
 
@@ -750,6 +756,13 @@ main > section:nth-child(4) > div > i {
     font-size: 35px;
     color: #ff253a;
 }
+
+/*!*to left right icons hover in common*!*/
+/*main > section:nth-child(4) > div > i:hover {*/
+/*    color: darkorange;*/
+/*    cursor: pointer;*/
+/*}*/
+
 
 /*to left icon*/
 main > section:nth-child(4) > div > :nth-child(4) {
