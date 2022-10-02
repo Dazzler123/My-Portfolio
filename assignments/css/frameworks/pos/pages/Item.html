@@ -158,7 +158,8 @@
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Price Per Unit :</label>
-                        <input id="txt_Update_Price_Per_Unit" type="text" class="form-control" id="formGroupExampleInput7"
+                        <input id="txt_Update_Price_Per_Unit" type="text" class="form-control"
+                               id="formGroupExampleInput7"
                                placeholder="Ex: 2500.00">
                     </div>
                     <div class="mb-3">
@@ -203,9 +204,30 @@
     // all items array
     var itemArr = []; //global scope
 
+
+    //get selected table row
+    function getSelectedRow() {
+        $('#tbl_Item_Body>tr').click(function () {
+            // enable update delete btns
+            $('#btn_Update_Item').removeAttr('disabled');
+            $('#btn_Delete_Item').removeAttr('disabled');
+
+            let code = $('this').children(':eq(0)').text();
+            let name = $('this').children(':eq(0)').text();
+            let ppu = $('this').children(':eq(0)').text();
+            let qtyOnHand = $('this').children(':eq(0)').text();
+
+            let itemData = {
+                "itemCode": code,
+                "itemName": name,
+                "ppu": ppu,
+                "qtyOnHand": qtyOnHand
+            };
+        });
+    }
+
     // add new item btn on action
     $('#btn_Add_New_Item').click(function () {
-
         let itemCode = $('#txt_Item_Code').val();
         let itemName = $('#txt_Item_Name').val();
         let ppu = $('#txt_Price_Per_Unit').val();
@@ -220,7 +242,17 @@
 
         //add to the array
         itemArr.push(itemOne);
+
+        var row = "<tr><td>" + itemCode + "" + "</td><td>" + itemName + "</td><td>" + ppu +
+            "</td><td>" + qtyOnHand + "</td></tr>";
+
+        // add to the table
+        $('#tbl_Item_Body').append(row);
+
+        //get selected table row
+        getSelectedRow();
     });
+
 
     //load all items to the table
     $('#btn_Get_All_Items').click(function () {
