@@ -135,6 +135,46 @@
         </div>
     </div>
 
+    <!--update item modal-->
+    <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+         aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-warning">
+                    <h5 class="modal-title" id="staticBackdropLabel2">Update Item</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!--update item input form-->
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">Item Code : </label>
+                        <input id="txt_Update_Item_Code" type="text" class="form-control" id="formGroupExampleInput5"
+                               placeholder="Ex: ITM-001">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">Item Name :</label>
+                        <input id="txt_Update_Item_Name" type="text" class="form-control" id="formGroupExampleInput6"
+                               placeholder="Ex: Keerisamba 5kg">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">Price Per Unit :</label>
+                        <input id="txt_Update_Price_Per_Unit" type="text" class="form-control" id="formGroupExampleInput7"
+                               placeholder="Ex: 2500.00">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">Quantity On Hand :</label>
+                        <input id="txt_Update_QTY_On_Hand" type="text" class="form-control" id="formGroupExampleInput8"
+                               placeholder="Ex: 500">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button id="btn_Update_Item_Details" type="button" class="btn btn-primary">Update Item</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!--item details table-->
     <div class="container mt-5 justify-content-center col-md-12 col-sm-12">
@@ -183,7 +223,7 @@
     });
 
     //load all items to the table
-    $('#get_All_Items').click(function () {
+    $('#btn_Get_All_Items').click(function () {
         //clear table
         $('#tbl_Item_Body').empty();
 
