@@ -248,7 +248,28 @@
         }
     });
     ////////////////////////////////////////////////////////////////
-
+    //focus textfields after enter key pressed (update item modal)
+    $('#txt_Update_Item_Code').on('keydown', function (event) {
+        if (event.key == "Enter") {
+            $('#txt_Update_Item_Name').focus();
+        }
+    });
+    $('#txt_Update_Item_Name').on('keydown', function (event) {
+        if (event.key == "Enter") {
+            $('#txt_Update_Price_Per_Unit').focus();
+        }
+    });
+    $('#txt_Update_Price_Per_Unit').on('keydown', function (event) {
+        if (event.key == "Enter") {
+            $('#txt_Update_QTY_On_Hand').focus();
+        }
+    });
+    $('#txt_Update_QTY_On_Hand').on('keydown', function (event) {
+        if (event.key == "Enter") {
+            $('#btn_Update_Item_Details').focus();
+        }
+    });
+    ////////////////////////////////////////////////////////////////
 
 
     // add new item btn on action
