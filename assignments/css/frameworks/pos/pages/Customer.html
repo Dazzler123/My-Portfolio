@@ -253,6 +253,28 @@
         }
     });
     ////////////////////////////////////////////////////////////////
+    //focus textfields after enter key pressed (update customer modal)
+    $('#txt_Update_Cus_ID').on('keydown', function (event) {
+        if (event.key == "Enter") {
+            $('#txt_Update_Cus_Name').focus();
+        }
+    });
+    $('#txt_Update_Cus_Name').on('keydown', function (event) {
+        if (event.key == "Enter") {
+            $('#txt_Update_Cus_Address').focus();
+        }
+    });
+    $('#txt_Update_Cus_Address').on('keydown', function (event) {
+        if (event.key == "Enter") {
+            $('#txt_Update_Cus_Salary').focus();
+        }
+    });
+    $('#txt_Update_Cus_Salary').on('keydown', function (event) {
+        if (event.key == "Enter") {
+            $('#btn_Update_Customer_Details').focus();
+        }
+    });
+    ////////////////////////////////////////////////////////////////
 
     // $('#btn_Update_Customer').click(function () {
     //     //get selected table row
