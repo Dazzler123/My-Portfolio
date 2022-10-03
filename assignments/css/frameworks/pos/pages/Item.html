@@ -269,6 +269,15 @@
             $('#btn_Update_Item_Details').focus();
         }
     });
+
+    //disable tab key
+    $("#txt_Item_Code,#txt_Item_Name,#txt_Price_Per_Unit,#txt_QTY_On_Hand,#txt_Update_Item_Code," +
+        "#txt_Update_Item_Name,#txt_Update_Price_Per_Unit,#txt_Update_QTY_On_Hand").on('keydown', function (event) {
+        if (event.key == "Tab") {
+            event.preventDefault();
+        }
+    });
+
     ////////////////////////////////////////////////////////////////
 
 
