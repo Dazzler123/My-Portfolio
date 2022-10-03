@@ -171,7 +171,8 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button id="btn_Update_Customer_Details" type="button" class="btn btn-primary">Update Customer</button>
+                    <button id="btn_Update_Customer_Details" type="button" class="btn btn-primary">Update Customer
+                    </button>
                 </div>
             </div>
         </div>
@@ -229,6 +230,29 @@
         });
     }
 
+
+    //focus textfields after enter key pressed (save customer modal)
+    $('#txt_Cus_ID').on('keydown', function (event) {
+        if (event.key == "Enter") {
+            $('#txt_Cus_Name').focus();
+        }
+    });
+    $('#txt_Cus_Name').on('keydown', function (event) {
+        if (event.key == "Enter") {
+            $('#txt_Cus_Address').focus();
+        }
+    });
+    $('#txt_Cus_Address').on('keydown', function (event) {
+        if (event.key == "Enter") {
+            $('#txt_Cus_Salary').focus();
+        }
+    });
+    $('#txt_Cus_Salary').on('keydown', function (event) {
+        if (event.key == "Enter") {
+            $('#btn_Add_New_Customer').focus();
+        }
+    });
+    ////////////////////////////////////////////////////////////////
 
     // $('#btn_Update_Customer').click(function () {
     //     //get selected table row
