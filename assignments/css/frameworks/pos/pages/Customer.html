@@ -274,6 +274,14 @@
             $('#btn_Update_Customer_Details').focus();
         }
     });
+
+    //disable tab key
+    $("#txt_Cus_ID,#txt_Cus_Name,#txt_Cus_Address,#txt_Cus_Salary,#txt_Update_Cus_ID," +
+        "#txt_Update_Cus_Name,#txt_Update_Cus_Address,#txt_Update_Cus_Salary").on('keydown', function (event) {
+        if (event.key == "Tab") {
+            event.preventDefault();
+        }
+    });
     ////////////////////////////////////////////////////////////////
 
     // $('#btn_Update_Customer').click(function () {
