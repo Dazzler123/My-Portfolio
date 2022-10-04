@@ -830,7 +830,7 @@ main > section:nth-child(4) > div:nth-child(6) > div{
 }
 
 /*see more btn*/
-main > section:nth-child(4) > :nth-child(7) {
+main > section:nth-child(4) > a > h4 {
     position: relative;
     top: 195vh;
     text-align: right;
@@ -838,8 +838,22 @@ main > section:nth-child(4) > :nth-child(7) {
     margin: 0;
     font-family: 'system-ui';
     font-weight: 100;
-    font-size: 18px;
+    font-size: 19px;
+    color: white;
+    font-style: italic;
 }
+
+/*see more btn a tag*/
+main > section:nth-child(4) > a {
+    text-decoration: none;
+}
+
+/*see more btn while hover*/
+main > section:nth-child(4) > a > h4:hover {
+    color: darkorange;
+}
+
+
 
 
 
