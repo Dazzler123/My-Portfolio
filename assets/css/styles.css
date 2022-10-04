@@ -825,8 +825,40 @@ main > section:nth-child(4) > div:nth-child(6) > div{
     /*border: 2px solid red;*/
     background-color: #0a53be;
     border-radius: 5%;
+    background-size: cover;
+    background-position: center;
     /*grid-row: 2/4;*/
     /*grid-column: 1/5;*/
+}
+
+/*css fixed position case div*/
+main > section:nth-child(4) > div:nth-child(6) > div:nth-child(1) {
+    background-image: url("../images/css case 1.JPG");
+}
+
+/*css sticky position case div*/
+main > section:nth-child(4) > div:nth-child(6) > div:nth-child(2) {
+    background-image: url("../images/sticky card case.JPG");
+}
+
+/*css spinner animation case div*/
+main > section:nth-child(4) > div:nth-child(6) > div:nth-child(3) {
+    background-image: url("../images/spinner css 1.JPG");
+}
+
+/*css water drop animation case div*/
+main > section:nth-child(4) > div:nth-child(6) > div:nth-child(4) {
+    background-image: url("../images/water drop animation2.JPG");
+}
+
+/*css box moving animation case div*/
+main > section:nth-child(4) > div:nth-child(6) > div:nth-child(5) {
+    background-image: url("../images/box moving css.JPG");
+}
+
+/*css car moving animation case div*/
+main > section:nth-child(4) > div:nth-child(6) > div:nth-child(6) {
+    background-image: url("../images/car moving animation.JPG");
 }
 
 /*see more btn*/
@@ -856,7 +888,7 @@ main > section:nth-child(4) > a > h4:hover {
 /*javascript heading*/
 main > section:nth-child(4) > :nth-child(8) {
     position: relative;
-    top: 207vh;
+    top: 206vh;
     text-align: center;
     margin: 0;
     font-family: 'system-ui';
