@@ -660,7 +660,7 @@ main > section:nth-child(4) {
     /*border: 2px solid red;*/
     position: relative;
     top: 13vh;
-    height: 285vh;
+    height: 454vh;
 }
 
 /*heading*/
@@ -715,7 +715,7 @@ main > section:nth-child(4) > ul pre button:hover {
 }
 
 /*projects images container*/
-main > section:nth-child(4) > div {
+main > section:nth-child(4) > :nth-child(3) {
     /*border: 2px solid red;*/
     position: relative;
     top: 216vh;
@@ -776,6 +776,72 @@ main > section:nth-child(4) > div > :nth-child(5) {
     top: 45vh;
     transform: rotate(180deg);
 }
+
+/*assignments heading*/
+main > section:nth-child(4) > :nth-child(4) {
+    position: absolute;
+    display: inline-block;
+    left: 11vw;
+    top: 290vh;
+
+    font-family: 'system-ui';
+    font-weight: 600;
+    font-size: 27px;
+}
+
+/*css heading*/
+main > section:nth-child(4) > :nth-child(5) {
+    position: relative;
+    top: 205vh;
+    text-align: center;
+    margin: 0;
+    font-family: 'system-ui';
+    font-weight: 400;
+    font-size: 23px;
+}
+
+/*css assignments div container*/
+main > section:nth-child(4) > :nth-child(6) {
+    /* border: 2px solid red; */
+    position: relative;
+    top: 189vh;
+    height: 17%;
+    width: 85%;
+    left: 0;
+    right: 0;
+    margin: 10% auto auto;
+    display: grid;
+    /* align-items: center; */
+    /* justify-content: space-around; */
+    /* flex-wrap: nowrap; */
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 5%;
+    row-gap: 13%;
+}
+
+/*css assignment divs all in common*/
+main > section:nth-child(4) > div:nth-child(6) > div{
+    /*border: 2px solid red;*/
+    background-color: #0a53be;
+    border-radius: 5%;
+    /*grid-row: 2/4;*/
+    /*grid-column: 1/5;*/
+}
+
+/*see more btn*/
+main > section:nth-child(4) > :nth-child(7) {
+    position: relative;
+    top: 195vh;
+    text-align: right;
+    left: -74px;
+    margin: 0;
+    font-family: 'system-ui';
+    font-weight: 100;
+    font-size: 18px;
+}
+
+
 
 
 /*===================!*Collaborator's recommendation ====================================================*!*/
