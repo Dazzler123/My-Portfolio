@@ -936,6 +936,18 @@ main > section:nth-child(4) > div:nth-child(9) > div{
     border-radius: 5%;
     background-position: center;
     background-size: cover;
+    text-align: center;
+}
+
+/*javascript case div titles all in common*/
+main > section:nth-child(4) > div:nth-child(9) > div > h4 {
+    color: white;
+    position: relative;
+    display: inline-block;
+    font-family: 'system-ui';
+    font-weight: 200;
+    font-size: 18px;
+    top: 97%;
 }
 
 /*js calculator case div 1*/
