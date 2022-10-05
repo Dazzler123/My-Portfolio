@@ -861,6 +861,27 @@ main > section:nth-child(4) > div:nth-child(6) > div:nth-child(6) {
     background-image: url("../images/car moving animation.JPG");
 }
 
+/*js calculator case div*/
+main > section:nth-child(4) > div:nth-child(9) > div:nth-child(1) {
+    background-image: url("../images/js cal 4.JPG");
+    background-position: center;
+    background-size: cover;
+}
+
+/*js sample case div*/
+main > section:nth-child(4) > div:nth-child(9) > div:nth-child(2) {
+    background-image: url("../images/js cal 4.JPG");
+    background-position: center;
+    background-size: cover;
+}
+
+/*js sample case div 2*/
+main > section:nth-child(4) > div:nth-child(9) > div:nth-child(3) {
+    background-image: url("../images/js cal 4.JPG");
+    background-position: center;
+    background-size: cover;
+}
+
 /*see more btn*/
 main > section:nth-child(4) > a > h4 {
     position: relative;
