@@ -821,13 +821,19 @@ main > section:nth-child(4) > :nth-child(6) {
 }
 
 /*css assignment divs all in common*/
-main > section:nth-child(4) > div:nth-child(6) > div{
+main > section:nth-child(4) > div:nth-child(6) > div {
     /*border: 2px solid red;*/
     background-color: white;
     border-radius: 5%;
     background-size: cover;
     background-position: center;
     text-align: center;
+}
+
+/*css assignment divs hover effect all in common*/
+main > section:nth-child(4) > div:nth-child(6) > div:hover {
+    opacity: 80%;
+    cursor: pointer;
 }
 
 /*css case div titles all in common*/
@@ -842,7 +848,7 @@ main > section:nth-child(4) > div:nth-child(6) > div > h4 {
 }
 
 /*css box moving case title*/
-main > section:nth-child(4) > div:nth-child(6) > div:nth-child(5) > h4{
+main > section:nth-child(4) > div:nth-child(6) > div:nth-child(5) > h4 {
     /*transform: rotate(180deg);*/
     top: 97%;
 }
@@ -931,7 +937,7 @@ main > section:nth-child(4) > :nth-child(9) {
 }
 
 /*javascript assignment divs all in common*/
-main > section:nth-child(4) > div:nth-child(9) > div{
+main > section:nth-child(4) > div:nth-child(9) > div {
     background-color: white;
     border-radius: 5%;
     background-position: center;
@@ -940,7 +946,7 @@ main > section:nth-child(4) > div:nth-child(9) > div{
 }
 
 /*javascript assignment divs hover effect all in common*/
-main > section:nth-child(4) > div:nth-child(9) > div:hover{
+main > section:nth-child(4) > div:nth-child(9) > div:hover {
     opacity: 80%;
     cursor: pointer;
 }
