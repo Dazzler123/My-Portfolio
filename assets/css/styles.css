@@ -823,12 +823,28 @@ main > section:nth-child(4) > :nth-child(6) {
 /*css assignment divs all in common*/
 main > section:nth-child(4) > div:nth-child(6) > div{
     /*border: 2px solid red;*/
-    background-color: #0a53be;
+    background-color: white;
     border-radius: 5%;
     background-size: cover;
     background-position: center;
-    /*grid-row: 2/4;*/
-    /*grid-column: 1/5;*/
+    text-align: center;
+}
+
+/*css case div titles all in common*/
+main > section:nth-child(4) > div:nth-child(6) > div > h4 {
+    color: white;
+    position: relative;
+    display: inline-block;
+    font-family: 'system-ui';
+    font-weight: 200;
+    font-size: 18px;
+    top: 97%;
+}
+
+/*css box moving case title*/
+main > section:nth-child(4) > div:nth-child(6) > div:nth-child(5) > h4{
+    /*transform: rotate(180deg);*/
+    top: 97%;
 }
 
 /*css fixed position case div*/
@@ -839,6 +855,7 @@ main > section:nth-child(4) > div:nth-child(6) > div:nth-child(1) {
 /*css sticky position case div*/
 main > section:nth-child(4) > div:nth-child(6) > div:nth-child(2) {
     background-image: url("../images/sticky card case.JPG");
+
 }
 
 /*css spinner animation case div*/
