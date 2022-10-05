@@ -939,6 +939,12 @@ main > section:nth-child(4) > div:nth-child(9) > div{
     text-align: center;
 }
 
+/*javascript assignment divs hover effect all in common*/
+main > section:nth-child(4) > div:nth-child(9) > div:hover{
+    opacity: 80%;
+    cursor: pointer;
+}
+
 /*javascript case div titles all in common*/
 main > section:nth-child(4) > div:nth-child(9) > div > h4 {
     color: white;
