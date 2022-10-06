@@ -43,7 +43,7 @@
 
             width: 657px;
             height: 600px;
-            background: url("assets/img/loader gif.gif");
+            background: url("assets/img/loading_spinner_green.gif");
             background-size: cover;
             background-position: center;
         }
@@ -699,6 +699,13 @@
 <script src="../pos/assets/js/jquery-3.6.1.min.js"></script>
 
 <script>
+
+    // loader
+    $(window).on('load', function () {
+        // $("#loader").css('display','none');
+        $("#loader_Container").fadeOut(700);
+    });
+
     // =============== AT INITIAL STATE ==================
     $('#header_container').css('visibility', 'hidden');
     $('#cust_main_container').css('visibility', 'hidden');
