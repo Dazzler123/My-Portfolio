@@ -206,6 +206,11 @@
     // all customers array
     var customerArr = []; //global scope
 
+    // customer details patterns
+    let idPattern = /C(0-9){3}/;
+    let namePattern = /C(0-9){3}/;
+    let addressPattern = /C(0-9){3}/;
+    let salaryPattern = /C(0-9){3}/;
 
     //get selected table row
     function getSelectedRow() {
@@ -225,51 +230,145 @@
                 "address": address,
                 "salary": salary
             };
-
             console.log(customerData);
         });
     }
 
 
-    //focus textfields after enter key pressed (save customer modal)
+    //textfields after a key pressed (save customer modal)
     $('#txt_Cus_ID').on('keydown', function (event) {
+        var text = $('#txt_Cus_ID').val();
+        var valid = idPattern.test(text);
+
+        // check if the text matches the pattern
+        if (valid) {
+            $('#txt_Cus_ID').css('border', 'green');
+        }else {
+            $('#txt_Cus_ID').css('border', 'red');
+        }
+
+        //focus to the next textfield
         if (event.key == "Enter") {
             $('#txt_Cus_Name').focus();
         }
     });
+
     $('#txt_Cus_Name').on('keydown', function (event) {
+        var text = $('#txt_Cus_Name').val();
+        var valid = namePattern.test(text);
+
+        // check if the text matches the pattern
+        if (valid) {
+            $('#txt_Cus_Name').css('border', 'green');
+        }else {
+            $('#txt_Cus_Name').css('border', 'red');
+        }
+
+        //focus to the next textfield
         if (event.key == "Enter") {
             $('#txt_Cus_Address').focus();
         }
     });
+
     $('#txt_Cus_Address').on('keydown', function (event) {
+        var text = $('#txt_Cus_Address').val();
+        var valid = addressPattern.test(text);
+
+        // check if the text matches the pattern
+        if (valid) {
+            $('#txt_Cus_Address').css('border', 'green');
+        }else {
+            $('#txt_Cus_Address').css('border', 'red');
+        }
+
+        //focus to the next textfield
         if (event.key == "Enter") {
             $('#txt_Cus_Salary').focus();
         }
     });
+
     $('#txt_Cus_Salary').on('keydown', function (event) {
+        var text = $('#txt_Cus_Salary').val();
+        var valid = salaryPattern.test(text);
+
+        // check if the text matches the pattern
+        if (valid) {
+            $('#txt_Cus_Salary').css('border', 'green');
+        }else {
+            $('#txt_Cus_Salary').css('border', 'red');
+        }
+
+        //focus the button
         if (event.key == "Enter") {
             $('#btn_Add_New_Customer').focus();
         }
     });
+
     ////////////////////////////////////////////////////////////////
-    //focus textfields after enter key pressed (update customer modal)
+    //textfields after a key pressed (update customer modal)
     $('#txt_Update_Cus_ID').on('keydown', function (event) {
+        var text = $('#txt_Update_Cus_ID').val();
+        var valid = idPattern.test(text);
+
+        // check if the text matches the pattern
+        if (valid) {
+            $('#txt_Update_Cus_ID').css('border', 'green');
+        }else {
+            $('#txt_Update_Cus_ID').css('border', 'red');
+        }
+
+        //focus to the next textfield
         if (event.key == "Enter") {
             $('#txt_Update_Cus_Name').focus();
         }
     });
+
     $('#txt_Update_Cus_Name').on('keydown', function (event) {
+        var text = $('#txt_Update_Cus_Name').val();
+        var valid = namePattern.test(text);
+
+        // check if the text matches the pattern
+        if (valid) {
+            $('#txt_Update_Cus_Name').css('border', 'green');
+        }else {
+            $('#txt_Update_Cus_Name').css('border', 'red');
+        }
+
+        //focus to the next textfield
         if (event.key == "Enter") {
             $('#txt_Update_Cus_Address').focus();
         }
     });
+
     $('#txt_Update_Cus_Address').on('keydown', function (event) {
+        var text = $('#txt_Update_Cus_Address').val();
+        var valid = addressPattern.test(text);
+
+        // check if the text matches the pattern
+        if (valid) {
+            $('#txt_Update_Cus_Address').css('border', 'green');
+        }else {
+            $('#txt_Update_Cus_Address').css('border', 'red');
+        }
+
+        //focus to the next textfield
         if (event.key == "Enter") {
             $('#txt_Update_Cus_Salary').focus();
         }
     });
+
     $('#txt_Update_Cus_Salary').on('keydown', function (event) {
+        var text = $('#txt_Update_Cus_Salary').val();
+        var valid = salaryPattern.test(text);
+
+        // check if the text matches the pattern
+        if (valid) {
+            $('#txt_Update_Cus_Salary').css('border', 'green');
+        }else {
+            $('#txt_Update_Cus_Salary').css('border', 'red');
+        }
+
+        //focus to the next textfield
         if (event.key == "Enter") {
             $('#btn_Update_Customer_Details').focus();
         }
