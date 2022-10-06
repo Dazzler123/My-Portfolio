@@ -17,9 +17,35 @@
             top: 7%;
         }
 
+        /*dashboard buttons hover effect all in common*/
         #btn_Customer:hover, #btn_Item:hover, #btn_Place_Order:hover, #btn_Manage_Orders:hover {
             cursor: pointer;
             background: linear-gradient(45deg, rgba(29, 236, 197, 0.5), rgba(91, 14, 214, 0.5) 100%);
+        }
+
+        #loader_Container{
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: white;
+            overflow: hidden;
+        }
+
+        #loader_Container > div{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+
+            width: 657px;
+            height: 600px;
+            background: url("assets/img/loader gif.gif");
+            background-size: cover;
+            background-position: center;
         }
 
     </style>
@@ -60,6 +86,12 @@
         </div>
     </nav>
 </header>
+
+
+<!--loader-->
+<div id="loader_Container">
+    <div></div>
+</div>
 
 
 <!--dashboard form / home-->
