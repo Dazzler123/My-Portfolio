@@ -468,6 +468,7 @@
     }
 
 
+    //update customer details
     function updateCustomer(id) {
         //search customer
         let customer = searchCustomerByID(id);
@@ -507,8 +508,12 @@
 
 
     $('#btn_Update_Customer_Details').click(function () {
-
-
+        //confirmation alert
+        if (updateCustomer($('#txt_Update_Cus_ID').val())) {
+            alert("Customer details updated.");
+        } else {
+            alert("Customer update failed!");
+        }
     });
 
 
