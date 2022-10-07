@@ -192,6 +192,10 @@
                     <div class="mb-3">
                         <label for="formGroupExampleInput" class="form-label">Are you sure you
                             want to delete this customer?</label>
+                        <br>
+                        <label id="lbl_Customer_ID" for="formGroupExampleInput" class="form-label fw-semibold"></label>
+                        <br>
+                        <label id="lbl_Customer_Name" for="formGroupExampleInput" class="form-label fw-semibold"></label>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -392,6 +396,12 @@
 
                 //disable id textfield
                 $('#txt_Update_Cus_ID').prop('disabled', true);
+            });
+
+            //set data to delete customer modal confirmation
+            $('#btn_Delete_Customer').click(function () {
+                $('#lbl_Customer_ID').text("ID : " + id);
+                $('#lbl_Customer_Name').text("Name : " + name);
             });
         });
     }
