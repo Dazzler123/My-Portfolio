@@ -434,35 +434,33 @@
         getSelectedRow();
     });
 
-
     //search customer
-    $('#btn_Search_Customer').click(function () {
-        var showAlert = false;
+    function searchCustomerByID(id) {
+        for (var cus of customerArr) {
+            if (cus.id == id) {
+                return cus;
+            }
+        }
+        return null;
+    }
 
+    $('#btn_Search_Customer').click(function () {
         //clear table
         $('#tbl_Customer_Body').empty();
 
-        //customer id or name input
-        var id = $('#txt_Search_Cus_ID').val();
+        //get customer object
+        var cusObj = searchCustomerByID($('#txt_Search_Cus_ID').val());
 
-        for (var cus of customerArr) {
-            if (id == cus.id) {
-                var row = "<tr><td>" + cus.id + "</td><td>" + cus.name + "</td><td>" + cus.address + "</td><td>" + cus.salary + "</td></tr>";
-
-                // add to the table
-                $('#tbl_Customer_Body').append(row);
-
-                // to trigger confirmation alert
-                showAlert = true;
-            }
-        }
-        //show alert here
-        if (showAlert==false) {
+        // show error alert
+        if (cusObj == null) {
             alert("No such customer found with given ID!");
             //clear textfield
             $('#txt_Search_Cus_ID').val("");
+        } else {
+            var row = "<tr><td>" + cusObj.id + "</td><td>" + cusObj.name + "</td><td>" + cusObj.address + "</td><td>" + cusObj.salary + "</td></tr>";
+            // add to the table
+            $('#tbl_Customer_Body').append(row);
         }
-
         //get selected table row
         getSelectedRow();
     });
