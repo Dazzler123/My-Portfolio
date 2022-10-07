@@ -88,9 +88,10 @@
                 data-bs-target="#staticBackdrop">+ Add New Customer
         </button>
         <button id="btn_Update_Customer" type="button" class="btn btn-outline-warning col-5" data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop2" disabled>Update Customer
+                data-bs-target="#staticBackdrop2">Update Customer
         </button>
-        <button id="btn_Delete_Customer" type="button" class="btn btn-outline-danger col-5" disabled>- Delete Customer
+        <button id="btn_Delete_Customer" type="button" class="btn btn-outline-danger col-5" data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop3">- Delete Customer
         </button>
         <button id="btn_Get_All_Customers" type="button" class="btn btn-outline-primary col-5">View All Customers
         </button>
@@ -149,7 +150,7 @@
                 <div class="modal-body">
                     <!--update customer input form-->
                     <div class="mb-3">
-                        <label for="formGroupExampleInput" class="form-label">Customer ID : </label>
+                        <label for="formGroupExampleInput" class="form-label" style="font-style:italic ">Enter Customer ID to search :</label>
                         <input id="txt_Update_Cus_ID" type="text" class="form-control" id="formGroupExampleInput5"
                                placeholder="Ex: C001">
                     </div>
@@ -172,6 +173,47 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                     <button id="btn_Update_Customer_Details" type="button" class="btn btn-primary">Update Customer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--delete customer model-->
+    <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+         aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-danger">
+                    <h5 class="modal-title" id="staticBackdropLabel3">Delete Customer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!--delete customer input form-->
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label" style="font-style:italic ">Enter Customer ID to search :</label>
+                        <input id="txt_Delete_Cus_ID" type="text" class="form-control" id="formGroupExampleInput9"
+                               placeholder="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">Customer Name :</label>
+                        <input id="txt_Delete_Cus_Name" type="text" class="form-control" id="formGroupExampleInput10"
+                               placeholder="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">Customer Address :</label>
+                        <input id="txt_Delete_Cus_Address" type="text" class="form-control" id="formGroupExampleInput11"
+                               placeholder="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">Customer Salary :</label>
+                        <input id="txt_Delete_Cus_Salary" type="text" class="form-control" id="formGroupExampleInput12"
+                               placeholder="" disabled>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button id="btn_Delete_Customer_Details" type="button" class="btn btn-danger">Delete Customer
                     </button>
                 </div>
             </div>
@@ -212,27 +254,45 @@
     let addressPattern = /C(0-9){3}/;
     let salaryPattern = /C(0-9){3}/;
 
-    //get selected table row
-    function getSelectedRow() {
-        $('#tbl_Customer_Body>tr').click(function () {
-            // enable update delete btns
-            $('#btn_Update_Customer').removeAttr('disabled');
-            $('#btn_Delete_Customer').removeAttr('disabled');
+    // $('#tbl_Customer_Body>tr').click(function () {
+    //     // enable update delete btns
+    //     $('#btn_Update_Customer').removeAttr('disabled');
+    //     $('#btn_Delete_Customer').removeAttr('disabled');
+    //
+    //     updtCusObj = {
+    //         "id": $('this').children(':eq(0)').text(),
+    //         "name": $('this').children(':eq(1)').text(),
+    //         "address": $('this').children(':eq(2)').text(),
+    //         "salary": $('this').children(':eq(3)').text()
+    //     };
+    // });
 
-            let id = $('this').children(':eq(0)').text();
-            let name = $('this').children(':eq(1)').text();
-            let address = $('this').children(':eq(2)').text();
-            let salary = $('this').children(':eq(3)').text();
 
-            let customerData = {
-                "id": id,
-                "name": name,
-                "address": address,
-                "salary": salary
-            };
-            console.log(customerData);
-        });
-    }
+    // //get selected table row
+    // function getSelectedRow() {
+    //     $('#tbl_Customer_Body>tr').click(function () {
+    //         // enable update delete btns
+    //         $('#btn_Update_Customer').removeAttr('disabled');
+    //         $('#btn_Delete_Customer').removeAttr('disabled');
+    //     });
+    // }
+
+    // //get selected table row
+    // function getSelectedRow() {
+    //     $('#tbl_Customer_Body>tr').click(function () {
+    //         // enable update delete btns
+    //         $('#btn_Update_Customer').removeAttr('disabled');
+    //         $('#btn_Delete_Customer').removeAttr('disabled');
+    //
+    //         updtCusObj = {
+    //             "id": $('this').children(':eq(0)').text(),
+    //             "name": $('this').children(':eq(1)').text(),
+    //             "address": $('this').children(':eq(2)').text(),
+    //             "salary": $('this').children(':eq(3)').text()
+    //         };
+    //     });
+    //     return updtCusObj;
+    // }
 
 
     //textfields after a key pressed (save customer modal)
@@ -383,13 +443,6 @@
     });
     ////////////////////////////////////////////////////////////////
 
-    // $('#btn_Update_Customer').click(function () {
-    //     //get selected table row
-    //     var rowData = getSelectedRow();
-    //     console.log(rowData);
-    // });
-
-
     // add new customer btn on action
     $('#btn_Add_New_Customer').click(function () {
         let customerID = $('#txt_Cus_ID').val();
@@ -412,9 +465,6 @@
 
         // add to the table
         $('#tbl_Customer_Body').append(row);
-
-        //get selected table row
-        getSelectedRow();
     });
 
 
@@ -429,9 +479,6 @@
             // add to the table
             $('#tbl_Customer_Body').append(row);
         }
-
-        //get selected table row
-        getSelectedRow();
     });
 
     //search customer
@@ -443,6 +490,11 @@
         }
         return null;
     }
+
+
+
+
+
 
     $('#btn_Search_Customer').click(function () {
         //clear table
@@ -461,8 +513,33 @@
             // add to the table
             $('#tbl_Customer_Body').append(row);
         }
-        //get selected table row
-        getSelectedRow();
+    });
+
+
+    $('#btn_Update_Customer').click(function () {
+        //search customer by id
+
+
+            $('txt_Update_Cus_ID').val(updtCusObj.id);
+            $('txt_Update_Cus_Name').val(updtCusObj.name);
+            $('txt_Update_Cus_Address').val(updtCusObj.address);
+            $('txt_Update_Cus_Salary').val(updtCusObj.salary);
+
+    });
+
+
+    $('#btn_Delete_Customer').click(function () {
+        // let deleteID = $("#txtCustomerID").val();
+        //
+        // let option = confirm("Do you really want to delete customer id :" + deleteID);
+        // if (option){
+        //     if (deleteCustomer(deleteID)) {
+        //         alert("Customer Successfully Deleted..");
+        //         setTextfieldValues("", "", "", "");
+        //     } else {
+        //         alert("No such customer to delete. please check the id");
+        //     }
+        // }
     });
 
 
