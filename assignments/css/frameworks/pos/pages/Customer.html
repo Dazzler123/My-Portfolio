@@ -243,7 +243,7 @@
         // check if the text matches the pattern
         if (valid) {
             $('#txt_Cus_ID').css('border', 'green');
-        }else {
+        } else {
             $('#txt_Cus_ID').css('border', 'red');
         }
 
@@ -260,7 +260,7 @@
         // check if the text matches the pattern
         if (valid) {
             $('#txt_Cus_Name').css('border', 'green');
-        }else {
+        } else {
             $('#txt_Cus_Name').css('border', 'red');
         }
 
@@ -277,7 +277,7 @@
         // check if the text matches the pattern
         if (valid) {
             $('#txt_Cus_Address').css('border', 'green');
-        }else {
+        } else {
             $('#txt_Cus_Address').css('border', 'red');
         }
 
@@ -294,7 +294,7 @@
         // check if the text matches the pattern
         if (valid) {
             $('#txt_Cus_Salary').css('border', 'green');
-        }else {
+        } else {
             $('#txt_Cus_Salary').css('border', 'red');
         }
 
@@ -313,7 +313,7 @@
         // check if the text matches the pattern
         if (valid) {
             $('#txt_Update_Cus_ID').css('border', 'green');
-        }else {
+        } else {
             $('#txt_Update_Cus_ID').css('border', 'red');
         }
 
@@ -330,7 +330,7 @@
         // check if the text matches the pattern
         if (valid) {
             $('#txt_Update_Cus_Name').css('border', 'green');
-        }else {
+        } else {
             $('#txt_Update_Cus_Name').css('border', 'red');
         }
 
@@ -347,7 +347,7 @@
         // check if the text matches the pattern
         if (valid) {
             $('#txt_Update_Cus_Address').css('border', 'green');
-        }else {
+        } else {
             $('#txt_Update_Cus_Address').css('border', 'red');
         }
 
@@ -364,7 +364,7 @@
         // check if the text matches the pattern
         if (valid) {
             $('#txt_Update_Cus_Salary').css('border', 'green');
-        }else {
+        } else {
             $('#txt_Update_Cus_Salary').css('border', 'red');
         }
 
@@ -437,7 +437,7 @@
 
     //search customer
     $('#btn_Search_Customer').click(function () {
-        var alert = false;
+        var showAlert = false;
 
         //clear table
         $('#tbl_Customer_Body').empty();
@@ -453,10 +453,15 @@
                 $('#tbl_Customer_Body').append(row);
 
                 // to trigger confirmation alert
-                alert = true;
+                showAlert = true;
             }
         }
         //show alert here
+        if (showAlert==false) {
+            alert("No such customer found with given ID!");
+            //clear textfield
+            $('#txt_Search_Cus_ID').val("");
+        }
 
         //get selected table row
         getSelectedRow();
