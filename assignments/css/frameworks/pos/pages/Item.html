@@ -325,35 +325,33 @@
         getSelectedRow();
     });
 
-
     //search item
-    $('#btn_Search_Item').click(function () {
-        var showAlert = false;
+    function searchItemByID(id) {
+        for (var item of itemArr) {
+            if (item.id == id) {
+                return item;
+            }
+        }
+        return null;
+    }
 
+    $('#btn_Search_Item').click(function () {
         //clear table
         $('#tbl_Item_Body').empty();
 
-        //item code or name input
-        var id = $('#txt_Search_Item_Code').val();
+        //get item object
+        var itemObj = searchItemByID($('#txt_Search_Item_Code').val());
 
-        for (var item of itemArr) {
-            if (id == item.id) {
-                var row = "<tr><td>" + item.id + "</td><td>" + item.name + "</td><td>" + item.price_per_unit + "</td><td>" + item.qty_On_Hand + "</td></tr>";
-
-                // add to the table
-                $('#tbl_Item_Body').append(row);
-
-                // to trigger confirmation alert
-                showAlert = true;
-            }
-        }
         //show alert here
-        if (showAlert==false) {
+        if (itemObj == null) {
             alert("No such item found with given ID!");
             //clear textfield
             $('#txt_Search_Item_Code').val("");
+        } else {
+            var row = "<tr><td>" + itemObj.id + "</td><td>" + itemObj.name + "</td><td>" + itemObj.price_per_unit + "</td><td>" + itemObj.qty_On_Hand + "</td></tr>";
+            // add to the table
+            $('#tbl_Item_Body').append(row);
         }
-
         //get selected table row
         getSelectedRow();
     });
