@@ -295,6 +295,20 @@
         return null;
     }
 
+    function updateItem(id) {
+        //search item
+        let item = searchItemByID(id);
+        if (item != null) {
+            item.id = $("#txt_Update_Item_Code").val();
+            item.name = $("#txt_Update_Item_Name").val();
+            item.price_per_unit = $("#txt_Update_Price_Per_Unit").val();
+            item.qty_On_Hand = $("#txt_Update_QTY_On_Hand").val();
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 
 
     // //focus textfields after enter key pressed (save item modal)
