@@ -62,7 +62,6 @@
     <!--heading-->
     <h4 class="fw-semibold fst-italic col-12 pt-4 pb-2 ps-4">Item Form</h4>
 
-
     <!--search item-->
     <div class="container card ps-0 pe-0 col-md-5 ms-3 row col-sm-12">
         <h5 class="card-header bg-primary">Search Item</h5>
@@ -84,13 +83,15 @@
 
     <!--crud btns-->
     <div class="container row col-md-6 gap-3 mt-3 mb-3 justify-content-center col-sm-12">
-        <button type="button" class="btn btn-outline-success col-5" data-bs-toggle="modal"
+        <button id="btn_Add_Item" type="button" class="btn btn-outline-success col-5" data-bs-toggle="modal"
                 data-bs-target="#staticBackdrop">+ Add New Item
         </button>
         <button id="btn_Update_Item" type="button" class="btn btn-outline-warning col-5" data-bs-toggle="modal"
                 data-bs-target="#staticBackdrop2" disabled>Update Item
         </button>
-        <button id="btn_Delete_Item" type="button" class="btn btn-outline-danger col-5" disabled>- Delete Item</button>
+        <button id="btn_Delete_Item" type="button" class="btn btn-outline-danger col-5" data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop3" disabled>- Delete Item
+        </button>
         <button id="btn_Get_All_Items" type="button" class="btn btn-outline-primary col-5">View All Items</button>
     </div>
 
@@ -154,22 +155,26 @@
                         <label for="formGroupExampleInput" class="form-label">Item Code : </label>
                         <input id="txt_Update_Item_Code" type="text" class="form-control" id="formGroupExampleInput5"
                                placeholder="Ex: ITM-001">
+                        <span class="control-error fw-light fs-6 text-danger" id="lbl_Update_Item_Reg_ID"></span>
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Item Name :</label>
                         <input id="txt_Update_Item_Name" type="text" class="form-control" id="formGroupExampleInput6"
                                placeholder="Ex: Keerisamba 5kg">
+                        <span class="control-error fw-light fs-6 text-danger" id="lbl_Update_Item_Reg_Name"></span>
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Price Per Unit :</label>
                         <input id="txt_Update_Price_Per_Unit" type="text" class="form-control"
                                id="formGroupExampleInput7"
                                placeholder="Ex: 2500.00">
+                        <span class="control-error fw-light fs-6 text-danger" id="lbl_Update_Item_Reg_PPU"></span>
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Quantity On Hand :</label>
                         <input id="txt_Update_QTY_On_Hand" type="text" class="form-control" id="formGroupExampleInput8"
                                placeholder="Ex: 500">
+                        <span class="control-error fw-light fs-6 text-danger" id="lbl_Update_Item_Reg_QOH"></span>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -180,6 +185,36 @@
         </div>
     </div>
 
+    <!--delete item model-->
+    <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+         aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-top">
+            <div class="modal-content">
+                <div class="modal-header bg-danger">
+                    <h5 class="modal-title" id="staticBackdropLabel3">Delete Item</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">Are you sure you
+                            want to delete this item?</label>
+                        <br>
+                        <label for="formGroupExampleInput" class="form-label fw-semibold">Code : </label>
+                        <label id="lbl_Item_Code" for="formGroupExampleInput" class="form-label fw-semibold"></label>
+                        <br>
+                        <label for="formGroupExampleInput" class="form-label fw-semibold">Name : </label>
+                        <label id="lbl_Item_Name" for="formGroupExampleInput"
+                               class="form-label fw-semibold"></label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                    <button id="btn_Delete_Customer_Details" type="button" class="btn btn-danger">Yes
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!--item details table-->
     <div class="container mt-5 justify-content-center col-md-12 col-sm-12">
