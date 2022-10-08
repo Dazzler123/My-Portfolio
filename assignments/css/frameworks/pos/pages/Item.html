@@ -244,6 +244,193 @@
     var itemArr = []; //global scope
 
 
+    ///////////////////////////// VALIDATION ////////////////////////////////////////////
+    // item details patterns
+    const itemCodeRegEx = /^(ITM-)[0-9]{1,3}$/;
+    const itemNameRegEx = /^[A-z 0-9.-/+]{3,200}$/;
+    const itemPPURegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
+    const itemQOHRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
+
+    // item validation pattern array //global scope
+    let itemValidations = [];
+    //push add new item textfield validations to the array
+    itemValidations.push({
+        reg: itemCodeRegEx,
+        field: $('#txt_Item_Code'),
+        error: 'Pattern is Incorrect : ITM- 0-9'
+    });
+    itemValidations.push({
+        reg: itemNameRegEx,
+        field: $('#txt_Item_Name'),
+        error: 'Pattern is Incorrect : A-z 0-9 5-20'
+    });
+    itemValidations.push({
+        reg: itemPPURegEx,
+        field: $('#txt_Price_Per_Unit'),
+        error: 'Pattern is Incorrect: 100 or 100.00'
+    });
+    itemValidations.push({
+        reg: itemQOHRegEx,
+        field: $('#txt_QTY_On_Hand'),
+        error: 'Pattern is incorrect : 100 or 100.00'
+    });
+    //push update item textfield validations to the array
+    itemValidations.push({
+        reg: itemCodeRegEx,
+        field: $('#txt_Update_Item_Code'),
+        error: 'Pattern is Incorrect : ITM- 0-9'
+    });
+    itemValidations.push({
+        reg: itemNameRegEx,
+        field: $('#txt_Update_Item_Name'),
+        error: 'Pattern is Incorrect : A-z 0-9 5-20'
+    });
+    itemValidations.push({
+        reg: itemPPURegEx,
+        field: $('#txt_Update_Price_Per_Unit'),
+        error: 'Pattern is Incorrect: 100 or 100.00'
+    });
+    itemValidations.push({
+        reg: itemQOHRegEx,
+        field: $('#txt_Update_QTY_On_Hand'),
+        error: 'Pattern is incorrect : 100 or 100.00'
+    });
+
+    //save customer validation
+    $("#txt_Item_Code,#txt_Item_Name,#txt_Price_Per_Unit,#txt_QTY_On_Hand").on('keyup', function (event) {
+        checkValidity();
+        //set correct data to make VALUE less than zero
+        $('#txt_Update_Item_Code').val("ITM-001");
+        $('#txt_Update_Item_Name').val("Keerisamba");
+        $('#txt_Update_Price_Per_Unit').val("100.00");
+        $('#txt_Update_QTY_On_Hand').val("100.00");
+    });
+
+    $("#txt_Item_Code,#txt_Item_Name,#txt_Price_Per_Unit,#txt_QTY_On_Hand").on('blur', function (event) {
+        checkValidity();
+    });
+
+    $("#txt_Item_Code").on('keydown', function (event) {
+        if (event.key == "Enter" && check(itemCodeRegEx, $("#txt_Item_Code"))) {
+            $("#txt_Item_Name").focus();
+        } else {
+            focusText($("#txt_Item_Code"));
+        }
+    });
+
+    $("#txt_Item_Name").on('keydown', function (event) {
+        if (event.key == "Enter" && check(itemNameRegEx, $("#txt_Item_Name"))) {
+            focusText($("#txt_Price_Per_Unit"));
+        }
+    });
+
+    $("#txt_Price_Per_Unit").on('keydown', function (event) {
+        if (event.key == "Enter" && check(itemPPURegEx, $("#txt_Price_Per_Unit"))) {
+            focusText($("#txt_QTY_On_Hand"));
+        }
+    });
+
+    $("#txt_QTY_On_Hand").on('keydown', function (event) {
+        if (event.key == "Enter" && check(itemQOHRegEx, $("#txt_QTY_On_Hand"))) {
+        }
+    });
+
+    // update customer validation
+    $("#txt_Update_Item_Code,#txt_Update_Item_Name,#txt_Update_Price_Per_Unit,#txt_Update_QTY_On_Hand").on('keyup', function (event) {
+        checkValidity();
+        //set correct data to make VALUE less than zero
+        $('#txt_Item_Code').val("ITM-001");
+        $('#txt_Item_Name').val("Keerisamba");
+        $('#txt_Price_Per_Unit').val("100.00");
+        $('#txt_QTY_On_Hand').val("100.00");
+    });
+
+    $("#txt_Update_Item_Code,#txt_Update_Item_Name,#txt_Update_Price_Per_Unit,#txt_Update_QTY_On_Hand").on('blur', function (event) {
+        checkValidity();
+    });
+
+    $("#txt_Update_Item_Code").on('keydown', function (event) {
+        if (event.key == "Enter" && check(itemCodeRegEx, $("#txt_Update_Item_Code"))) {
+            $("#txt_Update_Item_Name").focus();
+        } else {
+            focusText($("#txt_Update_Item_Code"));
+        }
+    });
+
+    $("#txt_Update_Item_Name").on('keydown', function (event) {
+        if (event.key == "Enter" && check(itemNameRegEx, $("#txt_Update_Item_Name"))) {
+            focusText($("#txt_Update_Price_Per_Unit"));
+        }
+    });
+
+    $("#txt_Update_Price_Per_Unit").on('keydown', function (event) {
+        if (event.key == "Enter" && check(itemPPURegEx, $("#txt_Update_Price_Per_Unit"))) {
+            focusText($("#txt_Update_QTY_On_Hand"));
+        }
+    });
+
+    $("#txt_Update_QTY_On_Hand").on('keydown', function (event) {
+        if (event.key == "Enter" && check(itemQOHRegEx, $("#txt_Update_QTY_On_Hand"))) {
+        }
+    });
+
+    function checkValidity() {
+        let errorCount = 0;
+        for (let validation of itemValidations) {
+            if (check(validation.reg, validation.field)) {
+                textSuccess(validation.field, "");
+            } else {
+                errorCount = errorCount + 1;
+                setTextError(validation.field, validation.error);
+            }
+        }
+        setButtonState(errorCount);
+    }
+
+    function check(regex, txtField) {
+        let inputValue = txtField.val();
+        return regex.test(inputValue) ? true : false;
+    }
+
+    function setTextError(txtField, error) {
+        if (txtField.val().length <= 0) {
+            defaultText(txtField, "");
+        } else {
+            txtField.css('border', '2px solid red');
+            txtField.parent().children('span').text(error);
+        }
+    }
+
+    function textSuccess(txtField, error) {
+        if (txtField.val().length <= 0) {
+            defaultText(txtField, "");
+        } else {
+            txtField.css('border', '2px solid green');
+            txtField.parent().children('span').text(error);
+        }
+    }
+
+    function defaultText(txtField, error) {
+        txtField.css("border", "1px solid #ced4da");
+        txtField.parent().children('span').text(error);
+    }
+
+    function focusText(txtField) {
+        txtField.focus();
+    }
+
+    function setButtonState(value) {
+        if (value > 0) {
+            $("#btn_Add_New_Item").attr('disabled', true);
+            $("#btn_Update_Item_Details").attr('disabled', true);
+        } else {
+            $("#btn_Add_New_Item").attr('disabled', false);
+            $("#btn_Update_Item_Details").attr('disabled', false);
+        }
+    }
+    ///////////////////////////////////////////////////////////////////////////////////////
+
+
     //get selected table row data
     function getRowData() {
         $('#tbl_Item_Body > tr').click(function () {
