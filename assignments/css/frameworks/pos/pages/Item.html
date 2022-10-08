@@ -342,6 +342,43 @@
     });
 
 
+    $('#btn_Search_Item').click(function () {
+        //clear table
+        $('#tbl_Item_Body').empty();
+
+        //get item object
+        var itemObj = searchItemByID($('#txt_Search_Item_Code').val());
+
+        //show error alert
+        if (itemObj == null) {
+            alert("No such item found with given ID!");
+            //clear textfield
+            $('#txt_Search_Item_Code').val("");
+        } else {
+            var row = "<tr><td>" + itemObj.id + "</td><td>" + itemObj.name + "</td><td>" + itemObj.price_per_unit + "</td><td>" + itemObj.qty_On_Hand + "</td></tr>";
+            // add to the table
+            $('#tbl_Item_Body').append(row);
+        }
+        //select table row
+        getRowData();
+    });
+
+
+    $('#btn_Update_Item_Details').click(function () {
+        //confirmation alert
+        if (updateItem($('#txt_Update_Item_Code').val())) {
+            alert("Item details updated.");
+
+            //close modal code here...
+
+            //disable update item button
+            $('#btn_Update_Item').prop('disabled', true);
+        } else {
+            alert("Update failed!");
+        }
+    });
+
+
     //load all items to the table
     $('#btn_Get_All_Items').click(function () {
         //clear table
@@ -358,36 +395,17 @@
         getRowData();
     });
 
-    //search item
-    function searchItemByID(id) {
-        for (var item of itemArr) {
-            if (item.id == id) {
-                return item;
-            }
-        }
-        return null;
-    }
+    // //search item
+    // function searchItemByID(id) {
+    //     for (var item of itemArr) {
+    //         if (item.id == id) {
+    //             return item;
+    //         }
+    //     }
+    //     return null;
+    // }
 
-    $('#btn_Search_Item').click(function () {
-        //clear table
-        $('#tbl_Item_Body').empty();
 
-        //get item object
-        var itemObj = searchItemByID($('#txt_Search_Item_Code').val());
-
-        //show alert here
-        if (itemObj == null) {
-            alert("No such item found with given ID!");
-            //clear textfield
-            $('#txt_Search_Item_Code').val("");
-        } else {
-            var row = "<tr><td>" + itemObj.id + "</td><td>" + itemObj.name + "</td><td>" + itemObj.price_per_unit + "</td><td>" + itemObj.qty_On_Hand + "</td></tr>";
-            // add to the table
-            $('#tbl_Item_Body').append(row);
-        }
-        //get selected table row
-        getRowData();
-    });
 
 </script>
 </body>
