@@ -113,25 +113,25 @@
                         <label for="formGroupExampleInput" class="form-label">Customer ID : </label>
                         <input id="txt_Cus_ID" type="text" class="form-control" id="formGroupExampleInput"
                                placeholder="Ex: C001">
-                        <span class="control-error" id="lbl_Add_Cust_Reg_ID"></span>
+                        <span class="control-error fw-light fs-6 text-danger" id="lbl_Add_Cust_Reg_ID"></span>
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Customer Name :</label>
                         <input id="txt_Cus_Name" type="text" class="form-control" id="formGroupExampleInput2"
                                placeholder="Enter Full Name">
-                        <span class="control-error" id="lbl_Add_Cust_Reg_Name"></span>
+                        <span class="control-error fw-light fs-6 text-danger" id="lbl_Add_Cust_Reg_Name"></span>
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Customer Address :</label>
                         <input id="txt_Cus_Address" type="text" class="form-control" id="formGroupExampleInput3"
                                placeholder="Ex: 23, Alwis Town Road, Hendala, Wattala.">
-                        <span class="control-error" id="lbl_Add_Cust_Reg_Address"></span>
+                        <span class="control-error fw-light fs-6 text-danger" id="lbl_Add_Cust_Reg_Address"></span>
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Customer Salary :</label>
                         <input id="txt_Cus_Salary" type="text" class="form-control" id="formGroupExampleInput4"
                                placeholder="Ex: 25000">
-                        <span class="control-error" id="lbl_Add_Cust_Reg_Salary"></span>
+                        <span class="control-error fw-light fs-6 text-danger" id="lbl_Add_Cust_Reg_Salary"></span>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -157,21 +157,25 @@
                         <label for="formGroupExampleInput" class="form-label">Customer ID :</label>
                         <input id="txt_Update_Cus_ID" type="text" class="form-control" id="formGroupExampleInput5"
                                placeholder="Ex: C001">
+                        <span class="control-error fw-light fs-6 text-danger" id="lbl_Update_Cust_Reg_ID"></span>
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Customer Name :</label>
                         <input id="txt_Update_Cus_Name" type="text" class="form-control" id="formGroupExampleInput6"
                                placeholder="Enter Full Name">
+                        <span class="control-error fw-light fs-6 text-danger" id="lbl_Update_Cust_Reg_Name"></span>
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Customer Address :</label>
                         <input id="txt_Update_Cus_Address" type="text" class="form-control" id="formGroupExampleInput7"
                                placeholder="Ex: 23, Alwis Town Road, Hendala, Wattala.">
+                        <span class="control-error fw-light fs-6 text-danger" id="lbl_Update_Cust_Reg_Address"></span>
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Customer Salary :</label>
                         <input id="txt_Update_Cus_Salary" type="text" class="form-control" id="formGroupExampleInput8"
                                placeholder="Ex: 25000">
+                        <span class="control-error fw-light fs-6 text-danger" id="lbl_Update_Cust_Reg_Salary"></span>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -251,6 +255,7 @@
 
     // customer validation pattern array //global scope
     let customerValidations = [];
+    //push add new customer textfield validations to the array
     customerValidations.push({
         reg: cusIDRegEx,
         field: $('#txt_Cus_ID'),
@@ -271,9 +276,36 @@
         field: $('#txt_Cus_Salary'),
         error: 'Customer Salary Pattern is Wrong : 100 or 100.00'
     });
+    //push update customer textfield validations to the array
+    customerValidations.push({
+        reg: cusIDRegEx,
+        field: $('#txt_Update_Cus_ID'),
+        error: 'Customer ID Pattern is Wrong : C00-001'
+    });
+    customerValidations.push({
+        reg: cusNameRegEx,
+        field: $('#txt_Update_Cus_Name'),
+        error: 'Customer Name Pattern is Wrong : A-z 5-20'
+    });
+    customerValidations.push({
+        reg: cusAddressRegEx,
+        field: $('#txt_Update_Cus_Address'),
+        error: 'Customer Address Pattern is Wrong : A-z 0-9 ,/'
+    });
+    customerValidations.push({
+        reg: cusSalaryRegEx,
+        field: $('#txt_Update_Cus_Salary'),
+        error: 'Customer Salary Pattern is Wrong : 100 or 100.00'
+    });
 
+    //save customer validation
     $("#txt_Cus_ID,#txt_Cus_Name,#txt_Cus_Address,#txt_Cus_Salary").on('keyup', function (event) {
         checkValidity();
+        //set correct data to make value less than zero
+        $('#txt_Update_Cus_ID').val("C00-001");
+        $('#txt_Update_Cus_Name').val("Dasindu");
+        $('#txt_Update_Cus_Address').val("Wattala");
+        $('#txt_Update_Cus_Salary').val("15000.00");
     });
 
     $("#txt_Cus_ID,#txt_Cus_Name,#txt_Cus_Address,#txt_Cus_Salary").on('blur', function (event) {
@@ -302,6 +334,46 @@
 
     $("#txt_Cus_Salary").on('keydown', function (event) {
         if (event.key == "Enter" && check(cusSalaryRegEx, $("#txt_Cus_Salary"))) {
+        }
+    });
+
+
+    // update customer validation
+    $("#txt_Update_Cus_ID,#txt_Update_Cus_Name,#txt_Update_Cus_Address,#txt_Update_Cus_Salary").on('keyup', function (event) {
+        checkValidity();
+        //set correct data to make value less than zero
+        $('#txt_Cus_ID').val("C00-001");
+        $('#txt_Cus_Name').val("Dasindu");
+        $('#txt_Cus_Address').val("Wattala");
+        $('#txt_Cus_Salary').val("15000.00");
+    });
+
+    $("#txt_Update_Cus_ID,#txt_Update_Cus_Name,#txt_Update_Cus_Address,#txt_Update_Cus_Salary").on('blur', function (event) {
+        checkValidity();
+    });
+
+    $("#txt_Update_Cus_ID").on('keydown', function (event) {
+        if (event.key == "Enter" && check(cusIDRegEx, $("#txt_Update_Cus_ID"))) {
+            $("#txt_Update_Cus_Name").focus();
+        } else {
+            focusText($("#txt_Update_Cus_ID"));
+        }
+    });
+
+    $("#txt_Update_Cus_Name").on('keydown', function (event) {
+        if (event.key == "Enter" && check(cusNameRegEx, $("#txt_Update_Cus_Name"))) {
+            focusText($("#txt_Update_Cus_Address"));
+        }
+    });
+
+    $("#txt_Update_Cus_Address").on('keydown', function (event) {
+        if (event.key == "Enter" && check(cusAddressRegEx, $("#txt_Update_Cus_Address"))) {
+            focusText($("#txt_Update_Cus_Salary"));
+        }
+    });
+
+    $("#txt_Update_Cus_Salary").on('keydown', function (event) {
+        if (event.key == "Enter" && check(cusSalaryRegEx, $("#txt_Update_Cus_Salary"))) {
         }
     });
 
@@ -353,11 +425,15 @@
     function setButtonState(value) {
         if (value > 0) {
             $("#btn_Add_New_Customer").attr('disabled', true);
+            $("#btn_Update_Customer_Details").attr('disabled', true);
         } else {
             $("#btn_Add_New_Customer").attr('disabled', false);
+            $("#btn_Update_Customer_Details").attr('disabled', false);
         }
     }
     ///////////////////////////////////////////////////////////////////////////////////////
+
+
 
     //get select table row data
     function getRowData() {
