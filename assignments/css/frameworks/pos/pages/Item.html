@@ -309,64 +309,12 @@
         }
     }
 
+    //clear add item textfields
+    $('#btn_Add_Item').click(function () {
+        $("#txt_Item_Code,#txt_Item_Name,#txt_Price_Per_Unit,#txt_QTY_On_Hand").val("");
+    });
 
 
-    // //focus textfields after enter key pressed (save item modal)
-    // $('#txt_Item_Code').on('keydown', function (event) {
-    //     if (event.key == "Enter") {
-    //         $('#txt_Item_Name').focus();
-    //     }
-    // });
-    // $('#txt_Item_Name').on('keydown', function (event) {
-    //     if (event.key == "Enter") {
-    //         $('#txt_Price_Per_Unit').focus();
-    //     }
-    // });
-    // $('#txt_Price_Per_Unit').on('keydown', function (event) {
-    //     if (event.key == "Enter") {
-    //         $('#txt_QTY_On_Hand').focus();
-    //     }
-    // });
-    // $('#txt_QTY_On_Hand').on('keydown', function (event) {
-    //     if (event.key == "Enter") {
-    //         $('#btn_Add_New_Item').focus();
-    //     }
-    // });
-    // ////////////////////////////////////////////////////////////////
-    // //focus textfields after enter key pressed (update item modal)
-    // $('#txt_Update_Item_Code').on('keydown', function (event) {
-    //     if (event.key == "Enter") {
-    //         $('#txt_Update_Item_Name').focus();
-    //     }
-    // });
-    // $('#txt_Update_Item_Name').on('keydown', function (event) {
-    //     if (event.key == "Enter") {
-    //         $('#txt_Update_Price_Per_Unit').focus();
-    //     }
-    // });
-    // $('#txt_Update_Price_Per_Unit').on('keydown', function (event) {
-    //     if (event.key == "Enter") {
-    //         $('#txt_Update_QTY_On_Hand').focus();
-    //     }
-    // });
-    // $('#txt_Update_QTY_On_Hand').on('keydown', function (event) {
-    //     if (event.key == "Enter") {
-    //         $('#btn_Update_Item_Details').focus();
-    //     }
-    // });
-    //
-    // //disable tab key
-    // $("#txt_Item_Code,#txt_Item_Name,#txt_Price_Per_Unit,#txt_QTY_On_Hand,#txt_Update_Item_Code," +
-    //     "#txt_Update_Item_Name,#txt_Update_Price_Per_Unit,#txt_Update_QTY_On_Hand").on('keydown', function (event) {
-    //     if (event.key == "Tab") {
-    //         event.preventDefault();
-    //     }
-    // });
-
-    ////////////////////////////////////////////////////////////////
-
-
-    // add new item btn on action
     $('#btn_Add_New_Item').click(function () {
         let itemCode = $('#txt_Item_Code').val();
         let itemName = $('#txt_Item_Name').val();
@@ -379,7 +327,6 @@
             "price_per_unit": ppu,
             "qty_On_Hand": qtyOnHand
         };
-
         //add to the array
         itemArr.push(itemOne);
 
@@ -388,9 +335,10 @@
 
         // add to the table
         $('#tbl_Item_Body').append(row);
-
         //get selected table row
         getRowData();
+        // alert
+        alert("Item saved successfully.");
     });
 
 
