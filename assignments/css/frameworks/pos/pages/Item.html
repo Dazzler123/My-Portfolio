@@ -209,7 +209,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-                    <button id="btn_Delete_Customer_Details" type="button" class="btn btn-danger">Yes
+                    <button id="btn_Delete_Item_Details" type="button" class="btn btn-danger">Yes
                     </button>
                 </div>
             </div>
@@ -309,6 +309,19 @@
         }
     }
 
+
+    function deleteItem(id) {
+        let item = searchItemByID(id);
+        if (item != null) {
+            let indexNumber = itemArr.indexOf(item);
+            //remove from the array
+            itemArr.splice(indexNumber, 1);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     //clear add item textfields
     $('#btn_Add_Item').click(function () {
         $("#txt_Item_Code,#txt_Item_Name,#txt_Price_Per_Unit,#txt_QTY_On_Hand").val("");
@@ -375,6 +388,22 @@
             $('#btn_Update_Item').prop('disabled', true);
         } else {
             alert("Update failed!");
+        }
+    });
+
+
+    $('#btn_Delete_Item_Details').click(function () {
+        let deleteID = $("#lbl_Item_Code").text();
+
+        if (deleteItem(deleteID)) {
+            alert("Item deleted successfully.");
+
+            //close modal code here...
+
+            //disable delete item button
+            $('#btn_Delete_Item').prop('disabled', true);
+        } else {
+            alert("Process failed!");
         }
     });
 
