@@ -434,7 +434,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
 
 
-
     //get selected table row data
     function getRowData() {
         $('#tbl_Customer_Body > tr').click(function () {
@@ -518,7 +517,6 @@
         $("#txt_Cus_ID,#txt_Cus_Name,#txt_Cus_Address,#txt_Cus_Salary").val("");
     });
 
-
     $('#btn_Add_New_Customer').click(function () {
         let customerID = $('#txt_Cus_ID').val();
         let customerName = $('#txt_Cus_Name').val();
@@ -539,10 +537,12 @@
 
         // add to the table
         $('#tbl_Customer_Body').append(row);
-        //select table row
-        getRowData();
         // alert
         alert("Customer saved successfully.");
+        //select table row
+        getRowData();
+        // close modal
+        $('#staticBackdrop').modal('hide');
     });
 
     // search customer
@@ -567,14 +567,13 @@
         getRowData();
     });
 
-
     $('#btn_Update_Customer_Details').click(function () {
         //confirmation alert
         if (updateCustomer($('#txt_Update_Cus_ID').val())) {
+            // confirmation alert
             alert("Customer details updated.");
-
-            //close modal code here...
-
+            // close modal
+            $('#staticBackdrop2').modal('hide');
             //disable update customer button
             $('#btn_Update_Customer').prop('disabled', true);
         } else {
@@ -582,22 +581,20 @@
         }
     });
 
-
     $('#btn_Delete_Customer_Details').click(function () {
         let deleteID = $("#lbl_Customer_ID").text();
 
         if (deleteCustomer(deleteID)) {
+            //confirmation alert
             alert("Customer deleted successfully.");
-
-            //close modal code here...
-
+            // close modal
+            $('#staticBackdrop3').modal('hide');
             //disable delete customer button
             $('#btn_Delete_Customer').prop('disabled', true);
         } else {
             alert("Process failed!");
         }
     });
-
 
     //load all customers to the table
     $('#btn_Get_All_Customers').click(function () {
@@ -613,7 +610,6 @@
         //select table row
         getRowData();
     });
-
 
 </script>
 </body>

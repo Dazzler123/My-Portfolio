@@ -533,10 +533,12 @@
 
         // add to the table
         $('#tbl_Item_Body').append(row);
-        //get selected table row
-        getRowData();
         // alert
         alert("Item saved successfully.");
+        //get selected table row
+        getRowData();
+        //close modal
+        $('#staticBackdrop').modal('hide');
     });
 
     $('#btn_Search_Item').click(function () {
@@ -563,10 +565,10 @@
     $('#btn_Update_Item_Details').click(function () {
         //confirmation alert
         if (updateItem($('#txt_Update_Item_Code').val())) {
+            //confirmation alert
             alert("Item details updated.");
-
             //close modal code here...
-
+            $('#staticBackdrop2').modal('hide');
             //disable update item button
             $('#btn_Update_Item').prop('disabled', true);
         } else {
@@ -578,10 +580,10 @@
         let deleteID = $("#lbl_Item_Code").text();
 
         if (deleteItem(deleteID)) {
+            // confirmation alert
             alert("Item deleted successfully.");
-
             //close modal code here...
-
+            $('#staticBackdrop3').modal('hide');
             //disable delete item button
             $('#btn_Delete_Item').prop('disabled', true);
         } else {
