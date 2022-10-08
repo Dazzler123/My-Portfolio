@@ -244,26 +244,48 @@
     var itemArr = []; //global scope
 
 
-    //get selected table row
-    function getSelectedRow() {
-        $('#tbl_Item_Body>tr').click(function () {
+    //get selected table row data
+    function getRowData() {
+        $('#tbl_Item_Body > tr').click(function () {
+            let code = $(this, '#tbl_Item_Body>tr').children(':nth-child(1)').text();
+            let name = $(this, '#tbl_Item_Body>tr').children(':nth-child(2)').text();
+            let ppu = $(this, '#tbl_Item_Body>tr').children(':nth-child(3)').text();
+            let qtyOnHand = $(this, '#tbl_Item_Body>tr').children(':nth-child(4)').text();
+
             // enable update delete btns
             $('#btn_Update_Item').removeAttr('disabled');
             $('#btn_Delete_Item').removeAttr('disabled');
 
-            let code = $('this').children(':eq(0)').text();
-            let name = $('this').children(':eq(0)').text();
-            let ppu = $('this').children(':eq(0)').text();
-            let qtyOnHand = $('this').children(':eq(0)').text();
+            //set data to update item modal textfields
+            $('#btn_Update_Item').click(function () {
+                //search before adding
+                if (searchItemByID(id) != null) {
+                    $('#txt_Update_Item_Code').val(code);
+                    $('#txt_Update_Item_Name').val(name);
+                    $('#txt_Update_Price_Per_Unit').val(ppu);
+                    $('#txt_Update_QTY_On_Hand').val(qtyOnHand);
+                } else {
+                    $("#txt_Update_Item_Code,#txt_Update_Item_Name,#txt_Update_Price_Per_Unit,#txt_Update_QTY_On_Hand").val("");
+                }
+                //disable id textfield
+                $('#txt_Update_Item_Code').prop('disabled', true);
+            });
 
-            let itemData = {
-                "itemCode": code,
-                "itemName": name,
-                "ppu": ppu,
-                "qtyOnHand": qtyOnHand
-            };
+            //set data to delete item modal confirmation
+            $('#btn_Delete_Item').click(function () {
+                //search before adding
+                if (searchItemByID(id) != null) {
+                    $('#lbl_Item_Code').text(id);
+                    $('#lbl_Item_Name').text(name);
+                } else {
+                    $('#lbl_Item_Code').text("");
+                    $('#lbl_Item_Name').text("");
+                }
+            });
         });
     }
+
+
 
     //focus textfields after enter key pressed (save item modal)
     $('#txt_Item_Code').on('keydown', function (event) {
@@ -344,7 +366,7 @@
         $('#tbl_Item_Body').append(row);
 
         //get selected table row
-        getSelectedRow();
+        getRowData();
     });
 
 
@@ -361,7 +383,7 @@
         }
 
         //get selected table row
-        getSelectedRow();
+        getRowData();
     });
 
     //search item
@@ -392,7 +414,7 @@
             $('#tbl_Item_Body').append(row);
         }
         //get selected table row
-        getSelectedRow();
+        getRowData();
     });
 
 </script>
