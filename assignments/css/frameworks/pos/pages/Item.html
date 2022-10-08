@@ -285,59 +285,69 @@
         });
     }
 
+    // search item by ID
+    function searchItemByID(id) {
+        for (var item of itemArr) {
+            if (item.id == id) {
+                return item;
+            }
+        }
+        return null;
+    }
 
 
-    //focus textfields after enter key pressed (save item modal)
-    $('#txt_Item_Code').on('keydown', function (event) {
-        if (event.key == "Enter") {
-            $('#txt_Item_Name').focus();
-        }
-    });
-    $('#txt_Item_Name').on('keydown', function (event) {
-        if (event.key == "Enter") {
-            $('#txt_Price_Per_Unit').focus();
-        }
-    });
-    $('#txt_Price_Per_Unit').on('keydown', function (event) {
-        if (event.key == "Enter") {
-            $('#txt_QTY_On_Hand').focus();
-        }
-    });
-    $('#txt_QTY_On_Hand').on('keydown', function (event) {
-        if (event.key == "Enter") {
-            $('#btn_Add_New_Item').focus();
-        }
-    });
-    ////////////////////////////////////////////////////////////////
-    //focus textfields after enter key pressed (update item modal)
-    $('#txt_Update_Item_Code').on('keydown', function (event) {
-        if (event.key == "Enter") {
-            $('#txt_Update_Item_Name').focus();
-        }
-    });
-    $('#txt_Update_Item_Name').on('keydown', function (event) {
-        if (event.key == "Enter") {
-            $('#txt_Update_Price_Per_Unit').focus();
-        }
-    });
-    $('#txt_Update_Price_Per_Unit').on('keydown', function (event) {
-        if (event.key == "Enter") {
-            $('#txt_Update_QTY_On_Hand').focus();
-        }
-    });
-    $('#txt_Update_QTY_On_Hand').on('keydown', function (event) {
-        if (event.key == "Enter") {
-            $('#btn_Update_Item_Details').focus();
-        }
-    });
 
-    //disable tab key
-    $("#txt_Item_Code,#txt_Item_Name,#txt_Price_Per_Unit,#txt_QTY_On_Hand,#txt_Update_Item_Code," +
-        "#txt_Update_Item_Name,#txt_Update_Price_Per_Unit,#txt_Update_QTY_On_Hand").on('keydown', function (event) {
-        if (event.key == "Tab") {
-            event.preventDefault();
-        }
-    });
+    // //focus textfields after enter key pressed (save item modal)
+    // $('#txt_Item_Code').on('keydown', function (event) {
+    //     if (event.key == "Enter") {
+    //         $('#txt_Item_Name').focus();
+    //     }
+    // });
+    // $('#txt_Item_Name').on('keydown', function (event) {
+    //     if (event.key == "Enter") {
+    //         $('#txt_Price_Per_Unit').focus();
+    //     }
+    // });
+    // $('#txt_Price_Per_Unit').on('keydown', function (event) {
+    //     if (event.key == "Enter") {
+    //         $('#txt_QTY_On_Hand').focus();
+    //     }
+    // });
+    // $('#txt_QTY_On_Hand').on('keydown', function (event) {
+    //     if (event.key == "Enter") {
+    //         $('#btn_Add_New_Item').focus();
+    //     }
+    // });
+    // ////////////////////////////////////////////////////////////////
+    // //focus textfields after enter key pressed (update item modal)
+    // $('#txt_Update_Item_Code').on('keydown', function (event) {
+    //     if (event.key == "Enter") {
+    //         $('#txt_Update_Item_Name').focus();
+    //     }
+    // });
+    // $('#txt_Update_Item_Name').on('keydown', function (event) {
+    //     if (event.key == "Enter") {
+    //         $('#txt_Update_Price_Per_Unit').focus();
+    //     }
+    // });
+    // $('#txt_Update_Price_Per_Unit').on('keydown', function (event) {
+    //     if (event.key == "Enter") {
+    //         $('#txt_Update_QTY_On_Hand').focus();
+    //     }
+    // });
+    // $('#txt_Update_QTY_On_Hand').on('keydown', function (event) {
+    //     if (event.key == "Enter") {
+    //         $('#btn_Update_Item_Details').focus();
+    //     }
+    // });
+    //
+    // //disable tab key
+    // $("#txt_Item_Code,#txt_Item_Name,#txt_Price_Per_Unit,#txt_QTY_On_Hand,#txt_Update_Item_Code," +
+    //     "#txt_Update_Item_Name,#txt_Update_Price_Per_Unit,#txt_Update_QTY_On_Hand").on('keydown', function (event) {
+    //     if (event.key == "Tab") {
+    //         event.preventDefault();
+    //     }
+    // });
 
     ////////////////////////////////////////////////////////////////
 
