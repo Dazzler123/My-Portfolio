@@ -259,7 +259,7 @@
             //set data to update item modal textfields
             $('#btn_Update_Item').click(function () {
                 //search before adding
-                if (searchItemByID(id) != null) {
+                if (searchItemByID(code) != null) {
                     $('#txt_Update_Item_Code').val(code);
                     $('#txt_Update_Item_Name').val(name);
                     $('#txt_Update_Price_Per_Unit').val(ppu);
@@ -274,8 +274,8 @@
             //set data to delete item modal confirmation
             $('#btn_Delete_Item').click(function () {
                 //search before adding
-                if (searchItemByID(id) != null) {
-                    $('#lbl_Item_Code').text(id);
+                if (searchItemByID(code) != null) {
+                    $('#lbl_Item_Code').text(code);
                     $('#lbl_Item_Name').text(name);
                 } else {
                     $('#lbl_Item_Code').text("");
@@ -309,7 +309,6 @@
         }
     }
 
-
     function deleteItem(id) {
         let item = searchItemByID(id);
         if (item != null) {
@@ -326,7 +325,6 @@
     $('#btn_Add_Item').click(function () {
         $("#txt_Item_Code,#txt_Item_Name,#txt_Price_Per_Unit,#txt_QTY_On_Hand").val("");
     });
-
 
     $('#btn_Add_New_Item').click(function () {
         let itemCode = $('#txt_Item_Code').val();
@@ -354,7 +352,6 @@
         alert("Item saved successfully.");
     });
 
-
     $('#btn_Search_Item').click(function () {
         //clear table
         $('#tbl_Item_Body').empty();
@@ -376,7 +373,6 @@
         getRowData();
     });
 
-
     $('#btn_Update_Item_Details').click(function () {
         //confirmation alert
         if (updateItem($('#txt_Update_Item_Code').val())) {
@@ -390,7 +386,6 @@
             alert("Update failed!");
         }
     });
-
 
     $('#btn_Delete_Item_Details').click(function () {
         let deleteID = $("#lbl_Item_Code").text();
@@ -407,7 +402,6 @@
         }
     });
 
-
     //load all items to the table
     $('#btn_Get_All_Items').click(function () {
         //clear table
@@ -420,20 +414,9 @@
             $('#tbl_Item_Body').append(row);
         }
 
-        //get selected table row
+        //select table row
         getRowData();
     });
-
-    // //search item
-    // function searchItemByID(id) {
-    //     for (var item of itemArr) {
-    //         if (item.id == id) {
-    //             return item;
-    //         }
-    //     }
-    //     return null;
-    // }
-
 
 
 </script>
