@@ -105,6 +105,8 @@ $('#btn_Add_New_Item').click(function () {
     alert("Item saved successfully.");
     //get selected table row
     getItemTblRowData();
+    //add item code to cbxSelectItemCode combo box in place order form
+    loadAllItemCodes();
     //close modal
     $('#staticBackdrop4').modal('hide');
 });

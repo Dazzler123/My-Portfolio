@@ -7,3 +7,12 @@ function loadAllCustomerIds() {
         $('#cbxSelectCustID').append("<option>" + cus.id + "</option>");
     }
 }
+
+//load all item codes to the combo box
+function loadAllItemCodes() {
+    //clear combo box
+    $('#cbxSelectItemCode').empty();
+    for (let itm of itemArr) {
+        $('#cbxSelectItemCode').append("<option>" + itm.id + "</option>");
+    }
+}
