@@ -31,3 +31,14 @@ $('#cbxSelectItemCode').change( function () {
     $('#txtAvailableQTYOnHand').val(item.qty_On_Hand);
     $('#txtUnitPrice').val(item.price_per_unit);
 });
+
+//set customer details to the textfields
+$('#cbxSelectCustID').change( function () {
+    //clear before adding
+    $('#txtCusName,#txtCusAddress,#txtCusSalary').val("");
+    //search customer
+    var customer = searchCustomerByID($(this).val());
+    $('#txtCusName').val(customer.name);
+    $('#txtCusAddress').val(customer.address);
+    $('#txtCusSalary').val(customer.salary);
+});
