@@ -1,197 +1,6 @@
-// // all customers array
-// var customerArr = []; //global scope
-
-
-///////////////////////////// VALIDATION ////////////////////////////////////////////
-// customer details patterns
-const cusIDRegEx = /^(C00-)[0-9]{1,3}$/;
-const cusNameRegEx = /^[A-z ]{5,20}$/;
-const cusAddressRegEx = /^[0-9/A-z. ,]{7,}$/;
-const cusSalaryRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
-
-// customer validation pattern array //global scope
-let customerValidations = [];
-//push add new customer textfield validations to the array
-customerValidations.push({
-    reg: cusIDRegEx,
-    field: $('#txt_Cus_ID'),
-    error: 'Customer ID Pattern is Wrong : C00-001'
-});
-customerValidations.push({
-    reg: cusNameRegEx,
-    field: $('#txt_Cus_Name'),
-    error: 'Customer Name Pattern is Wrong : A-z 5-20'
-});
-customerValidations.push({
-    reg: cusAddressRegEx,
-    field: $('#txt_Cus_Address'),
-    error: 'Customer Address Pattern is Wrong : A-z 0-9 ,/'
-});
-customerValidations.push({
-    reg: cusSalaryRegEx,
-    field: $('#txt_Cus_Salary'),
-    error: 'Customer Salary Pattern is Wrong : 100 or 100.00'
-});
-//push update customer textfield validations to the array
-customerValidations.push({
-    reg: cusIDRegEx,
-    field: $('#txt_Update_Cus_ID'),
-    error: 'Customer ID Pattern is Wrong : C00-001'
-});
-customerValidations.push({
-    reg: cusNameRegEx,
-    field: $('#txt_Update_Cus_Name'),
-    error: 'Customer Name Pattern is Wrong : A-z 5-20'
-});
-customerValidations.push({
-    reg: cusAddressRegEx,
-    field: $('#txt_Update_Cus_Address'),
-    error: 'Customer Address Pattern is Wrong : A-z 0-9 ,/'
-});
-customerValidations.push({
-    reg: cusSalaryRegEx,
-    field: $('#txt_Update_Cus_Salary'),
-    error: 'Customer Salary Pattern is Wrong : 100 or 100.00'
-});
-
-//save customer validation
-$("#txt_Cus_ID,#txt_Cus_Name,#txt_Cus_Address,#txt_Cus_Salary").on('keyup', function (event) {
-    checkValidity();
-    //set correct data to make value less than zero
-    $('#txt_Update_Cus_ID').val("C00-001");
-    $('#txt_Update_Cus_Name').val("Dasindu");
-    $('#txt_Update_Cus_Address').val("Wattala");
-    $('#txt_Update_Cus_Salary').val("15000.00");
-});
-
-$("#txt_Cus_ID,#txt_Cus_Name,#txt_Cus_Address,#txt_Cus_Salary").on('blur', function (event) {
-    checkValidity();
-});
-
-$("#txt_Cus_ID").on('keydown', function (event) {
-    if (event.key == "Enter" && check(cusIDRegEx, $("#txt_Cus_ID"))) {
-        $("#txt_Cus_Name").focus();
-    } else {
-        focusText($("#txt_Cus_ID"));
-    }
-});
-
-$("#txt_Cus_Name").on('keydown', function (event) {
-    if (event.key == "Enter" && check(cusNameRegEx, $("#txt_Cus_Name"))) {
-        focusText($("#txt_Cus_Address"));
-    }
-});
-
-$("#txt_Cus_Address").on('keydown', function (event) {
-    if (event.key == "Enter" && check(cusAddressRegEx, $("#txt_Cus_Address"))) {
-        focusText($("#txt_Cus_Salary"));
-    }
-});
-
-$("#txt_Cus_Salary").on('keydown', function (event) {
-    if (event.key == "Enter" && check(cusSalaryRegEx, $("#txt_Cus_Salary"))) {
-    }
-});
-
-
-// update customer validation
-$("#txt_Update_Cus_ID,#txt_Update_Cus_Name,#txt_Update_Cus_Address,#txt_Update_Cus_Salary").on('keyup', function (event) {
-    checkValidity();
-    //set correct data to make value less than zero
-    $('#txt_Cus_ID').val("C00-001");
-    $('#txt_Cus_Name').val("Dasindu");
-    $('#txt_Cus_Address').val("Wattala");
-    $('#txt_Cus_Salary').val("15000.00");
-});
-
-$("#txt_Update_Cus_ID,#txt_Update_Cus_Name,#txt_Update_Cus_Address,#txt_Update_Cus_Salary").on('blur', function (event) {
-    checkValidity();
-});
-
-$("#txt_Update_Cus_ID").on('keydown', function (event) {
-    if (event.key == "Enter" && check(cusIDRegEx, $("#txt_Update_Cus_ID"))) {
-        $("#txt_Update_Cus_Name").focus();
-    } else {
-        focusText($("#txt_Update_Cus_ID"));
-    }
-});
-
-$("#txt_Update_Cus_Name").on('keydown', function (event) {
-    if (event.key == "Enter" && check(cusNameRegEx, $("#txt_Update_Cus_Name"))) {
-        focusText($("#txt_Update_Cus_Address"));
-    }
-});
-
-$("#txt_Update_Cus_Address").on('keydown', function (event) {
-    if (event.key == "Enter" && check(cusAddressRegEx, $("#txt_Update_Cus_Address"))) {
-        focusText($("#txt_Update_Cus_Salary"));
-    }
-});
-
-$("#txt_Update_Cus_Salary").on('keydown', function (event) {
-    if (event.key == "Enter" && check(cusSalaryRegEx, $("#txt_Update_Cus_Salary"))) {
-    }
-});
-
-function checkValidity() {
-    let errorCount = 0;
-    for (let validation of customerValidations) {
-        if (check(validation.reg, validation.field)) {
-            textSuccess(validation.field, "");
-        } else {
-            errorCount = errorCount + 1;
-            setTextError(validation.field, validation.error);
-        }
-    }
-    setButtonState(errorCount);
-}
-
-function check(regex, txtField) {
-    let inputValue = txtField.val();
-    return regex.test(inputValue) ? true : false;
-}
-
-function setTextError(txtField, error) {
-    if (txtField.val().length <= 0) {
-        defaultText(txtField, "");
-    } else {
-        txtField.css('border', '2px solid red');
-        txtField.parent().children('span').text(error);
-    }
-}
-
-function textSuccess(txtField, error) {
-    if (txtField.val().length <= 0) {
-        defaultText(txtField, "");
-    } else {
-        txtField.css('border', '2px solid green');
-        txtField.parent().children('span').text(error);
-    }
-}
-
-function defaultText(txtField, error) {
-    txtField.css("border", "1px solid #ced4da");
-    txtField.parent().children('span').text(error);
-}
-
-function focusText(txtField) {
-    txtField.focus();
-}
-
-function setButtonState(value) {
-    if (value > 0) {
-        $("#btn_Add_New_Customer").attr('disabled', true);
-        $("#btn_Update_Customer_Details").attr('disabled', true);
-    } else {
-        $("#btn_Add_New_Customer").attr('disabled', false);
-        $("#btn_Update_Customer_Details").attr('disabled', false);
-    }
-}
-///////////////////////////////////////////////////////////////////////////////////////
-
 
 //get selected table row data
-function getRowData() {
+function getCustTblRowData() {
     $('#tbl_Customer_Body > tr').click(function () {
         let id = $(this, '#tbl_Customer_Body>tr').children(':nth-child(1)').text();
         let name = $(this, '#tbl_Customer_Body>tr').children(':nth-child(2)').text();
@@ -296,7 +105,7 @@ $('#btn_Add_New_Customer').click(function () {
     // alert
     alert("Customer saved successfully.");
     //select table row
-    getRowData();
+    getCustTblRowData();
     // close modal
     $('#staticBackdrop').modal('hide');
 });
@@ -320,7 +129,7 @@ $('#btn_Search_Customer').click(function () {
         $('#tbl_Customer_Body').append(row);
     }
     //select table row
-    getRowData();
+    getCustTblRowData();
 });
 
 $('#btn_Update_Customer_Details').click(function () {
@@ -364,5 +173,5 @@ $('#btn_Get_All_Customers').click(function () {
         $('#tbl_Customer_Body').append(row);
     }
     //select table row
-    getRowData();
+    getCustTblRowData();
 });
