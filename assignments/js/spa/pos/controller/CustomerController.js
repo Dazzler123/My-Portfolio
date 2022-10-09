@@ -1,5 +1,5 @@
-// all customers array
-var customerArr = []; //global scope
+// // all customers array
+// var customerArr = []; //global scope
 
 
 ///////////////////////////// VALIDATION ////////////////////////////////////////////

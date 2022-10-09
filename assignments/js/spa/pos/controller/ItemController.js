@@ -1,5 +1,5 @@
-// all items array
-var itemArr = []; //global scope
+// // all items array
+// var itemArr = []; //global scope
 
 
 ///////////////////////////// VALIDATION ////////////////////////////////////////////
