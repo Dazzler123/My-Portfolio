@@ -849,8 +849,8 @@ main > section:nth-child(4) > div:nth-child(6) > div > h4 {
 
 /*css box moving case title*/
 main > section:nth-child(4) > div:nth-child(6) > div:nth-child(5) > h4 {
-    /*transform: rotate(180deg);*/
-    top: 97%;
+    transform: rotate(180deg);
+    top: -25%;
 }
 
 /*css fixed position case div*/
@@ -1439,7 +1439,7 @@ footer > small {
     /*section container*/
     main > section:nth-child(4) {
         top: 15vh;
-        height: 160vh;
+        height: 489vh;
     }
 
     /*heading*/
@@ -1450,41 +1450,131 @@ footer > small {
 
     /*projects images container*/
     main > section:nth-child(4) > div {
-        display: inline-block;
-        top: 77vh;
-        left: 6%;
-        height: 32%;
+        position: relative;
+        top: 248vh;
+        height: 14%;
         width: 88%;
     }
 
-    /*left image*/
-    main > section:nth-child(4) > div > img:nth-child(1) {
-        height: 29vh;
-        width: 24vw;
+
+    /*assignments heading*/
+    main > section:nth-child(4) > :nth-child(4) {
+        top: 305vh;
     }
 
-    /*middle image*/
-    main > section:nth-child(4) > div > img:nth-child(2) {
-        height: 50vh;
-        width: 35vw;
+    /*css heading*/
+    main > section:nth-child(4) > :nth-child(5) {
+        position: relative;
+        top: 205vh;
     }
 
-    /*right image*/
-    main > section:nth-child(4) > div > img:nth-child(3) {
-        height: 29vh;
-        width: 24vw;
+    /*css assignments div container*/
+    main > section:nth-child(4) > :nth-child(6) {
+        /* border: 2px solid red; */
+        position: relative;
+        top: 216vh;
+        height: 17%;
+        width: 85%;
+        left: 0;
+        right: 0;
+        margin: 10% auto auto;
+        display: grid;
+        /* align-items: center; */
+        /* justify-content: space-around; */
+        /* flex-wrap: nowrap; */
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 5%;
+        row-gap: 13%;
     }
 
-    /*to left icon*/
-    main > section:nth-child(4) > div > :nth-child(4) {
-        left: 5vw;
-        top: 57vh;
+    /*css assignment divs all in common*/
+    main > section:nth-child(4) > div:nth-child(6) > div {
+        /*border: 2px solid red;*/
+        background-color: white;
+        border-radius: 5%;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
     }
 
-    /*to right icon*/
-    main > section:nth-child(4) > div > :nth-child(5) {
-        left: 80vw;
-        top: 57vh;
+    /*css case div titles all in common*/
+    main > section:nth-child(4) > div:nth-child(6) > div > h4 {
+        color: white;
+        position: relative;
+        display: inline-block;
+        font-family: 'system-ui';
+        font-weight: 200;
+        font-size: 18px;
+        top: 97%;
+    }
+
+    /*css box moving case title*/
+    main > section:nth-child(4) > div:nth-child(6) > div:nth-child(5) > h4 {
+        transform: rotate(180deg);
+        top: -25%;
+    }
+
+    /*see more btn*/
+    main > section:nth-child(4) > a > h4 {
+        position: relative;
+        top: 195vh;
+        text-align: right;
+        left: -74px;
+        margin: 0;
+        font-family: 'system-ui';
+        font-weight: 100;
+        font-size: 19px;
+        color: white;
+        font-style: italic;
+    }
+
+    /*javascript heading*/
+    main > section:nth-child(4) > :nth-child(8) {
+        position: relative;
+        top: 206vh;
+        text-align: center;
+        margin: 0;
+        font-family: 'system-ui';
+        font-weight: 400;
+        font-size: 23px;
+    }
+
+    /*javascript assignments div container*/
+    main > section:nth-child(4) > :nth-child(9) {
+        /* border: 2px solid red; */
+        position: relative;
+        top: 190vh;
+        height: 8%;
+        width: 85%;
+        left: 0;
+        right: 0;
+        margin: 10% auto auto;
+        display: grid;
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 5%;
+        row-gap: 13%;
+    }
+
+    /*javascript assignment divs all in common*/
+    main > section:nth-child(4) > div:nth-child(9) > div {
+        background-color: white;
+        border-radius: 5%;
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+    }
+
+    /*javascript case div titles all in common*/
+    main > section:nth-child(4) > div:nth-child(9) > div > h4 {
+        color: white;
+        position: relative;
+        display: inline-block;
+        font-family: 'system-ui';
+        font-weight: 200;
+        font-size: 18px;
+        top: 97%;
     }
 
 
