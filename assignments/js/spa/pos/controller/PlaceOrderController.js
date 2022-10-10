@@ -212,3 +212,23 @@ function calculateSubTotal() {
     $('#lblSubTotal').text(prc);
     return total;
 }
+
+//calculate discount amount on subtotal
+function calculateDiscount(value) {
+    //get sub total
+    var subTot = calculateSubTotal();
+    var discount = parseInt(value);
+    return subTot * discount / 100;
+}
+
+$('#txtDiscountGiven').on('keyup', function () {
+    //calculate grand total
+    var gTot = calculateSubTotal() - calculateDiscount($(this).val());
+    // set value to total label
+    $('#lblGrandTotal').text(gTot);
+
+    var cash = parseInt($('#txtCashAmt').val());
+    //set balance
+    $('#txtBalanceAmt').val(cash - gTot);
+});
+

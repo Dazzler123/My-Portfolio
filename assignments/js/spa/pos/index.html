@@ -703,24 +703,24 @@
     <div class="container card ps-0 pe-0 col-md-3 ms-5 row col-sm-12">
         <div class="card-body border-0 p-0">
             <h5 class="mt-3 ms-4 col-5 text-danger text-start fs-3" style="display: inline-block">Total :</h5>
-            <h5 id="lblGrandTotal" class="mt-3 col-6 text-danger text-start fs-3" style="display: inline-block"> 15 000.00 /=</h5>
+            <h5 id="lblGrandTotal" class="mt-3 col-6 text-danger text-start fs-3" style="display: inline-block"> 0 /=</h5>
             <h5 class="mt-1 ms-4 col-5 text-danger text-start fs-3" style="display: inline-block">Sub Total :</h5>
             <h5 id="lblSubTotal" class="mt-1 col-5 text-danger text-start fs-3" style="display: inline-block"> 0 /=</h5>
 
             <div class="row col-12 mt-2">
                 <div class="col-7 ms-3">
                     <label class="form-label">Cash : </label>
-                    <input type="number" class="form-control" placeholder="Ex: 5000.00" aria-label="">
+                    <input id="txtCashAmt" type="number" class="form-control" placeholder="Ex: 5000.00" aria-label="">
                 </div>
                 <div class="col-4">
                     <label class="form-label">Discount : </label>
-                    <input type="number" class="form-control" placeholder="Ex: 15" aria-label="">
+                    <input id="txtDiscountGiven" type="number" class="form-control" placeholder="Ex: 15" aria-label="">
                 </div>
                 <div class="col-11 ms-3 mt-3">
                     <label class="form-label">Balance : </label>
-                    <input type="number" class="form-control" placeholder="Ex: 430.10" aria-label="">
+                    <input id="txtBalanceAmt" type="number" class="form-control" placeholder="" aria-label="" disabled>
                 </div>
-                <button type="button" class="btn btn-success btn-lg col-11 ms-4 mt-4 mb-3 h-50">Confirm Order</button>
+                <button id="btnConfirmOrder" type="button" class="btn btn-success btn-lg col-11 ms-4 mt-4 mb-3 h-50">Confirm Order</button>
             </div>
         </div>
     </div>
