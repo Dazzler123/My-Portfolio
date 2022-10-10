@@ -1,3 +1,5 @@
+//cart
+var cart = []; //global scope
 
 //load all customer id's to the combo box
 function loadAllCustomerIds() {
@@ -22,7 +24,7 @@ function loadAllItemCodes() {
 }
 
 //set item details to the textfields
-$('#cbxSelectItemCode').change( function () {
+$('#cbxSelectItemCode').change(function () {
     //clear before adding
     $('#txtItemName,#txtAvailableQTYOnHand,#txtUnitPrice').val("");
     //search item
@@ -33,7 +35,7 @@ $('#cbxSelectItemCode').change( function () {
 });
 
 //set customer details to the textfields
-$('#cbxSelectCustID').change( function () {
+$('#cbxSelectCustID').change(function () {
     //clear before adding
     $('#txtCusName,#txtCusAddress,#txtCusSalary').val("");
     //search customer
@@ -41,4 +43,17 @@ $('#cbxSelectCustID').change( function () {
     $('#txtCusName').val(customer.name);
     $('#txtCusAddress').val(customer.address);
     $('#txtCusSalary').val(customer.salary);
+});
+
+//add items to cart
+$('#btnAddToCart').click(function () {
+    var cartObj = {
+        "item_Code": $('#cbxSelectItemCode').val(),
+        "item_Name": $('#txtItemName').val(),
+        "unit_Price": $('#txtUnitPrice').val(),
+        "qty": $('#selectQTY').val()
+    };
+    //add to cart array
+    cart.push(cartObj);
+    console.log(cart);
 });

@@ -686,14 +686,14 @@
                 </div>
                 <div class="col-3">
                     <label class="form-label">Select Quantity : </label>
-                    <input type="number" class="form-control text-danger" placeholder="" aria-label="">
+                    <input id="selectQTY" type="number" class="form-control text-danger" placeholder="" aria-label="">
                 </div>
                 <div class="col-5" style="margin-top: 8%">
-                    <button type="button" class="btn btn-warning">+ Add To Cart</button>
+                    <button id="btnAddToCart" type="button" class="btn btn-warning">+ Add To Cart</button>
                 </div>
                 <div class="col-12 row justify-content-end gap-2" style="margin-top: 8%">
-                    <button type="button" class="btn btn-info col-4" disabled>Update Item</button>
-                    <button type="button" class="btn btn-danger col-4" disabled>- Remove Item</button>
+                    <button id="btnUpdateItemInCart" type="button" class="btn btn-info col-4" disabled>Update Item</button>
+                    <button id="btnRemoveItemFromCart" type="button" class="btn btn-danger col-4" disabled>- Remove Item</button>
                 </div>
             </div>
         </div>
@@ -736,31 +736,7 @@
                 <th scope="col" class="text-center">Quantity Bought</th>
             </tr>
             </thead>
-            <tbody>
-            <tr>
-                <td>ITM-001</td>
-                <td>Araliya Keerisamba 5kg</td>
-                <td>1960.00</td>
-                <td>350</td>
-            </tr>
-            <tr>
-                <td>ITM-002</td>
-                <td>Baasmathi Rice 25kg</td>
-                <td>11250.00</td>
-                <td>120</td>
-            </tr>
-            <tr>
-                <td>ITM-003</td>
-                <td>Maggie Coconut Milk 400g</td>
-                <td>350.00</td>
-                <td>20</td>
-            </tr>
-            <tr>
-                <td>ITM-004</td>
-                <td>Maliban Cream Cracker 150g</td>
-                <td>300.00</td>
-                <td>70</td>
-            </tr>
+            <tbody id="tbl_Cart_Body">
             </tbody>
         </table>
     </div>
