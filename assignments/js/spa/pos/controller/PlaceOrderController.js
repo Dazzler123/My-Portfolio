@@ -47,16 +47,26 @@ $('#cbxSelectCustID').change(function () {
 
 //add items to cart
 $('#btnAddToCart').click(function () {
-    var cartObj = {
-        "item_Code": $('#cbxSelectItemCode').val(),
-        "item_Name": $('#txtItemName').val(),
-        "unit_Price": $('#txtUnitPrice').val(),
-        "qty_Bought": $('#selectQTY').val()
-    };
-    //add to cart array
-    cart.push(cartObj);
-    //load all items
-    loadAllItemsToTbl();
+    var id = $('#cbxSelectItemCode').val();
+    var qty = $('#selectQTY').val();
+    //search item
+    if (searchItemInCart(id) != null) {
+        //update qty bought
+        updateItemInCart(id, qty)
+        //load all items
+        loadAllItemsToTbl();
+    } else {
+        var cartObj = {
+            "item_Code": id,
+            "item_Name": $('#txtItemName').val(),
+            "unit_Price": $('#txtUnitPrice').val(),
+            "qty_Bought": qty
+        };
+        //add to cart array
+        cart.push(cartObj);
+        //load all items
+        loadAllItemsToTbl();
+    }
 });
 
 //load all items in the cart to the table
@@ -67,5 +77,27 @@ function loadAllItemsToTbl() {
             "</td><td>" + itm.qty_Bought + "</td></tr>";
         //add to table
         $('#tbl_Cart_Body').append(row);
+    }
+}
+
+//search item in cart
+function searchItemInCart(id) {
+    for (const itm of cart) {
+        if (itm.item_Code == id) {
+            return itm;
+        }
+    }
+    return null;
+}
+
+//update item qty in cart
+function updateItemInCart(id, newQty) {
+    var itm = searchItemInCart(id);
+    if (itm != null) {
+        var newVal = itm.qty_Bought + newQty;
+        itm.qty_Bought = newVal;
+        return true;
+    } else {
+        return false;
     }
 }
