@@ -51,9 +51,21 @@ $('#btnAddToCart').click(function () {
         "item_Code": $('#cbxSelectItemCode').val(),
         "item_Name": $('#txtItemName').val(),
         "unit_Price": $('#txtUnitPrice').val(),
-        "qty": $('#selectQTY').val()
+        "qty_Bought": $('#selectQTY').val()
     };
     //add to cart array
     cart.push(cartObj);
-    console.log(cart);
+    //load all items
+    loadAllItemsToTbl();
 });
+
+//load all items in the cart to the table
+function loadAllItemsToTbl() {
+    $('#tbl_Cart_Body').empty();
+    for (const itm of cart) {
+        var row = "<tr><td>" + itm.item_Code + "" + "</td><td>" + itm.item_Name + "</td><td>" + itm.unit_Price +
+            "</td><td>" + itm.qty_Bought + "</td></tr>";
+        //add to table
+        $('#tbl_Cart_Body').append(row);
+    }
+}
