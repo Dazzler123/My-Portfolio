@@ -76,6 +76,8 @@ $('#btnAddToCart').click(function () {
                 loadAllItemsToTbl();
                 //clear qty field
                 clearQtyInput();
+                //calculate sub total
+                calculateSubTotal();
                 // //get selected table row data
                 getCartTblRowData();
             }
@@ -165,6 +167,7 @@ function update(itemCode) {
         //enable add to cart button
         $('#btnAddToCart').prop('disabled', false);
         clearQtyInput();
+        calculateSubTotal();
         getCartTblRowData();
     });
 }
@@ -184,6 +187,7 @@ function deleteData(itemCode) {
         //enable add to cart button
         $('#btnAddToCart').prop('disabled', false);
         clearQtyInput();
+        calculateSubTotal();
         getCartTblRowData();
     });
 }
@@ -192,4 +196,19 @@ function deleteData(itemCode) {
 function disableUpdtDeltBtns() {
     $('#btnUpdateItemInCart').prop('disabled', true);
     $('#btnRemoveItemFromCart').prop('disabled', true);
+}
+
+//calculate sub total
+function calculateSubTotal() {
+    let total = 0;
+    for (const item of cartArr) {
+        var uPrc = parseInt(item.unit_Price);
+        var qBght = parseInt(item.qty_Bought);
+        var totPrc = uPrc * qBght;
+        total = total + totPrc;
+    }
+    //set total to sub total label
+    var prc = total + " /=";
+    $('#lblSubTotal').text(prc);
+    return total;
 }
