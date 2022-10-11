@@ -1,6 +1,12 @@
 //cart
 var cartArr = []; //global scope
 
+$(window).on('load', function () {
+    let today = new Date().toLocaleDateString();
+    //set current date
+    $('#date').text(today);
+})
+
 //load all customer id's to the combo box
 function loadAllCustomerIds() {
     //clear combo box
