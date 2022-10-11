@@ -240,6 +240,40 @@ $('#txtDiscountGiven').on('keyup', function () {
 
 //place order
 $('#btnConfirmOrder').click(function () {
-    
+    //order id
+    var orderId = $('#cbxSelectOrderID').val();
+    //confirmation alert
+    var cnfm = confirm("Are you sure you want to confirm and place the order?");
+    if (cnfm) {
+        for (const item of cartArr) {
+            //get item code and qty bought
+            var itemId = item.item_Code;
+            var qty = item.qty_Bought;
+            orderDetails = {
+                orderId,
+                itemId,
+                qty
+            };
+            //push to order details array
+            orderDetailsArr.push(orderDetails);
+        }
+        //clear all fields for a new place order
+        clearAllFields();
+    }
 });
+
+function clearAllFields() {
+    clearQtyInput();
+    $('#txtBalanceAmt').val("");
+    $('#lblGrandTotal').text(" 0/=");
+    $('#lblSubTotal').text(" 0/=");
+
+    $('#tbl_Cart_Body').empty();
+    $('#txtCusName').val("");
+    $('#txtCusAddress').val("");
+    $('#txtCusSalary').val("");
+    $('#txtItemName').val("");
+    $('#txtAvailableQTYOnHand').val("");
+    $('#txtUnitPrice').val("");
+}
 

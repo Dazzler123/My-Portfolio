@@ -5,4 +5,4 @@ var customerArr = [];
 var itemArr = [];
 
 //orders array
-var orderDetails = [];
+var orderDetailsArr = [];
