@@ -2,12 +2,14 @@
 var cartArr = []; //global scope
 
 //order id
-var idNum = 0o01;
+var idNum = 1;
 
 $(window).on('load', function () {
     let today = new Date().toLocaleDateString();
     //set current date
     $('#date').text(today);
+    //set order id
+    $('#cbxSelectOrderID').val("ORD-" + idNum);
 })
 
 //load all customer id's to the combo box
@@ -243,9 +245,13 @@ $('#btnConfirmOrder').click(function () {
             reduceQty(itemId, qty);
             //clear cart array
             cartArr = [];
+            //increment id number for a new order id
+            idNum = idNum + 1;
         }
         //clear all fields for a new place order
         clearAllFields();
+        //generate new order id
+        generateOrderID();
     }
 });
 
@@ -276,9 +282,6 @@ function clearAllFields() {
 
 //generate new order id
 function generateOrderID() {
-    //when orderdetails array is empty
-    if (orderDetailsArr == []) {
-        $('#cbxSelectCustID').val("C001");
-    }
+    $('#cbxSelectOrderID').val("ORD-" + idNum);
 }
 
