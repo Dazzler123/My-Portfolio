@@ -1,6 +1,9 @@
 //cart
 var cartArr = []; //global scope
 
+//order id
+var idNum = 0o01;
+
 $(window).on('load', function () {
     let today = new Date().toLocaleDateString();
     //set current date
@@ -63,9 +66,13 @@ $('#btnAddToCart').click(function () {
     } else {
         //search item
         if (searchItemInCart(id) != null) {
-            //warning alert
-            alert("Item already added!");
-            clearQtyInput();
+            //update item qty
+            if (updateItemQty(id, qty)) {
+                loadAllItemsToTbl();
+                clearQtyInput();
+            } else {
+                alert("Something went wrong.");
+            }
         } else {
             if (qty == "") {
                 alert("Please select quantity!");
@@ -149,46 +156,23 @@ function getCartTblRowData() {
         let itemCode = $(this, '#tbl_Cart_Body>tr').children(':nth-child(1)').text();
         // set qty
         $('#selectQTY').val($(this, '#tbl_Cart_Body>tr').children(':nth-child(4)').text());
-        // enable disable buttons
+        // enable buttons
         $('#btnRemoveItemFromCart').removeAttr('disabled');
-        $('#btnUpdateItemInCart').removeAttr('disabled');
         $('#btnAddToCart').prop('disabled', true);
-
-        update(itemCode);
+        //remove item from cart
         deleteData(itemCode);
     });
 }
 
-function update(itemCode) {
-    $('#btnUpdateItemInCart').click(function () {
-        // confirmation alert
-        var alt = confirm("Are you sure you want to update quantity of this item in cart?");
-        if (alt) {
-            //update qty bought
-            updateItemQty(itemCode, $('#selectQTY').val());
-        }
-        loadAllItemsToTbl();
-        //disable both buttons
-        disableUpdtDeltBtns();
-        //enable add to cart button
-        $('#btnAddToCart').prop('disabled', false);
-        clearQtyInput();
-        calculateSubTotal();
-        getCartTblRowData();
-    });
-}
-
-
 function deleteData(itemCode) {
     $('#btnRemoveItemFromCart').click(function () {
         // confirmation alert
-        var alt = confirm("Are you sure you want to remove this item from the cart?");
-        if (alt) {
+        if (confirm("Are you sure you want to remove this item from the cart?")) {
             //remove item
             removeItemFromCart(itemCode);
         }
         loadAllItemsToTbl();
-        //disable both buttons
+        //disable button
         disableUpdtDeltBtns();
         //enable add to cart button
         $('#btnAddToCart').prop('disabled', false);
@@ -200,7 +184,6 @@ function deleteData(itemCode) {
 
 
 function disableUpdtDeltBtns() {
-    $('#btnUpdateItemInCart').prop('disabled', true);
     $('#btnRemoveItemFromCart').prop('disabled', true);
 }
 
@@ -257,7 +240,7 @@ $('#btnConfirmOrder').click(function () {
             //push to order details array
             orderDetailsArr.push(orderDetails);
             //reduce item qtys from respective items
-            reduceQty(itemId,qty);
+            reduceQty(itemId, qty);
             //clear cart array
             cartArr = [];
         }
@@ -266,10 +249,10 @@ $('#btnConfirmOrder').click(function () {
     }
 });
 
-function reduceQty(itemCode,reducedAmt) {
+function reduceQty(itemCode, reducedAmt) {
     for (const item of itemArr) {
         //get item
-        if (item.id == itemCode){
+        if (item.id == itemCode) {
             item.qty_On_Hand = item.qty_On_Hand - parseInt(reducedAmt);
             return true;
         }
@@ -283,12 +266,19 @@ function clearAllFields() {
     $('#lblSubTotal').text(" 0/=");
     $('#tbl_Cart_Body').empty();
     $('#cbxSelectItemCode').val("None");
-    $('#cbxSelectCustID').val("None");
     $('#txtCusName').val("");
     $('#txtCusAddress').val("");
     $('#txtCusSalary').val("");
     $('#txtItemName').val("");
     $('#txtAvailableQTYOnHand').val("");
     $('#txtUnitPrice').val("");
+}
+
+//generate new order id
+function generateOrderID() {
+    //when orderdetails array is empty
+    if (orderDetailsArr == []) {
+        $('#cbxSelectCustID').val("C001");
+    }
 }
 
