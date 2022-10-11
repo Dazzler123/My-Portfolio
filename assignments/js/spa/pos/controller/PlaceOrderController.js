@@ -238,3 +238,8 @@ $('#txtDiscountGiven').on('keyup', function () {
     $('#txtBalanceAmt').val(cash - gTot);
 });
 
+//place order
+$('#btnConfirmOrder').click(function () {
+    
+});
+
