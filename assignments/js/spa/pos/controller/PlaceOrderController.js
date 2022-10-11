@@ -231,7 +231,7 @@ $('#txtDiscountGiven').on('keyup', function () {
     //calculate grand total
     var gTot = calculateSubTotal() - calculateDiscount($(this).val());
     // set value to total label
-    $('#lblGrandTotal').text(gTot);
+    $('#lblGrandTotal').text(gTot + " /=");
 
     var cash = parseInt($('#txtCashAmt').val());
     //set balance
@@ -281,7 +281,6 @@ function clearAllFields() {
     $('#txtBalanceAmt').val("");
     $('#lblGrandTotal').text(" 0/=");
     $('#lblSubTotal').text(" 0/=");
-
     $('#tbl_Cart_Body').empty();
     $('#cbxSelectItemCode').val("None");
     $('#cbxSelectCustID').val("None");
