@@ -1495,7 +1495,7 @@ footer > small {
 
     /*===================!*Collaborator's recommendation ====================================================*!*/
     /*section container*/
-    main > section:nth-child(5){
+    main > section:nth-child(5) {
         top: 20vh;
     }
 
@@ -2463,7 +2463,7 @@ footer > small {
     /*!*section container*!*/
     main > section:nth-child(3) {
         top: -100px;
-        height: 203vh;
+        height: 236vh;
     }
 
     /*heading*/
@@ -2564,7 +2564,7 @@ footer > small {
     /*achievements container*/
     main > section:nth-child(3) > :nth-child(6) {
         top: 59vh;
-        height: 98vh;
+        height: 118vh;
     }
 
     /*achievements ul */
@@ -2581,26 +2581,32 @@ footer > small {
     /*images container*/
     main > section:nth-child(3) > :nth-child(6) > div {
         top: 10vh;
-        left: 8vh;
-        height: 48vh;
+        left: 5vh;
+        height: 71vh;
     }
 
     /*left image*/
     main > section:nth-child(3) > :nth-child(6) > div > img:nth-child(1) {
-        height: 142px;
-        width: 251px;
+        height: 193px;
+        width: 312px;
+        border-top-right-radius: 14%;
+        border-bottom-right-radius: 14%;
     }
 
     /*middle image*/
     main > section:nth-child(3) > :nth-child(6) > div > img:nth-child(2) {
-        height: 207px;
-        width: 353px;
+        height: 193px;
+        width: 312px;
     }
 
     /*right image*/
     main > section:nth-child(3) > :nth-child(6) > div > img:nth-child(3) {
-        height: 142px;
-        width: 251px;
+        height: 193px;
+        width: 312px;
+        border-top-left-radius: 14%;
+        border-bottom-left-radius: 14%;
+        left: 19%;
+        top: 6%;
     }
 
     /*to left icon*/
@@ -2622,12 +2628,12 @@ footer > small {
     /*section container*/
     main > section:nth-child(4) {
         top: -17vh;
-        height: 112vh;
+        height: 314vh;
     }
 
     /*heading*/
     main > section:nth-child(4) > :first-child {
-        left: 40vw;
+        left: 36vw;
         top: 0;
         font-size: 23px;
     }
@@ -2640,33 +2646,44 @@ footer > small {
 
     /*projects list li*/
     main > section:nth-child(4) > ul > li {
-        font-size: 17px;
+        font-size: 16px;
+    }
+
+    /*projects list li pre*/
+    main > section:nth-child(4) > ul > pre {
+        content-visibility: hidden;
     }
 
     /*projects images container*/
-    main > section:nth-child(4) > div {
-        top: 51vh;
-        left: 4%;
-        height: 42%;
-        width: 90.5%;
+    main > section:nth-child(4) > :nth-child(3) {
+        top: 70vh;
+        width: 92%;
+        left: 5vh;
+        height: 71vh;
     }
 
     /*left image*/
     main > section:nth-child(4) > div > img:nth-child(1) {
-        height: 142px;
-        width: 251px;
+        height: 193px;
+        width: 312px;
+        border-top-right-radius: 14%;
+        border-bottom-right-radius: 14%;
     }
 
     /*middle image*/
     main > section:nth-child(4) > div > img:nth-child(2) {
-        height: 207px;
-        width: 353px;
+        height: 193px;
+        width: 312px;
     }
 
     /*right image*/
     main > section:nth-child(4) > div > img:nth-child(3) {
-        height: 142px;
-        width: 251px;
+        height: 193px;
+        width: 312px;
+        border-top-left-radius: 14%;
+        border-bottom-left-radius: 14%;
+        left: 19%;
+        top: 6%;
     }
 
     /*to left right icons in common*/
@@ -2684,6 +2701,55 @@ footer > small {
     main > section:nth-child(4) > div > :nth-child(5) {
         left: 82vw;
         top: 42vh;
+    }
+
+    /*assignments heading*/
+    main > section:nth-child(4) > :nth-child(4) {
+        top: 163vh;
+        font-size: 22px;
+    }
+
+    /*css heading*/
+    main > section:nth-child(4) > :nth-child(5) {
+        top: 95vh;
+        font-size: 17px;
+    }
+
+    /*css assignments div container*/
+    main > section:nth-child(4) > :nth-child(6) {
+        top: 86vh;
+        height: 20%;
+    }
+
+    /*css case div titles all in common*/
+    main > section:nth-child(4) > div:nth-child(6) > div > h4 {
+        font-size: 16px;
+        top: 97%;
+    }
+
+    /*box model case title*/
+    main > section:nth-child(4) > div:nth-child(6) > div:nth-child(5) > h4 {
+        top: -35%;
+    }
+
+    /*see more btn*/
+    main > section:nth-child(4) > a > h4 {
+        top: 95vh;
+        text-align: right;
+        left: -6vw;
+        font-size: 16px;
+    }
+
+    /*javascript heading*/
+    main > section:nth-child(4) > :nth-child(8) {
+        top: 101vh;
+        font-size: 19px;
+    }
+
+    /*javascript assignments div container*/
+    main > section:nth-child(4) > :nth-child(9) {
+        top: 92vh;
+        height: 9%;
     }
 
 
