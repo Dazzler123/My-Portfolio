@@ -1439,7 +1439,7 @@ footer > small {
     /*section container*/
     main > section:nth-child(4) {
         top: 15vh;
-        height: 489vh;
+        height: 524vh;
     }
 
     /*heading*/
@@ -1449,39 +1449,56 @@ footer > small {
     }
 
     /*projects images container*/
-    main > section:nth-child(4) > div {
+    main > section:nth-child(4) > :nth-child(3) {
         /*position: relative;*/
-        top: 200vh;
+        top: 246vh;
         height: 14%;
-        width: 88%;
+        width: 93%;
+        left: 3%;
+    }
+
+    /*projects images let right arrows in common*/
+    main > section:nth-child(4) > :nth-child(3) > i {
+        /*position: relative;*/
+        top: 56vh;
     }
 
     /*assignments heading*/
     main > section:nth-child(4) > :nth-child(4) {
-        top: 309vh;
+        top: 333vh;
     }
 
     /*css heading*/
     main > section:nth-child(4) > :nth-child(5) {
-        top: 218vh;
+        top: 266vh;
     }
 
     /*css assignments div container*/
     main > section:nth-child(4) > :nth-child(6) {
-        top: 199vh;
+        top: 247vh;
     }
 
     /*see more btn*/
     main > section:nth-child(4) > a > h4 {
-        top: 206vh;
+        top: 256vh;
+    }
+
+    /*javascript assignments div container*/
+    main > section:nth-child(4) > :nth-child(9) {
+        top: 243vh;
     }
 
     /*javascript heading*/
     main > section:nth-child(4) > :nth-child(8) {
-        top: 210vh;
+        top: 263vh;
     }
 
     /*===================!*Collaborator's recommendation ====================================================*!*/
+    /*section container*/
+    main > section:nth-child(5){
+        top: 20vh;
+    }
+
     /*heading*/
     main > section:nth-child(5) > :first-child {
         left: 143px;
@@ -1924,21 +1941,26 @@ footer > small {
 
     /*projects list ul container*/
     main > section:nth-child(4) > ul {
-        left: 5%;
+        left: 2%;
         top: 13vh;
     }
 
     /*projects list li*/
     main > section:nth-child(4) > ul > li {
-        font-size: 17px;
+        font-size: 16px;
+    }
+
+    /*projects list li pre*/
+    main > section:nth-child(4) > ul > pre {
+        font-size: 12px;
     }
 
     /*projects images container*/
-    main > section:nth-child(4) > div {
-        top: 51vh;
+    main > section:nth-child(4) > :nth-child(3) {
+        top: 182vh;
         left: 4%;
         height: 42%;
-        width: 90.5%;
+        width: 92%;
     }
 
     /*left image*/
@@ -1976,11 +1998,125 @@ footer > small {
         top: 42vh;
     }
 
+    /*assignments heading*/
+    main > section:nth-child(4) > :nth-child(4) {
+        top: 309vh;
+    }
+
+    /*css heading*/
+    main > section:nth-child(4) > :nth-child(5) {
+        /*position: relative;*/
+        top: 218vh;
+    }
+
+    /*css assignments div container*/
+    main > section:nth-child(4) > :nth-child(6) {
+        /* border: 2px solid red; */
+        /*position: relative;*/
+        top: 199vh;
+        /*height: 17%;*/
+        /*width: 85%;*/
+        /*left: 0;*/
+        /*right: 0;*/
+        /*margin: 10% auto auto;*/
+        /*display: grid;*/
+        /*!* align-items: center; *!*/
+        /*!* justify-content: space-around; *!*/
+        /*!* flex-wrap: nowrap; *!*/
+        /*grid-template-rows: repeat(2, 1fr);*/
+        /*grid-template-columns: repeat(3, 1fr);*/
+        /*column-gap: 5%;*/
+        /*row-gap: 13%;*/
+    }
+
+    /*!*css assignment divs all in common*!*/
+    /*main > section:nth-child(4) > div:nth-child(6) > div {*/
+    /*    !*border: 2px solid red;*!*/
+    /*    background-color: white;*/
+    /*    border-radius: 5%;*/
+    /*    background-size: cover;*/
+    /*    background-position: center;*/
+    /*    text-align: center;*/
+    /*}*/
+
+    /*!*css case div titles all in common*!*/
+    /*main > section:nth-child(4) > div:nth-child(6) > div > h4 {*/
+    /*    color: white;*/
+    /*    position: relative;*/
+    /*    display: inline-block;*/
+    /*    font-family: 'system-ui';*/
+    /*    font-weight: 200;*/
+    /*    font-size: 18px;*/
+    /*    top: 97%;*/
+    /*}*/
+
+    /*see more btn*/
+    main > section:nth-child(4) > a > h4 {
+        /*position: relative;/*/
+        top: 206vh;
+        /*text-align: right;*/
+        /*left: -74px;*/
+        /*margin: 0;*/
+        /*font-family: 'system-ui';*/
+        /*font-weight: 100;*/
+        /*font-size: 19px;*/
+        /*color: white;*/
+        /*font-style: italic;*/
+    }
+
+    /*javascript heading*/
+    main > section:nth-child(4) > :nth-child(8) {
+        position: relative;
+        top: 210vh;
+        text-align: center;
+        margin: 0;
+        font-family: 'system-ui';
+        font-weight: 400;
+        font-size: 23px;
+    }
+
+    /*javascript assignments div container*/
+    main > section:nth-child(4) > :nth-child(9) {
+        /* border: 2px solid red; */
+        position: relative;
+        top: 190vh;
+        height: 8%;
+        width: 85%;
+        left: 0;
+        right: 0;
+        margin: 10% auto auto;
+        display: grid;
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 5%;
+        row-gap: 13%;
+    }
+
+    /*javascript assignment divs all in common*/
+    main > section:nth-child(4) > div:nth-child(9) > div {
+        background-color: white;
+        border-radius: 5%;
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+    }
+
+    /*javascript case div titles all in common*/
+    main > section:nth-child(4) > div:nth-child(9) > div > h4 {
+        color: white;
+        position: relative;
+        display: inline-block;
+        font-family: 'system-ui';
+        font-weight: 200;
+        font-size: 18px;
+        top: 97%;
+    }
+
 
     /*!*===================!*Collaborator's recommendation ====================================================*!*!*/
     /*section container*/
     main > section:nth-child(5) {
-        top: -6vh;
+        top: 101vh;
         height: 53vh;
     }
 
@@ -2047,7 +2183,7 @@ footer > small {
     /*!*===================!* Footer ====================================================*!*!*/
     /*footer container*/
     footer {
-        top: 7vh;
+        top: 216vh;
         height: 35vh;
     }
 
