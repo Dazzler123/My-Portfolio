@@ -106,8 +106,8 @@ $('#btn_Add_New_Customer').click(function () {
     alert("Customer saved successfully.");
     //select table row
     getCustTblRowData();
-    //add id to cbxSelectCustID combo box in place order form
-    loadAllCustomerIds();
+    // //add id to cbxSelectCustID combo box in place order form
+    // loadAllCustomerIds();
     // close modal
     $('#staticBackdrop').modal('hide');
 });

@@ -1,8 +1,9 @@
 //search order
-function searchOrderByID(id) {
-    for (const order of orderDetailsArr) {
-        if (order.order_ID == id) {
-            return order;
+function searchOrderByID(oId) {
+    for (const temp of orderDetailsArr) {
+        if (temp.order_ID == "ORD-1") {
+            // return temp;
+            console.log(temp);
         }
     }
     return null;

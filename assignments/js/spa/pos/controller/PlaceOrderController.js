@@ -12,16 +12,16 @@ $(window).on('load', function () {
     $('#cbxSelectOrderID').val("ORD-" + idNum);
 })
 
-//load all customer id's to the combo box
-function loadAllCustomerIds() {
-    //clear combo box
-    $('#cbxSelectCustID').empty();
-    $('#cbxSelectCustID').append("<option>None</option>");
-
-    for (let cus of customerArr) {
-        $('#cbxSelectCustID').append("<option>" + cus.id + "</option>");
-    }
-}
+// //load all customer id's to the combo box
+// function loadAllCustomerIds() {
+//     //clear combo box
+//     $('#cbxSelectCustID').empty();
+//     $('#cbxSelectCustID').append("<option>None</option>");
+//
+//     for (let cus of customerArr) {
+//         $('#cbxSelectCustID').append("<option>" + cus.id + "</option>");
+//     }
+// }
 
 //load all item codes to the combo box
 function loadAllItemCodes() {
@@ -77,6 +77,7 @@ $('#btnAddToCart').click(function () {
             //update item qty
             if (updateItemQty(id, qty)) {
                 loadAllItemsToTbl();
+                calculateSubTotal();
                 clearQtyInput();
             } else {
                 alert("Something went wrong.");
