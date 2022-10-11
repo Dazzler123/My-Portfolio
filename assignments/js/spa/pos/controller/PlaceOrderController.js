@@ -256,11 +256,25 @@ $('#btnConfirmOrder').click(function () {
             };
             //push to order details array
             orderDetailsArr.push(orderDetails);
+            //reduce item qtys from respective items
+            reduceQty(itemId,qty);
+            //clear cart array
+            cartArr = [];
         }
         //clear all fields for a new place order
         clearAllFields();
     }
 });
+
+function reduceQty(itemCode,reducedAmt) {
+    for (const item of itemArr) {
+        //get item
+        if (item.id == itemCode){
+            item.qty_On_Hand = item.qty_On_Hand - parseInt(reducedAmt);
+            return true;
+        }
+    }
+}
 
 function clearAllFields() {
     clearQtyInput();
@@ -269,6 +283,8 @@ function clearAllFields() {
     $('#lblSubTotal').text(" 0/=");
 
     $('#tbl_Cart_Body').empty();
+    $('#cbxSelectItemCode').val("None");
+    $('#cbxSelectCustID').val("None");
     $('#txtCusName').val("");
     $('#txtCusAddress').val("");
     $('#txtCusSalary').val("");
