@@ -495,7 +495,7 @@
         <h5 class="card-header bg-primary">Search Order</h5>
         <div class="card-body border-0 p-0">
             <form style="margin-top: 17px;" class="d-flex col-8 ms-3" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <input class="form-control me-2" type="search" placeholder="Enter Order ID" aria-label="Search">
                 <button id="btnSearchOrder" class="btn btn-outline-success" type="submit">Search</button>
             </form>
             <h6 class="fst-italic fw-normal col-4 ms-3" style="padding-top: 16px;">Search By</h6>
@@ -509,12 +509,12 @@
 
     <!--crud btns-->
     <div class="container row col-md-6 gap-3 mt-3 mb-3 justify-content-center col-sm-12">
-        <button type="button" class="btn btn-outline-warning col-5" data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop7">Update Order
+        <button id="btnUpdateItemQty" type="button" class="btn btn-outline-warning col-5" data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop7">Update Quantity Bought
         </button>
-        <button type="button" class="btn btn-outline-danger col-5" data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop8">- Delete Order</button>
-        <button type="button" class="btn btn-outline-primary col-5">View All Orders</button>
+        <button id="btnDeleteItemFromOrder" type="button" class="btn btn-outline-danger col-5" data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop8">- Delete Item From Order</button>
+        <button id="btnViewAllOrders" type="button" class="btn btn-outline-primary col-5">View All Orders</button>
     </div>
 
     <!-- update order modal -->
@@ -536,7 +536,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button id="btnUpdateOrderQty" type="button" class="btn btn-primary">Save Changes</button>
+                    <button id="btnUpdateQtyBought" type="button" class="btn btn-primary">Save Changes</button>
                 </div>
             </div>
         </div>
@@ -584,50 +584,7 @@
                 <th scope="col" class="text-center">Quantity Bought</th>
             </tr>
             </thead>
-            <tbody>
-            <tr>
-                <td>ITM-001</td>
-                <td>Araliya Keerisamba 5kg</td>
-                <td>1960.00</td>
-                <td>350</td>
-            </tr>
-            <tr>
-                <td>ITM-002</td>
-                <td>Baasmathi Rice 25kg</td>
-                <td>11250.00</td>
-                <td>120</td>
-            </tr>
-            <tr>
-                <td>ITM-003</td>
-                <td>Maggie Coconut Milk 400g</td>
-                <td>350.00</td>
-                <td>20</td>
-            </tr>
-            <tr>
-                <td>ITM-004</td>
-                <td>Maliban Cream Cracker 150g</td>
-                <td>300.00</td>
-                <td>70</td>
-            </tr>
-            <tr>
-                <td>ITM-001</td>
-                <td>Araliya Keerisamba 5kg</td>
-                <td>1960.00</td>
-                <td>350</td>
-            </tr>
-            <tr>
-                <td>ITM-002</td>
-                <td>Baasmathi Rice 25kg</td>
-                <td>11250.00</td>
-                <td>120</td>
-            </tr>
-            <tr>
-                <td>ITM-003</td>
-                <td>Maggie Coconut Milk 400g</td>
-                <td>350.00</td>
-                <td>20</td>
-            </tr>
-
+            <tbody id="tbl_Orders_Body">
             </tbody>
         </table>
     </div>
