@@ -4041,7 +4041,7 @@ footer > small {
     /*section container*/
     main > section:nth-child(4) {
         top: -23vh;
-        height: 112vh;
+        height: 351vh;
     }
 
     /*heading*/
@@ -4053,7 +4053,7 @@ footer > small {
 
     /*projects list ul container*/
     main > section:nth-child(4) > ul {
-        left: -7%;
+        left: -4%;
         top: 10vh;
     }
 
@@ -4062,11 +4062,16 @@ footer > small {
         font-size: 14px;
     }
 
+    /*projects list pre*/
+    main > section:nth-child(4) > ul pre {
+        content-visibility: hidden;
+    }
+
     /*projects images container*/
-    main > section:nth-child(4) > div {
-        top: 45vh;
-        left: 5%;
-        height: 42%;
+    main > section:nth-child(4) > :nth-child(3) {
+        top: 63vh;
+        left: 3%;
+        height: 18%;
         /*width: 90.5%;*/
     }
 
@@ -4095,8 +4100,8 @@ footer > small {
 
     /*to left icon*/
     main > section:nth-child(4) > div > :nth-child(4) {
-        left: 15vw;
-        top: 43vh;
+        left: 20vw;
+        top: 42vh;
     }
 
     /*to right icon*/
@@ -4105,11 +4110,128 @@ footer > small {
         top: 251px;
     }
 
+    /*assignments heading*/
+    main > section:nth-child(4) > :nth-child(4) {
+        top: 125vh;
+        font-size: 20px;
+    }
+
+    /*css heading*/
+    main > section:nth-child(4) > :nth-child(5) {
+        top: 64vh;
+        font-size: 17px;
+    }
+
+    /*css assignments div container*/
+    main > section:nth-child(4) > :nth-child(6) {
+        top: 61vh;
+        height: 37%;
+        width: 120%;
+        left: 17px;
+        grid-template-rows: repeat(8, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 3%;
+        row-gap: 5%;
+    }
+
+    /*css case 1 div*/
+    main > section:nth-child(4) > div:nth-child(6) > :nth-child(1) {
+       grid-row: 1/3;
+       grid-column: 1/4;
+
+    }
+    /*css case 2 div*/
+    main > section:nth-child(4) > div:nth-child(6) > :nth-child(2) {
+        grid-row: 3/5;
+        grid-column: 1/4;
+    }
+    /*css case 2 div*/
+    main > section:nth-child(4) > div:nth-child(6) > :nth-child(3) {
+        grid-row: 5/7;
+        grid-column: 1/4;
+    }
+    /*css case 4 div*/
+    main > section:nth-child(4) > div:nth-child(6) > :nth-child(4) {
+        grid-row: 7/8;
+        grid-column: 1/2;
+    }
+    /*css case 5 div*/
+    main > section:nth-child(4) > div:nth-child(6) > :nth-child(5) {
+        grid-row: 7/8;
+        grid-column: 2/3;
+    }
+    /*css case 6 div*/
+    main > section:nth-child(4) > div:nth-child(6) > :nth-child(6) {
+        grid-row: 7/8;
+        grid-column: 3/4;
+    }
+
+    /*css case div titles all in common*/
+    main > section:nth-child(4) > div:nth-child(6) > div > h4 {
+        font-size: 13px;
+        top: 97%;
+    }
+
+    /*box model case title*/
+    main > section:nth-child(4) > div:nth-child(6) > div:nth-child(5) > h4 {
+        top: -97%;
+    }
+
+    /*see more btn*/
+    main > section:nth-child(4) > a > h4 {
+        top: 55vh;
+        text-align: right;
+        left: -5vw;
+        font-size: 13px;
+    }
+
+    /*javascript heading*/
+    main > section:nth-child(4) > :nth-child(8) {
+        top: 58vh;
+        font-size: 17px;
+    }
+
+    /*javascript assignments div container*/
+    main > section:nth-child(4) > :nth-child(9) {
+        top: 55vh;
+        height: 16%;
+        width: 135%;
+        left: 20px;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 3%;
+        row-gap: 11%;
+    }
+
+    /*javascript case 1 div*/
+    main > section:nth-child(4) > div:nth-child(9) > :nth-child(1) {
+        grid-row: 1/3;
+        grid-column: 1/3;
+    }
+
+    /*javascript case 2 div*/
+    main > section:nth-child(4) > div:nth-child(9) > :nth-child(2) {
+        grid-row: 3/4;
+        grid-column: 1/2;
+    }
+
+    /*javascript case 3 div*/
+    main > section:nth-child(4) > div:nth-child(9) > :nth-child(3) {
+        grid-row: 3/4;
+        grid-column: 2/3;
+    }
+
+    /*javascript case div titles all in common*/
+    main > section:nth-child(4) > div:nth-child(9) > div > h4 {
+        font-size: 13px;
+        top: 95%;
+    }
+
 
     /*!*===================!*Collaborator's recommendation ====================================================*!*!*/
     /*section container*/
     main > section:nth-child(5) {
-        top: -19vh;
+        top: -37vh;
         height: 58vh;
     }
 
@@ -4213,16 +4335,16 @@ footer > small {
 
     /*mobile number*/
     footer > address > a:nth-child(1) {
-        left: 28%;
-        top: -1px;
+        left: 30%;
+        top: 0px;
         font-size: 17px;
     }
 
     /*mail address*/
     footer > address > a:nth-child(2) {
-        left: -49px;
-        top: 45px;
-        font-size: 17px;
+        left: 73px;
+        top: 27px;
+        font-size: 16px;
     }
 
     /*telegram icon image*/
