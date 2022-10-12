@@ -1,8 +1,8 @@
 //search order
 function searchOrderByID(oId) {
     for (const temp of orderDetailsArr) {
-        if (temp.orderId == "ORD-1") {
-            // return temp;
+        if (temp.orderID == oId) {
+            console.log(temp);
             return temp;
         }
     }
@@ -10,14 +10,17 @@ function searchOrderByID(oId) {
 }
 
 $('#btnSearchOrder').click(function () {
+    //clear table
+    $('#tbl_Orders_Body > tr').empty();
     var id = $('#txtInputSearchOrderID').val();
+    //search order
     if (searchOrderByID(id) != null) {
-        for (const items of orderDetailsArr) {
-            if (items.order_ID == id ) {
+        for (const ord of orderDetailsArr) {
+            if(id == ord.orderID) {
                 //get item
-                var itm = searchItemByID(items.item_Code);
+                var itm = searchItemByID(ord.itemCode);
                 var row = "<tr><td>" + itm.id + "" + "</td><td>" + itm.name + "</td><td>" + itm.price_per_unit +
-                    "</td><td>" + items.qty_Bought + "</td></tr>";
+                    "</td><td>" + ord.orderQTY + "</td></tr>";
                 //add to table
                 $('#tbl_Orders_Body').append(row);
             }

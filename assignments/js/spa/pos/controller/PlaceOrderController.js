@@ -233,20 +233,25 @@ $('#btnConfirmOrder').click(function () {
             //get item code and qty bought
             var itemId = item.item_Code;
             var qty = item.qty_Bought;
-            orderDetails = {
-                orderId,
-                itemId,
-                qty
+            // orderDetails = {
+            //     orderId,
+            //     itemId,
+            //     qty
+            // };
+            var orderDetail = {
+                "orderID": orderId,
+                "itemCode": itemId,
+                "orderQTY": qty
             };
             //push to order details array
-            orderDetailsArr.push(orderDetails);
+            orderDetailsArr.push(orderDetail);
             //reduce item qtys from respective items
             reduceQty(itemId, qty);
-            //clear cart array
-            cartArr = [];
-            //increment id number for a new order id
-            idNum = idNum + 1;
         }
+        //clear cart array
+        cartArr = [];
+        //increment id number for a new order id
+        idNum++;
         //clear all fields for a new place order
         clearAllFields();
         //generate new order id
@@ -255,12 +260,11 @@ $('#btnConfirmOrder').click(function () {
 });
 
 function reduceQty(itemCode, reducedAmt) {
-    for (const item of itemArr) {
-        //get item
-        if (item.id == itemCode) {
-            item.qty_On_Hand = item.qty_On_Hand - parseInt(reducedAmt);
-            return true;
-        }
+    //get item
+    var itm = searchItemByID(itemCode);
+    if(itm != null) {
+        itm.qty_On_Hand = itm.qty_On_Hand - parseInt(reducedAmt);
+        return true;
     }
 }
 
