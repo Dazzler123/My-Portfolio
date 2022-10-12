@@ -87,7 +87,6 @@ $('#btn_Add_New_Customer').click(function () {
     let customerName = $('#txt_Cus_Name').val();
     let customerAddress = $('#txt_Cus_Address').val();
     let customerSalary = $('#txt_Cus_Salary').val();
-
     var customerOne = {
         "id": customerID,
         "name": customerName,
@@ -99,7 +98,6 @@ $('#btn_Add_New_Customer').click(function () {
 
     var row = "<tr><td>" + customerID + "" + "</td><td>" + customerName + "</td><td>" + customerAddress +
         "</td><td>" + customerSalary + "</td></tr>";
-
     // add to the table
     $('#tbl_Customer_Body').append(row);
     // alert
@@ -116,10 +114,8 @@ $('#btn_Add_New_Customer').click(function () {
 $('#btn_Search_Customer').click(function () {
     //clear table
     $('#tbl_Customer_Body').empty();
-
     //get customer object
     var cusObj = searchCustomerByID($('#txt_Search_Cus_ID').val());
-
     // show error alert
     if (cusObj == null) {
         alert("No such customer found with given ID!");
@@ -143,6 +139,8 @@ $('#btn_Update_Customer_Details').click(function () {
         $('#staticBackdrop2').modal('hide');
         //disable update customer button
         $('#btn_Update_Customer').prop('disabled', true);
+        //disable delete customer button
+        $('#btn_Delete_Customer').prop('disabled', true);
     } else {
         alert("Update failed!");
     }
@@ -150,7 +148,6 @@ $('#btn_Update_Customer_Details').click(function () {
 
 $('#btn_Delete_Customer_Details').click(function () {
     let deleteID = $("#lbl_Customer_ID").text();
-
     if (deleteCustomer(deleteID)) {
         //confirmation alert
         alert("Customer deleted successfully.");
@@ -158,6 +155,8 @@ $('#btn_Delete_Customer_Details').click(function () {
         $('#staticBackdrop3').modal('hide');
         //disable delete customer button
         $('#btn_Delete_Customer').prop('disabled', true);
+        //disable update customer button
+        $('#btn_Update_Customer').prop('disabled', true);
     } else {
         alert("Process failed!");
     }
@@ -167,7 +166,6 @@ $('#btn_Delete_Customer_Details').click(function () {
 $('#btn_Get_All_Customers').click(function () {
     //clear table
     $('#tbl_Customer_Body').empty();
-
     for (var customer of customerArr) {
         var row = "<tr><td>" + customer.id + "</td><td>" + customer.name + "</td><td>" + customer.address + "</td><td>" + customer.salary + "</td></tr>";
 

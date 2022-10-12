@@ -141,6 +141,8 @@ $('#btn_Update_Item_Details').click(function () {
         $('#staticBackdrop5').modal('hide');
         //disable update item button
         $('#btn_Update_Item').prop('disabled', true);
+        //disable delete item button
+        $('#btn_Delete_Item').prop('disabled', true);
     } else {
         alert("Update failed!");
     }
@@ -148,7 +150,6 @@ $('#btn_Update_Item_Details').click(function () {
 
 $('#btn_Delete_Item_Details').click(function () {
     let deleteID = $("#lbl_Item_Code").text();
-
     if (deleteItem(deleteID)) {
         // confirmation alert
         alert("Item deleted successfully.");
@@ -156,6 +157,8 @@ $('#btn_Delete_Item_Details').click(function () {
         $('#staticBackdrop6').modal('hide');
         //disable delete item button
         $('#btn_Delete_Item').prop('disabled', true);
+        //disable update item button
+        $('#btn_Update_Item').prop('disabled', true);
     } else {
         alert("Process failed!");
     }

@@ -67,3 +67,14 @@ function getOrderTblRowData() {
     });
 }
 
+// function deleteItemFromOrder(id) {
+//     let item = searchItemByID(id);
+//     if (item != null) {
+//         let indexNumber = itemArr.indexOf(item);
+//         //remove from the array
+//         itemArr.splice(indexNumber, 1);
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
