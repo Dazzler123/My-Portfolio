@@ -3335,7 +3335,7 @@ footer > small {
     /*section container*/
     main > section:nth-child(4) {
         top: -28vh;
-        height: 112vh;
+        height: 270vh;
     }
 
     /*heading*/
@@ -3347,7 +3347,7 @@ footer > small {
 
     /*projects list ul container*/
     main > section:nth-child(4) > ul {
-        left: -7%;
+        left: -3%;
         top: 12vh;
     }
 
@@ -3356,11 +3356,16 @@ footer > small {
         font-size: 14px;
     }
 
+    /*projects list pre*/
+    main > section:nth-child(4) > ul pre {
+        content-visibility: hidden;
+    }
+
     /*projects images container*/
-    main > section:nth-child(4) > div {
-        top: 45vh;
-        left: 8%;
-        height: 42%;
+    main > section:nth-child(4) > :nth-child(3) {
+        top: 58vh;
+        left: 6%;
+        height: 15%;
         /*width: 90.5%;*/
     }
 
@@ -3397,6 +3402,60 @@ footer > small {
     main > section:nth-child(4) > div > :nth-child(5) {
         left: 67vw;
         top: 251px;
+    }
+
+    /*assignments heading*/
+    main > section:nth-child(4) > :nth-child(4) {
+        top: 123vh;
+        font-size: 20px;
+    }
+
+    /*css heading*/
+    main > section:nth-child(4) > :nth-child(5) {
+        top: 83vh;
+        font-size: 17px;
+    }
+
+    /*css assignments div container*/
+    main > section:nth-child(4) > :nth-child(6) {
+        top: 79vh;
+        height: 23%;
+    }
+
+    /*css case div titles all in common*/
+    main > section:nth-child(4) > div:nth-child(6) > div > h4 {
+        font-size: 13px;
+        top: 97%;
+    }
+
+    /*box model case title*/
+    main > section:nth-child(4) > div:nth-child(6) > div:nth-child(5) > h4 {
+        top: -37%;
+    }
+
+    /*see more btn*/
+    main > section:nth-child(4) > a > h4 {
+        top: 89vh;
+        text-align: right;
+        left: -5vw;
+        font-size: 13px;
+    }
+
+    /*javascript heading*/
+    main > section:nth-child(4) > :nth-child(8) {
+        top: 92vh;
+        font-size: 17px;
+    }
+
+    /*javascript assignments div container*/
+    main > section:nth-child(4) > :nth-child(9) {
+        top: 88vh;
+        height: 9%;
+    }
+
+    /*javascript case div titles all in common*/
+    main > section:nth-child(4) > div:nth-child(9) > div > h4 {
+        font-size: 13px;
     }
 
 
