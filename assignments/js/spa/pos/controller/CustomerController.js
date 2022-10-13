@@ -1,4 +1,3 @@
-
 //get selected table row data
 function getCustTblRowData() {
     $('#tbl_Customer_Body > tr').click(function () {
@@ -76,7 +75,6 @@ function deleteCustomer(id) {
     }
 }
 
-
 //clear add customer textfields
 $('#btn_Add_Customer').click(function () {
     $("#txt_Cus_ID,#txt_Cus_Name,#txt_Cus_Address,#txt_Cus_Salary").val("");
@@ -104,7 +102,7 @@ $('#btn_Add_New_Customer').click(function () {
     alert("Customer saved successfully.");
     //select table row
     getCustTblRowData();
-    // //add id to cbxSelectCustID combo box in place order form
+    //add id to cbxSelectCustID combo box in place order form
     // loadAllCustomerIds();
     // close modal
     $('#staticBackdrop').modal('hide');
@@ -119,8 +117,8 @@ $('#btn_Search_Customer').click(function () {
     // show error alert
     if (cusObj == null) {
         alert("No such customer found with given ID!");
-        //clear textfield
-        $('#txt_Search_Cus_ID').val("");
+        // //clear textfield
+        // $('#txt_Search_Cus_ID').val("");
     } else {
         var row = "<tr><td>" + cusObj.id + "</td><td>" + cusObj.name + "</td><td>" + cusObj.address + "</td><td>" + cusObj.salary + "</td></tr>";
         // add to the table
@@ -137,6 +135,7 @@ $('#btn_Update_Customer_Details').click(function () {
         alert("Customer details updated.");
         // close modal
         $('#staticBackdrop2').modal('hide');
+        loadAllCustomers();
         //disable update customer button
         $('#btn_Update_Customer').prop('disabled', true);
         //disable delete customer button
@@ -153,6 +152,7 @@ $('#btn_Delete_Customer_Details').click(function () {
         alert("Customer deleted successfully.");
         // close modal
         $('#staticBackdrop3').modal('hide');
+        loadAllCustomers();
         //disable delete customer button
         $('#btn_Delete_Customer').prop('disabled', true);
         //disable update customer button
@@ -164,6 +164,10 @@ $('#btn_Delete_Customer_Details').click(function () {
 
 //load all customers to the table
 $('#btn_Get_All_Customers').click(function () {
+    loadAllCustomers();
+});
+
+function loadAllCustomers() {
     //clear table
     $('#tbl_Customer_Body').empty();
     for (var customer of customerArr) {
@@ -174,4 +178,4 @@ $('#btn_Get_All_Customers').click(function () {
     }
     //select table row
     getCustTblRowData();
-});
+}

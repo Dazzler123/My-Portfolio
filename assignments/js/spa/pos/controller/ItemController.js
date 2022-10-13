@@ -121,8 +121,8 @@ $('#btn_Search_Item').click(function () {
     //show error alert
     if (itemObj == null) {
         alert("No such item found with given ID!");
-        //clear textfield
-        $('#txt_Search_Item_Code').val("");
+        // //clear textfield
+        // $('#txt_Search_Item_Code').val("");
     } else {
         var row = "<tr><td>" + itemObj.id + "</td><td>" + itemObj.name + "</td><td>" + itemObj.price_per_unit + "</td><td>" + itemObj.qty_On_Hand + "</td></tr>";
         // add to the table
@@ -139,6 +139,7 @@ $('#btn_Update_Item_Details').click(function () {
         alert("Item details updated.");
         //close modal code here...
         $('#staticBackdrop5').modal('hide');
+        loadAllItems();
         //disable update item button
         $('#btn_Update_Item').prop('disabled', true);
         //disable delete item button
@@ -155,6 +156,7 @@ $('#btn_Delete_Item_Details').click(function () {
         alert("Item deleted successfully.");
         //close modal code here...
         $('#staticBackdrop6').modal('hide');
+        loadAllItems();
         //disable delete item button
         $('#btn_Delete_Item').prop('disabled', true);
         //disable update item button
@@ -166,6 +168,10 @@ $('#btn_Delete_Item_Details').click(function () {
 
 //load all items to the table
 $('#btn_Get_All_Items').click(function () {
+    loadAllItems();
+});
+
+function loadAllItems() {
     //clear table
     $('#tbl_Item_Body').empty();
 
@@ -175,7 +181,6 @@ $('#btn_Get_All_Items').click(function () {
         // add to the table
         $('#tbl_Item_Body').append(row);
     }
-
     //select table row
     getItemTblRowData();
-});
+}
