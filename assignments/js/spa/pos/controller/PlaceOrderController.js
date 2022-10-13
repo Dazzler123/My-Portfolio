@@ -121,6 +121,7 @@ function loadAllItemsToTbl() {
         //add to table
         $('#tbl_Cart_Body').append(row);
     }
+    getCartTblRowData();
 }
 
 //search item in cart
@@ -167,7 +168,7 @@ function getCartTblRowData() {
         // // set qty
         // $('#selectQTY').val($(this, '#tbl_Cart_Body>tr').children(':nth-child(4)').text());
         // enable buttons
-        // $('#btnRemoveItemFromCart').removeAttr('disabled');
+        $('#btnRemoveItemFromCart').removeAttr('disabled');
         //remove item from cart
         // deleteData(itemCode);
         // $('#btnRemoveItemFromCart').click(function () {
@@ -219,14 +220,13 @@ $('#btnDeleteFromCart').click(function () {
         loadAllItemsToTbl();
         $('#staticBackdrop9').modal('hide');
         //disable button
-        // $('#btnRemoveItemFromCart').prop('disabled', true);
+        $('#btnRemoveItemFromCart').prop('disabled', true);
         clearQtyInput();
         calculateSubTotal();
     } else {
         alert("Failed to remove item from cart");
     }
 });
-
 
 
 //calculate sub total
@@ -311,18 +311,21 @@ function reduceQty(itemCode, reducedAmt) {
 
 function clearAllFields() {
     clearQtyInput();
+    $('#date').val("");
     $('#txtBalanceAmt').val("");
     $('#lblGrandTotal').text(" 0/=");
     $('#lblSubTotal').text(" 0/=");
+    $('#txtCashAmt').val("");
     $('#tbl_Cart_Body').empty();
     $('#cbxSelectItemCode').val("None");
+    $('#cbxSelectCustID').val("");
     $('#txtCusName').val("");
     $('#txtCusAddress').val("");
     $('#txtCusSalary').val("");
     $('#txtItemName').val("");
     $('#txtAvailableQTYOnHand').val("");
     $('#txtUnitPrice').val("");
-    $('#btnRemoveItemFromCart').removeAttr('disabled');
+    $('#txtDiscountGiven').val("0");
 }
 
 //generate new order id

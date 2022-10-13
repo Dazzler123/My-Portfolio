@@ -1,8 +1,20 @@
+//order id
+let oID;
+
 //search order
 function searchOrderByID(oId) {
     for (const temp of orderDetailsArr) {
         if (temp.orderID == oId) {
-            console.log(temp);
+            return temp;
+        }
+    }
+    return null;
+}
+
+//search items in a order
+function searchItemsInAOrder(oId, itmCde) {
+    for (const temp of orderDetailsArr) {
+        if (temp.orderID == oId & temp.itemCode == itmCde) {
             return temp;
         }
     }
@@ -10,27 +22,37 @@ function searchOrderByID(oId) {
 }
 
 $('#btnSearchOrder').click(function () {
-    //clear table
-    $('#tbl_Orders_Body > tr').empty();
     var id = $('#txtInputSearchOrderID').val();
     //search order
     if (searchOrderByID(id) != null) {
-        for (const ord of orderDetailsArr) {
-            if(id == ord.orderID) {
-                //get item
-                var itm = searchItemByID(ord.itemCode);
-                var row = "<tr><td>" + itm.id + "" + "</td><td>" + itm.name + "</td><td>" + itm.price_per_unit +
-                    "</td><td>" + ord.orderQTY + "</td></tr>";
-                //add to table
-                $('#tbl_Orders_Body').append(row);
-            }
-        }
+        //load items
+        loadAllItemsInOrder(id);
+        //set order id
+        oID = id;
         //select row
         getOrderTblRowData();
     } else {
         alert("No such order found!");
+        oID = null;
     }
 });
+
+function loadAllItemsInOrder(id) {
+    //clear table
+    $('#tbl_Orders_Body > tr').empty();
+    for (const ord of orderDetailsArr) {
+        //search for items with matching order id's
+        if (id == ord.orderID) {
+            //get item
+            var itm = searchItemByID(ord.itemCode);
+            var row = "<tr><td>" + itm.id + "" + "</td><td>" + itm.name + "</td><td>" + itm.price_per_unit +
+                "</td><td>" + ord.orderQTY + "</td></tr>";
+            //add to table
+            $('#tbl_Orders_Body').append(row);
+        }
+    }
+    getOrderTblRowData();
+}
 
 //get selected table row data
 function getOrderTblRowData() {
@@ -38,7 +60,6 @@ function getOrderTblRowData() {
         let itmCode = $(this, '#tbl_Orders_Body>tr').children(':nth-child(1)').text();
         let itmName = $(this, '#tbl_Orders_Body>tr').children(':nth-child(2)').text();
         let qtyBght = $(this, '#tbl_Orders_Body>tr').children(':nth-child(4)').text();
-
         // enable update delete btns
         $('#btnUpdateItemQty').removeAttr('disabled');
         $('#btnDeleteItemFromOrder').removeAttr('disabled');
@@ -52,7 +73,6 @@ function getOrderTblRowData() {
                 $("#txtUpdateOrderQty").val("");
             }
         });
-
         //set data to delete item from order modal confirmation
         $('#btnDeleteItemFromOrder').click(function () {
             //search before adding
@@ -67,14 +87,28 @@ function getOrderTblRowData() {
     });
 }
 
-// function deleteItemFromOrder(id) {
-//     let item = searchItemByID(id);
-//     if (item != null) {
-//         let indexNumber = itemArr.indexOf(item);
-//         //remove from the array
-//         itemArr.splice(indexNumber, 1);
-//         return true;
-//     } else {
-//         return false;
-//     }
-// }
+$('#btn_Delete_Item_From_Order').click(function () {
+    var itmCde = $('#lbl_Order_Remove_Item_Code').text();
+    if (deleteItemFromOrder(oID, itmCde)) {
+        alert("Item has been removed from the order.");
+        $('#staticBackdrop8').modal('hide');
+        //load items
+        loadAllItemsInOrder(oID);
+        //disable button
+        $('#btnDeleteItemFromOrder').prop('disabled', true);
+    } else {
+        alert("Remove item failed!");
+    }
+});
+
+function deleteItemFromOrder(oID, itemCde) {
+    let item = searchItemsInAOrder(oID, itemCde);
+    if (item != null) {
+        let indexNumber = orderDetailsArr.indexOf(item);
+        //remove from the array
+        orderDetailsArr.splice(indexNumber, 1);
+        return true;
+    } else {
+        return false;
+    }
+}
