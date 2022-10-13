@@ -1,5 +1,6 @@
 //order id
 let oID;
+let itmCd;
 
 //search order
 function searchOrderByID(oId) {
@@ -61,14 +62,16 @@ function getOrderTblRowData() {
         let itmName = $(this, '#tbl_Orders_Body>tr').children(':nth-child(2)').text();
         let qtyBght = $(this, '#tbl_Orders_Body>tr').children(':nth-child(4)').text();
         // enable update delete btns
-        $('#btnUpdateItemQty').removeAttr('disabled');
+        $('#btnUpdateItemQtyBght').removeAttr('disabled');
         $('#btnDeleteItemFromOrder').removeAttr('disabled');
 
         //set data to update item qty bought modal textfields
-        $('#btnUpdateItemQty').click(function () {
+        $('#btnUpdateItemQtyBght').click(function () {
             //search before adding
-            if (searchItemByID(itmCode) != null) {
+            if (searchItemsInAOrder(oID,itmCode) != null) {
                 $('#txtUpdateOrderQty').val(qtyBght);
+                //get item code
+                itmCd = itmCode;
             } else {
                 $("#txtUpdateOrderQty").val("");
             }
@@ -76,15 +79,46 @@ function getOrderTblRowData() {
         //set data to delete item from order modal confirmation
         $('#btnDeleteItemFromOrder').click(function () {
             //search before adding
-            if (searchItemByID(itmCode) != null) {
+            if (searchItemsInAOrder(oID,itmCode) != null) {
                 $('#lbl_Order_Remove_Item_Code').text(itmCode);
                 $('#lbl_Order_Remove_Item_Name').text(itmName);
+                // //get item code
+                // itmCd = itmCode;
             } else {
                 $('#lbl_Order_Remove_Item_Code').text("");
                 $('#lbl_Order_Remove_Item_Name').text("");
             }
         });
     });
+}
+
+$('#btnUpdateQtyBought').click(function () {
+    var newQty = $('#txtUpdateOrderQty').val();
+    //confirmation alert
+    if (updateItemOrderQty(itmCd,newQty)) {
+        //confirmation alert
+        alert("Item quantity bought updated.");
+        loadAllItemsInOrder(oID);
+        //close modal code here...
+        $('#staticBackdrop7').modal('hide');
+        //disable buttons
+        $('#btnUpdateItemQtyBght').prop('disabled', true);
+        $('#btnDeleteItemFromOrder').prop('disabled', true);
+        //clear item code
+        itmCd = null;
+    } else {
+        alert("Update failed!");
+    }
+});
+
+function updateItemOrderQty(itm,newQty) {
+    var item = searchItemsInAOrder(oID,itm);
+    if (item != null) {
+        item.orderQTY = parseInt(newQty);
+        return true;
+    } else {
+        return false;
+    }
 }
 
 $('#btn_Delete_Item_From_Order').click(function () {
@@ -96,6 +130,7 @@ $('#btn_Delete_Item_From_Order').click(function () {
         loadAllItemsInOrder(oID);
         //disable button
         $('#btnDeleteItemFromOrder').prop('disabled', true);
+        $('#btnUpdateItemQtyBght').prop('disabled', true);
     } else {
         alert("Remove item failed!");
     }
