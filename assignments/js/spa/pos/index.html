@@ -671,7 +671,39 @@
                 </div>
                 <div class="col-12 row justify-content-end gap-2" style="margin-top: 8%">
 <!--                    <button id="btnUpdateItemInCart" type="button" class="btn btn-info col-4" disabled>Update Item</button>-->
-                    <button id="btnRemoveItemFromCart" type="button" class="btn btn-danger col-4" disabled>- Remove Item</button>
+                    <button id="btnRemoveItemFromCart" type="button" class="btn btn-danger col-4" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop9">- Remove Item</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--remove item from cart model-->
+    <div class="modal fade" id="staticBackdrop9" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+         aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-top">
+            <div class="modal-content">
+                <div class="modal-header bg-danger">
+                    <h5 class="modal-title" id="staticBackdropLabel9">Remove Item</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">Are you sure you
+                            want to remove this item from the cart?</label>
+                        <br>
+                        <label for="formGroupExampleInput2" class="form-label fw-semibold">Code : </label>
+                        <label id="lbl_Cart_Remove_Item_Code" for="formGroupExampleInput" class="form-label fw-semibold"></label>
+                        <br>
+                        <label for="formGroupExampleInput" class="form-label fw-semibold">Name : </label>
+                        <label id="lbl_Cart_Remove_Item_Name" for="formGroupExampleInput"
+                               class="form-label fw-semibold"></label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                    <button id="btnDeleteFromCart" type="button" class="btn btn-danger">Yes
+                    </button>
                 </div>
             </div>
         </div>

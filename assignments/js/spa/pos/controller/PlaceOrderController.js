@@ -100,7 +100,7 @@ $('#btnAddToCart').click(function () {
                 clearQtyInput();
                 //calculate sub total
                 calculateSubTotal();
-                // //get selected table row data
+                //get selected table row data
                 getCartTblRowData();
             }
         }
@@ -163,30 +163,71 @@ function removeItemFromCart(id) {
 function getCartTblRowData() {
     $('#tbl_Cart_Body > tr').click(function () {
         let itemCode = $(this, '#tbl_Cart_Body>tr').children(':nth-child(1)').text();
-        // set qty
-        $('#selectQTY').val($(this, '#tbl_Cart_Body>tr').children(':nth-child(4)').text());
+        let itemNm = $(this, '#tbl_Cart_Body>tr').children(':nth-child(2)').text();
+        // // set qty
+        // $('#selectQTY').val($(this, '#tbl_Cart_Body>tr').children(':nth-child(4)').text());
         // enable buttons
-        $('#btnRemoveItemFromCart').removeAttr('disabled');
+        // $('#btnRemoveItemFromCart').removeAttr('disabled');
         //remove item from cart
-        deleteData(itemCode);
+        // deleteData(itemCode);
+        // $('#btnRemoveItemFromCart').click(function () {
+        //     // confirmation alert
+        //     if (confirm("Are you sure you want to remove this item from the cart?")) {
+        //         //remove item
+        //         removeItemFromCart(itemCode);
+        //         loadAllItemsToTbl();
+        //         clearQtyInput();
+        //         calculateSubTotal();
+        //         // disable buttons
+        //         $('#btnRemoveItemFromCart').removeAttr('disabled');
+        //     }
+        // });
+        $('#btnRemoveItemFromCart').click(function () {
+            //search before adding
+            if (searchItemInCart(itemCode) != null) {
+                $('#lbl_Cart_Remove_Item_Code').text(itemCode);
+                $('#lbl_Cart_Remove_Item_Name').text(itemNm);
+            } else {
+                $('#lbl_Cart_Remove_Item_Code').text("");
+                $('#lbl_Cart_Remove_Item_Name').text("");
+            }
+        });
     });
 }
 
-function deleteData(itemCode) {
-    $('#btnRemoveItemFromCart').click(function () {
-        // confirmation alert
-        if (confirm("Are you sure you want to remove this item from the cart?")) {
-            //remove item
-            removeItemFromCart(itemCode);
-        }
+// function deleteData(itemCode) {
+//     $('#btnRemoveItemFromCart').click(function () {
+//         // confirmation alert
+//         if (confirm("Are you sure you want to remove this item from the cart?")) {
+//             //remove item
+//             removeItemFromCart(itemCode);
+//         }
+//         loadAllItemsToTbl();
+//         //disable button
+//         $('#btnRemoveItemFromCart').prop('disabled', true);
+//         clearQtyInput();
+//         calculateSubTotal();
+//         // getCartTblRowData();
+//     });
+// }
+
+$('#btnDeleteFromCart').click(function () {
+    var itmCode = $('#lbl_Cart_Remove_Item_Code').text();
+    //delete from cart
+    if (removeItemFromCart(itmCode)) {
+        alert("Item removed from cart");
         loadAllItemsToTbl();
+        $('#staticBackdrop9').modal('hide');
         //disable button
-        $('#btnRemoveItemFromCart').prop('disabled', true);
+        // $('#btnRemoveItemFromCart').prop('disabled', true);
         clearQtyInput();
         calculateSubTotal();
-        // getCartTblRowData();
-    });
-}
+    } else {
+        alert("Failed to remove item from cart");
+    }
+});
+
+
 
 //calculate sub total
 function calculateSubTotal() {
@@ -262,7 +303,7 @@ $('#btnConfirmOrder').click(function () {
 function reduceQty(itemCode, reducedAmt) {
     //get item
     var itm = searchItemByID(itemCode);
-    if(itm != null) {
+    if (itm != null) {
         itm.qty_On_Hand = itm.qty_On_Hand - parseInt(reducedAmt);
         return true;
     }
@@ -281,6 +322,7 @@ function clearAllFields() {
     $('#txtItemName').val("");
     $('#txtAvailableQTYOnHand').val("");
     $('#txtUnitPrice').val("");
+    $('#btnRemoveItemFromCart').removeAttr('disabled');
 }
 
 //generate new order id
