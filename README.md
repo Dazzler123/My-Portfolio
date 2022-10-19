@@ -9,6 +9,9 @@ Wireframe design URL - https://wireframe.cc/sMyMaq
 
 Mock-up design URL - https://www.figma.com/file/z6FkRcj5lSjNfpldt8E8fc/portfolio-mockup?node-id=0%3A1
 
+Github page URL - https://dazzler123.github.io/My-Portfolio/
+
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ======= Bootstrap POS System Prototype Design links =======
