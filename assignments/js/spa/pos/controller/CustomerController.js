@@ -85,14 +85,29 @@ $('#btn_Add_New_Customer').click(function () {
     let customerName = $('#txt_Cus_Name').val();
     let customerAddress = $('#txt_Cus_Address').val();
     let customerSalary = $('#txt_Cus_Salary').val();
-    var customerOne = {
-        "id": customerID,
-        "name": customerName,
-        "address": customerAddress,
-        "salary": customerSalary
-    };
+    //save object
+    let customerObj = Object.assign({}, customer);
+    customerObj.id = customerID;
+    customerObj.name = customerName;
+    customerObj.address = customerAddress;
+    customerObj.salary = customerSalary;
+    // {
+    //     "id"
+    // :
+    //     customerID,
+    //         "name"
+    // :
+    //     customerName,
+    //         "address"
+    // :
+    //     customerAddress,
+    //         "salary"
+    // :
+    //     customerSalary
+    // }
+    // ;
     //add to the array
-    customerArr.push(customerOne);
+    customerArr.push(customerObj);
 
     var row = "<tr><td>" + customerID + "" + "</td><td>" + customerName + "</td><td>" + customerAddress +
         "</td><td>" + customerSalary + "</td></tr>";
