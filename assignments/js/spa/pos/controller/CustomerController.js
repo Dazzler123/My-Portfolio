@@ -85,27 +85,12 @@ $('#btn_Add_New_Customer').click(function () {
     let customerName = $('#txt_Cus_Name').val();
     let customerAddress = $('#txt_Cus_Address').val();
     let customerSalary = $('#txt_Cus_Salary').val();
-    //save object
+    //wrap data
     let customerObj = Object.assign({}, customer);
     customerObj.id = customerID;
     customerObj.name = customerName;
     customerObj.address = customerAddress;
     customerObj.salary = customerSalary;
-    // {
-    //     "id"
-    // :
-    //     customerID,
-    //         "name"
-    // :
-    //     customerName,
-    //         "address"
-    // :
-    //     customerAddress,
-    //         "salary"
-    // :
-    //     customerSalary
-    // }
-    // ;
     //add to the array
     customerArr.push(customerObj);
 

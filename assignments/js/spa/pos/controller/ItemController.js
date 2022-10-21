@@ -86,26 +86,11 @@ $('#btn_Add_New_Item').click(function () {
     let ppu = $('#txt_Price_Per_Unit').val();
     let qtyOnHand = $('#txt_QTY_On_Hand').val();
 
-    var itemObj = Object.assign({}, item);
+    let itemObj = Object.assign({}, item);
     itemObj.id = itemCode;
     itemObj.name = itemName;
     itemObj.price_per_unit = ppu;
     itemObj.qty_On_Hand = qtyOnHand;
-    // {
-    //     "id"
-    // :
-    //     itemCode,
-    //         "name"
-    // :
-    //     itemName,
-    //         "price_per_unit"
-    // :
-    //     ppu,
-    //         "qty_On_Hand"
-    // :
-    //     qtyOnHand
-    // }
-    // ;
     //add to the array
     itemArr.push(itemObj);
 

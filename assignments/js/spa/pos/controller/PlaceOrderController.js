@@ -81,14 +81,9 @@ $('#btnAddToCart').click(function () {
                 cartObj.item_Name = $('#txtItemName').val();
                 cartObj.unit_Price = $('#txtUnitPrice').val();
                 cartObj.qty_Bought = qty;
-                //     {
-                //     "item_Code": ,
-                //     "item_Name": $('#txtItemName').val(),
-                //     "unit_Price": $('#txtUnitPrice').val(),
-                //     "qty_Bought": qty
-                // };
                 //add to cart array
                 cartArr.push(cartObj);
+
                 //load all items
                 loadAllItemsToTbl();
                 //clear qty field
@@ -244,21 +239,9 @@ $('#btnConfirmOrder').click(function () {
             orderObj.order_ID = orderId;
             orderObj.item_Code = itemId;
             orderObj.order_QTY = qty;
-
-            //     orderDetails = {
-            //     orderId,
-            //     itemId,
-            //     qty
-            // };
-            // var orderDetail = {
-            //     "orderID": orderId,
-            //     "itemCode": itemId,
-            //     "orderQTY": qty
-            // };
-
             //push to order details array
             orderDetailsArr.push(orderObj);
-            console.log(orderDetailsArr);
+
             //reduce item qtys from respective items
             reduceQty(itemId, qty);
         }
