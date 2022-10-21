@@ -76,12 +76,17 @@ $('#btnAddToCart').click(function () {
             if (qty == "") {
                 alert("Please select quantity!");
             } else {
-                var cartObj = {
-                    "item_Code": id,
-                    "item_Name": $('#txtItemName').val(),
-                    "unit_Price": $('#txtUnitPrice').val(),
-                    "qty_Bought": qty
-                };
+                let cartObj = Object.assign({},cart);
+                cartObj.item_Code = id;
+                cartObj.item_Name = $('#txtItemName').val();
+                cartObj.unit_Price = $('#txtUnitPrice').val();
+                cartObj.qty_Bought = qty;
+                //     {
+                //     "item_Code": ,
+                //     "item_Name": $('#txtItemName').val(),
+                //     "unit_Price": $('#txtUnitPrice').val(),
+                //     "qty_Bought": qty
+                // };
                 //add to cart array
                 cartArr.push(cartObj);
                 //load all items
