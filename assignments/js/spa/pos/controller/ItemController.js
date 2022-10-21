@@ -1,4 +1,3 @@
-
 //get selected table row data
 function getItemTblRowData() {
     $('#tbl_Item_Body > tr').click(function () {
@@ -87,25 +86,38 @@ $('#btn_Add_New_Item').click(function () {
     let ppu = $('#txt_Price_Per_Unit').val();
     let qtyOnHand = $('#txt_QTY_On_Hand').val();
 
-    var itemOne = {
-        "id": itemCode,
-        "name": itemName,
-        "price_per_unit": ppu,
-        "qty_On_Hand": qtyOnHand
-    };
+    var itemObj = Object.assign({}, item);
+    itemObj.id = itemCode;
+    itemObj.name = itemName;
+    itemObj.price_per_unit = ppu;
+    itemObj.qty_On_Hand = qtyOnHand;
+    // {
+    //     "id"
+    // :
+    //     itemCode,
+    //         "name"
+    // :
+    //     itemName,
+    //         "price_per_unit"
+    // :
+    //     ppu,
+    //         "qty_On_Hand"
+    // :
+    //     qtyOnHand
+    // }
+    // ;
     //add to the array
-    itemArr.push(itemOne);
+    itemArr.push(itemObj);
 
     var row = "<tr><td>" + itemCode + "" + "</td><td>" + itemName + "</td><td>" + ppu +
         "</td><td>" + qtyOnHand + "</td></tr>";
-
     // add to the table
     $('#tbl_Item_Body').append(row);
     // alert
     alert("Item saved successfully.");
     //get selected table row
     getItemTblRowData();
-    //add item code to cbxSelectItemCode combo box in place order form
+    //refresh cbxSelectItemCode combo box in place order form
     loadAllItemCodes();
     //close modal
     $('#staticBackdrop4').modal('hide');
@@ -114,7 +126,6 @@ $('#btn_Add_New_Item').click(function () {
 $('#btn_Search_Item').click(function () {
     //clear table
     $('#tbl_Item_Body').empty();
-
     //get item object
     var itemObj = searchItemByID($('#txt_Search_Item_Code').val());
 
@@ -161,6 +172,8 @@ $('#btn_Delete_Item_Details').click(function () {
         $('#btn_Delete_Item').prop('disabled', true);
         //disable update item button
         $('#btn_Update_Item').prop('disabled', true);
+        //refresh cbxSelectItemCode combo box in place order form
+        loadAllItemCodes();
     } else {
         alert("Process failed!");
     }
@@ -174,10 +187,8 @@ $('#btn_Get_All_Items').click(function () {
 function loadAllItems() {
     //clear table
     $('#tbl_Item_Body').empty();
-
     for (var item of itemArr) {
         var row = "<tr><td>" + item.id + "</td><td>" + item.name + "</td><td>" + item.price_per_unit + "</td><td>" + item.qty_On_Hand + "</td></tr>";
-
         // add to the table
         $('#tbl_Item_Body').append(row);
     }

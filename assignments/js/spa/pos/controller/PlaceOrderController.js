@@ -19,7 +19,7 @@ function loadAllItemCodes() {
     $('#cbxSelectItemCode').empty();
     $('#cbxSelectItemCode').append("<option>None</option>");
 
-    for (let itm of itemArr) {
+    for (var itm of itemArr) {
         $('#cbxSelectItemCode').append("<option>" + itm.id + "</option>");
     }
 }
