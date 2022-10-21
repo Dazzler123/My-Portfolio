@@ -4,6 +4,7 @@ var cartArr = []; //global scope
 //order id
 var idNum = 1;
 
+//at initial state
 $(window).on('load', function () {
     let today = new Date().toLocaleDateString();
     //set current date
@@ -11,17 +12,6 @@ $(window).on('load', function () {
     //set order id
     $('#cbxSelectOrderID').val("ORD-" + idNum);
 })
-
-// //load all customer id's to the combo box
-// function loadAllCustomerIds() {
-//     //clear combo box
-//     $('#cbxSelectCustID').empty();
-//     $('#cbxSelectCustID').append("<option>None</option>");
-//
-//     for (let cus of customerArr) {
-//         $('#cbxSelectCustID').append("<option>" + cus.id + "</option>");
-//     }
-// }
 
 //load all item codes to the combo box
 function loadAllItemCodes() {
@@ -165,24 +155,8 @@ function getCartTblRowData() {
     $('#tbl_Cart_Body > tr').click(function () {
         let itemCode = $(this, '#tbl_Cart_Body>tr').children(':nth-child(1)').text();
         let itemNm = $(this, '#tbl_Cart_Body>tr').children(':nth-child(2)').text();
-        // // set qty
-        // $('#selectQTY').val($(this, '#tbl_Cart_Body>tr').children(':nth-child(4)').text());
         // enable buttons
         $('#btnRemoveItemFromCart').removeAttr('disabled');
-        //remove item from cart
-        // deleteData(itemCode);
-        // $('#btnRemoveItemFromCart').click(function () {
-        //     // confirmation alert
-        //     if (confirm("Are you sure you want to remove this item from the cart?")) {
-        //         //remove item
-        //         removeItemFromCart(itemCode);
-        //         loadAllItemsToTbl();
-        //         clearQtyInput();
-        //         calculateSubTotal();
-        //         // disable buttons
-        //         $('#btnRemoveItemFromCart').removeAttr('disabled');
-        //     }
-        // });
         $('#btnRemoveItemFromCart').click(function () {
             //search before adding
             if (searchItemInCart(itemCode) != null) {
@@ -196,21 +170,6 @@ function getCartTblRowData() {
     });
 }
 
-// function deleteData(itemCode) {
-//     $('#btnRemoveItemFromCart').click(function () {
-//         // confirmation alert
-//         if (confirm("Are you sure you want to remove this item from the cart?")) {
-//             //remove item
-//             removeItemFromCart(itemCode);
-//         }
-//         loadAllItemsToTbl();
-//         //disable button
-//         $('#btnRemoveItemFromCart').prop('disabled', true);
-//         clearQtyInput();
-//         calculateSubTotal();
-//         // getCartTblRowData();
-//     });
-// }
 
 $('#btnDeleteFromCart').click(function () {
     var itmCode = $('#lbl_Cart_Remove_Item_Code').text();
@@ -274,18 +233,27 @@ $('#btnConfirmOrder').click(function () {
             //get item code and qty bought
             var itemId = item.item_Code;
             var qty = item.qty_Bought;
-            // orderDetails = {
+
+            //add to database array
+            let orderObj = Object.assign({}, orderDetails);
+            orderObj.order_ID = orderId;
+            orderObj.item_Code = itemId;
+            orderObj.order_QTY = qty;
+
+            //     orderDetails = {
             //     orderId,
             //     itemId,
             //     qty
             // };
-            var orderDetail = {
-                "orderID": orderId,
-                "itemCode": itemId,
-                "orderQTY": qty
-            };
+            // var orderDetail = {
+            //     "orderID": orderId,
+            //     "itemCode": itemId,
+            //     "orderQTY": qty
+            // };
+
             //push to order details array
-            orderDetailsArr.push(orderDetail);
+            orderDetailsArr.push(orderObj);
+            console.log(orderDetailsArr);
             //reduce item qtys from respective items
             reduceQty(itemId, qty);
         }
