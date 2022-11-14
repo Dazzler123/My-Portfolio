@@ -2,9 +2,145 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Knight Rider Car Light</title>
+    <style>
+        body {
+            background: black;
+        }
+
+        /*container*/
+        #box_Container {
+            border: 2px solid red;
+            position: absolute;
+            display: flex;
+            height: 10%;
+            width: 90%;
+            left: 0;
+            right: 0;
+            top: 30%;
+            /*bottom: 0;*/
+            margin: auto;
+        }
+
+        #box_Container > div {
+            border: 2px solid red;
+            /*flex-grow: 1;*/
+            width: 20%;
+        }
+
+        /*button container*/
+        body > div:nth-child(2) {
+            display: flex;
+            position: absolute;
+            /*border: 2px solid red;*/
+            height: 10%;
+            width: 40%;
+            left: 0;
+            right: 0;
+            top: 45%;
+            margin: auto;
+            gap: 1%;
+        }
+
+        /*both buttons in common*/
+        body > div:nth-child(2) > button {
+            position: relative;
+            font-size: 100%;
+            font-weight: bold;
+            width: 30%;
+            flex-grow: 1;
+            cursor: pointer;
+        }
+
+        body > div:nth-child(2) > button:first-child {
+            background-color: springgreen;
+        }
+
+        body > div:nth-child(2) > button:last-child {
+            background-color: orange;
+        }
+
+    </style>
 </head>
 <body>
+<!--container-->
+<div id="box_Container">
+    <!--    <div></div>-->
+    <!--    <div></div>-->
+    <!--    <div></div>-->
+    <!--    <div></div>-->
+    <!--    <div></div>-->
+    <!--    <div></div>-->
+    <!--    <div></div>-->
+</div>
 
+<div>
+    <button id="btnStart">START</button>
+    <button id="btnStop">STOP</button>
+</div>
+
+<!--import jquery-->
+<script src="assets/jquery-3.6.1.min.js"></script>
+<script>
+    // let colors = ["#f61708","#bd140c","#8f1e1e","#6e3b3b","#8B4501","#D2691E","#FF7F50"];
+    var clear = null;
+
+    var knightRider = {
+        count: 0,
+        tempArray: [],
+        leftColors: ["black", "black", "black", "black", "black", "black", "black", "#f61708", "#bd140c", "#8f1e1e", "#6e3b3b", "#8B4501", "#D2691E", "#FF7F50"],
+        rightColors: ["black", "black", "black", "black", "black", "black", "black", "#f61708", "#bd140c", "#8f1e1e", "#6e3b3b", "#8B4501", "#D2691E", "#FF7F50"],
+
+        animateLeft: function () {
+            var lastColor = this.tempArray.pop();
+            this.tempArray.unshift(lastColor);
+        },
+        animateRight: function () {
+            var firstColor = this.tempArray.shift();
+            this.tempArray.push(firstColor);
+        },
+        animate: function () {
+            this.count++;
+            if (this.count <= this.leftColors.length) {
+                this.tempArray = this.leftColors;
+                this.animateLeft();
+            } else {
+                if (this.count >= (this.rightColors.length * 2)) {
+                    this.count = 0;
+                }
+                this.tempArray = this.rightColors;
+                this.animateRight();
+            }
+        }
+    };
+
+
+    $('#btnStart').click(function () {
+        //stop previous setInterval process
+        clearInterval(clear);
+        clear = setInterval(effect, 100);
+    });
+
+    // $('#box_Container > div:nth-child(1)').css('background',colors[0]);
+    // $('#box_Container > div:nth-child(2)').css('background',colors[1]);
+    // $('#box_Container > div:nth-child(3)').css('background',colors[2]);
+    // $('#box_Container > div:nth-child(4)').css('background',colors[3]);
+    // $('#box_Container > div:nth-child(5)').css('background',colors[4]);
+    // $('#box_Container > div:nth-child(6)').css('background',colors[5]);
+    // $('#box_Container > div:nth-child(7)').css('background',colors[6]);
+
+    $('#btnStop').click(function () {
+        //stop current setInterval process
+        clearInterval(clear);
+    });
+
+    function effect() {
+        $('#box_Container').empty();
+        for (let i = 0; i < (knightRider.tempArray.length) / 2; i++) {
+            $('#box_Container').append(`<div style="background-color: ${knightRider.tempArray[i]}"></div>`);
+        }
+        knightRider.animate();
+    }
+</script>
 </body>
 </html>
