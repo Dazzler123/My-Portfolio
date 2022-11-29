@@ -1,0 +1,133 @@
+/*in game background*/
+#background {
+    width: 100%;
+    height: 100vh;
+
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    /*background-position: center;*/
+    background-repeat: repeat-x;
+}
+
+/*character*/
+#character {
+    height: 30%;
+    margin-top: 53.7vh;
+    margin-left: 4vw;
+}
+
+/*wolf barrier*/
+.wolf {
+    width: 25vw;
+    height: 15vh;
+    position: absolute;
+    margin-top: 69vh;
+
+    background-image: url("../images/barriers/wolf-barrier-land.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/*rock barrier*/
+.rock {
+    width: 25vw;
+    height: 20vh;
+    position: absolute;
+    margin-top: 67vh;
+
+    background-image: url("../images/barriers/rock-barrier-land.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#score_icon {
+    height: 20%;
+    display: inline-block;
+    margin-top: -0.5%;
+    margin-left: 1%;
+}
+
+#level_Heading {
+    margin-top: 3vw;
+    margin-left: 45vw;
+}
+
+/*game score*/
+#score {
+    position: relative;
+    margin-top: 38px;
+    margin-left: 14%;
+}
+
+/*control instructions*/
+#enter_ctrl {
+    margin-top: 23vw;
+    margin-left: 36.5vw;
+}
+
+#space_ctrl {
+    margin-top: 42%;
+    margin-left: 82%;
+}
+
+#exit_ctrl {
+    margin-top: 44%;
+    margin-left: 82%;
+}
+
+#owner_title {
+    margin-top: 45%;
+}
+
+/*<!--success game end view-->*/
+#success_game_end_container {
+    background: yellowgreen;
+    border-radius: 10%;
+    height: 73vh;
+    margin-top: 15vh;
+}
+
+.you_win {
+    height: 50%;
+}
+
+/*<!--failed game end view-->*/
+#failed_game_end_container {
+    background: yellowgreen;
+    border-radius: 10%;
+    height: 73vh;
+    margin-top: 15vh;
+}
+
+.you_lose {
+    height: 60%;
+}
+
+/*homepage background*/
+main:nth-child(1) > div:nth-child(1) {
+    width: 100%;
+    height: 100vh;
+
+    background-image: url("../images/homepage-bg-samurai.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/*homepage button controls*/
+main:nth-child(1) > div:nth-child(1) > div{
+    left: 56%;
+    top: 75%;
+}
+
+/*about game container*/
+#about_container {
+    background: #2697b7;
+    height: 80vh;
+    display: inline-block;
+    border-radius: 1%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}

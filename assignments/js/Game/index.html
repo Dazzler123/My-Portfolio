@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="Dasindu Bimlaka Hewagamage" name="author">
+    <meta content="Dasindu Bimlaka Hewagamage" name="owner">
+    <meta content="width=device-width initial-scale=1 maximum-scale=1 minimum-scale=1 user-scalable=no" name="viewport">
+
+    <title>Ninja Run</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body onkeydown="keyCheck(event)">
+
+<!--homepage-->
+<main id="home_container" class="position-absolute container-fluid row me-0 pe-0 ms-0 ps-0 overflow-hidden justify-content-center">
+    <!--background-->
+    <div class="position-relative overflow-hidden">
+        <!--logo icon-->
+        <img src="assets/images/ninja-run-logo.png" class="h-75 position-absolute" style="left: 50%" alt="ninja_run_logo">
+        <!--buttons-->
+        <div class="d-grid gap-2 mb-5 col-3 position-absolute">
+            <button id="btnStartGame" type="button" class="btn col-12 btn-outline-primary btn-lg">Start Game</button>
+            <button id="btnAbout" type="button" class="btn col-12 btn-outline-secondary btn-lg">About</button>
+        </div>
+        <!--ownership-title-->
+        <p class="position-absolute text-dark fw-light fs-6" style="margin-top: 45%; margin-left: 71.9%">@2022 Designed & Developed by Dasindu Hewagamage</p>
+    </div>
+</main>
+
+<!--about game-->
+<main id="about_container" class="position-absolute col-9 row pe-0 ps-0 overflow-hidden justify-content-center">
+    <!--logo icon-->
+    <img src="assets/images/ninja-run-logo.png" class="col-3 position-absolute" style="left: 2%; top: 62%; height: 29vh; width: 15vw;" alt="ninja_run_logo">
+    <p class="position-absolute text-dark text-center mt-5 fw-bolder fs-1 font-monospace">NINJA RUN</p>
+    <br>
+    <br>
+    <p class="text-dark text-center mt-5 fw-normal fs-4 fst-normal">Online 2D Video Game</p>
+    <p class="text-dark text-center fw-normal fs-5 fst-italic">A Mission, Ninja running through a forest avoiding many obstacles.</p>
+    <br>
+    <p class="text-dark ms-5 fw-normal fs-6 fst-normal">* A 2D game developed using HTML, CSS & JavaScript, as a Single Page Application (SPA).</p>
+    <p class="text-dark ms-5 fw-normal fs-6 fst-normal">* Bootstrap & JQuery were used for more Efficiency and Optimization.</p>
+    <p class="text-dark ms-5 fw-normal fs-6 fst-normal">* Project developed under MVC Architecture.</p>
+    <br>
+    <br>
+    <p class="text-dark mt-5 text-center fw-bold fs-6 fst-normal">Designed & Developed by Dasindu Hewagamage</p>
+    <p class="text-dark text-center fw-normal fs-6 fst-normal">(IJSE - Batch 59 - AAD Module)</p>
+    <button id="btnCloseAbout" type="button" class="btn me-3 float-end col-3 btn-secondary btn-lg">Close</button>
+</main>
+
+<!--in game-->
+<main id="game_container" class="container-fluid row me-0 pe-0 ms-0 ps-0 overflow-hidden justify-content-center">
+    <!--background-->
+    <div id="background" class="position-relative overflow-hidden">
+        <p id="level_Heading" class="position-absolute text-danger fw-bolder fs-2 font-monospace">Level 1</p>
+        <!--game score board-->
+        <img id="score_icon" class="position-absolute" src="assets/images/score-board-icon.png" alt="score_board_icon">
+        <p id="score" class="position-absolute text-white fw-semibold fs-2 font-monospace"></p>
+        <!--character-->
+        <img id="character" src="assets/images/characters/Idle1.png" alt="character_idle_01" class="position-absolute w-auto">
+        <!--control instructions-->
+        <p id="enter_ctrl" class="position-absolute text-primary fw-semibold fs-2">Press ENTER to start game</p>
+        <p id="space_ctrl" class="position-absolute text-primary fw-bold fs-5 font-monospace">Press SPACE to Jump</p>
+        <p id="exit_ctrl" class="position-absolute text-primary fw-bold fs-5 font-monospace">Press ESC to exit game</p>
+        <!--ownership-title-->
+        <p id="owner_title" class="position-absolute text-dark fw-light fs-6">@2022 Designed & Developed by Dasindu Hewagamage</p>
+    </div>
+    <!--success game end view-->
+    <div id="success_game_end_container" class="col-3 position-absolute row overflow-hidden justify-content-center">
+        <img src="assets/images/you-win-.png" alt="you_win_icon" class="you_win col-12 m-0">
+        <p class="col-12 text-center text-dark fw-bold fs-4 font-monospace">Level Completed</p>
+        <p id="success_score" class="col-12 text-center text-dark fw-bold fs-5 font-monospace"></p>
+        <!--buttons-->
+        <div class="d-grid gap-2 mb-5">
+            <button id="btnContinue" type="button" class="btn btn-outline-primary">Continue</button>
+            <button id="btnRetry" type="button" class="btn btn-outline-secondary">Retry</button>
+            <button id="btnExitGame" type="button" class="btn btn-outline-danger">Exit Game</button>
+        </div>
+    </div>
+    <!--failed game end view-->
+    <div id="failed_game_end_container" class="col-3 position-absolute row overflow-hidden justify-content-center">
+        <img src="assets/images/you-lose-rip.png" alt="you_lose_icon" class="you_lose col-12 m-0">
+        <p class="col-12 text-center text-dark fw-bold fs-4 font-monospace">Level Failed</p>
+        <p id="failed_score" class="col-12 text-center text-dark fw-bold fs-5 font-monospace"></p>
+        <!--buttons-->
+        <div class="d-grid gap-2 mb-5">
+            <button id="btnTryAgain" type="button" class="btn btn-outline-primary">Try Again</button>
+            <button id="btnExitGameTwo" type="button" class="btn btn-outline-danger">Exit Game</button>
+        </div>
+    </div>
+</main>
+
+<!--background music-->
+<audio id="bgm" >
+    <source src="assets/audio/bgm/Ninja%20Game%20-%20arashi.mp3">
+</audio>
+<audio id="jump_part_one_bgm" >
+    <source src="assets/audio/bgm/gruntJump.wav">
+</audio>
+<audio id="jump_part_two_bgm" >
+    <source src="assets/audio/bgm/gruntJumpLand.wav">
+</audio>
+<audio id="run_bgm" >
+    <source src="assets/audio/bgm/footstepsCliff.wav">
+</audio>
+<audio id="click_effect" >
+    <source src="assets/audio/bgm/buttonClick.wav">
+</audio>
+<audio id="dead_effect" >
+    <source src="assets/audio/bgm/splat.wav">
+</audio>
+<audio id="game_won_effect" >
+    <source src="assets/audio/bgm/angelWings.wav">
+</audio>
+
+<!--=================================================================-->
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery-3.6.1.min.js"></script>
+
+<script src="controller/Homepage_Controller.js"></script>
+<script src="controller/Character_Behaviour.js"></script>
+<script src="controller/Game_Background.js"></script>
+<script src="controller/Keyboard_Controls.js"></script>
+
+</body>
+</html>
